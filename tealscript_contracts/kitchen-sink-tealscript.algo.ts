@@ -2,13 +2,13 @@ import { Contract } from "@algorandfoundation/tealscript";
 
 export class KitchenSinkContract extends Contract {
   globalInt = GlobalStateKey<uint64>();
-  globalString = GlobalStateKey<string>();
+  globalString = GlobalStateKey<string>({ key: "customKey" });
 
   localBigInt = LocalStateKey<uint<512>>();
 
   boxOfArray = BoxKey<uint64[]>({ key: "b" });
-  boxMap = BoxMap<Address, uint64>({ prefix: "" });
-  boxRef = BoxKey<bytes>({ key: "ff" });
+  boxMap = BoxMap<Address, bytes>({ prefix: "" });
+  boxRef = BoxKey<bytes>({ key: "FF" });
 
   useState(a: uint64, b: string, c: uint64) {
     this.globalInt.value *= a;
@@ -22,7 +22,7 @@ export class KitchenSinkContract extends Contract {
     }
   }
 
-  createApp() {
+  createApplication() {
     this.globalInt.value = 4;
     this.globalInt.value = this.app.id;
   }
@@ -31,13 +31,13 @@ export class KitchenSinkContract extends Contract {
 
   addToBox(x: uint64) {
     if (!this.boxOfArray.exists) {
-      this.boxOfArray.value = [];
+      this.boxOfArray.value = [x];
     } else {
       this.boxOfArray.value.push(x);
     }
   }
 
-  addToBoxMap(x: uint64) {
+  addToBoxMap(x: string) {
     this.boxMap(this.txn.sender).value = x;
   }
 
