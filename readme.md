@@ -16,7 +16,7 @@ npm i
 pipx install puyapy
 ```
 
-> puya.exe is currently distributed under the puyapy package but will eventually be moved to a puya package. 
+> puya.exe is currently distributed under the puyapy package but will eventually be moved to a puya package.
 
 ### 3. Test that puya is available (you may need to restart your shell)
 
@@ -31,10 +31,10 @@ Expect to see
 
 ### 4. Build project
 
-Using the npm script 
+Using the npm script
 
 ```shell
-npm run build
+npm run build:puya
 ```
 
 OR
@@ -44,4 +44,3 @@ Invoke using npx
 ```shell
 npx @algorandfoundation/puya-ts build contracts
 ```
-
