@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "puya-ts build contracts"
+    "build:puya": "puya-ts build contracts",
+    "build:tealscript": "tealscript tealscript_contracts/kitchen-sink-tealscript.algo.ts tealscript_contracts/artifacts"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "@algorandfoundation/algorand-typescript": "^0.0.1-alpha.10",
     "@algorandfoundation/algorand-typescript-testing": "^1.0.0-alpha.4",
     "@algorandfoundation/puya-ts": "^1.0.0-alpha.18",
+    "@algorandfoundation/tealscript": "0.105.5",
     "@rollup/plugin-typescript": "^12.1.0",
     "@tsconfig/node20": "^20.1.4",
     "prettier": "^3.3.3"
