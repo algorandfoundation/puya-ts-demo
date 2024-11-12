@@ -21,9 +21,15 @@ import {
   uint64,
 } from "@algorandfoundation/algorand-typescript";
 import {
+  Address,
+  Byte,
   DynamicArray,
+  Str,
+  Struct,
   UintN,
 } from "@algorandfoundation/algorand-typescript/arc4";
+
+class ExampleStruct extends Struct<{ x: Str; y: Byte; z: Address }> {}
 
 export class KitchenSinkContract extends Contract {
   globalInt = GlobalState({ initialValue: Uint64(4) });
@@ -92,5 +98,13 @@ export class KitchenSinkContract extends Contract {
 
   private getHello() {
     return "Hello";
+  }
+
+  buildStruct(x: Str, y: Byte, z: Address): ExampleStruct {
+    return new ExampleStruct({
+      x: x,
+      y: y,
+      z: z,
+    });
   }
 }

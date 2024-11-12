@@ -13,10 +13,15 @@ npm i
 > This assumes you have a python installation on your machine, if not see algokit install instructions
 
 ```shell
+# Install latest 'release'
 pipx install puyapy
+# Install unreleased from `main` branch
+pipx install git+https://github.com/algorandfoundation/puya
 ```
 
-> puya.exe is currently distributed under the puyapy package but will eventually be moved to a puya package. 
+> NOTE: As puya-ts is still in alpha you can expect the latest version to depend on unreleased versions of puya. It is equally likely that new commits to puya may break puya-ts. Some trial and error may be required to find compatible versions until puya-ts stabilises
+
+> puya is currently distributed under the puyapy package but will eventually be moved to a puya package. 
 
 ### 3. Test that puya is available (you may need to restart your shell)
 
