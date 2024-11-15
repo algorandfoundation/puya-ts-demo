@@ -17,11 +17,12 @@ These are changes to the way things are named, but the functionality remains the
 
 These are minor changes to the syntax of the language/API.
 
-| TEALScript                                 | PuyaTS                                   | Notes                                                                                            |
-| ------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `this.boxRef.create(boxSize)`              | `this.boxRef.create({ size: boxSize })`  | The size option is now a property of the create method                                           |
-| Explcicit method return types are required | Implicit method return types are allowed |                                                                                                  |
-| `verify...Txn`                             | `assertMatch`                            | `assertMatch` accepts any object. This means, however, that txn types must be explicitly checked |
+| TEALScript                                      | PuyaTS                                       | Notes                                                                                            |
+| ----------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `this.boxRef.create(boxSize)`                   | `this.boxRef.create({ size: boxSize })`      | The size option is now a property of the create method                                           |
+| Explcicit method return types are required      | Implicit method return types are allowed     |                                                                                                  |
+| `verify...Txn`                                  | `assertMatch`                                | `assertMatch` accepts any object. This means, however, that txn types must be explicitly checked |
+| Methods, classes, and types are in global scope | Methods, classes, and types must be imported |                                                                                                  |
 
 ## Major Changes
 
@@ -121,3 +122,19 @@ const y = UintN<64>(x);
 ```
 
 ### String vs Bytes
+
+#### TEALScript
+
+In TEALScript, bytes and strings are the same type and can be used interchangeably.
+
+```ts
+assert(swapAsset.assetName === "SWAP");
+```
+
+#### PuyaTS
+
+In PuyaTS, bytes and strings are distinct types. Most functions acccept `bytes | string`, but outputs will always be `bytes`
+
+```ts
+assert(swapAsset.assetName === Bytes("SWAP"));
+```
