@@ -10,9 +10,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@algorandfoundation/algorand-typescript": "^0.0.1-alpha.10",
-    "@algorandfoundation/algorand-typescript-testing": "^1.0.0-alpha.4",
-    "@algorandfoundation/puya-ts": "^1.0.0-alpha.18",
+    "@algorandfoundation/algorand-typescript": "^0.0.1-alpha.22",
+    "@algorandfoundation/algorand-typescript-testing": "^1.0.0-alpha.12",
+    "@algorandfoundation/puya-ts": "^1.0.0-alpha.34",
     "@algorandfoundation/tealscript": "0.105.5",
     "@rollup/plugin-typescript": "^12.1.0",
     "@tsconfig/node20": "^20.1.4",
