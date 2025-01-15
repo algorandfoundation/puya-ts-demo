@@ -3,14 +3,7 @@ import { defineConfig } from 'vitest/config'
 import { puyaTsTransformer } from '@algorandfoundation/algorand-typescript-testing/test-transformer'
 
 export default defineConfig({
-  esbuild: {},
-  test: {
-    server: {
-      deps: {
-        inline: [/node_modules/]
-      }
-    }
-  },
+  esbuild: {},  
   plugins: [
     typescript({
       tsconfig: './tsconfig.json',
