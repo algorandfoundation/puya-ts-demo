@@ -5,6 +5,7 @@ import { puyaTsTransformer } from '@algorandfoundation/algorand-typescript-testi
 export default defineConfig({
   esbuild: {},
   test: {
+    exclude: ['node_modules', '**/*.test.ts'],
     setupFiles: 'vitest.setup.ts',
   },
   plugins: [
