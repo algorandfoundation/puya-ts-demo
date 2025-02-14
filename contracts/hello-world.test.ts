@@ -1,5 +1,6 @@
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
 import { HelloWorldContract } from "./hello-world.algo";
+import { describe, expect, test } from "@jest/globals";
 
 describe('HelloWorldContract', () => {
   const ctx = new TestExecutionContext();
