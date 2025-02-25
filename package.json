@@ -19,8 +19,8 @@
   "description": "",
   "devDependencies": {
     "@algorandfoundation/algorand-typescript": "^1.0.0-beta.20",
-    "@algorandfoundation/algorand-typescript-testing": "^1.0.0-beta.24",
-    "@algorandfoundation/puya-ts": "^1.0.0-beta.27",
+    "@algorandfoundation/algorand-typescript-testing": "^1.0.0-beta.25",
+    "@algorandfoundation/puya-ts": "^1.0.0-beta.30",
     "@algorandfoundation/tealscript": "0.105.5",
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-typescript": "^12.1.0",
