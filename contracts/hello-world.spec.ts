@@ -1,6 +1,4 @@
-import { internal } from "@algorandfoundation/algorand-typescript";
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
-import { TesterContext } from "@vitest/expect";
 import { describe, expect, it } from "vitest";
 import { HelloWorldContract } from "./hello-world.algo";
 

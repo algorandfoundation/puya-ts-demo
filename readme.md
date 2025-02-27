@@ -21,13 +21,12 @@ pipx install puyapy
 ### 3. Test that puya is available (you may need to restart your shell)
 
 ```shell
-puya
+puya --version
 ```
 
-Expect to see
+Puya 4.4.2 or later is required, so we expect to see the following
 
-> usage: puya [-h] [--version] [--log-level {notset,debug,info,warning,error,critical}] --options OPTIONS --awst AWST [--source-annotations SOURCE_ANNOTATIONS]  
-> puya: error: the following arguments are required: --options, --awst
+> puya 4.4.2
 
 ### 4. Build project
 
