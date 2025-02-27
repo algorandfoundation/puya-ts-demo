@@ -4,11 +4,11 @@
     "noEmit": true,
     "target": "ES2023",
     "module": "ESNext",
-    "lib": ["ES2023"],
+    "lib": ["ESNext"],
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "esModuleInterop": true,
   },
   "include": ["**/*.ts", "**/*.mts" ],
-  "exclude": []
+  "exclude": ["tealscript_contracts/*"],
 }
