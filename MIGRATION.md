@@ -73,7 +73,7 @@ PuyaTS requires explicit usage of a constructor to return the result of a math o
 
 ```ts
 getSum(x: uint64, y: uint64): uint64 {
-    const sum = UintN<64>(sum);
+    const sum = UintN<64>(x + y);
     return sum;
 }
 ```
