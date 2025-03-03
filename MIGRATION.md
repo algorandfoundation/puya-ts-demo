@@ -116,6 +116,26 @@ In PuyaTS, bytes and strings are distinct types. Most functions acccept `bytes |
 assert(swapAsset.assetName === Bytes("SWAP"));
 ```
 
+### Array Mutability
+
+#### TEALScript
+
+TEALScript supports mutable arrays
+
+```ts
+const myArray: uint64[] = [1, 2, 3];
+myArray.push(4);
+```
+
+#### PuyaTS
+
+PuyaTS arrays are always immutable
+
+```ts
+let myArray: uint64[] = [1, 2, 3];
+myArray = [...myArray, 4];
+```
+
 ### Objects vs Structs
 
 #### TEALScript
