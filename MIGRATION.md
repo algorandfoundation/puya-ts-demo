@@ -1,6 +1,6 @@
 ## Nominal Changes
 
-These are changes to the way things are named, but the functionality remains the same.
+These are changes to the way things are named, but the functionality remains the same. This list is not exhaustive.
 
 | TEALScript                           | PuyaTS                        | Notes                                            |
 | ------------------------------------ | ----------------------------- | ------------------------------------------------ |
@@ -15,7 +15,7 @@ These are changes to the way things are named, but the functionality remains the
 
 ## Minor Changes
 
-These are minor changes to the syntax of the language/API.
+These are minor changes to the syntax of the language/API. This list is not exhaustive.
 
 | TEALScript                                      | PuyaTS                                       | Notes                                                                                            |
 | ----------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -38,6 +38,13 @@ Each action (OnCompletes and create) has a method name that is used to route to 
 createApplication() {
 ```
 
+Alternatively, decorators can be used for more complex contracts
+
+```ts
+@allow.create('NoOp')
+myCustomCreateMethod() {
+```
+
 #### PuyaTS
 
 Decorators must be used to specify the action/OC.
@@ -45,36 +52,6 @@ Decorators must be used to specify the action/OC.
 ```ts
 @abimethod({ onCreate: "require", allowActions: "NoOp" })
 createApplication() {
-```
-
-### Native vs ABI types
-
-#### TEALScript
-
-TEALScript does ABI encoding/decoding automatically where appropriate.
-
-```ts
-addToBox(x: uint64) {
-    if (!this.boxOfArray.exists) {
-        this.boxOfArray.value = [x];
-    } else {
-        this.boxOfArray.value.push(x);
-    }
-}
-```
-
-#### PuyaTS
-
-Puya requires explicit ABI encoding/decoding in some scenarios, resulting in a "native" `uint64` type and a `UintN<64>` type. This also means that arrays must be initialized with a constructor rather than using array literals.
-
-```ts
-addToBox(x: uint64) {
-    if (!this.boxOfArray.exists) {
-        this.boxOfArray.value = new DynamicArray(new UintN<64>(x));
-    } else {
-        this.boxOfArray.value.push(new UintN<64>(x));
-    }
-}
 ```
 
 ### Math Typing
@@ -137,4 +114,48 @@ In PuyaTS, bytes and strings are distinct types. Most functions acccept `bytes |
 
 ```ts
 assert(swapAsset.assetName === Bytes("SWAP"));
+```
+
+### Objects vs Structs
+
+#### TEALScript
+
+TEALScript supports the use of JavaScript objects
+
+```ts
+type ListingKey {
+    owner: Address,
+    asset: AssetID,
+    nonce: uint64
+}
+```
+
+```ts
+deposit(xfer: AssetTransferTransaction, nonce: uint64) {
+    const key: ListingKey = { 
+      owner: this.txn.sender,
+      asset: xfer.xferAsset,
+      nonce: nonce
+    }
+```
+
+#### PuyaTS
+
+PuyaTS does not support the use of JavaScript objects. Instead, structs must be used and each struct field must be an ARC4 type.
+
+```ts
+export class ListingKey extends arc4.Struct<{
+  owner: arc4.Address
+  asset: arc4.UintN64
+  nonce: arc4.UintN64
+}> {}
+```
+
+```ts
+deposit(xfer: gtxn.AssetTransferTxn, nonce: arc4.UintN64) {
+    const key = new ListingKey({
+        owner: new arc4.Address(Txn.sender),
+        asset: new arc4.UintN64(xfer.xferAsset.id),
+        nonce: nonce,
+    })
 ```
