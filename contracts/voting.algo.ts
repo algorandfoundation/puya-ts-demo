@@ -11,23 +11,23 @@ export default class VotingContract extends arc4.Contract {
     this.topic.value = Bytes(topic)
   }
   @arc4.abimethod()
-  public vote(pay: gtxn.PaymentTxn): arc4.Bool {
+  public vote(pay: gtxn.PaymentTxn): boolean {
     assert(op.Global.groupSize === 2, 'Expected 2 transactions')
     assert(pay.amount === 10_000, 'Incorrect payment amount')
     assert(pay.sender === Txn.sender, 'Payment sender must match transaction sender')
 
     if (this.voted(Txn.sender).hasValue) {
-      return new arc4.Bool(false) // Already voted
+      return false // Already voted
     }
 
     this.votes.value = this.votes.value + 1
     this.voted(Txn.sender).value = 1
-    return new arc4.Bool(true)
+    return true
   }
 
   @arc4.abimethod({ readonly: true })
-  public getVotes(): arc4.UintN64 {
-    return new arc4.UintN64(this.votes.value)
+  public getVotes(): uint64 {
+    return this.votes.value
   }
 
   public clearStateProgram(): boolean {

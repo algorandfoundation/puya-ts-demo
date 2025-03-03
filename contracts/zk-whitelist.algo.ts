@@ -15,18 +15,17 @@ import {
   OpUpFeeSource,
   TemplateVar,
   Txn,
-  Uint64,
 } from '@algorandfoundation/algorand-typescript'
 
 const curveMod = BigUint(21888242871839275222246405745257275088548364400416034343698204186575808495617n)
-const verifierBudget = Uint64(145000)
+const verifierBudget: uint64 = 145000
 
 export default class ZkWhitelistContract extends arc4.Contract {
-  appName = GlobalState<arc4.Str>({})
+  appName = GlobalState<string>({})
   whiteList = LocalState<boolean>()
 
   @abimethod({ onCreate: 'require' })
-  create(name: arc4.Str) {
+  create(name: string) {
     // Create the application
     this.appName.value = name
   }
@@ -44,7 +43,7 @@ export default class ZkWhitelistContract extends arc4.Contract {
   }
 
   @abimethod()
-  addAddressToWhitelist(address: arc4.Address, proof: arc4.DynamicArray<arc4.Address>): arc4.Str {
+  addAddressToWhitelist(address: arc4.Address, proof: arc4.Address[]): string {
     /*
     Add caller to the whitelist if the zk proof is valid.
     On success, will return an empty string. Otherwise, will return an error
@@ -56,38 +55,38 @@ export default class ZkWhitelistContract extends arc4.Contract {
     // modulus, so to be safe we take the address modulo the field modulus
     const addressMod = arc4.interpretAsArc4<arc4.Address>(op.bzero(32).bitwiseOr(Bytes(BigUint(address.bytes) % curveMod)))
     // Verify the proof by calling the deposit verifier app
-    const verified = this.verifyProof(TemplateVar<uint64>('VERIFIER_APP_ID'), proof, new arc4.DynamicArray(addressMod))
+    const verified = this.verifyProof(TemplateVar<uint64>('VERIFIER_APP_ID'), proof, [addressMod])
     if (!verified.native) {
-      return new arc4.Str('Proof verification failed')
+      return 'Proof verification failed'
     }
     // if successful, add the sender to the whitelist by setting local state
     const account = Account(address.bytes)
     if (Txn.sender !== account) {
-      return new arc4.Str('Sender address does not match authorized address')
+      return 'Sender address does not match authorized address'
     }
     this.whiteList(account).value = true
-    return new arc4.Str('')
+    return ''
   }
 
   @abimethod()
-  isOnWhitelist(address: arc4.Address): arc4.Bool {
+  isOnWhitelist(address: arc4.Address): boolean {
     // Check if an address is on the whitelist
     const account = address.native
     const optedIn = op.appOptedIn(account, Global.currentApplicationId)
     if (!optedIn) {
-      return new arc4.Bool(false)
+      return false
     }
-    const whitelisted = this.whiteList(account).value
-    return new arc4.Bool(whitelisted)
+    return this.whiteList(account).value
   }
 
-  verifyProof(appId: uint64, proof: arc4.DynamicArray<arc4.Address>, publicInputs: arc4.DynamicArray<arc4.Address>): arc4.Bool {
+  verifyProof(appId: uint64, proof: arc4.Address[], publicInputs: arc4.Address[]): arc4.Bool {
     // Verify a proof using the verifier app.
     const verified = itxn
       .applicationCall({
         appId: appId,
         fee: 0,
-        appArgs: [arc4.methodSelector('verify(byte[32][],byte[32][])bool'), proof.copy(), publicInputs.copy()],
+        // Commented out until https://github.com/algorandfoundation/puya-ts/issues/116 is resolved
+        // appArgs: [arc4.methodSelector('verify(byte[32][],byte[32][])bool'), proof, arc4.encodeArc4(publicInputs)], 
         onCompletion: arc4.OnCompleteAction.NoOp,
       })
       .submit().lastLog
