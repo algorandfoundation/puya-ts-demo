@@ -70,11 +70,21 @@ getSum(x: uint64, y: uint64): uint64 {
 
 #### PuyaTS
 
-PuyaTS requires explicit usage of a constructor to return the result of a math operation.
+PuyaTS requires explicit usage of a constructor or type hint to return the result of a math operation. This is required so TypeScript (and thus your IDE and other tooling) knows the type of the result is not `number` (which is unavoidable TypeScript behavior).
 
 ```ts
 getSum(x: uint64, y: uint64): uint64 {
-    const sum = UintN<64>(x + y);
+    const sum = Uint64(x + y);
+    return sum;
+}
+```
+
+or
+
+
+```ts
+getSum(x: uint64, y: uint64): uint64 {
+    const sum: uint64 = x + y;
     return sum;
 }
 ```
