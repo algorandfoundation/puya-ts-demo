@@ -23,6 +23,7 @@ These are minor changes to the syntax of the language/API. This list is not exha
 | Explcicit method return types are required      | Implicit method return types are allowed     |                                                                                                  |
 | `verify...Txn`                                  | `assertMatch`                                | `assertMatch` accepts any object. This means, however, that txn types must be explicitly checked |
 | Methods, classes, and types are in global scope | Methods, classes, and types must be imported |                                                                                                  |
+| `forEach` is supported | `forEach` is not supported, but `for ... of` is supported | `for ... of` also enables continue/break |
 
 ## Major Changes
 
