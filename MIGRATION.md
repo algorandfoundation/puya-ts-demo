@@ -21,7 +21,7 @@ These are minor changes to the syntax of the language/API. This list is not exha
 | ----------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | `this.boxRef.create(boxSize)`                   | `this.boxRef.create({ size: boxSize })`      | The size option is now a property of the create method                                           |
 | Explcicit method return types are required      | Implicit method return types are allowed     |                                                                                                  |
-| `verify...Txn`                                  | `assertMatch`                                | `assertMatch` accepts any object. This means, however, that txn types must be explicitly checked |
+| `verify...Txn`                                  | `assertMatch`                                | `assertMatch` accepts any object. This means, however, that txn types must be explicitly checked if the verified fields apply to more than one txn type |
 | Methods, classes, and types are in global scope | Methods, classes, and types must be imported |                                                                                                  |
 | `forEach` is supported | `forEach` is not supported, but `for ... of` is supported | `for ... of` also enables continue/break |
 
