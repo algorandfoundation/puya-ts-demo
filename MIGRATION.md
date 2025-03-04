@@ -168,5 +168,8 @@ type Favorites {
 
 ```ts
 updateFavoriteNumber(n: uint64) {
-    this.favorites(this.txn.sender).value {...favorites, number: n};
+    this.favorites.set(
+        Txn.sender, 
+        { ...this.listings.get(Txn.sender),  number: n }
+    );
 ```
