@@ -151,7 +151,7 @@ type ListingKey {
 ```
 
 ```ts
-deposit(xfer: AssetTransferTransaction, nonce: uint64) {
+deposit(xfer: AssetTransferTxn, nonce: uint64) {
     const key: ListingKey = { 
       owner: this.txn.sender,
       asset: xfer.xferAsset,
@@ -172,7 +172,7 @@ export class ListingKey extends arc4.Struct<{
 ```
 
 ```ts
-deposit(xfer: gtxn.AssetTransferTxn, nonce: arc4.UintN64) {
+deposit(xfer: gtxn.AssetTransferTransaction, nonce: arc4.UintN64) {
     const key = new ListingKey({
         owner: new arc4.Address(Txn.sender),
         asset: new arc4.UintN64(xfer.xferAsset.id),
