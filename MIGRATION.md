@@ -131,7 +131,7 @@ assert(swapAsset.assetName === Bytes("SWAP"));
 
 #### TEALScript
 
-TEALScript supports mutable arrays
+TEALScript supports mutable native TypeScript arrays
 
 ```ts
 const myArray: uint64[] = [1, 2, 3];
@@ -140,12 +140,21 @@ myArray.push(4);
 
 #### PuyaTS
 
-PuyaTS arrays are always immutable
+In PuyaTS native arrays are always immutable.
 
 ```ts
 let myArray: uint64[] = [1, 2, 3];
 myArray = [...myArray, 4];
 ```
+
+If you want mutability, there is an explcit `MutableArray` type:
+
+```ts
+let myArray = new MutableArray<uint64>(1, 2, 3]);
+myArray.push(4);
+```
+
+This type, however, can only be used internally. It cannot be put in storage, events, scratch, or used as a public ABI method parameter/return type.
 
 ### Object Mutability
 
