@@ -137,46 +137,36 @@ let myArray: uint64[] = [1, 2, 3];
 myArray = [...myArray, 4];
 ```
 
-### Objects vs Structs
+### Object Mutability
 
 #### TEALScript
 
-TEALScript supports the use of JavaScript objects
+In TEALScript, objects are mutable
 
 ```ts
-type ListingKey {
-    owner: Address,
-    asset: AssetID,
-    nonce: uint64
+type Favorites {
+    color: string,
+    number: uint64,
 }
 ```
 
 ```ts
-deposit(xfer: AssetTransferTxn, nonce: uint64) {
-    const key: ListingKey = { 
-      owner: this.txn.sender,
-      asset: xfer.xferAsset,
-      nonce: nonce
-    }
+updateFavoriteNumber(n: uint64) {
+    this.favorites(this.txn.sender).value.number = n;
 ```
 
 #### PuyaTS
 
-PuyaTS does not support the use of JavaScript objects. Instead, structs must be used and each struct field must be an ARC4 type.
+Like Arrays, all objects are immutable.
 
 ```ts
-export class ListingKey extends arc4.Struct<{
-  owner: arc4.Address
-  asset: arc4.UintN64
-  nonce: arc4.UintN64
-}> {}
+type Favorites {
+    color: string,
+    number: uint64,
+}
 ```
 
 ```ts
-deposit(xfer: gtxn.AssetTransferTransaction, nonce: arc4.UintN64) {
-    const key = new ListingKey({
-        owner: new arc4.Address(Txn.sender),
-        asset: new arc4.UintN64(xfer.xferAsset.id),
-        nonce: nonce,
-    })
+updateFavoriteNumber(n: uint64) {
+    this.favorites(this.txn.sender).value {...favorites, number: n};
 ```
