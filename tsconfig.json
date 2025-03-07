@@ -2,13 +2,17 @@
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
-    "target": "ES2023",
+    "target": "ESNext",
     "module": "ESNext",
     "lib": ["ESNext"],
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "include": ["**/*.ts", "**/*.mts" ],
-  "exclude": ["tealscript_contracts/*"],
+  "include": ["**/*.ts", "**/*.mts"],
+  "exclude": [
+    "contracts/**/*Client.ts",
+    "contracts/**/*.e2e.ts",
+    "contracts/**/*.tealscript.ts",
+  ]
 }
