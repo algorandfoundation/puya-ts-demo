@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "patch-package",
-    "build:puya": "puya-ts build contracts/hello-world contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
-    "build:tealscript": "for i in contracts/{calculator,kitchen-sink}/*.algo.ts; do npx tealscript $i contracts/artifacts; done",
+    "build:puya": "puya-ts build contracts/hello-world contracts/kitchen-sink contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
+    "build:tealscript": "for i in contracts/{calculator}/*.algo.ts; do npx tealscript $i contracts/artifacts; done",
     "test:jest": "tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest",
     "test:vitest": "vitest run",
     "test:e2e": "for i in contracts/**/*.e2e.ts; do echo \"==== Runing $i ===\";npx tsx $i; done"
