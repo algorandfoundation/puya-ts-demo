@@ -2,7 +2,6 @@ import { createDefaultEsmPreset, type JestConfigWithTsJest } from "ts-jest";
 
 const presetConfig = createDefaultEsmPreset({});
 const ignorePatterns = [  
-  "<rootDir>/contracts/calculator/.*.algo.ts",  
   "@algorandfoundation/tealscript"
 ]
 

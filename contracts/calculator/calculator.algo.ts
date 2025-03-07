@@ -1,7 +1,8 @@
-import { Contract } from "@algorandfoundation/tealscript";
+import { arc4, err } from "@algorandfoundation/algorand-typescript";
+import type { uint64 } from "@algorandfoundation/algorand-typescript";
 
 // eslint-disable-next-line no-unused-vars
-class Calculator extends Contract {
+export class Calculator extends arc4.Contract {
   /**
    * Calculates the sum of two numbers
    *
@@ -40,7 +41,7 @@ class Calculator extends Contract {
       result = this.getSum(a, b);
     } else if (operation === 'difference') {
       result = this.getDifference(a, b);
-    } else throw Error('Invalid operation');
+    } else err('Invalid operation');
 
     return result;
   }
