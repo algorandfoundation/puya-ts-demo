@@ -11,9 +11,10 @@
   },
   "include": ["**/*.ts", "**/*.mts"],
   "exclude": [
+    "contracts/**/*Client.ts",
+    "contracts/**/*.e2e.ts",
     "contracts/**/*.tealscript.ts",
     "contracts/calculator/*.algo.ts",
-    "contracts/kitchen-sink/*.algo.ts",
-    "contracts/simple/*.algo.ts"
+    "contracts/kitchen-sink/*.algo.ts"
   ]
 }
