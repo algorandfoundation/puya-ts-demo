@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "patch-package",
-    "build:puya": "puya-ts build contracts/hello-world contracts/kitchen-sink contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
-    "build:tealscript": "tealscript contracts/calculator/*.algo.ts contracts/calculator/out",
+    "build:puya": "puya-ts build contracts/calculator contracts/hello-world contracts/kitchen-sink contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
+    "build:tealscript": "",
     "test:jest": "tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest",
     "test:vitest": "vitest run",
     "format:check": "prettier --check .",
