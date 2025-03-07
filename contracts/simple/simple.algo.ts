@@ -1,29 +1,31 @@
-import { Contract } from "@algorandfoundation/tealscript";
+import { arc4, GlobalState } from '@algorandfoundation/algorand-typescript'
+import type { biguint, uint64 } from '@algorandfoundation/algorand-typescript'
 
-export default class Simple extends Contract {
-  counter = GlobalStateKey<uint64>({ key: 'counter' });
+
+export default class Simple extends arc4.Contract {
+  counter = GlobalState<uint64>({ key: 'counter', initialValue: 0 })
 
   private incrementCounter(i: uint64): void {
-    this.counter.value = this.counter.value + i;
+    this.counter.value = this.counter.value + i
   }
 
   incr(i: uint64): void {
-    this.incrementCounter(i);
+    this.incrementCounter(i)
   }
 
   decr(i: uint64): void {
-    this.counter.value = this.counter.value - i;
+    this.counter.value = this.counter.value - i
   }
 
-  add(a: uint256, b: uint256): uint256 {
-    return a + b;
+  add(a: biguint, b: biguint): biguint {
+    return a + b
   }
 
-  sub(a: uint256, b: uint256): uint256 {
-    return a - b;
+  sub(a: biguint, b: biguint): biguint {
+    return a - b
   }
 
   clearState(): void {
-    this.incrementCounter(1);
+    this.incrementCounter(1)
   }
 }

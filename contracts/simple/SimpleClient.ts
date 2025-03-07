@@ -37,43 +37,25 @@ export const APP_SPEC: AppSpec = {
         "no_op": "CALL"
       }
     },
-    "add(uint256,uint256)uint256": {
+    "add(uint512,uint512)uint512": {
       "call_config": {
         "no_op": "CALL"
       }
     },
-    "sub(uint256,uint256)uint256": {
+    "sub(uint512,uint512)uint512": {
       "call_config": {
         "no_op": "CALL"
       }
     },
-    "createApplication()void": {
+    "clearState()void": {
       "call_config": {
-        "no_op": "CREATE"
+        "no_op": "CALL"
       }
     }
   },
-  "bare_call_config": {
-    "no_op": "NEVER",
-    "opt_in": "NEVER",
-    "close_out": "NEVER",
-    "update_application": "NEVER",
-    "delete_application": "NEVER"
-  },
-  "schema": {
-    "local": {
-      "declared": {},
-      "reserved": {}
-    },
-    "global": {
-      "declared": {
-        "counter": {
-          "type": "uint64",
-          "key": "counter"
-        }
-      },
-      "reserved": {}
-    }
+  "source": {
+    "approval": "I3ByYWdtYSB2ZXJzaW9uIDEwCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBAYWxnb3JhbmRmb3VuZGF0aW9uL2FsZ29yYW5kLXR5cGVzY3JpcHQvYXJjNC9pbmRleC5kLnRzOjpDb250cmFjdC5hcHByb3ZhbFByb2dyYW0oKSAtPiB1aW50NjQ6Cm1haW46CiAgICBpbnRjYmxvY2sgMSAwIDY0CiAgICBieXRlY2Jsb2NrICJjb3VudGVyIiAweDE1MWY3Yzc1CiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYm56IG1haW5fYWZ0ZXJfaWZfZWxzZUAyCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjYKICAgIC8vIGNvdW50ZXIgPSBHbG9iYWxTdGF0ZTx1aW50NjQ+KHsga2V5OiAnY291bnRlcicsIGluaXRpYWxWYWx1ZTogMCB9KQogICAgYnl0ZWNfMCAvLyAiY291bnRlciIKICAgIGludGNfMSAvLyAwCiAgICBhcHBfZ2xvYmFsX3B1dAoKbWFpbl9hZnRlcl9pZl9lbHNlQDI6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjUKICAgIC8vIGV4cG9ydCBkZWZhdWx0IGNsYXNzIFNpbXBsZSBleHRlbmRzIGFyYzQuQ29udHJhY3QgewogICAgdHhuIE51bUFwcEFyZ3MKICAgIGJ6IG1haW5fYmFyZV9yb3V0aW5nQDEyCiAgICBwdXNoYnl0ZXNzIDB4OWZhYjg2MTAgMHgyZTBjNWE0NyAweDFmZjJlODg2IDB4NDUyYTdlZDUgMHgxMTE3MDUzNCAvLyBtZXRob2QgImluY3IodWludDY0KXZvaWQiLCBtZXRob2QgImRlY3IodWludDY0KXZvaWQiLCBtZXRob2QgImFkZCh1aW50NTEyLHVpbnQ1MTIpdWludDUxMiIsIG1ldGhvZCAic3ViKHVpbnQ1MTIsdWludDUxMil1aW50NTEyIiwgbWV0aG9kICJjbGVhclN0YXRlKCl2b2lkIgogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAogICAgbWF0Y2ggbWFpbl9pbmNyX3JvdXRlQDUgbWFpbl9kZWNyX3JvdXRlQDYgbWFpbl9hZGRfcm91dGVANyBtYWluX3N1Yl9yb3V0ZUA4IG1haW5fY2xlYXJTdGF0ZV9yb3V0ZUA5CgptYWluX2FmdGVyX2lmX2Vsc2VAMTY6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjUKICAgIC8vIGV4cG9ydCBkZWZhdWx0IGNsYXNzIFNpbXBsZSBleHRlbmRzIGFyYzQuQ29udHJhY3QgewogICAgaW50Y18xIC8vIDAKICAgIHJldHVybgoKbWFpbl9jbGVhclN0YXRlX3JvdXRlQDk6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjI4CiAgICAvLyBjbGVhclN0YXRlKCk6IHZvaWQgewogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBub3QgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBjYW4gb25seSBjYWxsIHdoZW4gbm90IGNyZWF0aW5nCiAgICBjYWxsc3ViIGNsZWFyU3RhdGUKICAgIGludGNfMCAvLyAxCiAgICByZXR1cm4KCm1haW5fc3ViX3JvdXRlQDg6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjI0CiAgICAvLyBzdWIoYTogYmlndWludCwgYjogYmlndWludCk6IGJpZ3VpbnQgewogICAgdHhuIE9uQ29tcGxldGlvbgogICAgIQogICAgYXNzZXJ0IC8vIE9uQ29tcGxldGlvbiBpcyBub3QgTm9PcAogICAgdHhuIEFwcGxpY2F0aW9uSUQKICAgIGFzc2VydCAvLyBjYW4gb25seSBjYWxsIHdoZW4gbm90IGNyZWF0aW5nCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjUKICAgIC8vIGV4cG9ydCBkZWZhdWx0IGNsYXNzIFNpbXBsZSBleHRlbmRzIGFyYzQuQ29udHJhY3QgewogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQogICAgdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMgogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czoyNAogICAgLy8gc3ViKGE6IGJpZ3VpbnQsIGI6IGJpZ3VpbnQpOiBiaWd1aW50IHsKICAgIGNhbGxzdWIgc3ViCiAgICBkdXAKICAgIGxlbgogICAgaW50Y18yIC8vIDY0CiAgICA8PQogICAgYXNzZXJ0IC8vIG92ZXJmbG93CiAgICBpbnRjXzIgLy8gNjQKICAgIGJ6ZXJvCiAgICBifAogICAgYnl0ZWNfMSAvLyAweDE1MWY3Yzc1CiAgICBzd2FwCiAgICBjb25jYXQKICAgIGxvZwogICAgaW50Y18wIC8vIDEKICAgIHJldHVybgoKbWFpbl9hZGRfcm91dGVANzoKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MjAKICAgIC8vIGFkZChhOiBiaWd1aW50LCBiOiBiaWd1aW50KTogYmlndWludCB7CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gT25Db21wbGV0aW9uIGlzIG5vdCBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGNhbiBvbmx5IGNhbGwgd2hlbiBub3QgY3JlYXRpbmcKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NQogICAgLy8gZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2ltcGxlIGV4dGVuZHMgYXJjNC5Db250cmFjdCB7CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAyCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjIwCiAgICAvLyBhZGQoYTogYmlndWludCwgYjogYmlndWludCk6IGJpZ3VpbnQgewogICAgY2FsbHN1YiBhZGQKICAgIGR1cAogICAgbGVuCiAgICBpbnRjXzIgLy8gNjQKICAgIDw9CiAgICBhc3NlcnQgLy8gb3ZlcmZsb3cKICAgIGludGNfMiAvLyA2NAogICAgYnplcm8KICAgIGJ8CiAgICBieXRlY18xIC8vIDB4MTUxZjdjNzUKICAgIHN3YXAKICAgIGNvbmNhdAogICAgbG9nCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2RlY3Jfcm91dGVANjoKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MTYKICAgIC8vIGRlY3IoaTogdWludDY0KTogdm9pZCB7CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gT25Db21wbGV0aW9uIGlzIG5vdCBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGNhbiBvbmx5IGNhbGwgd2hlbiBub3QgY3JlYXRpbmcKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NQogICAgLy8gZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2ltcGxlIGV4dGVuZHMgYXJjNC5Db250cmFjdCB7CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBidG9pCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjE2CiAgICAvLyBkZWNyKGk6IHVpbnQ2NCk6IHZvaWQgewogICAgY2FsbHN1YiBkZWNyCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2luY3Jfcm91dGVANToKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MTIKICAgIC8vIGluY3IoaTogdWludDY0KTogdm9pZCB7CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICAhCiAgICBhc3NlcnQgLy8gT25Db21wbGV0aW9uIGlzIG5vdCBOb09wCiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgYXNzZXJ0IC8vIGNhbiBvbmx5IGNhbGwgd2hlbiBub3QgY3JlYXRpbmcKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NQogICAgLy8gZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2ltcGxlIGV4dGVuZHMgYXJjNC5Db250cmFjdCB7CiAgICB0eG5hIEFwcGxpY2F0aW9uQXJncyAxCiAgICBidG9pCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjEyCiAgICAvLyBpbmNyKGk6IHVpbnQ2NCk6IHZvaWQgewogICAgY2FsbHN1YiBpbmNyCiAgICBpbnRjXzAgLy8gMQogICAgcmV0dXJuCgptYWluX2JhcmVfcm91dGluZ0AxMjoKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NQogICAgLy8gZXhwb3J0IGRlZmF1bHQgY2xhc3MgU2ltcGxlIGV4dGVuZHMgYXJjNC5Db250cmFjdCB7CiAgICB0eG4gT25Db21wbGV0aW9uCiAgICBibnogbWFpbl9hZnRlcl9pZl9lbHNlQDE2CiAgICB0eG4gQXBwbGljYXRpb25JRAogICAgIQogICAgYXNzZXJ0IC8vIGNhbiBvbmx5IGNhbGwgd2hlbiBjcmVhdGluZwogICAgaW50Y18wIC8vIDEKICAgIHJldHVybgoKCi8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6OlNpbXBsZS5pbmNyZW1lbnRDb3VudGVyKGk6IHVpbnQ2NCkgLT4gdm9pZDoKaW5jcmVtZW50Q291bnRlcjoKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6OAogICAgLy8gcHJpdmF0ZSBpbmNyZW1lbnRDb3VudGVyKGk6IHVpbnQ2NCk6IHZvaWQgewogICAgcHJvdG8gMSAwCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjYKICAgIC8vIGNvdW50ZXIgPSBHbG9iYWxTdGF0ZTx1aW50NjQ+KHsga2V5OiAnY291bnRlcicsIGluaXRpYWxWYWx1ZTogMCB9KQogICAgaW50Y18xIC8vIDAKICAgIGJ5dGVjXzAgLy8gImNvdW50ZXIiCiAgICBhcHBfZ2xvYmFsX2dldF9leAogICAgYXNzZXJ0IC8vIGNoZWNrIEdsb2JhbFN0YXRlIGV4aXN0cwogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo5CiAgICAvLyB0aGlzLmNvdW50ZXIudmFsdWUgPSB0aGlzLmNvdW50ZXIudmFsdWUgKyBpCiAgICBmcmFtZV9kaWcgLTEKICAgICsKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NgogICAgLy8gY291bnRlciA9IEdsb2JhbFN0YXRlPHVpbnQ2ND4oeyBrZXk6ICdjb3VudGVyJywgaW5pdGlhbFZhbHVlOiAwIH0pCiAgICBieXRlY18wIC8vICJjb3VudGVyIgogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo5CiAgICAvLyB0aGlzLmNvdW50ZXIudmFsdWUgPSB0aGlzLmNvdW50ZXIudmFsdWUgKyBpCiAgICBzd2FwCiAgICBhcHBfZ2xvYmFsX3B1dAogICAgcmV0c3ViCgoKLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo6U2ltcGxlLmluY3IoaTogdWludDY0KSAtPiB2b2lkOgppbmNyOgogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czoxMgogICAgLy8gaW5jcihpOiB1aW50NjQpOiB2b2lkIHsKICAgIHByb3RvIDEgMAogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czoxMwogICAgLy8gdGhpcy5pbmNyZW1lbnRDb3VudGVyKGkpCiAgICBmcmFtZV9kaWcgLTEKICAgIGNhbGxzdWIgaW5jcmVtZW50Q291bnRlcgogICAgcmV0c3ViCgoKLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo6U2ltcGxlLmRlY3IoaTogdWludDY0KSAtPiB2b2lkOgpkZWNyOgogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czoxNgogICAgLy8gZGVjcihpOiB1aW50NjQpOiB2b2lkIHsKICAgIHByb3RvIDEgMAogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo2CiAgICAvLyBjb3VudGVyID0gR2xvYmFsU3RhdGU8dWludDY0Pih7IGtleTogJ2NvdW50ZXInLCBpbml0aWFsVmFsdWU6IDAgfSkKICAgIGludGNfMSAvLyAwCiAgICBieXRlY18wIC8vICJjb3VudGVyIgogICAgYXBwX2dsb2JhbF9nZXRfZXgKICAgIGFzc2VydCAvLyBjaGVjayBHbG9iYWxTdGF0ZSBleGlzdHMKICAgIC8vIGNvbnRyYWN0cy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MTcKICAgIC8vIHRoaXMuY291bnRlci52YWx1ZSA9IHRoaXMuY291bnRlci52YWx1ZSAtIGkKICAgIGZyYW1lX2RpZyAtMQogICAgLQogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo2CiAgICAvLyBjb3VudGVyID0gR2xvYmFsU3RhdGU8dWludDY0Pih7IGtleTogJ2NvdW50ZXInLCBpbml0aWFsVmFsdWU6IDAgfSkKICAgIGJ5dGVjXzAgLy8gImNvdW50ZXIiCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjE3CiAgICAvLyB0aGlzLmNvdW50ZXIudmFsdWUgPSB0aGlzLmNvdW50ZXIudmFsdWUgLSBpCiAgICBzd2FwCiAgICBhcHBfZ2xvYmFsX3B1dAogICAgcmV0c3ViCgoKLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo6U2ltcGxlLmFkZChhOiBieXRlcywgYjogYnl0ZXMpIC0+IGJ5dGVzOgphZGQ6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjIwCiAgICAvLyBhZGQoYTogYmlndWludCwgYjogYmlndWludCk6IGJpZ3VpbnQgewogICAgcHJvdG8gMiAxCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjIxCiAgICAvLyByZXR1cm4gYSArIGIKICAgIGZyYW1lX2RpZyAtMgogICAgZnJhbWVfZGlnIC0xCiAgICBiKwogICAgcmV0c3ViCgoKLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo6U2ltcGxlLnN1YihhOiBieXRlcywgYjogYnl0ZXMpIC0+IGJ5dGVzOgpzdWI6CiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjI0CiAgICAvLyBzdWIoYTogYmlndWludCwgYjogYmlndWludCk6IGJpZ3VpbnQgewogICAgcHJvdG8gMiAxCiAgICAvLyBjb250cmFjdHMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjI1CiAgICAvLyByZXR1cm4gYSAtIGIKICAgIGZyYW1lX2RpZyAtMgogICAgZnJhbWVfZGlnIC0xCiAgICBiLQogICAgcmV0c3ViCgoKLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czo6U2ltcGxlLmNsZWFyU3RhdGUoKSAtPiB2b2lkOgpjbGVhclN0YXRlOgogICAgLy8gY29udHJhY3RzL3NpbXBsZS9zaW1wbGUuYWxnby50czoyOQogICAgLy8gdGhpcy5pbmNyZW1lbnRDb3VudGVyKDEpCiAgICBpbnRjXzAgLy8gMQogICAgY2FsbHN1YiBpbmNyZW1lbnRDb3VudGVyCiAgICByZXRzdWIK",
+    "clear": "I3ByYWdtYSB2ZXJzaW9uIDEwCiNwcmFnbWEgdHlwZXRyYWNrIGZhbHNlCgovLyBAYWxnb3JhbmRmb3VuZGF0aW9uL2FsZ29yYW5kLXR5cGVzY3JpcHQvYmFzZS1jb250cmFjdC5kLnRzOjpCYXNlQ29udHJhY3QuY2xlYXJTdGF0ZVByb2dyYW0oKSAtPiB1aW50NjQ6Cm1haW46CiAgICBwdXNoaW50IDEgLy8gMQogICAgcmV0dXJuCg=="
   },
   "state": {
     "global": {
@@ -85,22 +67,33 @@ export const APP_SPEC: AppSpec = {
       "num_uints": 0
     }
   },
-  "source": {
-    "approval": "I3ByYWdtYSB2ZXJzaW9uIDkKCi8vIFRoaXMgVEVBTCB3YXMgZ2VuZXJhdGVkIGJ5IFRFQUxTY3JpcHQgdjAuNjcuMwovLyBodHRwczovL2dpdGh1Yi5jb20vYWxnb3JhbmRmb3VuZGF0aW9uL1RFQUxTY3JpcHQKCi8vIFRoaXMgY29udHJhY3QgaXMgY29tcGxpYW50IHdpdGggYW5kL29yIGltcGxlbWVudHMgdGhlIGZvbGxvd2luZyBBUkNzOiBbIEFSQzQgXQoKLy8gVGhlIGZvbGxvd2luZyB0ZW4gbGluZXMgb2YgVEVBTCBoYW5kbGUgaW5pdGlhbCBwcm9ncmFtIGZsb3cKLy8gVGhpcyBwYXR0ZXJuIGlzIHVzZWQgdG8gbWFrZSBpdCBlYXN5IGZvciBhbnlvbmUgdG8gcGFyc2UgdGhlIHN0YXJ0IG9mIHRoZSBwcm9ncmFtIGFuZCBkZXRlcm1pbmUgaWYgYSBzcGVjaWZpYyBhY3Rpb24gaXMgYWxsb3dlZAovLyBIZXJlLCBhY3Rpb24gcmVmZXJzIHRvIHRoZSBPbkNvbXBsZXRlIGluIGNvbWJpbmF0aW9uIHdpdGggd2hldGhlciB0aGUgYXBwIGlzIGJlaW5nIGNyZWF0ZWQgb3IgY2FsbGVkCi8vIEV2ZXJ5IHBvc3NpYmxlIGFjdGlvbiBmb3IgdGhpcyBjb250cmFjdCBpcyByZXByZXNlbnRlZCBpbiB0aGUgc3dpdGNoIHN0YXRlbWVudAovLyBJZiB0aGUgYWN0aW9uIGlzIG5vdCBpbXBsbWVudGVkIGluIHRoZSBjb250cmFjdCwgaXRzIHJlc3BlY3RpdmUgYnJhbmNoIHdpbGwgYmUgIk5PVF9JTVBMRU1FTlRFRCIgd2hpY2gganVzdCBjb250YWlucyAiZXJyIgp0eG4gQXBwbGljYXRpb25JRAppbnQgMAo+CmludCA2CioKdHhuIE9uQ29tcGxldGlvbgorCnN3aXRjaCBjcmVhdGVfTm9PcCBOT1RfSU1QTEVNRU5URUQgTk9UX0lNUExFTUVOVEVEIE5PVF9JTVBMRU1FTlRFRCBOT1RfSU1QTEVNRU5URUQgTk9UX0lNUExFTUVOVEVEIGNhbGxfTm9PcAoKTk9UX0lNUExFTUVOVEVEOgoJZXJyCgovLyBpbmNyZW1lbnRDb3VudGVyKHVpbnQ2NCl2b2lkCmluY3JlbWVudENvdW50ZXI6Cglwcm90byAxIDAKCgkvLyBleGFtcGxlcy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6NwoJLy8gdGhpcy5jb3VudGVyLnZhbHVlID0gdGhpcy5jb3VudGVyLnZhbHVlICsgaQoJYnl0ZSAweDYzNmY3NTZlNzQ2NTcyIC8vICJjb3VudGVyIgoJZHVwCglhcHBfZ2xvYmFsX2dldAoJZnJhbWVfZGlnIC0xIC8vIGk6IHVpbnQ2NAoJKwoJYXBwX2dsb2JhbF9wdXQKCXJldHN1YgoKYWJpX3JvdXRlX2luY3I6CgkvLyBpOiB1aW50NjQKCXR4bmEgQXBwbGljYXRpb25BcmdzIDEKCWJ0b2kKCgkvLyBleGVjdXRlIGluY3IodWludDY0KXZvaWQKCWNhbGxzdWIgaW5jcgoJaW50IDEKCXJldHVybgoKLy8gaW5jcih1aW50NjQpdm9pZAppbmNyOgoJcHJvdG8gMSAwCgoJLy8gZXhhbXBsZXMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjExCgkvLyB0aGlzLmluY3JlbWVudENvdW50ZXIoaSkKCWZyYW1lX2RpZyAtMSAvLyBpOiB1aW50NjQKCWNhbGxzdWIgaW5jcmVtZW50Q291bnRlcgoJcmV0c3ViCgphYmlfcm91dGVfZGVjcjoKCS8vIGk6IHVpbnQ2NAoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJYnRvaQoKCS8vIGV4ZWN1dGUgZGVjcih1aW50NjQpdm9pZAoJY2FsbHN1YiBkZWNyCglpbnQgMQoJcmV0dXJuCgovLyBkZWNyKHVpbnQ2NCl2b2lkCmRlY3I6Cglwcm90byAxIDAKCgkvLyBleGFtcGxlcy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MTUKCS8vIHRoaXMuY291bnRlci52YWx1ZSA9IHRoaXMuY291bnRlci52YWx1ZSAtIGkKCWJ5dGUgMHg2MzZmNzU2ZTc0NjU3MiAvLyAiY291bnRlciIKCWR1cAoJYXBwX2dsb2JhbF9nZXQKCWZyYW1lX2RpZyAtMSAvLyBpOiB1aW50NjQKCS0KCWFwcF9nbG9iYWxfcHV0CglyZXRzdWIKCmFiaV9yb3V0ZV9hZGQ6CgkvLyBUaGUgQUJJIHJldHVybiBwcmVmaXgKCWJ5dGUgMHgxNTFmN2M3NQoKCS8vIGI6IHVpbnQyNTYKCXR4bmEgQXBwbGljYXRpb25BcmdzIDIKCWR1cAoJbGVuCglpbnQgMzIKCT09Cglhc3NlcnQKCgkvLyBhOiB1aW50MjU2Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAxCglkdXAKCWxlbgoJaW50IDMyCgk9PQoJYXNzZXJ0CgoJLy8gZXhlY3V0ZSBhZGQodWludDI1Nix1aW50MjU2KXVpbnQyNTYKCWNhbGxzdWIgYWRkCgljb25jYXQKCWxvZwoJaW50IDEKCXJldHVybgoKLy8gYWRkKHVpbnQyNTYsdWludDI1Nil1aW50MjU2CmFkZDoKCXByb3RvIDIgMQoKCS8vIGV4YW1wbGVzL3NpbXBsZS9zaW1wbGUuYWxnby50czoxOQoJLy8gcmV0dXJuIGEgKyBiOwoJZnJhbWVfZGlnIC0xIC8vIGE6IHVpbnQ8MjU2PgoJZnJhbWVfZGlnIC0yIC8vIGI6IHVpbnQ8MjU2PgoJYisKCWR1cAoJYml0bGVuCglpbnQgMjU2Cgk8PQoJYXNzZXJ0CglieXRlIDB4RkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRgoJYiYKCWR1cAoJbGVuCglkdXAKCWludCAzMgoJLQoJc3dhcAoJc3Vic3RyaW5nMwoJcmV0c3ViCgphYmlfcm91dGVfc3ViOgoJLy8gVGhlIEFCSSByZXR1cm4gcHJlZml4CglieXRlIDB4MTUxZjdjNzUKCgkvLyBiOiB1aW50MjU2Cgl0eG5hIEFwcGxpY2F0aW9uQXJncyAyCglkdXAKCWxlbgoJaW50IDMyCgk9PQoJYXNzZXJ0CgoJLy8gYTogdWludDI1NgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMQoJZHVwCglsZW4KCWludCAzMgoJPT0KCWFzc2VydAoKCS8vIGV4ZWN1dGUgc3ViKHVpbnQyNTYsdWludDI1Nil1aW50MjU2CgljYWxsc3ViIHN1YgoJY29uY2F0Cglsb2cKCWludCAxCglyZXR1cm4KCi8vIHN1Yih1aW50MjU2LHVpbnQyNTYpdWludDI1NgpzdWI6Cglwcm90byAyIDEKCgkvLyBleGFtcGxlcy9zaW1wbGUvc2ltcGxlLmFsZ28udHM6MjMKCS8vIHJldHVybiBhIC0gYjsKCWZyYW1lX2RpZyAtMSAvLyBhOiB1aW50PDI1Nj4KCWZyYW1lX2RpZyAtMiAvLyBiOiB1aW50PDI1Nj4KCWItCglkdXAKCWJpdGxlbgoJaW50IDI1NgoJPD0KCWFzc2VydAoJYnl0ZSAweEZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkYKCWImCglkdXAKCWxlbgoJZHVwCglpbnQgMzIKCS0KCXN3YXAKCXN1YnN0cmluZzMKCXJldHN1YgoKYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uOgoJaW50IDEKCXJldHVybgoKY3JlYXRlX05vT3A6CgltZXRob2QgImNyZWF0ZUFwcGxpY2F0aW9uKCl2b2lkIgoJdHhuYSBBcHBsaWNhdGlvbkFyZ3MgMAoJbWF0Y2ggYWJpX3JvdXRlX2NyZWF0ZUFwcGxpY2F0aW9uCgllcnIKCmNhbGxfTm9PcDoKCW1ldGhvZCAiaW5jcih1aW50NjQpdm9pZCIKCW1ldGhvZCAiZGVjcih1aW50NjQpdm9pZCIKCW1ldGhvZCAiYWRkKHVpbnQyNTYsdWludDI1Nil1aW50MjU2IgoJbWV0aG9kICJzdWIodWludDI1Nix1aW50MjU2KXVpbnQyNTYiCgl0eG5hIEFwcGxpY2F0aW9uQXJncyAwCgltYXRjaCBhYmlfcm91dGVfaW5jciBhYmlfcm91dGVfZGVjciBhYmlfcm91dGVfYWRkIGFiaV9yb3V0ZV9zdWIKCWVycg==",
-    "clear": "I3ByYWdtYSB2ZXJzaW9uIDkKCi8vIGV4YW1wbGVzL3NpbXBsZS9zaW1wbGUuYWxnby50czoyNwovLyB0aGlzLmluY3JlbWVudENvdW50ZXIoMSkKaW50IDEKY2FsbHN1YiBpbmNyZW1lbnRDb3VudGVyCmludCAxCnJldHVybgoKLy8gaW5jcmVtZW50Q291bnRlcih1aW50NjQpdm9pZAppbmNyZW1lbnRDb3VudGVyOgoJcHJvdG8gMSAwCgoJLy8gZXhhbXBsZXMvc2ltcGxlL3NpbXBsZS5hbGdvLnRzOjcKCS8vIHRoaXMuY291bnRlci52YWx1ZSA9IHRoaXMuY291bnRlci52YWx1ZSArIGkKCWJ5dGUgMHg2MzZmNzU2ZTc0NjU3MiAvLyAiY291bnRlciIKCWR1cAoJYXBwX2dsb2JhbF9nZXQKCWZyYW1lX2RpZyAtMSAvLyBpOiB1aW50NjQKCSsKCWFwcF9nbG9iYWxfcHV0CglyZXRzdWI="
+  "schema": {
+    "global": {
+      "declared": {
+        "counter": {
+          "type": "uint64",
+          "key": "counter"
+        }
+      },
+      "reserved": {}
+    },
+    "local": {
+      "declared": {},
+      "reserved": {}
+    }
   },
   "contract": {
     "name": "Simple",
-    "desc": "",
     "methods": [
       {
         "name": "incr",
         "args": [
           {
-            "name": "i",
-            "type": "uint64"
+            "type": "uint64",
+            "name": "i"
           }
         ],
+        "readonly": false,
         "returns": {
           "type": "void"
         }
@@ -109,10 +102,11 @@ export const APP_SPEC: AppSpec = {
         "name": "decr",
         "args": [
           {
-            "name": "i",
-            "type": "uint64"
+            "type": "uint64",
+            "name": "i"
           }
         ],
+        "readonly": false,
         "returns": {
           "type": "void"
         }
@@ -121,42 +115,49 @@ export const APP_SPEC: AppSpec = {
         "name": "add",
         "args": [
           {
-            "name": "a",
-            "type": "uint256"
+            "type": "uint512",
+            "name": "a"
           },
           {
-            "name": "b",
-            "type": "uint256"
+            "type": "uint512",
+            "name": "b"
           }
         ],
+        "readonly": false,
         "returns": {
-          "type": "uint256"
+          "type": "uint512"
         }
       },
       {
         "name": "sub",
         "args": [
           {
-            "name": "a",
-            "type": "uint256"
+            "type": "uint512",
+            "name": "a"
           },
           {
-            "name": "b",
-            "type": "uint256"
+            "type": "uint512",
+            "name": "b"
           }
         ],
+        "readonly": false,
         "returns": {
-          "type": "uint256"
+          "type": "uint512"
         }
       },
       {
-        "name": "createApplication",
+        "name": "clearState",
         "args": [],
+        "readonly": false,
         "returns": {
           "type": "void"
         }
       }
-    ]
+    ],
+    "networks": {}
+  },
+  "bare_call_config": {
+    "no_op": "CREATE"
   }
 }
 
@@ -229,7 +230,7 @@ export type Simple = {
       argsTuple: [i: bigint | number]
       returns: void
     }>
-    & Record<'add(uint256,uint256)uint256' | 'add', {
+    & Record<'add(uint512,uint512)uint512' | 'add', {
       argsObj: {
         a: bigint | number
         b: bigint | number
@@ -237,7 +238,7 @@ export type Simple = {
       argsTuple: [a: bigint | number, b: bigint | number]
       returns: bigint
     }>
-    & Record<'sub(uint256,uint256)uint256' | 'sub', {
+    & Record<'sub(uint512,uint512)uint512' | 'sub', {
       argsObj: {
         a: bigint | number
         b: bigint | number
@@ -245,7 +246,7 @@ export type Simple = {
       argsTuple: [a: bigint | number, b: bigint | number]
       returns: bigint
     }>
-    & Record<'createApplication()void' | 'createApplication', {
+    & Record<'clearState()void' | 'clearState', {
       argsObj: {
       }
       argsTuple: []
@@ -292,7 +293,7 @@ export type SimpleCreateCalls = (typeof SimpleCallFactory)['create']
  * Defines supported create methods for this smart contract
  */
 export type SimpleCreateCallParams =
-  | (TypedCallParams<'createApplication()void'> & (OnCompleteNoOp))
+  | (TypedCallParams<undefined> & (OnCompleteNoOp))
 /**
  * Defines arguments required for the deploy method.
  */
@@ -315,16 +316,15 @@ export abstract class SimpleCallFactory {
   static get create() {
     return {
       /**
-       * Constructs a create call for the Simple smart contract using the createApplication()void ABI method
+       * Constructs a create call for the Simple smart contract using a bare call
        *
-       * @param args Any args for the contract call
-       * @param params Any additional parameters for the call
+       * @param params Any parameters for the call
        * @returns A TypedCallParams object for the call
        */
-      createApplication(args: MethodArgs<'createApplication()void'>, params: AppClientCallCoreParams & CoreAppCallArgs & AppClientCompilationParams & (OnCompleteNoOp) = {}) {
+      bare(params: BareCallArgs & AppClientCallCoreParams & CoreAppCallArgs & AppClientCompilationParams & (OnCompleteNoOp) = {}) {
         return {
-          method: 'createApplication()void' as const,
-          methodArgs: Array.isArray(args) ? args : [],
+          method: undefined,
+          methodArgs: undefined,
           ...params,
         }
       },
@@ -360,30 +360,44 @@ export abstract class SimpleCallFactory {
     }
   }
   /**
-   * Constructs a no op call for the add(uint256,uint256)uint256 ABI method
+   * Constructs a no op call for the add(uint512,uint512)uint512 ABI method
    *
    * @param args Any args for the contract call
    * @param params Any additional parameters for the call
    * @returns A TypedCallParams object for the call
    */
-  static add(args: MethodArgs<'add(uint256,uint256)uint256'>, params: AppClientCallCoreParams & CoreAppCallArgs) {
+  static add(args: MethodArgs<'add(uint512,uint512)uint512'>, params: AppClientCallCoreParams & CoreAppCallArgs) {
     return {
-      method: 'add(uint256,uint256)uint256' as const,
+      method: 'add(uint512,uint512)uint512' as const,
       methodArgs: Array.isArray(args) ? args : [args.a, args.b],
       ...params,
     }
   }
   /**
-   * Constructs a no op call for the sub(uint256,uint256)uint256 ABI method
+   * Constructs a no op call for the sub(uint512,uint512)uint512 ABI method
    *
    * @param args Any args for the contract call
    * @param params Any additional parameters for the call
    * @returns A TypedCallParams object for the call
    */
-  static sub(args: MethodArgs<'sub(uint256,uint256)uint256'>, params: AppClientCallCoreParams & CoreAppCallArgs) {
+  static sub(args: MethodArgs<'sub(uint512,uint512)uint512'>, params: AppClientCallCoreParams & CoreAppCallArgs) {
     return {
-      method: 'sub(uint256,uint256)uint256' as const,
+      method: 'sub(uint512,uint512)uint512' as const,
       methodArgs: Array.isArray(args) ? args : [args.a, args.b],
+      ...params,
+    }
+  }
+  /**
+   * Constructs a no op call for the clearState()void ABI method
+   *
+   * @param args Any args for the contract call
+   * @param params Any additional parameters for the call
+   * @returns A TypedCallParams object for the call
+   */
+  static clearState(args: MethodArgs<'clearState()void'>, params: AppClientCallCoreParams & CoreAppCallArgs) {
+    return {
+      method: 'clearState()void' as const,
+      methodArgs: Array.isArray(args) ? args : [],
       ...params,
     }
   }
@@ -464,14 +478,13 @@ export class SimpleClient {
     const $this = this
     return {
       /**
-       * Creates a new instance of the Simple smart contract using the createApplication()void ABI method.
+       * Creates a new instance of the Simple smart contract using a bare call.
        *
-       * @param args The arguments for the smart contract call
-       * @param params Any additional parameters for the call
+       * @param args The arguments for the bare call
        * @returns The create result
        */
-      async createApplication(args: MethodArgs<'createApplication()void'>, params: AppClientCallCoreParams & AppClientCompilationParams & (OnCompleteNoOp) = {}): Promise<AppCallTransactionResultOfType<MethodReturn<'createApplication()void'>>> {
-        return $this.mapReturnValue(await $this.appClient.create(SimpleCallFactory.create.createApplication(args, params)))
+      bare(args: BareCallArgs & AppClientCallCoreParams & AppClientCompilationParams & CoreAppCallArgs & (OnCompleteNoOp) = {}): Promise<AppCallTransactionResultOfType<undefined>> {
+        return $this.appClient.create(args) as unknown as Promise<AppCallTransactionResultOfType<undefined>>
       },
     }
   }
@@ -509,25 +522,36 @@ export class SimpleClient {
   }
 
   /**
-   * Calls the add(uint256,uint256)uint256 ABI method.
+   * Calls the add(uint512,uint512)uint512 ABI method.
    *
    * @param args The arguments for the contract call
    * @param params Any additional parameters for the call
    * @returns The result of the call
    */
-  public add(args: MethodArgs<'add(uint256,uint256)uint256'>, params: AppClientCallCoreParams & CoreAppCallArgs = {}) {
+  public add(args: MethodArgs<'add(uint512,uint512)uint512'>, params: AppClientCallCoreParams & CoreAppCallArgs = {}) {
     return this.call(SimpleCallFactory.add(args, params))
   }
 
   /**
-   * Calls the sub(uint256,uint256)uint256 ABI method.
+   * Calls the sub(uint512,uint512)uint512 ABI method.
    *
    * @param args The arguments for the contract call
    * @param params Any additional parameters for the call
    * @returns The result of the call
    */
-  public sub(args: MethodArgs<'sub(uint256,uint256)uint256'>, params: AppClientCallCoreParams & CoreAppCallArgs = {}) {
+  public sub(args: MethodArgs<'sub(uint512,uint512)uint512'>, params: AppClientCallCoreParams & CoreAppCallArgs = {}) {
     return this.call(SimpleCallFactory.sub(args, params))
+  }
+
+  /**
+   * Calls the clearState()void ABI method.
+   *
+   * @param args The arguments for the contract call
+   * @param params Any additional parameters for the call
+   * @returns The result of the call
+   */
+  public clearState(args: MethodArgs<'clearState()void'>, params: AppClientCallCoreParams & CoreAppCallArgs = {}) {
+    return this.call(SimpleCallFactory.clearState(args, params))
   }
 
   /**
@@ -602,13 +626,18 @@ export class SimpleClient {
         resultMappers.push(undefined)
         return this
       },
-      add(args: MethodArgs<'add(uint256,uint256)uint256'>, params?: AppClientCallCoreParams & CoreAppCallArgs) {
+      add(args: MethodArgs<'add(uint512,uint512)uint512'>, params?: AppClientCallCoreParams & CoreAppCallArgs) {
         promiseChain = promiseChain.then(() => client.add(args, {...params, sendParams: {...params?.sendParams, skipSending: true, atc}}))
         resultMappers.push(undefined)
         return this
       },
-      sub(args: MethodArgs<'sub(uint256,uint256)uint256'>, params?: AppClientCallCoreParams & CoreAppCallArgs) {
+      sub(args: MethodArgs<'sub(uint512,uint512)uint512'>, params?: AppClientCallCoreParams & CoreAppCallArgs) {
         promiseChain = promiseChain.then(() => client.sub(args, {...params, sendParams: {...params?.sendParams, skipSending: true, atc}}))
+        resultMappers.push(undefined)
+        return this
+      },
+      clearState(args: MethodArgs<'clearState()void'>, params?: AppClientCallCoreParams & CoreAppCallArgs) {
+        promiseChain = promiseChain.then(() => client.clearState(args, {...params, sendParams: {...params?.sendParams, skipSending: true, atc}}))
         resultMappers.push(undefined)
         return this
       },
@@ -661,22 +690,31 @@ export type SimpleComposer<TReturns extends [...any[]] = []> = {
   decr(args: MethodArgs<'decr(uint64)void'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'decr(uint64)void'>]>
 
   /**
-   * Calls the add(uint256,uint256)uint256 ABI method.
+   * Calls the add(uint512,uint512)uint512 ABI method.
    *
    * @param args The arguments for the contract call
    * @param params Any additional parameters for the call
    * @returns The typed transaction composer so you can fluently chain multiple calls or call execute to execute all queued up transactions
    */
-  add(args: MethodArgs<'add(uint256,uint256)uint256'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'add(uint256,uint256)uint256'>]>
+  add(args: MethodArgs<'add(uint512,uint512)uint512'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'add(uint512,uint512)uint512'>]>
 
   /**
-   * Calls the sub(uint256,uint256)uint256 ABI method.
+   * Calls the sub(uint512,uint512)uint512 ABI method.
    *
    * @param args The arguments for the contract call
    * @param params Any additional parameters for the call
    * @returns The typed transaction composer so you can fluently chain multiple calls or call execute to execute all queued up transactions
    */
-  sub(args: MethodArgs<'sub(uint256,uint256)uint256'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'sub(uint256,uint256)uint256'>]>
+  sub(args: MethodArgs<'sub(uint512,uint512)uint512'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'sub(uint512,uint512)uint512'>]>
+
+  /**
+   * Calls the clearState()void ABI method.
+   *
+   * @param args The arguments for the contract call
+   * @param params Any additional parameters for the call
+   * @returns The typed transaction composer so you can fluently chain multiple calls or call execute to execute all queued up transactions
+   */
+  clearState(args: MethodArgs<'clearState()void'>, params?: AppClientCallCoreParams & CoreAppCallArgs): SimpleComposer<[...TReturns, MethodReturn<'clearState()void'>]>
 
   /**
    * Makes a clear_state call to an existing instance of the Simple smart contract.

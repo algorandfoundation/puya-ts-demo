@@ -1,10 +1,10 @@
 import { createDefaultEsmPreset, type JestConfigWithTsJest } from "ts-jest";
 
 const presetConfig = createDefaultEsmPreset({});
-const ignorePatterns = [
+const ignorePatterns = [  
   "<rootDir>/contracts/calculator/.*.algo.ts",
-  "<rootDir>/contracts/kitchen-sink/.*.algo.ts",
-  "<rootDir>/contracts/simple/.*.algo.ts",
+  "<rootDir>/contracts/kitchen-sink/.*.algo.ts",  
+  "<rootDir>/contracts/kitchen-sink/.*.algo.ts",  
   "@algorandfoundation/tealscript"
 ]
 
