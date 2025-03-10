@@ -55,6 +55,12 @@ Decorators must be used to specify the action/OC.
 createApplication() {
 ```
 
+The exception is for `NoOp` calls, which do not need a decorator
+
+```ts
+myPublicMethod() {
+```
+
 ### Math Typing
 
 #### TEALScript
@@ -80,7 +86,6 @@ getSum(x: uint64, y: uint64): uint64 {
 ```
 
 or
-
 
 ```ts
 getSum(x: uint64, y: uint64): uint64 {
