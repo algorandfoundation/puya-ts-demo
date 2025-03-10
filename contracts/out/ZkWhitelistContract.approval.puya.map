@@ -1,0 +1,1520 @@
+{
+  "version": 3,
+  "sources": [
+    "/Users/joe/git/other/puya-ts-demo/contracts/zk-whitelist.algo.ts"
+  ],
+  "mappings": "AA0BA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;AAqEE;;AAAA;AAAA;AAAA;;AAAA;AArEF;;;AAAA;AAAA;;;AAAA;;;AAqEE;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAZC;;AAAA;AAAA;AAAA;;AAAA;AAzDH;;;AAyDG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAnCA;;AAAA;AAAA;AAAA;;AAAA;AAtBH;;;AAAA;;;AAsBG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAJH;;;AAIG;;;AAAA;;AAAD;;;AAHA;;;;;;;;;AAME;;AAAA;;AAMc;;AAAuB;;AAA9B;AAAP;;AASF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAea;;AAAT;AAAuB;;AAzCzB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyC+B;AAA7B;AAMA;;;;AAAA;AAAA;AAFA;AADe;;AAAA;;AAAA;;;AAAA;AAAA;;;AAKH;AAAV;;;AACK;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAIM;;AAAJ;;AAAA;AAAJ;;;AACS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAEF;;AAnDF;AAmDkC;AAAhC;AACO;;;;AAAP;AAGF;;;AAIQ;;AAAwC;;AAA9B;AACZ;;;AACK;AAAP;AAE0C;;AAAA;AA/D9C;AA+D8C;AAAA;AACrC;AAAA;AAAA;;AAAA;AAAP;AAGF;;;AAMmB;AASuB;;;AAJlC;;;;;;;;;;;;;;;;;;;;AALW;;;AAGR;;;AAHQ;AAWL;;AACL;AAAA;;;AAAA;AAAA;;;AAA0C;AAA1C;AAAA;AAAP;;AAAA;;AAAA",
+  "op_pc_offset": 2,
+  "pc_events": {
+    "0": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "2": {
+      "op": "bz main_after_if_else@12",
+      "stack_out": []
+    },
+    "5": {
+      "op": "pushbytess 0x20df3a54 0xa0e81872 0x9300aae2 0xcb77c07a 0x517637c6 0xf10773f1 // method \"create(string)void\", method \"update()void\", method \"optInOrOut()void\", method \"addAddressToWhitelist(address,address[])string\", method \"isOnWhitelist(address)bool\", method \"verifyProof(uint64,address[],address[])bool\"",
+      "defined_out": [
+        "Method(addAddressToWhitelist(address,address[])string)",
+        "Method(create(string)void)",
+        "Method(isOnWhitelist(address)bool)",
+        "Method(optInOrOut()void)",
+        "Method(update()void)",
+        "Method(verifyProof(uint64,address[],address[])bool)"
+      ],
+      "stack_out": [
+        "Method(create(string)void)",
+        "Method(update()void)",
+        "Method(optInOrOut()void)",
+        "Method(addAddressToWhitelist(address,address[])string)",
+        "Method(isOnWhitelist(address)bool)",
+        "Method(verifyProof(uint64,address[],address[])bool)"
+      ]
+    },
+    "37": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(addAddressToWhitelist(address,address[])string)",
+        "Method(create(string)void)",
+        "Method(isOnWhitelist(address)bool)",
+        "Method(optInOrOut()void)",
+        "Method(update()void)",
+        "Method(verifyProof(uint64,address[],address[])bool)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(create(string)void)",
+        "Method(update()void)",
+        "Method(optInOrOut()void)",
+        "Method(addAddressToWhitelist(address,address[])string)",
+        "Method(isOnWhitelist(address)bool)",
+        "Method(verifyProof(uint64,address[],address[])bool)",
+        "tmp%2#0"
+      ]
+    },
+    "40": {
+      "op": "match main_create_route@3 main_update_route@4 main_optInOrOut_route@5 main_addAddressToWhitelist_route@6 main_isOnWhitelist_route@7 main_verifyProof_route@8",
+      "stack_out": []
+    },
+    "54": {
+      "block": "main_after_if_else@12",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "55": {
+      "op": "return",
+      "stack_out": []
+    },
+    "56": {
+      "block": "main_verifyProof_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "58": {
+      "op": "!",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "59": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "60": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "62": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "63": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "66": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "67": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ]
+    },
+    "70": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "tmp%35#0",
+        "tmp%36#0",
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "tmp%36#0",
+        "tmp%37#0"
+      ]
+    },
+    "73": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.verifyProof",
+      "op": "callsub verifyProof",
+      "defined_out": [
+        "verifyProof%0#0",
+        "verifyProof%1#0",
+        "verifyProof%2#0"
+      ],
+      "stack_out": [
+        "verifyProof%0#0",
+        "verifyProof%1#0",
+        "verifyProof%2#0"
+      ]
+    },
+    "76": {
+      "op": "popn 2",
+      "stack_out": [
+        "verifyProof%0#0"
+      ]
+    },
+    "78": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "verifyProof%0#0"
+      ],
+      "stack_out": [
+        "verifyProof%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "79": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "verifyProof%0#0"
+      ]
+    },
+    "80": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "81": {
+      "op": "log",
+      "stack_out": []
+    },
+    "82": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "83": {
+      "op": "return",
+      "stack_out": []
+    },
+    "84": {
+      "block": "main_isOnWhitelist_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "86": {
+      "op": "!",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "87": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "88": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "90": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "91": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[32]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%1#0"
+      ]
+    },
+    "94": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.isOnWhitelist",
+      "op": "callsub isOnWhitelist",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "97": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0",
+        "0x151f7c75"
+      ]
+    },
+    "98": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%29#0"
+      ]
+    },
+    "99": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "100": {
+      "op": "log",
+      "stack_out": []
+    },
+    "101": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "102": {
+      "op": "return",
+      "stack_out": []
+    },
+    "103": {
+      "block": "main_addAddressToWhitelist_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "105": {
+      "op": "!",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "106": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "107": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "109": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "110": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[32]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%0#0"
+      ]
+    },
+    "113": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[32]%0#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%0#0",
+        "tmp%22#0"
+      ]
+    },
+    "116": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.addAddressToWhitelist",
+      "op": "callsub addAddressToWhitelist",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "119": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0",
+        "0x151f7c75"
+      ]
+    },
+    "120": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%23#0"
+      ]
+    },
+    "121": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "122": {
+      "op": "log",
+      "stack_out": []
+    },
+    "123": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "124": {
+      "op": "return",
+      "stack_out": []
+    },
+    "125": {
+      "block": "main_optInOrOut_route@5",
+      "stack_in": [],
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "126": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "1",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "1",
+        "tmp%13#0"
+      ]
+    },
+    "128": {
+      "op": "shl",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "129": {
+      "op": "intc_2 // 6",
+      "defined_out": [
+        "6",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "6"
+      ]
+    },
+    "130": {
+      "op": "&",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "131": {
+      "error": "OnCompletion is not one of OptIn, CloseOut",
+      "op": "assert // OnCompletion is not one of OptIn, CloseOut",
+      "stack_out": []
+    },
+    "132": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "134": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "135": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "136": {
+      "op": "return",
+      "stack_out": []
+    },
+    "137": {
+      "block": "main_update_route@4",
+      "stack_in": [],
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "138": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "1",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "1",
+        "tmp%8#0"
+      ]
+    },
+    "140": {
+      "op": "shl",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "141": {
+      "op": "pushint 48 // 48",
+      "defined_out": [
+        "48",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0",
+        "48"
+      ]
+    },
+    "143": {
+      "op": "&",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "144": {
+      "error": "OnCompletion is not one of UpdateApplication, DeleteApplication",
+      "op": "assert // OnCompletion is not one of UpdateApplication, DeleteApplication",
+      "stack_out": []
+    },
+    "145": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "147": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "148": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.update",
+      "op": "callsub update"
+    },
+    "151": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "152": {
+      "op": "return",
+      "stack_out": []
+    },
+    "153": {
+      "block": "main_create_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "155": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "156": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "157": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "159": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "160": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "161": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "164": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.create",
+      "op": "callsub create",
+      "stack_out": []
+    },
+    "167": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "168": {
+      "op": "return",
+      "stack_out": []
+    },
+    "169": {
+      "subroutine": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.create",
+      "params": {
+        "name#0": "bytes"
+      },
+      "block": "create",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "172": {
+      "op": "pushbytes \"appName\"",
+      "defined_out": [
+        "\"appName\""
+      ],
+      "stack_out": [
+        "\"appName\""
+      ]
+    },
+    "181": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"appName\"",
+        "name#0 (copy)"
+      ],
+      "stack_out": [
+        "\"appName\"",
+        "name#0 (copy)"
+      ]
+    },
+    "183": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "184": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "185": {
+      "subroutine": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.update",
+      "params": {},
+      "block": "update",
+      "stack_in": [],
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "187": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "189": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "190": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "191": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "192": {
+      "subroutine": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.addAddressToWhitelist",
+      "params": {
+        "address#0": "bytes",
+        "proof#0": "bytes"
+      },
+      "block": "addAddressToWhitelist",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "195": {
+      "block": "addAddressToWhitelist_while_top@6",
+      "stack_in": [],
+      "op": "pushint 145010 // 145010",
+      "defined_out": [
+        "145010"
+      ],
+      "stack_out": [
+        "145010"
+      ]
+    },
+    "199": {
+      "op": "global OpcodeBudget",
+      "defined_out": [
+        "145010",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "145010",
+        "tmp%0#1"
+      ]
+    },
+    "201": {
+      "op": ">",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "202": {
+      "op": "bz addAddressToWhitelist_after_while@11",
+      "stack_out": []
+    },
+    "205": {
+      "op": "itxn_begin"
+    },
+    "206": {
+      "op": "intc_2 // appl",
+      "defined_out": [
+        "appl"
+      ],
+      "stack_out": [
+        "appl"
+      ]
+    },
+    "207": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "209": {
+      "op": "pushint 5 // DeleteApplication",
+      "defined_out": [
+        "DeleteApplication"
+      ],
+      "stack_out": [
+        "DeleteApplication"
+      ]
+    },
+    "211": {
+      "op": "itxn_field OnCompletion",
+      "stack_out": []
+    },
+    "213": {
+      "op": "bytec_1 // 0x068101",
+      "defined_out": [
+        "0x068101"
+      ],
+      "stack_out": [
+        "0x068101"
+      ]
+    },
+    "214": {
+      "op": "itxn_field ApprovalProgram",
+      "stack_out": []
+    },
+    "216": {
+      "op": "bytec_1 // 0x068101",
+      "stack_out": [
+        "0x068101"
+      ]
+    },
+    "217": {
+      "op": "itxn_field ClearStateProgram",
+      "stack_out": []
+    },
+    "219": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "220": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "222": {
+      "op": "itxn_submit"
+    },
+    "223": {
+      "op": "b addAddressToWhitelist_while_top@6"
+    },
+    "226": {
+      "block": "addAddressToWhitelist_after_while@11",
+      "stack_in": [],
+      "op": "pushint 32 // 32",
+      "defined_out": [
+        "32"
+      ],
+      "stack_out": [
+        "32"
+      ]
+    },
+    "228": {
+      "op": "bzero",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "229": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "address#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "address#0 (copy)"
+      ]
+    },
+    "231": {
+      "op": "pushbytes 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001",
+      "defined_out": [
+        "0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001",
+        "address#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "address#0 (copy)",
+        "0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001"
+      ]
+    },
+    "265": {
+      "op": "b%",
+      "defined_out": [
+        "reinterpret_bytes%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "reinterpret_bytes%0#0"
+      ]
+    },
+    "266": {
+      "op": "b|",
+      "defined_out": [
+        "addressMod#0"
+      ],
+      "stack_out": [
+        "addressMod#0"
+      ]
+    },
+    "267": {
+      "op": "pushbytes 0x0001",
+      "defined_out": [
+        "0x0001",
+        "addressMod#0"
+      ],
+      "stack_out": [
+        "addressMod#0",
+        "0x0001"
+      ]
+    },
+    "271": {
+      "op": "swap",
+      "stack_out": [
+        "0x0001",
+        "addressMod#0"
+      ]
+    },
+    "272": {
+      "op": "concat",
+      "defined_out": [
+        "array_data%0#0"
+      ],
+      "stack_out": [
+        "array_data%0#0"
+      ]
+    },
+    "273": {
+      "op": "intc_3 // TMPL_VERIFIER_APP_ID",
+      "defined_out": [
+        "TMPL_VERIFIER_APP_ID",
+        "array_data%0#0"
+      ],
+      "stack_out": [
+        "array_data%0#0",
+        "TMPL_VERIFIER_APP_ID"
+      ]
+    },
+    "274": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "TMPL_VERIFIER_APP_ID",
+        "array_data%0#0",
+        "proof#0 (copy)"
+      ],
+      "stack_out": [
+        "array_data%0#0",
+        "TMPL_VERIFIER_APP_ID",
+        "proof#0 (copy)"
+      ]
+    },
+    "276": {
+      "op": "uncover 2",
+      "stack_out": [
+        "TMPL_VERIFIER_APP_ID",
+        "proof#0 (copy)",
+        "array_data%0#0"
+      ]
+    },
+    "278": {
+      "callsub": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.verifyProof",
+      "op": "callsub verifyProof",
+      "defined_out": [
+        "proof#0",
+        "verified#0",
+        "verifyProof%2#0"
+      ],
+      "stack_out": [
+        "verified#0",
+        "proof#0",
+        "verifyProof%2#0"
+      ]
+    },
+    "281": {
+      "op": "pop",
+      "stack_out": [
+        "verified#0",
+        "proof#0"
+      ]
+    },
+    "282": {
+      "op": "frame_bury -1",
+      "stack_out": [
+        "verified#0"
+      ]
+    },
+    "284": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "verified#0"
+      ],
+      "stack_out": [
+        "verified#0",
+        "0"
+      ]
+    },
+    "285": {
+      "op": "getbit",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "286": {
+      "op": "bnz addAddressToWhitelist_after_if_else@2",
+      "stack_out": []
+    },
+    "289": {
+      "op": "pushbytes 0x001950726f6f6620766572696669636174696f6e206661696c6564",
+      "defined_out": [
+        "0x001950726f6f6620766572696669636174696f6e206661696c6564"
+      ],
+      "stack_out": [
+        "0x001950726f6f6620766572696669636174696f6e206661696c6564"
+      ]
+    },
+    "318": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "319": {
+      "block": "addAddressToWhitelist_after_if_else@2",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "321": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "address#0 (copy)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0",
+        "address#0 (copy)"
+      ]
+    },
+    "323": {
+      "op": "!=",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "324": {
+      "op": "bz addAddressToWhitelist_after_if_else@4",
+      "stack_out": []
+    },
+    "327": {
+      "op": "pushbytes 0x003053656e646572206164647265737320646f6573206e6f74206d6174636820617574686f72697a65642061646472657373",
+      "defined_out": [
+        "0x003053656e646572206164647265737320646f6573206e6f74206d6174636820617574686f72697a65642061646472657373"
+      ],
+      "stack_out": [
+        "0x003053656e646572206164647265737320646f6573206e6f74206d6174636820617574686f72697a65642061646472657373"
+      ]
+    },
+    "379": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "380": {
+      "block": "addAddressToWhitelist_after_if_else@4",
+      "stack_in": [],
+      "op": "frame_dig -2",
+      "defined_out": [
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)"
+      ]
+    },
+    "382": {
+      "op": "bytec_2 // \"whiteList\"",
+      "defined_out": [
+        "\"whiteList\"",
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)",
+        "\"whiteList\""
+      ]
+    },
+    "383": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "\"whiteList\"",
+        "1",
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)",
+        "\"whiteList\"",
+        "1"
+      ]
+    },
+    "384": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "385": {
+      "op": "pushbytes 0x0000",
+      "defined_out": [
+        "0x0000"
+      ],
+      "stack_out": [
+        "0x0000"
+      ]
+    },
+    "389": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "390": {
+      "subroutine": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.isOnWhitelist",
+      "params": {
+        "address#0": "bytes"
+      },
+      "block": "isOnWhitelist",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "393": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)"
+      ]
+    },
+    "395": {
+      "op": "global CurrentApplicationID",
+      "defined_out": [
+        "address#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "address#0 (copy)",
+        "tmp%0#0"
+      ]
+    },
+    "397": {
+      "op": "app_opted_in",
+      "defined_out": [
+        "optedIn#0"
+      ],
+      "stack_out": [
+        "optedIn#0"
+      ]
+    },
+    "398": {
+      "op": "bnz isOnWhitelist_after_if_else@2",
+      "stack_out": []
+    },
+    "401": {
+      "op": "bytec_3 // 0x00",
+      "defined_out": [
+        "0x00"
+      ],
+      "stack_out": [
+        "0x00"
+      ]
+    },
+    "402": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "403": {
+      "block": "isOnWhitelist_after_if_else@2",
+      "stack_in": [],
+      "op": "frame_dig -1",
+      "defined_out": [
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)"
+      ]
+    },
+    "405": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)",
+        "0"
+      ]
+    },
+    "406": {
+      "op": "bytec_2 // \"whiteList\"",
+      "defined_out": [
+        "\"whiteList\"",
+        "0",
+        "address#0 (copy)"
+      ],
+      "stack_out": [
+        "address#0 (copy)",
+        "0",
+        "\"whiteList\""
+      ]
+    },
+    "407": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "whitelisted#0"
+      ],
+      "stack_out": [
+        "whitelisted#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "408": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "whitelisted#0"
+      ]
+    },
+    "409": {
+      "op": "bytec_3 // 0x00",
+      "defined_out": [
+        "0x00",
+        "whitelisted#0"
+      ],
+      "stack_out": [
+        "whitelisted#0",
+        "0x00"
+      ]
+    },
+    "410": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "whitelisted#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "411": {
+      "op": "uncover 2",
+      "stack_out": [
+        "0x00",
+        "0",
+        "whitelisted#0"
+      ]
+    },
+    "413": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0"
+      ],
+      "stack_out": [
+        "encoded_bool%0#0"
+      ]
+    },
+    "414": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "415": {
+      "subroutine": "contracts/zk-whitelist.algo.ts::ZkWhitelistContract.verifyProof",
+      "params": {
+        "appId#0": "uint64",
+        "proof#0": "bytes",
+        "publicInputs#0": "bytes"
+      },
+      "block": "verifyProof",
+      "stack_in": [],
+      "op": "proto 3 3"
+    },
+    "418": {
+      "op": "itxn_begin"
+    },
+    "419": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "420": {
+      "op": "itxn_field OnCompletion",
+      "stack_out": []
+    },
+    "422": {
+      "op": "pushbytes 0x8a3cec7a // method \"verify(byte[32][],byte[32][])bool\"",
+      "defined_out": [
+        "Method(verify(byte[32][],byte[32][])bool)"
+      ],
+      "stack_out": [
+        "Method(verify(byte[32][],byte[32][])bool)"
+      ]
+    },
+    "428": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "430": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "proof#0 (copy)"
+      ],
+      "stack_out": [
+        "proof#0 (copy)"
+      ]
+    },
+    "432": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "434": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "publicInputs#0 (copy)"
+      ],
+      "stack_out": [
+        "publicInputs#0 (copy)"
+      ]
+    },
+    "436": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "438": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "appId#0 (copy)"
+      ],
+      "stack_out": [
+        "appId#0 (copy)"
+      ]
+    },
+    "440": {
+      "op": "itxn_field ApplicationID",
+      "stack_out": []
+    },
+    "442": {
+      "op": "intc_2 // 6",
+      "defined_out": [
+        "6"
+      ],
+      "stack_out": [
+        "6"
+      ]
+    },
+    "443": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "445": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "446": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "448": {
+      "op": "itxn_submit"
+    },
+    "449": {
+      "op": "itxn LastLog",
+      "defined_out": [
+        "verified#0"
+      ],
+      "stack_out": [
+        "verified#0"
+      ]
+    },
+    "451": {
+      "op": "dup",
+      "defined_out": [
+        "verified#0",
+        "verified#0 (copy)"
+      ],
+      "stack_out": [
+        "verified#0",
+        "verified#0 (copy)"
+      ]
+    },
+    "452": {
+      "op": "extract 4 0",
+      "defined_out": [
+        "tmp%0#0",
+        "verified#0"
+      ],
+      "stack_out": [
+        "verified#0",
+        "tmp%0#0"
+      ]
+    },
+    "455": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%0#0",
+        "verified#0"
+      ]
+    },
+    "456": {
+      "op": "extract 0 4",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "459": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "460": {
+      "op": "==",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "461": {
+      "error": "Bytes has valid prefix",
+      "op": "assert // Bytes has valid prefix",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "462": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "tmp%0#0",
+        "proof#0 (copy)"
+      ]
+    },
+    "464": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "tmp%0#0",
+        "proof#0 (copy)",
+        "publicInputs#0 (copy)"
+      ]
+    },
+    "466": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
