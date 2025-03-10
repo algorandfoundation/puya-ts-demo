@@ -1,7 +1,6 @@
 import {
   abimethod,
   Account,
-  Application,
   assert,
   assertMatch,
   BigUint,
@@ -20,10 +19,6 @@ import {
   Uint64,
   uint64,
 } from "@algorandfoundation/algorand-typescript";
-import {
-  DynamicArray,
-  UintN,
-} from "@algorandfoundation/algorand-typescript/arc4";
 
 export class KitchenSinkContract extends Contract {
   globalInt = GlobalState({ initialValue: Uint64(4) });
@@ -31,7 +26,7 @@ export class KitchenSinkContract extends Contract {
 
   localBigInt = LocalState<biguint>();
 
-  boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+  boxOfArray = Box<uint64[]>({ key: "b" });
   boxMap = BoxMap<Account, bytes>({ keyPrefix: "" });
   boxRef = BoxRef({ key: Bytes.fromHex("FF") });
 
@@ -57,14 +52,14 @@ export class KitchenSinkContract extends Contract {
 
   addToBox(x: uint64) {
     if (!this.boxOfArray.exists) {
-      this.boxOfArray.value = new DynamicArray(new UintN<64>(x));
+      this.boxOfArray.value = [x];
     } else {
-      this.boxOfArray.value.push(new UintN<64>(x));
+      this.boxOfArray.value = [...this.boxOfArray.value, x];
     }
   }
 
   addToBoxMap(x: string) {
-    this.boxMap.set(Txn.sender, Bytes(x));
+    this.boxMap(Txn.sender).value = Bytes(x);
   }
 
   insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) {

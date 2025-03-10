@@ -3,9 +3,9 @@
 
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
-    intcblock 1 0 6 TMPL_VERIFIER_APP_ID
-    bytecblock 0x151f7c75 0x068101 "whiteList" 0x00
-    // contracts/zk-whitelist.algo.ts:27
+    intcblock 1 0 6 32 TMPL_VERIFIER_APP_ID
+    bytecblock 0x151f7c75 0x068101 "whiteList"
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     txn NumAppArgs
     bz main_after_if_else@12
@@ -14,37 +14,36 @@ main:
     match main_create_route@3 main_update_route@4 main_optInOrOut_route@5 main_addAddressToWhitelist_route@6 main_isOnWhitelist_route@7 main_verifyProof_route@8
 
 main_after_if_else@12:
-    // contracts/zk-whitelist.algo.ts:27
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     intc_1 // 0
     return
 
 main_verifyProof_route@8:
-    // contracts/zk-whitelist.algo.ts:96-100
+    // contracts/zk-whitelist.algo.ts:91-95
     // verifyProof(
     //   appId: uint64,
-    //   proof: arc4.DynamicArray<arc4.Address>,
-    //   publicInputs: arc4.DynamicArray<arc4.Address>,
+    //   proof: arc4.Address[],
+    //   publicInputs: arc4.Address[],
     // ): arc4.Bool {
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // contracts/zk-whitelist.algo.ts:27
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     txna ApplicationArgs 1
     btoi
     txna ApplicationArgs 2
     txna ApplicationArgs 3
-    // contracts/zk-whitelist.algo.ts:96-100
+    // contracts/zk-whitelist.algo.ts:91-95
     // verifyProof(
     //   appId: uint64,
-    //   proof: arc4.DynamicArray<arc4.Address>,
-    //   publicInputs: arc4.DynamicArray<arc4.Address>,
+    //   proof: arc4.Address[],
+    //   publicInputs: arc4.Address[],
     // ): arc4.Bool {
     callsub verifyProof
-    popn 2
     bytec_0 // 0x151f7c75
     swap
     concat
@@ -53,19 +52,23 @@ main_verifyProof_route@8:
     return
 
 main_isOnWhitelist_route@7:
-    // contracts/zk-whitelist.algo.ts:84
+    // contracts/zk-whitelist.algo.ts:80
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // contracts/zk-whitelist.algo.ts:27
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     txna ApplicationArgs 1
-    // contracts/zk-whitelist.algo.ts:84
+    // contracts/zk-whitelist.algo.ts:80
     // @abimethod()
     callsub isOnWhitelist
+    pushbytes 0x00
+    intc_1 // 0
+    uncover 2
+    setbit
     bytec_0 // 0x151f7c75
     swap
     concat
@@ -74,20 +77,26 @@ main_isOnWhitelist_route@7:
     return
 
 main_addAddressToWhitelist_route@6:
-    // contracts/zk-whitelist.algo.ts:49
+    // contracts/zk-whitelist.algo.ts:48
     // @abimethod()
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // contracts/zk-whitelist.algo.ts:27
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // contracts/zk-whitelist.algo.ts:49
+    // contracts/zk-whitelist.algo.ts:48
     // @abimethod()
     callsub addAddressToWhitelist
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
     bytec_0 // 0x151f7c75
     swap
     concat
@@ -96,7 +105,7 @@ main_addAddressToWhitelist_route@6:
     return
 
 main_optInOrOut_route@5:
-    // contracts/zk-whitelist.algo.ts:43
+    // contracts/zk-whitelist.algo.ts:42
     // @abimethod({ allowActions: ["OptIn", "CloseOut"] })
     intc_0 // 1
     txn OnCompletion
@@ -110,7 +119,7 @@ main_optInOrOut_route@5:
     return
 
 main_update_route@4:
-    // contracts/zk-whitelist.algo.ts:37
+    // contracts/zk-whitelist.algo.ts:36
     // @abimethod({ allowActions: ["UpdateApplication", "DeleteApplication"] })
     intc_0 // 1
     txn OnCompletion
@@ -125,7 +134,7 @@ main_update_route@4:
     return
 
 main_create_route@3:
-    // contracts/zk-whitelist.algo.ts:31
+    // contracts/zk-whitelist.algo.ts:30
     // @abimethod({ onCreate: "require" })
     txn OnCompletion
     !
@@ -133,10 +142,11 @@ main_create_route@3:
     txn ApplicationID
     !
     assert // can only call when creating
-    // contracts/zk-whitelist.algo.ts:27
+    // contracts/zk-whitelist.algo.ts:26
     // export default class ZkWhitelistContract extends arc4.Contract {
     txna ApplicationArgs 1
-    // contracts/zk-whitelist.algo.ts:31
+    extract 2 0
+    // contracts/zk-whitelist.algo.ts:30
     // @abimethod({ onCreate: "require" })
     callsub create
     intc_0 // 1
@@ -145,14 +155,14 @@ main_create_route@3:
 
 // contracts/zk-whitelist.algo.ts::ZkWhitelistContract.create(name: bytes) -> void:
 create:
-    // contracts/zk-whitelist.algo.ts:31-32
+    // contracts/zk-whitelist.algo.ts:30-31
     // @abimethod({ onCreate: "require" })
-    // create(name: arc4.Str) {
+    // create(name: string) {
     proto 1 0
-    // contracts/zk-whitelist.algo.ts:28
-    // appName = GlobalState<arc4.Str>({});
+    // contracts/zk-whitelist.algo.ts:27
+    // appName = GlobalState<string>({});
     pushbytes "appName"
-    // contracts/zk-whitelist.algo.ts:34
+    // contracts/zk-whitelist.algo.ts:33
     // this.appName.value = name;
     frame_dig -1
     app_global_put
@@ -161,7 +171,7 @@ create:
 
 // contracts/zk-whitelist.algo.ts::ZkWhitelistContract.update() -> void:
 update:
-    // contracts/zk-whitelist.algo.ts:40
+    // contracts/zk-whitelist.algo.ts:39
     // assert(Global.creatorAddress === Txn.sender);
     global CreatorAddress
     txn Sender
@@ -172,12 +182,9 @@ update:
 
 // contracts/zk-whitelist.algo.ts::ZkWhitelistContract.addAddressToWhitelist(address: bytes, proof: bytes) -> bytes:
 addAddressToWhitelist:
-    // contracts/zk-whitelist.algo.ts:49-53
+    // contracts/zk-whitelist.algo.ts:48-49
     // @abimethod()
-    // addAddressToWhitelist(
-    //   address: arc4.Address,
-    //   proof: arc4.DynamicArray<arc4.Address>,
-    // ): arc4.Str {
+    // addAddressToWhitelist(address: arc4.Address, proof: arc4.Address[]): string {
     proto 2 1
 
 addAddressToWhitelist_while_top@6:
@@ -200,189 +207,169 @@ addAddressToWhitelist_while_top@6:
     b addAddressToWhitelist_while_top@6
 
 addAddressToWhitelist_after_while@11:
-    // contracts/zk-whitelist.algo.ts:64
+    // contracts/zk-whitelist.algo.ts:60
     // op.bzero(32).bitwiseOr(Bytes(BigUint(address.bytes) % curveMod)),
-    pushint 32 // 32
+    intc_3 // 32
     bzero
     frame_dig -2
-    // contracts/zk-whitelist.algo.ts:23
+    // contracts/zk-whitelist.algo.ts:22
     // 21888242871839275222246405745257275088548364400416034343698204186575808495617n,
     pushbytes 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001
-    // contracts/zk-whitelist.algo.ts:64
+    // contracts/zk-whitelist.algo.ts:60
     // op.bzero(32).bitwiseOr(Bytes(BigUint(address.bytes) % curveMod)),
     b%
     b|
-    // contracts/zk-whitelist.algo.ts:70
-    // new arc4.DynamicArray(addressMod),
-    pushbytes 0x0001
+    // contracts/zk-whitelist.algo.ts:66
+    // [addressMod],
+    dup
+    len
+    intc_3 // 32
+    /
+    itob
+    extract 6 2
     swap
     concat
-    // contracts/zk-whitelist.algo.ts:68
+    // contracts/zk-whitelist.algo.ts:64
     // TemplateVar<uint64>("VERIFIER_APP_ID"),
-    intc_3 // TMPL_VERIFIER_APP_ID
-    // contracts/zk-whitelist.algo.ts:67-71
+    intc 4 // TMPL_VERIFIER_APP_ID
+    // contracts/zk-whitelist.algo.ts:63-67
     // const verified = this.verifyProof(
     //   TemplateVar<uint64>("VERIFIER_APP_ID"),
     //   proof,
-    //   new arc4.DynamicArray(addressMod),
+    //   [addressMod],
     // );
     frame_dig -1
     uncover 2
     callsub verifyProof
-    pop
-    frame_bury -1
     intc_1 // 0
-    // contracts/zk-whitelist.algo.ts:72
+    // contracts/zk-whitelist.algo.ts:68
     // if (!verified.native) {
     getbit
     bnz addAddressToWhitelist_after_if_else@2
-    // contracts/zk-whitelist.algo.ts:73
-    // return new arc4.Str("Proof verification failed");
-    pushbytes 0x001950726f6f6620766572696669636174696f6e206661696c6564
+    // contracts/zk-whitelist.algo.ts:69
+    // return "Proof verification failed";
+    pushbytes "Proof verification failed"
     retsub
 
 addAddressToWhitelist_after_if_else@2:
-    // contracts/zk-whitelist.algo.ts:77
+    // contracts/zk-whitelist.algo.ts:73
     // if (Txn.sender !== account) {
     txn Sender
     frame_dig -2
     !=
     bz addAddressToWhitelist_after_if_else@4
-    // contracts/zk-whitelist.algo.ts:78
-    // return new arc4.Str("Sender address does not match authorized address");
-    pushbytes 0x003053656e646572206164647265737320646f6573206e6f74206d6174636820617574686f72697a65642061646472657373
+    // contracts/zk-whitelist.algo.ts:74
+    // return "Sender address does not match authorized address";
+    pushbytes "Sender address does not match authorized address"
     retsub
 
 addAddressToWhitelist_after_if_else@4:
-    // contracts/zk-whitelist.algo.ts:80
+    // contracts/zk-whitelist.algo.ts:76
     // this.whiteList(account).value = true;
     frame_dig -2
-    // contracts/zk-whitelist.algo.ts:29
+    // contracts/zk-whitelist.algo.ts:28
     // whiteList = LocalState<boolean>();
     bytec_2 // "whiteList"
-    // contracts/zk-whitelist.algo.ts:80
+    // contracts/zk-whitelist.algo.ts:76
     // this.whiteList(account).value = true;
     intc_0 // 1
     app_local_put
-    // contracts/zk-whitelist.algo.ts:81
-    // return new arc4.Str("");
-    pushbytes 0x0000
+    // contracts/zk-whitelist.algo.ts:77
+    // return "";
+    pushbytes ""
     retsub
 
 
-// contracts/zk-whitelist.algo.ts::ZkWhitelistContract.isOnWhitelist(address: bytes) -> bytes:
+// contracts/zk-whitelist.algo.ts::ZkWhitelistContract.isOnWhitelist(address: bytes) -> uint64:
 isOnWhitelist:
-    // contracts/zk-whitelist.algo.ts:84-85
+    // contracts/zk-whitelist.algo.ts:80-81
     // @abimethod()
-    // isOnWhitelist(address: arc4.Address): arc4.Bool {
+    // isOnWhitelist(address: arc4.Address): boolean {
     proto 1 1
-    // contracts/zk-whitelist.algo.ts:88
+    // contracts/zk-whitelist.algo.ts:84
     // const optedIn = op.appOptedIn(account, Global.currentApplicationId);
     frame_dig -1
     global CurrentApplicationID
     app_opted_in
-    // contracts/zk-whitelist.algo.ts:89
+    // contracts/zk-whitelist.algo.ts:85
     // if (!optedIn) {
     bnz isOnWhitelist_after_if_else@2
-    // contracts/zk-whitelist.algo.ts:90
-    // return new arc4.Bool(false);
-    bytec_3 // 0x00
+    // contracts/zk-whitelist.algo.ts:86
+    // return false;
+    intc_1 // 0
     retsub
 
 isOnWhitelist_after_if_else@2:
-    // contracts/zk-whitelist.algo.ts:92
-    // const whitelisted = this.whiteList(account).value;
+    // contracts/zk-whitelist.algo.ts:88
+    // return this.whiteList(account).value;
     frame_dig -1
     intc_1 // 0
-    // contracts/zk-whitelist.algo.ts:29
+    // contracts/zk-whitelist.algo.ts:28
     // whiteList = LocalState<boolean>();
     bytec_2 // "whiteList"
-    // contracts/zk-whitelist.algo.ts:92
-    // const whitelisted = this.whiteList(account).value;
+    // contracts/zk-whitelist.algo.ts:88
+    // return this.whiteList(account).value;
     app_local_get_ex
     assert // check LocalState exists
-    // contracts/zk-whitelist.algo.ts:93
-    // return new arc4.Bool(whitelisted);
-    bytec_3 // 0x00
-    intc_1 // 0
-    uncover 2
-    setbit
     retsub
 
 
-// contracts/zk-whitelist.algo.ts::ZkWhitelistContract.verifyProof(appId: uint64, proof: bytes, publicInputs: bytes) -> bytes, bytes, bytes:
+// contracts/zk-whitelist.algo.ts::ZkWhitelistContract.verifyProof(appId: uint64, proof: bytes, publicInputs: bytes) -> bytes:
 verifyProof:
-    // contracts/zk-whitelist.algo.ts:96-100
+    // contracts/zk-whitelist.algo.ts:91-95
     // verifyProof(
     //   appId: uint64,
-    //   proof: arc4.DynamicArray<arc4.Address>,
-    //   publicInputs: arc4.DynamicArray<arc4.Address>,
+    //   proof: arc4.Address[],
+    //   publicInputs: arc4.Address[],
     // ): arc4.Bool {
-    proto 3 3
-    // contracts/zk-whitelist.algo.ts:102-113
+    proto 3 1
+    // contracts/zk-whitelist.algo.ts:97-105
     // const verified = itxn
     //   .applicationCall({
     //     appId: appId,
     //     fee: 0,
-    //     appArgs: [
-    //       arc4.methodSelector("verify(byte[32][],byte[32][])bool"),
-    //       proof.copy(),
-    //       publicInputs.copy(),
-    //     ],
+    //     // Commented out until https://github.com/algorandfoundation/puya-ts/issues/116 is resolved
+    //     // appArgs: [arc4.methodSelector('verify(byte[32][],byte[32][])bool'), proof, arc4.encodeArc4(publicInputs)],
     //     onCompletion: arc4.OnCompleteAction.NoOp,
     //   })
     //   .submit().lastLog;
     itxn_begin
-    // contracts/zk-whitelist.algo.ts:111
+    // contracts/zk-whitelist.algo.ts:103
     // onCompletion: arc4.OnCompleteAction.NoOp,
     intc_1 // 0
     itxn_field OnCompletion
-    // contracts/zk-whitelist.algo.ts:107
-    // arc4.methodSelector("verify(byte[32][],byte[32][])bool"),
-    pushbytes 0x8a3cec7a // method "verify(byte[32][],byte[32][])bool"
-    itxn_field ApplicationArgs
-    frame_dig -2
-    itxn_field ApplicationArgs
-    frame_dig -1
-    itxn_field ApplicationArgs
     frame_dig -3
     itxn_field ApplicationID
-    // contracts/zk-whitelist.algo.ts:102-112
+    // contracts/zk-whitelist.algo.ts:97-104
     // const verified = itxn
     //   .applicationCall({
     //     appId: appId,
     //     fee: 0,
-    //     appArgs: [
-    //       arc4.methodSelector("verify(byte[32][],byte[32][])bool"),
-    //       proof.copy(),
-    //       publicInputs.copy(),
-    //     ],
+    //     // Commented out until https://github.com/algorandfoundation/puya-ts/issues/116 is resolved
+    //     // appArgs: [arc4.methodSelector('verify(byte[32][],byte[32][])bool'), proof, arc4.encodeArc4(publicInputs)],
     //     onCompletion: arc4.OnCompleteAction.NoOp,
     //   })
     intc_2 // 6
     itxn_field TypeEnum
-    // contracts/zk-whitelist.algo.ts:105
+    // contracts/zk-whitelist.algo.ts:100
     // fee: 0,
     intc_1 // 0
     itxn_field Fee
-    // contracts/zk-whitelist.algo.ts:102-113
+    // contracts/zk-whitelist.algo.ts:97-105
     // const verified = itxn
     //   .applicationCall({
     //     appId: appId,
     //     fee: 0,
-    //     appArgs: [
-    //       arc4.methodSelector("verify(byte[32][],byte[32][])bool"),
-    //       proof.copy(),
-    //       publicInputs.copy(),
-    //     ],
+    //     // Commented out until https://github.com/algorandfoundation/puya-ts/issues/116 is resolved
+    //     // appArgs: [arc4.methodSelector('verify(byte[32][],byte[32][])bool'), proof, arc4.encodeArc4(publicInputs)],
     //     onCompletion: arc4.OnCompleteAction.NoOp,
     //   })
     //   .submit().lastLog;
     itxn_submit
-    // contracts/zk-whitelist.algo.ts:113
+    // contracts/zk-whitelist.algo.ts:105
     // .submit().lastLog;
     itxn LastLog
-    // contracts/zk-whitelist.algo.ts:114
+    // contracts/zk-whitelist.algo.ts:106
     // return arc4.interpretAsArc4<arc4.Bool>(verified, "log");
     dup
     extract 4 0
@@ -391,6 +378,4 @@ verifyProof:
     bytec_0 // 0x151f7c75
     ==
     assert // Bytes has valid prefix
-    frame_dig -2
-    frame_dig -1
     retsub

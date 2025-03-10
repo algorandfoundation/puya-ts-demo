@@ -96,10 +96,10 @@ export default class ProofOfAttendance extends arc4.Contract {
     const mintedAsset = this.mintPoa(Txn.sender);
     this.totalAttendees.value += 1;
 
-    const hasClaimed = this.boxMap.has(Txn.sender.bytes);
+    const hasClaimed = this.boxMap(Txn.sender.bytes).exists;
     assert(!hasClaimed, "Already claimed POA");
 
-    this.boxMap.set(Txn.sender.bytes, mintedAsset.id);
+    this.boxMap(Txn.sender.bytes).value = mintedAsset.id;
   }
   @arc4.abimethod({ readonly: true })
   getPoaId(): uint64 {
@@ -126,7 +126,7 @@ export default class ProofOfAttendance extends arc4.Contract {
 
   @arc4.abimethod({ readonly: true })
   getPoaIdWithBoxMap(): uint64 {
-    const [poaId, exists] = this.boxMap.maybe(Txn.sender.bytes);
+    const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     assert(exists, "POA not found");
     return poaId;
   }
@@ -198,7 +198,7 @@ export default class ProofOfAttendance extends arc4.Contract {
 
   @arc4.abimethod()
   claimPoaWithBoxMap(optInTxn: gtxn.AssetTransferTxn) {
-    const [poaId, exists] = this.boxMap.maybe(Txn.sender.bytes);
+    const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     assert(exists, "POA not found, attendance validation failed!");
     assert(optInTxn.xferAsset.id === poaId, "POA ID mismatch");
     assert(optInTxn.fee === 0, "We got you covered for free!");

@@ -536,9 +536,13 @@ confirmAttendanceWithBoxMap:
     // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     bytec_3 // "boxMap"
     // contracts/proof-of-attendance.algo.ts:99
-    // const hasClaimed = this.boxMap.has(Txn.sender.bytes);
+    // const hasClaimed = this.boxMap(Txn.sender.bytes).exists;
     txn Sender
+    // contracts/proof-of-attendance.algo.ts:31
+    // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     concat
+    // contracts/proof-of-attendance.algo.ts:99
+    // const hasClaimed = this.boxMap(Txn.sender.bytes).exists;
     box_len
     bury 1
     // contracts/proof-of-attendance.algo.ts:100
@@ -549,9 +553,13 @@ confirmAttendanceWithBoxMap:
     // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     bytec_3 // "boxMap"
     // contracts/proof-of-attendance.algo.ts:102
-    // this.boxMap.set(Txn.sender.bytes, mintedAsset.id);
+    // this.boxMap(Txn.sender.bytes).value = mintedAsset.id;
     txn Sender
+    // contracts/proof-of-attendance.algo.ts:31
+    // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     concat
+    // contracts/proof-of-attendance.algo.ts:102
+    // this.boxMap(Txn.sender.bytes).value = mintedAsset.id;
     swap
     itob
     box_put
@@ -615,9 +623,13 @@ getPoaIdWithBoxMap:
     // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     bytec_3 // "boxMap"
     // contracts/proof-of-attendance.algo.ts:129
-    // const [poaId, exists] = this.boxMap.maybe(Txn.sender.bytes);
+    // const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     txn Sender
+    // contracts/proof-of-attendance.algo.ts:31
+    // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     concat
+    // contracts/proof-of-attendance.algo.ts:129
+    // const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     box_get
     swap
     btoi
@@ -992,9 +1004,13 @@ claimPoaWithBoxMap:
     // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     bytec_3 // "boxMap"
     // contracts/proof-of-attendance.algo.ts:201
-    // const [poaId, exists] = this.boxMap.maybe(Txn.sender.bytes);
+    // const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     txn Sender
+    // contracts/proof-of-attendance.algo.ts:31
+    // boxMap = BoxMap<bytes, uint64>({ keyPrefix: "boxMap" });
     concat
+    // contracts/proof-of-attendance.algo.ts:201
+    // const [poaId, exists] = this.boxMap(Txn.sender.bytes).maybe();
     box_get
     swap
     btoi
