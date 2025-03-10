@@ -7,7 +7,9 @@
     "build:puya": "puya-ts build contracts",
     "build:tealscript": "tealscript tealscript_contracts/kitchen-sink-tealscript.algo.ts tealscript_contracts/artifacts",
     "test:jest": "tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest",
-    "test:vitest": "vitest run"
+    "test:vitest": "vitest run",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "engines": {
     "node": ">=20.17",
