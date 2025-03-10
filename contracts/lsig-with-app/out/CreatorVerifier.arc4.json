@@ -1,0 +1,51 @@
+{
+  "name": "CreatorVerifier",
+  "desc": "",
+  "methods": [
+    {
+      "name": "allowOptInsFrom",
+      "desc": "Allow anyone to use the lsig to opt in the txn sender into an asset created by the creator",
+      "args": [
+        {
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "disableOptInsFrom",
+      "desc": "Disable opt-ins for ASAs from the given creator",
+      "args": [
+        {
+          "name": "creator",
+          "type": "address"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "verifyCreator",
+      "args": [
+        {
+          "name": "optIn",
+          "type": "axfer"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
