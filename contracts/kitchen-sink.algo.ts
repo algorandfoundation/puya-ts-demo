@@ -59,7 +59,7 @@ export class KitchenSinkContract extends Contract {
   }
 
   addToBoxMap(x: string) {
-    this.boxMap.set(Txn.sender, Bytes(x));
+    this.boxMap(Txn.sender).value = Bytes(x);
   }
 
   insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) {

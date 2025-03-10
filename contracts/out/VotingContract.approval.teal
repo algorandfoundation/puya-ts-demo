@@ -49,6 +49,7 @@ main_getVotes_route@7:
     txn ApplicationID
     assert // can only call when not creating
     callsub getVotes
+    itob
     bytec_2 // 0x151f7c75
     swap
     concat
@@ -77,6 +78,10 @@ main_vote_route@6:
     // contracts/voting.algo.ts:25
     // @arc4.abimethod()
     callsub vote
+    pushbytes 0x00
+    intc_1 // 0
+    uncover 2
+    setbit
     bytec_2 // 0x151f7c75
     swap
     concat
@@ -130,11 +135,11 @@ setTopic:
     retsub
 
 
-// contracts/voting.algo.ts::VotingContract.vote(pay: uint64) -> bytes:
+// contracts/voting.algo.ts::VotingContract.vote(pay: uint64) -> uint64:
 vote:
     // contracts/voting.algo.ts:25-26
     // @arc4.abimethod()
-    // public vote(pay: gtxn.PaymentTxn): arc4.Bool {
+    // public vote(pay: gtxn.PaymentTxn): boolean {
     proto 1 1
     // contracts/voting.algo.ts:27
     // assert(op.Global.groupSize === 2, "Expected 2 transactions");
@@ -174,8 +179,8 @@ vote:
     bury 1
     bz vote_after_if_else@2
     // contracts/voting.algo.ts:35
-    // return new arc4.Bool(false); // Already voted
-    pushbytes 0x00
+    // return false; // Already voted
+    intc_1 // 0
     retsub
 
 vote_after_if_else@2:
@@ -207,12 +212,12 @@ vote_after_if_else@2:
     intc_0 // 1
     app_local_put
     // contracts/voting.algo.ts:40
-    // return new arc4.Bool(true);
-    pushbytes 0x80
+    // return true;
+    intc_0 // 1
     retsub
 
 
-// contracts/voting.algo.ts::VotingContract.getVotes() -> bytes:
+// contracts/voting.algo.ts::VotingContract.getVotes() -> uint64:
 getVotes:
     // contracts/voting.algo.ts:18
     // votes = GlobalState({ initialValue: Uint64(0), key: Bytes("votes") });
@@ -221,6 +226,5 @@ getVotes:
     app_global_get_ex
     assert // check GlobalState exists
     // contracts/voting.algo.ts:45
-    // return new arc4.UintN64(this.votes.value);
-    itob
+    // return this.votes.value;
     retsub

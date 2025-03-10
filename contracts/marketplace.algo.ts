@@ -106,22 +106,19 @@ export default class DigitalMarketplace extends arc4.Contract {
       asset: new arc4.UintN64(xfer.xferAsset.id),
       nonce: nonce,
     });
-    assert(!this.listings.has(key));
+    assert(!this.listings(key).exists);
 
     assert(xfer.sender === Txn.sender);
     assert(xfer.assetReceiver === Global.currentApplicationAddress);
     assert(xfer.assetAmount > 0);
 
-    this.listings.set(
-      key,
-      new ListingValue({
-        deposited: new arc4.UintN64(xfer.assetAmount),
-        unitaryPrice: unitaryPrice,
-        bidder: new arc4.Address(),
-        bid: new arc4.UintN64(),
-        bidUnitaryPrice: new arc4.UintN64(),
-      }),
-    );
+    this.listings(key).value = new ListingValue({
+      deposited: new arc4.UintN64(xfer.assetAmount),
+      unitaryPrice: unitaryPrice,
+      bidder: new arc4.Address(),
+      bid: new arc4.UintN64(),
+      bidUnitaryPrice: new arc4.UintN64(),
+    });
   }
 
   @arc4.abimethod()
@@ -136,19 +133,14 @@ export default class DigitalMarketplace extends arc4.Contract {
     assert(xfer.assetReceiver === Global.currentApplicationAddress);
     assert(xfer.assetAmount > 0);
 
-    const existing = this.listings.get(key);
-    this.listings.set(
-      key,
-      new ListingValue({
-        bid: existing.bid,
-        bidUnitaryPrice: existing.bidUnitaryPrice,
-        bidder: existing.bidder,
-        unitaryPrice: existing.unitaryPrice,
-        deposited: new arc4.UintN64(
-          existing.deposited.native + xfer.assetAmount,
-        ),
-      }),
-    );
+    const existing = this.listings(key).value.copy();
+    this.listings(key).value = new ListingValue({
+      bid: existing.bid,
+      bidUnitaryPrice: existing.bidUnitaryPrice,
+      bidder: existing.bidder,
+      unitaryPrice: existing.unitaryPrice,
+      deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
+    });
   }
 
   @arc4.abimethod()
@@ -159,17 +151,14 @@ export default class DigitalMarketplace extends arc4.Contract {
       nonce: nonce,
     });
 
-    const existing = this.listings.get(key);
-    this.listings.set(
-      key,
-      new ListingValue({
-        bid: existing.bid,
-        bidUnitaryPrice: existing.bidUnitaryPrice,
-        bidder: existing.bidder,
-        deposited: existing.deposited,
-        unitaryPrice: unitaryPrice,
-      }),
-    );
+    const existing = this.listings(key).value.copy();
+    this.listings(key).value = new ListingValue({
+      bid: existing.bid,
+      bidUnitaryPrice: existing.bidUnitaryPrice,
+      bidder: existing.bidder,
+      deposited: existing.deposited,
+      unitaryPrice: unitaryPrice,
+    });
   }
 
   @arc4.abimethod()
@@ -186,7 +175,7 @@ export default class DigitalMarketplace extends arc4.Contract {
       nonce: nonce,
     });
 
-    const listing = this.listings.get(key);
+    const listing = this.listings(key).value.copy();
 
     const amountToBePaid = this.quantityPrice(
       quantity,
@@ -198,16 +187,13 @@ export default class DigitalMarketplace extends arc4.Contract {
     assert(buyPay.receiver.bytes === owner.bytes);
     assert(buyPay.amount === amountToBePaid);
 
-    this.listings.set(
-      key,
-      new ListingValue({
-        bid: listing.bid,
-        bidUnitaryPrice: listing.bidUnitaryPrice,
-        bidder: listing.bidder,
-        unitaryPrice: listing.unitaryPrice,
-        deposited: new arc4.UintN64(listing.deposited.native - quantity),
-      }),
-    );
+    this.listings(key).value = new ListingValue({
+      bid: listing.bid,
+      bidUnitaryPrice: listing.bidUnitaryPrice,
+      bidder: listing.bidder,
+      unitaryPrice: listing.unitaryPrice,
+      deposited: new arc4.UintN64(listing.deposited.native - quantity),
+    });
 
     itxn
       .assetTransfer({
@@ -226,7 +212,7 @@ export default class DigitalMarketplace extends arc4.Contract {
       nonce: nonce,
     });
 
-    const listing = this.listings.get(key);
+    const listing = this.listings(key).value.copy();
     if (listing.bidder !== new arc4.Address()) {
       const currentBidDeposit = this.quantityPrice(
         listing.bid.native,
@@ -238,7 +224,7 @@ export default class DigitalMarketplace extends arc4.Contract {
         .submit();
     }
 
-    this.listings.delete(key);
+    this.listings(key).delete();
 
     itxn
       .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
@@ -268,7 +254,7 @@ export default class DigitalMarketplace extends arc4.Contract {
       nonce,
     });
 
-    const listing = this.listings.get(key);
+    const listing = this.listings(key).value.copy();
     if (listing.bidder !== new arc4.Address()) {
       assert(unitaryPrice.native > listing.bidUnitaryPrice.native);
 
@@ -293,16 +279,13 @@ export default class DigitalMarketplace extends arc4.Contract {
     assert(bidPay.receiver === Global.currentApplicationAddress);
     assert(bidPay.amount === amountToBeBid);
 
-    this.listings.set(
-      key,
-      new ListingValue({
-        deposited: listing.deposited,
-        unitaryPrice: listing.unitaryPrice,
-        bidder: new arc4.Address(Txn.sender),
-        bid: quantity,
-        bidUnitaryPrice: unitaryPrice,
-      }),
-    );
+    this.listings(key).value = new ListingValue({
+      deposited: listing.deposited,
+      unitaryPrice: listing.unitaryPrice,
+      bidder: new arc4.Address(Txn.sender),
+      bid: quantity,
+      bidUnitaryPrice: unitaryPrice,
+    });
   }
 
   @arc4.abimethod()
@@ -313,7 +296,7 @@ export default class DigitalMarketplace extends arc4.Contract {
       nonce,
     });
 
-    const listing = this.listings.get(key);
+    const listing = this.listings(key).value.copy();
     assert(listing.bidder !== new arc4.Address());
 
     const minQuantity =
@@ -337,15 +320,12 @@ export default class DigitalMarketplace extends arc4.Contract {
       })
       .submit();
 
-    this.listings.set(
-      key,
-      new ListingValue({
-        bidder: listing.bidder,
-        bidUnitaryPrice: listing.bidUnitaryPrice,
-        unitaryPrice: listing.unitaryPrice,
-        deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
-        bid: new arc4.UintN64(listing.bid.native - minQuantity),
-      }),
-    );
+    this.listings(key).value = new ListingValue({
+      bidder: listing.bidder,
+      bidUnitaryPrice: listing.bidUnitaryPrice,
+      unitaryPrice: listing.unitaryPrice,
+      deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
+      bid: new arc4.UintN64(listing.bid.native - minQuantity),
+    });
   }
 }
