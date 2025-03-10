@@ -1,0 +1,53 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 0 1
+    // contracts/marketplace.algo.ts:3
+    // export class HelloWorld extends Contract {
+    txn NumAppArgs
+    bz main_bare_routing@6
+    pushbytes 0x56346eab // method "hello((uint64,uint64))uint64"
+    txna ApplicationArgs 0
+    match main_hello_route@3
+
+main_after_if_else@10:
+    // contracts/marketplace.algo.ts:3
+    // export class HelloWorld extends Contract {
+    intc_0 // 0
+    return
+
+main_hello_route@3:
+    // contracts/marketplace.algo.ts:4
+    // hello(name: [uint64, uint64]): uint64 {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/marketplace.algo.ts:3
+    // export class HelloWorld extends Contract {
+    txna ApplicationArgs 1
+    intc_0 // 0
+    extract_uint64
+    // contracts/marketplace.algo.ts:4
+    // hello(name: [uint64, uint64]): uint64 {
+    itob
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return
+
+main_bare_routing@6:
+    // contracts/marketplace.algo.ts:3
+    // export class HelloWorld extends Contract {
+    txn OnCompletion
+    bnz main_after_if_else@10
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_1 // 1
+    return

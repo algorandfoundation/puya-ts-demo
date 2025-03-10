@@ -1,0 +1,70 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    // contracts/hello-world.algo.ts:3
+    // export class HelloWorldContract extends Contract {
+    txn NumAppArgs
+    bz main_bare_routing@6
+    pushbytes 0xee67fb50 // method "sayHello(string)string"
+    txna ApplicationArgs 0
+    match main_sayHello_route@3
+
+main_after_if_else@10:
+    // contracts/hello-world.algo.ts:3
+    // export class HelloWorldContract extends Contract {
+    pushint 0 // 0
+    return
+
+main_sayHello_route@3:
+    // contracts/hello-world.algo.ts:4
+    // sayHello(name: string): string {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/hello-world.algo.ts:3
+    // export class HelloWorldContract extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    // contracts/hello-world.algo.ts:4
+    // sayHello(name: string): string {
+    callsub sayHello
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    pushint 1 // 1
+    return
+
+main_bare_routing@6:
+    // contracts/hello-world.algo.ts:3
+    // export class HelloWorldContract extends Contract {
+    txn OnCompletion
+    bnz main_after_if_else@10
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    pushint 1 // 1
+    return
+
+
+// contracts/hello-world.algo.ts::HelloWorldContract.sayHello(name: bytes) -> bytes:
+sayHello:
+    // contracts/hello-world.algo.ts:4
+    // sayHello(name: string): string {
+    proto 1 1
+    // contracts/hello-world.algo.ts:5
+    // return `${this.getHello()} ${name}`;
+    pushbytes "Hello "
+    frame_dig -1
+    concat
+    retsub
