@@ -2,14 +2,14 @@ import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-te
 import { HelloWorldContract } from "./hello-world.algo";
 import { describe, expect, test } from "@jest/globals";
 
-describe('HelloWorldContract', () => {
+describe("HelloWorldContract", () => {
   const ctx = new TestExecutionContext();
 
-  test('Logs the returned value when sayHello is called', () => {
-      const contract = ctx.contract.create(HelloWorldContract);
+  test("Logs the returned value when sayHello is called", () => {
+    const contract = ctx.contract.create(HelloWorldContract);
 
-      const result = contract.sayHello("Sally");
+    const result = contract.sayHello("Sally");
 
-      expect(result).toBe("Hello Sally");
+    expect(result).toBe("Hello Sally");
   });
 });

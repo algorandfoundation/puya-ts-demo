@@ -1,22 +1,34 @@
-import type { Asset, gtxn, uint64 } from '@algorandfoundation/algorand-typescript'
-import { arc4, assert, BoxMap, Global, itxn, op, Txn } from '@algorandfoundation/algorand-typescript'
+import type {
+  Asset,
+  gtxn,
+  uint64,
+} from "@algorandfoundation/algorand-typescript";
+import {
+  arc4,
+  assert,
+  BoxMap,
+  Global,
+  itxn,
+  op,
+  Txn,
+} from "@algorandfoundation/algorand-typescript";
 
 export class ListingKey extends arc4.Struct<{
-  owner: arc4.Address
-  asset: arc4.UintN64
-  nonce: arc4.UintN64
+  owner: arc4.Address;
+  asset: arc4.UintN64;
+  nonce: arc4.UintN64;
 }> {}
 
 export class ListingValue extends arc4.Struct<{
-  deposited: arc4.UintN64
-  unitaryPrice: arc4.UintN64
-  bidder: arc4.Address
-  bid: arc4.UintN64
-  bidUnitaryPrice: arc4.UintN64
+  deposited: arc4.UintN64;
+  unitaryPrice: arc4.UintN64;
+  bidder: arc4.Address;
+  bid: arc4.UintN64;
+  bidUnitaryPrice: arc4.UintN64;
 }> {}
 
 export default class DigitalMarketplace extends arc4.Contract {
-  listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: 'listings' })
+  listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
 
   listingsBoxMbr(): uint64 {
     return (
@@ -35,34 +47,39 @@ export default class DigitalMarketplace extends arc4.Contract {
         8) *
         // fmt: on
         400
-    )
+    );
   }
 
-  quantityPrice(quantity: uint64, price: uint64, assetDecimals: uint64): uint64 {
-    const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity)
-    const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals)
-    const [_quotientHigh, amountToBePaid, _remainderHigh, _remainderLow] = op.divmodw(
-      amountNotScaledHigh,
-      amountNotScaledLow,
-      scalingFactorHigh,
-      scalingFactorLow,
-    )
-    assert(_quotientHigh === 0)
+  quantityPrice(
+    quantity: uint64,
+    price: uint64,
+    assetDecimals: uint64,
+  ): uint64 {
+    const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    const [_quotientHigh, amountToBePaid, _remainderHigh, _remainderLow] =
+      op.divmodw(
+        amountNotScaledHigh,
+        amountNotScaledLow,
+        scalingFactorHigh,
+        scalingFactorLow,
+      );
+    assert(_quotientHigh === 0);
 
-    return amountToBePaid
+    return amountToBePaid;
   }
 
   @arc4.abimethod({ readonly: true })
   getListingsMbr(): uint64 {
-    return this.listingsBoxMbr()
+    return this.listingsBoxMbr();
   }
 
   @arc4.abimethod()
   allowAsset(mbrPay: gtxn.PaymentTxn, asset: Asset) {
-    assert(!Global.currentApplicationAddress.isOptedIn(asset))
+    assert(!Global.currentApplicationAddress.isOptedIn(asset));
 
-    assert(mbrPay.receiver === Global.currentApplicationAddress)
-    assert(mbrPay.amount === Global.assetOptInMinBalance)
+    assert(mbrPay.receiver === Global.currentApplicationAddress);
+    assert(mbrPay.amount === Global.assetOptInMinBalance);
 
     itxn
       .assetTransfer({
@@ -70,25 +87,30 @@ export default class DigitalMarketplace extends arc4.Contract {
         assetReceiver: Global.currentApplicationAddress,
         assetAmount: 0,
       })
-      .submit()
+      .submit();
   }
 
   @arc4.abimethod()
-  firstDeposit(mbrPay: gtxn.PaymentTxn, xfer: gtxn.AssetTransferTxn, unitaryPrice: arc4.UintN64, nonce: arc4.UintN64) {
-    assert(mbrPay.sender === Txn.sender)
-    assert(mbrPay.receiver === Global.currentApplicationAddress)
-    assert(mbrPay.amount === this.listingsBoxMbr())
+  firstDeposit(
+    mbrPay: gtxn.PaymentTxn,
+    xfer: gtxn.AssetTransferTxn,
+    unitaryPrice: arc4.UintN64,
+    nonce: arc4.UintN64,
+  ) {
+    assert(mbrPay.sender === Txn.sender);
+    assert(mbrPay.receiver === Global.currentApplicationAddress);
+    assert(mbrPay.amount === this.listingsBoxMbr());
 
     const key = new ListingKey({
       owner: new arc4.Address(Txn.sender),
       asset: new arc4.UintN64(xfer.xferAsset.id),
       nonce: nonce,
-    })
-    assert(!this.listings.has(key))
+    });
+    assert(!this.listings.has(key));
 
-    assert(xfer.sender === Txn.sender)
-    assert(xfer.assetReceiver === Global.currentApplicationAddress)
-    assert(xfer.assetAmount > 0)
+    assert(xfer.sender === Txn.sender);
+    assert(xfer.assetReceiver === Global.currentApplicationAddress);
+    assert(xfer.assetAmount > 0);
 
     this.listings.set(
       key,
@@ -99,7 +121,7 @@ export default class DigitalMarketplace extends arc4.Contract {
         bid: new arc4.UintN64(),
         bidUnitaryPrice: new arc4.UintN64(),
       }),
-    )
+    );
   }
 
   @arc4.abimethod()
@@ -108,13 +130,13 @@ export default class DigitalMarketplace extends arc4.Contract {
       owner: new arc4.Address(Txn.sender),
       asset: new arc4.UintN64(xfer.xferAsset.id),
       nonce: nonce,
-    })
+    });
 
-    assert(xfer.sender === Txn.sender)
-    assert(xfer.assetReceiver === Global.currentApplicationAddress)
-    assert(xfer.assetAmount > 0)
+    assert(xfer.sender === Txn.sender);
+    assert(xfer.assetReceiver === Global.currentApplicationAddress);
+    assert(xfer.assetAmount > 0);
 
-    const existing = this.listings.get(key)
+    const existing = this.listings.get(key);
     this.listings.set(
       key,
       new ListingValue({
@@ -122,9 +144,11 @@ export default class DigitalMarketplace extends arc4.Contract {
         bidUnitaryPrice: existing.bidUnitaryPrice,
         bidder: existing.bidder,
         unitaryPrice: existing.unitaryPrice,
-        deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
+        deposited: new arc4.UintN64(
+          existing.deposited.native + xfer.assetAmount,
+        ),
       }),
-    )
+    );
   }
 
   @arc4.abimethod()
@@ -133,9 +157,9 @@ export default class DigitalMarketplace extends arc4.Contract {
       owner: new arc4.Address(Txn.sender),
       asset: new arc4.UintN64(asset.id),
       nonce: nonce,
-    })
+    });
 
-    const existing = this.listings.get(key)
+    const existing = this.listings.get(key);
     this.listings.set(
       key,
       new ListingValue({
@@ -145,24 +169,34 @@ export default class DigitalMarketplace extends arc4.Contract {
         deposited: existing.deposited,
         unitaryPrice: unitaryPrice,
       }),
-    )
+    );
   }
 
   @arc4.abimethod()
-  buy(owner: arc4.Address, asset: Asset, nonce: arc4.UintN64, buyPay: gtxn.PaymentTxn, quantity: uint64) {
+  buy(
+    owner: arc4.Address,
+    asset: Asset,
+    nonce: arc4.UintN64,
+    buyPay: gtxn.PaymentTxn,
+    quantity: uint64,
+  ) {
     const key = new ListingKey({
       owner: owner,
       asset: new arc4.UintN64(asset.id),
       nonce: nonce,
-    })
+    });
 
-    const listing = this.listings.get(key)
+    const listing = this.listings.get(key);
 
-    const amountToBePaid = this.quantityPrice(quantity, listing.unitaryPrice.native, asset.decimals)
+    const amountToBePaid = this.quantityPrice(
+      quantity,
+      listing.unitaryPrice.native,
+      asset.decimals,
+    );
 
-    assert(buyPay.sender === Txn.sender)
-    assert(buyPay.receiver.bytes === owner.bytes)
-    assert(buyPay.amount === amountToBePaid)
+    assert(buyPay.sender === Txn.sender);
+    assert(buyPay.receiver.bytes === owner.bytes);
+    assert(buyPay.amount === amountToBePaid);
 
     this.listings.set(
       key,
@@ -173,7 +207,7 @@ export default class DigitalMarketplace extends arc4.Contract {
         unitaryPrice: listing.unitaryPrice,
         deposited: new arc4.UintN64(listing.deposited.native - quantity),
       }),
-    )
+    );
 
     itxn
       .assetTransfer({
@@ -181,7 +215,7 @@ export default class DigitalMarketplace extends arc4.Contract {
         assetReceiver: Txn.sender,
         assetAmount: quantity,
       })
-      .submit()
+      .submit();
   }
 
   @arc4.abimethod()
@@ -190,17 +224,25 @@ export default class DigitalMarketplace extends arc4.Contract {
       owner: new arc4.Address(Txn.sender),
       asset: new arc4.UintN64(asset.id),
       nonce: nonce,
-    })
+    });
 
-    const listing = this.listings.get(key)
+    const listing = this.listings.get(key);
     if (listing.bidder !== new arc4.Address()) {
-      const currentBidDeposit = this.quantityPrice(listing.bid.native, listing.bidUnitaryPrice.native, asset.decimals)
-      itxn.payment({ receiver: listing.bidder.native, amount: currentBidDeposit }).submit()
+      const currentBidDeposit = this.quantityPrice(
+        listing.bid.native,
+        listing.bidUnitaryPrice.native,
+        asset.decimals,
+      );
+      itxn
+        .payment({ receiver: listing.bidder.native, amount: currentBidDeposit })
+        .submit();
     }
 
-    this.listings.delete(key)
+    this.listings.delete(key);
 
-    itxn.payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() }).submit()
+    itxn
+      .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
+      .submit();
 
     itxn
       .assetTransfer({
@@ -208,27 +250,48 @@ export default class DigitalMarketplace extends arc4.Contract {
         assetReceiver: Txn.sender,
         assetAmount: listing.deposited.native,
       })
-      .submit()
+      .submit();
   }
 
   @arc4.abimethod()
-  bid(owner: arc4.Address, asset: Asset, nonce: arc4.UintN64, bidPay: gtxn.PaymentTxn, quantity: arc4.UintN64, unitaryPrice: arc4.UintN64) {
-    const key = new ListingKey({ owner, asset: new arc4.UintN64(asset.id), nonce })
+  bid(
+    owner: arc4.Address,
+    asset: Asset,
+    nonce: arc4.UintN64,
+    bidPay: gtxn.PaymentTxn,
+    quantity: arc4.UintN64,
+    unitaryPrice: arc4.UintN64,
+  ) {
+    const key = new ListingKey({
+      owner,
+      asset: new arc4.UintN64(asset.id),
+      nonce,
+    });
 
-    const listing = this.listings.get(key)
+    const listing = this.listings.get(key);
     if (listing.bidder !== new arc4.Address()) {
-      assert(unitaryPrice.native > listing.bidUnitaryPrice.native)
+      assert(unitaryPrice.native > listing.bidUnitaryPrice.native);
 
-      const currentBidAmount = this.quantityPrice(listing.bid.native, listing.bidUnitaryPrice.native, asset.decimals)
+      const currentBidAmount = this.quantityPrice(
+        listing.bid.native,
+        listing.bidUnitaryPrice.native,
+        asset.decimals,
+      );
 
-      itxn.payment({ receiver: listing.bidder.native, amount: currentBidAmount }).submit()
+      itxn
+        .payment({ receiver: listing.bidder.native, amount: currentBidAmount })
+        .submit();
     }
 
-    const amountToBeBid = this.quantityPrice(quantity.native, unitaryPrice.native, asset.decimals)
+    const amountToBeBid = this.quantityPrice(
+      quantity.native,
+      unitaryPrice.native,
+      asset.decimals,
+    );
 
-    assert(bidPay.sender === Txn.sender)
-    assert(bidPay.receiver === Global.currentApplicationAddress)
-    assert(bidPay.amount === amountToBeBid)
+    assert(bidPay.sender === Txn.sender);
+    assert(bidPay.receiver === Global.currentApplicationAddress);
+    assert(bidPay.amount === amountToBeBid);
 
     this.listings.set(
       key,
@@ -239,21 +302,32 @@ export default class DigitalMarketplace extends arc4.Contract {
         bid: quantity,
         bidUnitaryPrice: unitaryPrice,
       }),
-    )
+    );
   }
 
   @arc4.abimethod()
   acceptBid(asset: Asset, nonce: arc4.UintN64) {
-    const key = new ListingKey({ owner: new arc4.Address(Txn.sender), asset: new arc4.UintN64(asset.id), nonce })
+    const key = new ListingKey({
+      owner: new arc4.Address(Txn.sender),
+      asset: new arc4.UintN64(asset.id),
+      nonce,
+    });
 
-    const listing = this.listings.get(key)
-    assert(listing.bidder !== new arc4.Address())
+    const listing = this.listings.get(key);
+    assert(listing.bidder !== new arc4.Address());
 
-    const minQuantity = listing.deposited.native < listing.bid.native ? listing.deposited.native : listing.bid.native
+    const minQuantity =
+      listing.deposited.native < listing.bid.native
+        ? listing.deposited.native
+        : listing.bid.native;
 
-    const bestBidAmount = this.quantityPrice(minQuantity, listing.bidUnitaryPrice.native, asset.decimals)
+    const bestBidAmount = this.quantityPrice(
+      minQuantity,
+      listing.bidUnitaryPrice.native,
+      asset.decimals,
+    );
 
-    itxn.payment({ receiver: Txn.sender, amount: bestBidAmount }).submit()
+    itxn.payment({ receiver: Txn.sender, amount: bestBidAmount }).submit();
 
     itxn
       .assetTransfer({
@@ -261,7 +335,7 @@ export default class DigitalMarketplace extends arc4.Contract {
         assetReceiver: listing.bidder.native,
         assetAmount: minQuantity,
       })
-      .submit()
+      .submit();
 
     this.listings.set(
       key,
@@ -272,6 +346,6 @@ export default class DigitalMarketplace extends arc4.Contract {
         deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
         bid: new arc4.UintN64(listing.bid.native - minQuantity),
       }),
-    )
+    );
   }
 }

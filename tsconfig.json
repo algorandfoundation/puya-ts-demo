@@ -7,8 +7,8 @@
     "lib": ["ESNext"],
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
-  "include": ["**/*.ts", "**/*.mts" ],
-  "exclude": ["tealscript_contracts/*"],
+  "include": ["**/*.ts", "**/*.mts"],
+  "exclude": ["tealscript_contracts/*"]
 }
