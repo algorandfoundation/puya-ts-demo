@@ -212,8 +212,12 @@ type Favorites = {
 ```
 
 ```ts
-updateFavoriteNumber(n: uint64) {
-    this.favorites(this.txn.sender).value.number = n;
+const favorites: Favorites = {
+    color,
+    number
+}
+
+favorites.number += 1;
 ```
 
 #### PuyaTS
@@ -228,11 +232,12 @@ type Favorites {
 ```
 
 ```ts
-updateFavoriteNumber(n: uint64) {
-    this.favorites.set(
-        Txn.sender, 
-        { ...this.listings.get(Txn.sender),  number: n }
-    );
+let favorites: Favorites = {
+    color,
+    number
+}
+
+favorites = { ...favorites,  number: favorites.number + 1 }
 ```
 
 ### ARC4 Types in State
@@ -280,7 +285,7 @@ updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
       nonce: nonce,
     })
 
-    const listing = this.listings.get(key).value.copy()
+    const listing = this.listings(key).value.copy()
 ```
 
 It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `nonce`. If `nonce` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
@@ -292,7 +297,7 @@ It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is
 In TEALScript, one can get a reference to a state value and use it like a regular JavaScript object reference.
 
 ```ts
-const listing = this.listings.get(key).value
+const listing = this.listings(key).value
 
 listing.newPrice = newPrice; // The value is modified in state
 ```
@@ -302,7 +307,7 @@ listing.newPrice = newPrice; // The value is modified in state
 In PuyaTS, state references are not supported and data must be copied out and copied back in.
 
 ```ts
-const listing = this.listings.get(key).value.copy()
+const listing = this.listings(key).value.copy()
 
 listing.newPrice = newPrice; // The value is NOT modified in state
 this.listings(key).value = listing; // We must manually set the value back in
@@ -311,7 +316,7 @@ this.listings(key).value = listing; // We must manually set the value back in
 Note that the same functionality for this example can be achieved by directly calling on `.value`
 
 ```ts
-this.listings.get(key).value.price = newPrice; // Value is updated in state
+this.listings(key).value.price = newPrice; // Value is updated in state
 ```
 
 ### Non-Uint64 Math and Overflows
@@ -370,7 +375,7 @@ This commonly results in this pattern:
 let listing: Listing
 
 if (this.listings(keyThatMightExist).exists) {
-    listing = this.listings.get(keyThatMightExist).value
+    listing = this.listings(keyThatMightExist).value
 } else {
     listing = createNewListing()
 }
@@ -383,7 +388,7 @@ listing.newPrice = newPrice;
 In PuyaTS, state values are NOT asserted when accessed.
 
 ```ts
-const listing = this.listings.get(keyThatDoesNotExist).value // no error, but value is 0x
+const listing = this.listings(keyThatDoesNotExist).value // no error, but value is 0x
 
 listing.newPrice = newPrice; // panic because value is 0x (depending on usage, the op it errors on would be different)
 ```
@@ -393,8 +398,8 @@ The same pattern as TEALScript can be used:
 ```ts
 let listing: Listing
 
-if (this.listings.get(keyThatMightExist).exists) {
-    listing = this.listings.get(keyThatMightExist).value.copy()
+if (this.listings(keyThatMightExist).exists) {
+    listing = this.listings(keyThatMightExist).value.copy()
 } else {
     listing = createNewListing()
 }
@@ -403,7 +408,7 @@ if (this.listings.get(keyThatMightExist).exists) {
 PuyaTS also has a `maybe()` function that returns a tuple:
 
 ```ts
-let [listing, exists] = this.listings.get(keyThatMightExist).maybe();
+let [listing, exists] = this.listings(keyThatMightExist).maybe();
 if (!exists) {
     listing = createNewListing()
 }
