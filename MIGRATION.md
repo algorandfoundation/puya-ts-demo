@@ -282,3 +282,32 @@ updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
 ```
 
 It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `none`. If `none` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
+
+### State References
+
+#### TEALScript
+
+In TEALScript, one can get a reference to a state value and use it like a regular JavaScript object reference.
+
+```ts
+const listing = this.listings.get(key).value
+
+listing.newPrice = newPrice; // The value is modified in state
+```
+
+#### PuyaTS
+
+In PuyaTS, state references are not supported and data must be copied out and copied back in.
+
+```ts
+const listing = this.listings.get(key).value.copy()
+
+listing.newPrice = newPrice; // The value is NOT modified in state
+this.listings(key).value = listing; // We must manually set the value back in
+```
+
+Note that the same functionality for this example can be achieved by directly calling on `.value`
+
+```ts
+this.listings.get(key).value.price = newPrice; // Value is updated in state
+```
