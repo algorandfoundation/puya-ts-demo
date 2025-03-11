@@ -2,25 +2,25 @@
 
 ## What?
 
-Algorand TypeScript is a new language built on the [Puya compiler architecture](https://github.com/algorandfoundation/puya/blob/main/ARCHITECTURE.md) for developing Algorand Smart Contracts and Logic Signatures in TypeScript.   
+Algorand TypeScript is a new language built on the [Puya compiler architecture](https://github.com/algorandfoundation/puya/blob/main/ARCHITECTURE.md) for developing Algorand Smart Contracts and Logic Signatures in TypeScript.
 
 ## Why?
 
-TealScript is a one-shot compiler converting AST parsed by the TypeScript compiler directly to Teal code output. This architecture makes it impossible to share compiler code for multiple front end languages increasing the maintenance overhead of supporting said languages. 
+TealScript is a one-shot compiler converting AST parsed by the TypeScript compiler directly to Teal code output. This architecture makes it impossible to share compiler code for multiple front end languages increasing the maintenance overhead of supporting said languages.
 
-Puya, whilst initially built to support Algorand Python has been architected as a multi-stage compiler with various Intermediate Representations (IR). Several of these stages include code optimizations that any front end language can take advantage of along with abstracting away some of the more complex concepts of compiler development. Some examples of these optimizations include: 
+Puya, whilst initially built to support Algorand Python has been architected as a multi-stage compiler with various Intermediate Representations (IR). Several of these stages include code optimizations that any front end language can take advantage of along with abstracting away some of the more complex concepts of compiler development. Some examples of these optimizations include:
 
- - Constant value propagation 
- - Dead code removal
- - Subroutine inlining
- - Repeated code elimination
- - Intrinsic op simplification
+- Constant value propagation
+- Dead code removal
+- Subroutine inlining
+- Repeated code elimination
+- Intrinsic op simplification
 
 [Puya-ts](https://github.com/algorandfoundation/puya-ts) is the new compiler built to take advantage of the Puya base compiler. As part of building puya-ts, we also took the chance to design Algorand TypeScript as the new supported language. It was built taking inspiration from the learnings of TealScript but differs in several ways which can best be summarised as:
 
- - Changes that were necessary to support the design goal of Semantic Compatability
- - Changes that were desirable to more closely align Algorand TypeScript with Algorand Python
- - Changes where we felt we could improve upon the approach used by TealScript
+- Changes that were necessary to support the design goal of Semantic Compatability
+- Changes that were desirable to more closely align Algorand TypeScript with Algorand Python
+- Changes where we felt we could improve upon the approach used by TealScript
 
 You can read more about Algorand TypeScript language and its design [here](https://github.com/algorandfoundation/puya-ts/blob/main/docs/language-guide.md). The rest of this document focuses on highlighting differences between Algorand TypeScript and TealScript to aid in migration between the two languages.
 
@@ -117,6 +117,7 @@ getSum(x: uint64, y: uint64) {
     return sum;
 }
 ```
+
 or
 
 ```ts
@@ -231,3 +232,53 @@ updateFavoriteNumber(n: uint64) {
         { ...this.listings.get(Txn.sender),  number: n }
     );
 ```
+
+### ARC4 Types in State
+
+#### TEALScript
+
+In TEALScript, the same types used within method logic can be stored in state or used as state map keys.
+
+```ts
+export type ListingKey = {
+    owner: Address,
+    asset: Asset,
+    nonce: uint64,
+}
+```
+
+```ts
+updateListing(xfer: AssetTransferTxn, nonce: uint64)
+    const key: ListingKey = {
+      owner: this.txn.sender,
+      asset: xfer.xferAsset,
+      nonce: nonce,
+    })
+
+    const listing = this.listings(key).value
+```
+
+#### PuyaTS
+
+In PuyaTS, state can only hold ARC4 types.
+
+```ts
+export class ListingKey extends arc4.Struct<{
+  owner: arc4.Address
+  asset: arc4.UintN64
+  nonce: arc4.UintN64
+}> {}
+```
+
+```ts
+updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
+    const key = new ListingKey({
+      owner: new arc4.Address(Txn.sender),
+      asset: new arc4.UintN64(xfer.xferAsset.id),
+      nonce: nonce,
+    })
+
+    const listing = this.listings.get(key).value.copy()
+```
+
+It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `none`. If `none` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
