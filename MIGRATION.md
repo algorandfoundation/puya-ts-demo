@@ -311,3 +311,41 @@ Note that the same functionality for this example can be achieved by directly ca
 ```ts
 this.listings.get(key).value.price = newPrice; // Value is updated in state
 ```
+
+### Non-Uint64 Math and Overflows
+
+In TEALScript, the usage of non-64-bit numbers (`uint<N>`) are more or less the same as `uint64`. The intermediate values of these values can be anything (under 64 bits for N < 64, under 512 bits for N > 64). The values are only checked for overlow when they are encoded by storing them in state, logging them, returning them, etc.
+
+```ts
+doMath(): uint8 {
+    const a: uint8 = 255;
+    const b: uint8 = 255;
+    const c = a + b; // Value exeeds max uint8 value, but we aren't encoding yet so no error occurs
+
+    return c - 255; // The final value is below uint8 max value, so no error occurs
+}
+```
+
+### PuyaTS
+
+In PuyaTS, constructors must be used for every value and an overflow check is performed upon construction.
+
+```ts
+doMath(): UintN8 {
+    const a = UintN8(255);
+    const b: UintN8(255);
+    const c = UintN8(a + b;) // Value exeeds max uint8 so an error is thrown
+```
+
+This means that having a constructor for every immediate value will result in a large program with a lot of opcode usage for overflow checks. This means in PuyaTS, you should use `uint64` or `biguint` until your value needs to be encodded.
+
+```ts
+doMath(): UintN8 {
+    const a: uint64 = 255;
+    const b: uint64 = 255;
+    const c: uint64 = a + b;
+
+    return UintN8(c - 255)
+```
+
+This will result in roughly the same behavior as TEALScript.
