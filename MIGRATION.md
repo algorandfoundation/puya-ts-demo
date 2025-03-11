@@ -314,6 +314,8 @@ this.listings.get(key).value.price = newPrice; // Value is updated in state
 
 ### Non-Uint64 Math and Overflows
 
+#### TEALScript
+
 In TEALScript, the usage of non-64-bit numbers (`uint<N>`) are more or less the same as `uint64`. The intermediate values of these values can be anything (under 64 bits for N < 64, under 512 bits for N > 64). The values are only checked for overlow when they are encoded by storing them in state, logging them, returning them, etc.
 
 ```ts
@@ -326,7 +328,7 @@ doMath(): uint8 {
 }
 ```
 
-### PuyaTS
+#### PuyaTS
 
 In PuyaTS, constructors must be used for every value and an overflow check is performed upon construction.
 
