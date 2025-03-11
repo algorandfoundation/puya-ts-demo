@@ -351,3 +351,60 @@ doMath(): UintN8 {
 ```
 
 This will result in roughly the same behavior as TEALScript.
+
+### State Value Assertions
+
+#### TEALScript
+
+In TEALScript, when you access state the value is always asserted to exist.
+
+```ts
+const listing = this.listings(keyThatDoesNotExist).value // panic, failed assert
+```
+
+This commonly results in this pattern:
+
+```ts
+let listing: Listing
+
+if (this.listings(keyThatMightExist).exists) {
+    listing = this.listings.get(keyThatMightExist).value
+} else {
+    listing = createNewListing()
+}
+
+listing.newPrice = newPrice; 
+```
+
+#### PuyaTS
+
+In PuyaTS, state values are NOT asserted when accessed.
+
+```ts
+const listing = this.listings.get(keyThatDoesNotExist).value // no error, but value is 0x
+
+listing.newPrice = newPrice; // panic because value is 0x (depending on usage, the op it errors on would be different)
+```
+
+The same pattern as TEALScript can be used:
+
+```ts
+let listing: Listing
+
+if (this.listings.get(keyThatMightExist).exists) {
+    listing = this.listings.get(keyThatMightExist).value.copy()
+} else {
+    listing = createNewListing()
+}
+```
+
+PuyaTS also has a `maybe()` function that returns a tuple:
+
+```ts
+let [listing, exists] = this.listings.get(keyThatMightExist).maybe();
+if (!exists) {
+    listing = createNewListing()
+}
+
+listing.newPrice = newPrice;
+```
