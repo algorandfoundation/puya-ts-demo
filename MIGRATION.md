@@ -147,6 +147,8 @@ const x = new UintN8(10);
 const y = new UintN<64>(x);
 ```
 
+c
+
 ### String vs Bytes
 
 #### TEALScript
@@ -281,7 +283,7 @@ updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
     const listing = this.listings.get(key).value.copy()
 ```
 
-It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `none`. If `none` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
+It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `nonce`. If `nonce` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
 
 ### State References
 
@@ -336,7 +338,7 @@ In PuyaTS, constructors must be used for every value and an overflow check is pe
 doMath(): UintN8 {
     const a = UintN8(255);
     const b: UintN8(255);
-    const c = UintN8(a + b;) // Value exeeds max uint8 so an error is thrown
+    const c = UintN8(a + b); // Value exeeds max uint8 so an error is thrown
 ```
 
 This means that having a constructor for every immediate value will result in a large program with a lot of opcode usage for overflow checks. This means in PuyaTS, you should use `uint64` or `biguint` until your value needs to be encodded.
