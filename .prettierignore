@@ -11,4 +11,4 @@ coverage
 # don't format ide files
 .idea
 
-contracts/out/*
+contracts/**/out/*

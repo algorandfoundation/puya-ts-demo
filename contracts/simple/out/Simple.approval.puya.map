@@ -1,0 +1,988 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/parallels/dev/puya-ts-demo/contracts/simple/simple.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;AASuC;AAAyB;AAA9D;AADF;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;AAsBE;;AAAA;AAAA;AAAA;;AAAA;AAtBF;;;AAAA;;;AAsBE;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAlBF;;;AAAA;;;AAkBE;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAdF;;;AAAA;AAcE;;;AAAA;;AAJA;;AAAA;AAAA;AAAA;;AAAA;AAVF;;;AAAA;AAUE;;;AAAA;;AAHC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAGD;;;AATqC;AAAA;AAAA;AAAA;AAGd;;AAAA;AAHc;AAGnC;AAAA;;AAUF;;;AAbqC;AAAA;AAAA;AAAA;AAcd;;AAAA;AAdc;AAcnC;AAAA;;AAGF;;;AACsB;;AAAA;;AAAA;AAAb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAP;AAGF;;;AACsB;;AAAA;;AAAA;AAAb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0 32"
+    },
+    "6": {
+      "op": "bytecblock \"counter\" 0x151f7c75"
+    },
+    "21": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "reinterpret_bool%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bool%0#0"
+      ]
+    },
+    "23": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "26": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\""
+      ],
+      "stack_out": [
+        "\"counter\""
+      ]
+    },
+    "27": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "\"counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"counter\"",
+        "0"
+      ]
+    },
+    "28": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "29": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "31": {
+      "op": "bz main_after_if_else@13",
+      "stack_out": []
+    },
+    "34": {
+      "op": "pushbytess 0xb8447b36 0x9fab8610 0x2e0c5a47 0xac976e02 0x091b32a7 // method \"createApplication()void\", method \"incr(uint64)void\", method \"decr(uint64)void\", method \"add(uint256,uint256)uint256\", method \"sub(uint256,uint256)uint256\"",
+      "defined_out": [
+        "Method(add(uint256,uint256)uint256)",
+        "Method(createApplication()void)",
+        "Method(decr(uint64)void)",
+        "Method(incr(uint64)void)",
+        "Method(sub(uint256,uint256)uint256)"
+      ],
+      "stack_out": [
+        "Method(createApplication()void)",
+        "Method(incr(uint64)void)",
+        "Method(decr(uint64)void)",
+        "Method(add(uint256,uint256)uint256)",
+        "Method(sub(uint256,uint256)uint256)"
+      ]
+    },
+    "61": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(add(uint256,uint256)uint256)",
+        "Method(createApplication()void)",
+        "Method(decr(uint64)void)",
+        "Method(incr(uint64)void)",
+        "Method(sub(uint256,uint256)uint256)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(createApplication()void)",
+        "Method(incr(uint64)void)",
+        "Method(decr(uint64)void)",
+        "Method(add(uint256,uint256)uint256)",
+        "Method(sub(uint256,uint256)uint256)",
+        "tmp%2#0"
+      ]
+    },
+    "64": {
+      "op": "match main_createApplication_route@5 main_incr_route@6 main_decr_route@7 main_add_route@8 main_sub_route@9",
+      "stack_out": []
+    },
+    "76": {
+      "block": "main_after_if_else@13",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "77": {
+      "op": "return",
+      "stack_out": []
+    },
+    "78": {
+      "block": "main_sub_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "80": {
+      "op": "!",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "81": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "82": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "84": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "85": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[32]%2#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%2#0"
+      ]
+    },
+    "88": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[32]%2#0",
+        "reinterpret_bytes[32]%3#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%2#0",
+        "reinterpret_bytes[32]%3#0"
+      ]
+    },
+    "91": {
+      "callsub": "contracts/simple/simple.algo.ts::Simple.sub",
+      "op": "callsub sub",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "94": {
+      "op": "bytec_1 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0",
+        "0x151f7c75"
+      ]
+    },
+    "95": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%27#0"
+      ]
+    },
+    "96": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "97": {
+      "op": "log",
+      "stack_out": []
+    },
+    "98": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "99": {
+      "op": "return",
+      "stack_out": []
+    },
+    "100": {
+      "block": "main_add_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "102": {
+      "op": "!",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "103": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "104": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "106": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "107": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[32]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%0#0"
+      ]
+    },
+    "110": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[32]%0#0",
+        "reinterpret_bytes[32]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%0#0",
+        "reinterpret_bytes[32]%1#0"
+      ]
+    },
+    "113": {
+      "callsub": "contracts/simple/simple.algo.ts::Simple.add",
+      "op": "callsub add",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "116": {
+      "op": "bytec_1 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "0x151f7c75"
+      ]
+    },
+    "117": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%21#0"
+      ]
+    },
+    "118": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "119": {
+      "op": "log",
+      "stack_out": []
+    },
+    "120": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "121": {
+      "op": "return",
+      "stack_out": []
+    },
+    "122": {
+      "block": "main_decr_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "124": {
+      "op": "!",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "125": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "126": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "128": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "129": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%1#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "132": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "133": {
+      "callsub": "contracts/simple/simple.algo.ts::Simple.decr",
+      "op": "callsub decr",
+      "stack_out": []
+    },
+    "136": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "137": {
+      "op": "return",
+      "stack_out": []
+    },
+    "138": {
+      "block": "main_incr_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "140": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "141": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "142": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "144": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "145": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "148": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "149": {
+      "callsub": "contracts/simple/simple.algo.ts::Simple.incr",
+      "op": "callsub incr",
+      "stack_out": []
+    },
+    "152": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "153": {
+      "op": "return",
+      "stack_out": []
+    },
+    "154": {
+      "block": "main_createApplication_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "156": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "157": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "158": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "160": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "161": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "162": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "163": {
+      "op": "return",
+      "stack_out": []
+    },
+    "164": {
+      "subroutine": "contracts/simple/simple.algo.ts::Simple.incr",
+      "params": {
+        "i#0": "uint64"
+      },
+      "block": "incr",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "167": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "168": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"counter\""
+      ]
+    },
+    "169": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "170": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "171": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "i#0 (copy)",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "173": {
+      "op": "+",
+      "defined_out": [
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "new_state_value%0#0"
+      ]
+    },
+    "174": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "new_state_value%0#0",
+        "\"counter\""
+      ]
+    },
+    "175": {
+      "op": "swap",
+      "stack_out": [
+        "\"counter\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "176": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "177": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "178": {
+      "subroutine": "contracts/simple/simple.algo.ts::Simple.decr",
+      "params": {
+        "i#0": "uint64"
+      },
+      "block": "decr",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "181": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "182": {
+      "op": "bytec_0 // \"counter\"",
+      "defined_out": [
+        "\"counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"counter\""
+      ]
+    },
+    "183": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "184": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "185": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "i#0 (copy)",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "187": {
+      "op": "-",
+      "defined_out": [
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "new_state_value%0#0"
+      ]
+    },
+    "188": {
+      "op": "bytec_0 // \"counter\"",
+      "stack_out": [
+        "new_state_value%0#0",
+        "\"counter\""
+      ]
+    },
+    "189": {
+      "op": "swap",
+      "stack_out": [
+        "\"counter\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "190": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "191": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "192": {
+      "subroutine": "contracts/simple/simple.algo.ts::Simple.add",
+      "params": {
+        "a#0": "bytes",
+        "b#0": "bytes"
+      },
+      "block": "add",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "195": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "197": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "199": {
+      "op": "b+",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "200": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "201": {
+      "op": "len",
+      "defined_out": [
+        "len_%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "len_%0#0"
+      ]
+    },
+    "202": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "len_%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "len_%0#0",
+        "32"
+      ]
+    },
+    "203": {
+      "op": "<=",
+      "defined_out": [
+        "no_overflow%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "no_overflow%0#0"
+      ]
+    },
+    "204": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "205": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "to_encode%0#0",
+        "32"
+      ]
+    },
+    "206": {
+      "op": "bzero",
+      "defined_out": [
+        "b_zeros%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "b_zeros%0#0"
+      ]
+    },
+    "207": {
+      "op": "b|",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "208": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "209": {
+      "subroutine": "contracts/simple/simple.algo.ts::Simple.sub",
+      "params": {
+        "a#0": "bytes",
+        "b#0": "bytes"
+      },
+      "block": "sub",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "212": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "214": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "216": {
+      "op": "b-",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "217": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "218": {
+      "op": "len",
+      "defined_out": [
+        "len_%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "len_%0#0"
+      ]
+    },
+    "219": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "len_%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "len_%0#0",
+        "32"
+      ]
+    },
+    "220": {
+      "op": "<=",
+      "defined_out": [
+        "no_overflow%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "no_overflow%0#0"
+      ]
+    },
+    "221": {
+      "error": "overflow",
+      "op": "assert // overflow",
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "222": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "to_encode%0#0",
+        "32"
+      ]
+    },
+    "223": {
+      "op": "bzero",
+      "defined_out": [
+        "b_zeros%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "b_zeros%0#0"
+      ]
+    },
+    "224": {
+      "op": "b|",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "225": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

@@ -1,0 +1,561 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0
+    bytecblock "b" 0xff "globalInt" "customKey"
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:29
+    // globalInt = GlobalState({ initialValue: Uint64(4) });
+    bytec_2 // "globalInt"
+    pushint 4 // 4
+    app_global_put
+
+main_after_if_else@2:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txn NumAppArgs
+    bz main_after_if_else@16
+    pushbytess 0x2dac715d 0xcc0c6e4d 0x29314d95 0xf743ce21 0x3a49b2a3 0xf5d898b7 0x6ce0f4b5 0x49a55ae8 // method "useState(uint64,string,uint64)void", method "createApp()void", method "optIn()void", method "addToBox(uint64)void", method "addToBoxMap(string)void", method "insertIntoBoxRef(byte[],uint64,uint64)void", method "sayHello(string,uint64)string", method "checkTransaction(pay)void"
+    txna ApplicationArgs 0
+    match main_useState_route@5 main_createApp_route@6 main_optIn_route@7 main_addToBox_route@8 main_addToBoxMap_route@9 main_insertIntoBoxRef_route@10 main_sayHello_route@11 main_checkTransaction_route@12
+
+main_after_if_else@16:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    intc_1 // 0
+    return
+
+main_checkTransaction_route@12:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:84
+    // checkTransaction(pay: gtxn.PaymentTxn) {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_0 // pay
+    ==
+    assert // transaction type is pay
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:84
+    // checkTransaction(pay: gtxn.PaymentTxn) {
+    callsub checkTransaction
+    intc_0 // 1
+    return
+
+main_sayHello_route@11:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:80
+    // sayHello(name: string, a: uint64): string {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:80
+    // sayHello(name: string, a: uint64): string {
+    callsub sayHello
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_insertIntoBoxRef_route@10:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:70
+    // insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    btoi
+    txna ApplicationArgs 3
+    btoi
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:70
+    // insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) {
+    callsub insertIntoBoxRef
+    intc_0 // 1
+    return
+
+main_addToBoxMap_route@9:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:66
+    // addToBoxMap(x: string) {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:66
+    // addToBoxMap(x: string) {
+    callsub addToBoxMap
+    intc_0 // 1
+    return
+
+main_addToBox_route@8:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:58
+    // addToBox(x: uint64) {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txna ApplicationArgs 1
+    btoi
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:58
+    // addToBox(x: uint64) {
+    callsub addToBox
+    intc_0 // 1
+    return
+
+main_optIn_route@7:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:55
+    // @abimethod({ allowActions: ["OptIn"] })
+    txn OnCompletion
+    intc_0 // OptIn
+    ==
+    assert // OnCompletion is not OptIn
+    txn ApplicationID
+    assert // can only call when not creating
+    intc_0 // 1
+    return
+
+main_createApp_route@6:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:50
+    // @abimethod({ onCreate: "require", allowActions: "NoOp" })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    callsub createApp
+    intc_0 // 1
+    return
+
+main_useState_route@5:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:38
+    // useState(a: uint64, b: string, c: uint64) {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:28
+    // export class KitchenSinkContract extends Contract {
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    extract 2 0
+    txna ApplicationArgs 3
+    btoi
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:38
+    // useState(a: uint64, b: string, c: uint64) {
+    callsub useState
+    intc_0 // 1
+    return
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.useState(a: uint64, b: bytes, c: uint64) -> void:
+useState:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:38
+    // useState(a: uint64, b: string, c: uint64) {
+    proto 3 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:29
+    // globalInt = GlobalState({ initialValue: Uint64(4) });
+    intc_1 // 0
+    bytec_2 // "globalInt"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:39
+    // this.globalInt.value *= a;
+    frame_dig -3
+    *
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:29
+    // globalInt = GlobalState({ initialValue: Uint64(4) });
+    bytec_2 // "globalInt"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:39
+    // this.globalInt.value *= a;
+    swap
+    app_global_put
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:30
+    // globalString = GlobalState<string>({ key: "customKey" });
+    intc_1 // 0
+    bytec_3 // "customKey"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:40
+    // if (this.globalString.hasValue) {
+    app_global_get_ex
+    bury 1
+    bz useState_else_body@2
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:30
+    // globalString = GlobalState<string>({ key: "customKey" });
+    intc_1 // 0
+    bytec_3 // "customKey"
+    app_global_get_ex
+    assert // check GlobalState exists
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:41
+    // this.globalString.value += b;
+    frame_dig -2
+    concat
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:30
+    // globalString = GlobalState<string>({ key: "customKey" });
+    bytec_3 // "customKey"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:41
+    // this.globalString.value += b;
+    swap
+    app_global_put
+
+useState_after_if_else@3:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:45
+    // if (Txn.sender.isOptedIn(Global.currentApplicationId)) {
+    txn Sender
+    global CurrentApplicationID
+    app_opted_in
+    bz useState_after_if_else@5
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:46
+    // this.localBigInt(Txn.sender).value = BigUint(c) * BigUint(a);
+    frame_dig -1
+    itob
+    frame_dig -3
+    itob
+    txn Sender
+    cover 2
+    b*
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:32
+    // localBigInt = LocalState<biguint>();
+    pushbytes "localBigInt"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:46
+    // this.localBigInt(Txn.sender).value = BigUint(c) * BigUint(a);
+    swap
+    app_local_put
+
+useState_after_if_else@5:
+    retsub
+
+useState_else_body@2:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:30
+    // globalString = GlobalState<string>({ key: "customKey" });
+    bytec_3 // "customKey"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:43
+    // this.globalString.value = b;
+    frame_dig -2
+    app_global_put
+    b useState_after_if_else@3
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.createApp() -> void:
+createApp:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:29
+    // globalInt = GlobalState({ initialValue: Uint64(4) });
+    bytec_2 // "globalInt"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:52
+    // this.globalInt.value = Global.currentApplicationId.id;
+    global CurrentApplicationID
+    app_global_put
+    retsub
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.addToBox(x: uint64) -> void:
+addToBox:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:58
+    // addToBox(x: uint64) {
+    proto 1 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:59
+    // if (!this.boxOfArray.exists) {
+    box_len
+    bury 1
+    bnz addToBox_else_body@2
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:60
+    // this.boxOfArray.value = new DynamicArray(new UintN<64>(x));
+    frame_dig -1
+    itob
+    pushbytes 0x0001
+    swap
+    concat
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:60
+    // this.boxOfArray.value = new DynamicArray(new UintN<64>(x));
+    box_del
+    pop
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:60
+    // this.boxOfArray.value = new DynamicArray(new UintN<64>(x));
+    swap
+    box_put
+    retsub
+
+addToBox_else_body@2:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:62
+    // this.boxOfArray.value.push(new UintN<64>(x));
+    box_get
+    assert // Box must have value
+    extract 2 0
+    frame_dig -1
+    itob
+    concat
+    dup
+    len
+    pushint 8 // 8
+    /
+    itob
+    extract 6 2
+    swap
+    concat
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:62
+    // this.boxOfArray.value.push(new UintN<64>(x));
+    box_del
+    pop
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:34
+    // boxOfArray = Box<DynamicArray<UintN<64>>>({ key: "b" });
+    bytec_0 // "b"
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:62
+    // this.boxOfArray.value.push(new UintN<64>(x));
+    swap
+    box_put
+    retsub
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.addToBoxMap(x: bytes) -> void:
+addToBoxMap:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:66
+    // addToBoxMap(x: string) {
+    proto 1 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:67
+    // this.boxMap(Txn.sender).value = Bytes(x);
+    txn Sender
+    dup
+    box_del
+    pop
+    frame_dig -1
+    box_put
+    retsub
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) -> void:
+insertIntoBoxRef:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:70
+    // insertIntoBoxRef(content: bytes, offset: uint64, boxSize: uint64) {
+    proto 3 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:71
+    // assert(offset + content.length < boxSize);
+    frame_dig -3
+    len
+    frame_dig -2
+    +
+    dup
+    frame_dig -1
+    <
+    assert
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:36
+    // boxRef = BoxRef({ key: Bytes.fromHex("FF") });
+    bytec_1 // 0xff
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:72
+    // if (this.boxRef.exists) {
+    box_len
+    bury 1
+    bz insertIntoBoxRef_else_body@2
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:36
+    // boxRef = BoxRef({ key: Bytes.fromHex("FF") });
+    bytec_1 // 0xff
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:73
+    // this.boxRef.create({ size: boxSize });
+    frame_dig -1
+    box_create
+    pop
+
+insertIntoBoxRef_after_if_else@5:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:36
+    // boxRef = BoxRef({ key: Bytes.fromHex("FF") });
+    bytec_1 // 0xff
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:77
+    // this.boxRef.splice(offset, offset + content.length, content);
+    frame_dig -2
+    frame_dig 0
+    frame_dig -3
+    box_splice
+    retsub
+
+insertIntoBoxRef_else_body@2:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:36
+    // boxRef = BoxRef({ key: Bytes.fromHex("FF") });
+    bytec_1 // 0xff
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:74
+    // } else if (this.boxRef.length !== boxSize) {
+    box_len
+    assert // Box must have value
+    frame_dig -1
+    !=
+    bz insertIntoBoxRef_after_if_else@5
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:36
+    // boxRef = BoxRef({ key: Bytes.fromHex("FF") });
+    bytec_1 // 0xff
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:75
+    // this.boxRef.resize(boxSize);
+    frame_dig -1
+    box_resize
+    b insertIntoBoxRef_after_if_else@5
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.sayHello(name: bytes, a: uint64) -> bytes:
+sayHello:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:80
+    // sayHello(name: string, a: uint64): string {
+    proto 2 1
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:81
+    // return `${this.getHello()} ${name} ${Bytes(a)}`;
+    pushbytes "Hello "
+    frame_dig -2
+    concat
+    pushbytes " "
+    concat
+    frame_dig -1
+    itob
+    concat
+    retsub
+
+
+// contracts/kitchen-sink/kitchen-sink.algo.ts::KitchenSinkContract.checkTransaction(pay: uint64) -> void:
+checkTransaction:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:84
+    // checkTransaction(pay: gtxn.PaymentTxn) {
+    proto 1 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    frame_dig -1
+    gtxns Amount
+    dup
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:86
+    // amount: { between: [1000, 2000] },
+    pushint 2000 // 2000
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    <=
+    bz checkTransaction_bool_false@6
+    frame_dig 0
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:86
+    // amount: { between: [1000, 2000] },
+    pushint 1000 // 1000
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    >=
+    bz checkTransaction_bool_false@6
+    frame_dig -1
+    gtxns LastValid
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:87
+    // lastValid: { greaterThan: Global.round },
+    global Round
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    >
+    bz checkTransaction_bool_false@6
+    frame_dig -1
+    gtxns Sender
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:88
+    // sender: Txn.sender,
+    txn Sender
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    ==
+    bz checkTransaction_bool_false@6
+    frame_dig -1
+    gtxns Receiver
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:89
+    // receiver: Global.currentApplicationId.address,
+    global CurrentApplicationID
+    app_params_get AppAddress
+    assert // application exists
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    ==
+    bz checkTransaction_bool_false@6
+    intc_0 // 1
+
+checkTransaction_bool_merge@7:
+    // contracts/kitchen-sink/kitchen-sink.algo.ts:85-90
+    // assertMatch(pay, {
+    //   amount: { between: [1000, 2000] },
+    //   lastValid: { greaterThan: Global.round },
+    //   sender: Txn.sender,
+    //   receiver: Global.currentApplicationId.address,
+    // });
+    assert // assert target is match for conditions
+    retsub
+
+checkTransaction_bool_false@6:
+    intc_1 // 0
+    b checkTransaction_bool_merge@7

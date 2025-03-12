@@ -1,0 +1,112 @@
+{
+  "name": "KitchenSinkContract",
+  "desc": "",
+  "methods": [
+    {
+      "name": "useState",
+      "args": [
+        {
+          "name": "a",
+          "type": "uint64"
+        },
+        {
+          "name": "b",
+          "type": "string"
+        },
+        {
+          "name": "c",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "optInToApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "addToBox",
+      "args": [
+        {
+          "name": "x",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "addToBoxMap",
+      "args": [
+        {
+          "name": "x",
+          "type": "string"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "insertIntoBoxRef",
+      "args": [
+        {
+          "name": "content",
+          "type": "byte[]"
+        },
+        {
+          "name": "offset",
+          "type": "uint64"
+        },
+        {
+          "name": "boxSize",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "sayHello",
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "a",
+          "type": "uint64"
+        }
+      ],
+      "returns": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "checkTransaction",
+      "args": [
+        {
+          "name": "pay",
+          "type": "pay"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
