@@ -1,0 +1,124 @@
+#pragma version 10
+#pragma typetrack false
+
+// contracts/lsig-with-app/lsig-with-app.algo.ts::program() -> uint64:
+main:
+    intcblock 1 0 TMPL_APP_ID
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:32-42
+    // assertMatch(Txn, {
+    //   assetAmount: 0,
+    //   assetReceiver: Txn.sender,
+    //   // It's very important to set fee to 0 for delegated logic signatures
+    //   // Otherwise the fee can be used to drain the signer's account
+    //   fee: 0,
+    //   // Also very important to check that the rekey is set to zero address
+    //   rekeyTo: Global.zeroAddress,
+    //   // Finally we must ensure that this is not a close transaction, which will drain the signer's account of the given asset
+    //   assetCloseTo: Global.zeroAddress,
+    // });
+    txn AssetAmount
+    bnz main_bool_false@6
+    txn AssetReceiver
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:34
+    // assetReceiver: Txn.sender,
+    txn Sender
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:32-42
+    // assertMatch(Txn, {
+    //   assetAmount: 0,
+    //   assetReceiver: Txn.sender,
+    //   // It's very important to set fee to 0 for delegated logic signatures
+    //   // Otherwise the fee can be used to drain the signer's account
+    //   fee: 0,
+    //   // Also very important to check that the rekey is set to zero address
+    //   rekeyTo: Global.zeroAddress,
+    //   // Finally we must ensure that this is not a close transaction, which will drain the signer's account of the given asset
+    //   assetCloseTo: Global.zeroAddress,
+    // });
+    ==
+    bz main_bool_false@6
+    txn Fee
+    bnz main_bool_false@6
+    txn RekeyTo
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:39
+    // rekeyTo: Global.zeroAddress,
+    global ZeroAddress
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:32-42
+    // assertMatch(Txn, {
+    //   assetAmount: 0,
+    //   assetReceiver: Txn.sender,
+    //   // It's very important to set fee to 0 for delegated logic signatures
+    //   // Otherwise the fee can be used to drain the signer's account
+    //   fee: 0,
+    //   // Also very important to check that the rekey is set to zero address
+    //   rekeyTo: Global.zeroAddress,
+    //   // Finally we must ensure that this is not a close transaction, which will drain the signer's account of the given asset
+    //   assetCloseTo: Global.zeroAddress,
+    // });
+    ==
+    bz main_bool_false@6
+    txn AssetCloseTo
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:41
+    // assetCloseTo: Global.zeroAddress,
+    global ZeroAddress
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:32-42
+    // assertMatch(Txn, {
+    //   assetAmount: 0,
+    //   assetReceiver: Txn.sender,
+    //   // It's very important to set fee to 0 for delegated logic signatures
+    //   // Otherwise the fee can be used to drain the signer's account
+    //   fee: 0,
+    //   // Also very important to check that the rekey is set to zero address
+    //   rekeyTo: Global.zeroAddress,
+    //   // Finally we must ensure that this is not a close transaction, which will drain the signer's account of the given asset
+    //   assetCloseTo: Global.zeroAddress,
+    // });
+    ==
+    bz main_bool_false@6
+    intc_0 // 1
+
+main_bool_merge@7:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:32-42
+    // assertMatch(Txn, {
+    //   assetAmount: 0,
+    //   assetReceiver: Txn.sender,
+    //   // It's very important to set fee to 0 for delegated logic signatures
+    //   // Otherwise the fee can be used to drain the signer's account
+    //   fee: 0,
+    //   // Also very important to check that the rekey is set to zero address
+    //   rekeyTo: Global.zeroAddress,
+    //   // Finally we must ensure that this is not a close transaction, which will drain the signer's account of the given asset
+    //   assetCloseTo: Global.zeroAddress,
+    // });
+    assert // assert target is match for conditions
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:44
+    // const appCall = gtxn.ApplicationTxn(Txn.groupIndex + 1);
+    txn GroupIndex
+    intc_0 // 1
+    +
+    dup
+    gtxns TypeEnum
+    pushint 6 // appl
+    ==
+    assert // transaction type is appl
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:46
+    // assert(appCall.appId === TemplateVar<Application>("APP_ID"));
+    dup
+    gtxns ApplicationID
+    intc_2 // TMPL_APP_ID
+    ==
+    assert
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:47
+    // assert(appCall.appArgs(0) === methodSelector("verifyCreator(axfer)void"));
+    intc_1 // 0
+    gtxnsas ApplicationArgs
+    pushbytes 0x8d5aa727 // method "verifyCreator(axfer)void"
+    ==
+    assert
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:48
+    // return true;
+    intc_0 // 1
+    return
+
+main_bool_false@6:
+    intc_1 // 0
+    b main_bool_merge@7
