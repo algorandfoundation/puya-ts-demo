@@ -1,0 +1,20 @@
+{
+  "name": "FactoryCaller",
+  "desc": "",
+  "methods": [
+    {
+      "name": "mintAndGetAsset",
+      "args": [],
+      "returns": {
+        "type": "uint64"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}

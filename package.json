@@ -4,11 +4,11 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "patch-package",
-    "build:puya": "puya-ts build contracts/calculator contracts/hello-world contracts/kitchen-sink contracts/lsig-with-app contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
+    "build:puya": "puya-ts build contracts/calculator contracts/hello-world contracts/itxns contracts/kitchen-sink contracts/lsig-with-app contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
     "build:tealscript": "",
     "test:jest": "tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.test.ts",
     "test:vitest": "vitest run",
-    "test:e2e": "npx tsx contracts/simple/simple.e2e.ts tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.e2e.ts",
+    "test:e2e": "npx tsx contracts/simple/simple.e2e.ts && npx tsx contracts/itxns/itxns.e2e.ts && tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.e2e.ts",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },
