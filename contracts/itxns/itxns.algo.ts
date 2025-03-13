@@ -1,55 +1,94 @@
-import { Contract } from "@algorandfoundation/tealscript";
+import {
+  compile,
+  Contract,
+  Global,
+  itxn,
+} from "@algorandfoundation/algorand-typescript";
+import type { uint64 } from "@algorandfoundation/algorand-typescript";
+import {
+  abimethod,
+  Address,
+  decodeArc4,
+  methodSelector,
+} from "@algorandfoundation/algorand-typescript/arc4";
 
-// eslint-disable-next-line no-unused-vars
-class NFTFactory extends Contract {
-  createNFT(name: string, unitName: string): AssetID {
-    return sendAssetCreation({
-      configAssetName: name,
-      configAssetUnitName: unitName,
-      configAssetTotal: 1,
-    });
+export class NFTFactory extends Contract {
+  @abimethod({ onCreate: "require" })
+  createApplication(): void {}
+
+  createNFT(name: string, unitName: string): uint64 {
+    return itxn
+      .assetConfig({
+        assetName: name,
+        unitName: unitName,
+        total: 1,
+      })
+      .submit().createdAsset.id;
   }
 
-  transferNFT(asset: AssetID, receiver: Address): void {
-    sendAssetTransfer({
-      assetReceiver: receiver,
-      assetAmount: 1,
-      xferAsset: asset,
-    });
+  transferNFT(assetId: uint64, receiver: Address): void {
+    itxn
+      .assetTransfer({
+        assetReceiver: receiver.native,
+        assetAmount: 1,
+        xferAsset: assetId,
+      })
+      .submit();
   }
 }
 
-// eslint-disable-next-line no-unused-vars
-class FactoryCaller extends Contract {
-  mintAndGetAsset(): AssetID {
-    sendMethodCall<typeof NFTFactory.prototype.createApplication>({
-      clearStateProgram: NFTFactory.clearProgram(),
-      approvalProgram: NFTFactory.approvalProgram(),
-    });
+export class FactoryCaller extends Contract {
+  @abimethod({ onCreate: "require" })
+  createApplication(): void {}
 
-    const factoryApp = this.itxn.createdApplicationID;
+  mintAndGetAsset(): uint64 {
+    const factory = compile(NFTFactory);
+    const factoryApp = itxn
+      .applicationCall({
+        appArgs: [methodSelector(NFTFactory.prototype.createApplication)],
+        approvalProgram: factory.approvalProgram,
+        clearStateProgram: factory.clearStateProgram,
+      })
+      .submit().createdApp;
 
-    sendPayment({
-      amount: 200_000,
-      receiver: factoryApp.address,
-    });
+    itxn
+      .payment({
+        amount: 200_000,
+        receiver: factoryApp.address,
+      })
+      .submit();
 
-    const createdAsset = sendMethodCall<typeof NFTFactory.prototype.createNFT>({
-      applicationID: factoryApp,
-      methodArgs: ["My NFT", "MNFT"],
-    });
+    const createNFTTxn = itxn
+      .applicationCall({
+        appArgs: [
+          methodSelector(NFTFactory.prototype.createNFT),
+          "My NFT",
+          "MNFT",
+        ],
+        appId: factoryApp,
+      })
+      .submit();
+    const createdAssetId = decodeArc4<uint64>(createNFTTxn.lastLog, "log");
 
-    sendAssetTransfer({
-      assetReceiver: this.app.address,
-      assetAmount: 0,
-      xferAsset: createdAsset,
-    });
+    itxn
+      .assetTransfer({
+        assetReceiver: Global.currentApplicationAddress,
+        assetAmount: 0,
+        xferAsset: createdAssetId,
+      })
+      .submit();
 
-    sendMethodCall<typeof NFTFactory.prototype.transferNFT>({
-      applicationID: factoryApp,
-      methodArgs: [createdAsset, this.app.address],
-    });
+    itxn
+      .applicationCall({
+        appArgs: [
+          methodSelector(NFTFactory.prototype.transferNFT),
+          createdAssetId,
+          Global.currentApplicationAddress,
+        ],
+        appId: factoryApp,
+      })
+      .submit();
 
-    return createdAsset;
+    return createdAssetId;
   }
 }
