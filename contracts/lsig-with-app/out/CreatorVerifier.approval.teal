@@ -1,0 +1,169 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:52
+    // export class CreatorVerifier extends Contract {
+    txn NumAppArgs
+    bz main_after_if_else@10
+    pushbytess 0xb8447b36 0xf1bf2ca8 0xbc28ac2b 0x8d5aa727 // method "createApplication()void", method "allowOptInsFrom(address)void", method "disableOptInsFrom(address)void", method "verifyCreator(axfer)void"
+    txna ApplicationArgs 0
+    match main_createApplication_route@3 main_allowOptInsFrom_route@4 main_disableOptInsFrom_route@5 main_verifyCreator_route@6
+
+main_after_if_else@10:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:52
+    // export class CreatorVerifier extends Contract {
+    intc_1 // 0
+    return
+
+main_verifyCreator_route@6:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:74
+    // verifyCreator(optIn: gtxn.AssetTransferTxn): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:52
+    // export class CreatorVerifier extends Contract {
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    pushint 4 // axfer
+    ==
+    assert // transaction type is axfer
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:74
+    // verifyCreator(optIn: gtxn.AssetTransferTxn): void {
+    callsub verifyCreator
+    intc_0 // 1
+    return
+
+main_disableOptInsFrom_route@5:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:68
+    // disableOptInsFrom(creator: Address): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:52
+    // export class CreatorVerifier extends Contract {
+    txna ApplicationArgs 1
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:68
+    // disableOptInsFrom(creator: Address): void {
+    callsub disableOptInsFrom
+    intc_0 // 1
+    return
+
+main_allowOptInsFrom_route@4:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:62
+    // allowOptInsFrom(creator: Address): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:52
+    // export class CreatorVerifier extends Contract {
+    txna ApplicationArgs 1
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:62
+    // allowOptInsFrom(creator: Address): void {
+    callsub allowOptInsFrom
+    intc_0 // 1
+    return
+
+main_createApplication_route@3:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:53
+    // @abimethod({ onCreate: "require" })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.allowOptInsFrom(creator: bytes) -> void:
+allowOptInsFrom:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:62
+    // allowOptInsFrom(creator: Address): void {
+    proto 1 0
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:63
+    // this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
+    txn Sender
+    frame_dig -1
+    concat
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:64
+    // new Bool(true);
+    pushbytes 0x80
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:63-64
+    // this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
+    //   new Bool(true);
+    box_put
+    retsub
+
+
+// contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.disableOptInsFrom(creator: bytes) -> void:
+disableOptInsFrom:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:68
+    // disableOptInsFrom(creator: Address): void {
+    proto 1 0
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:69
+    // this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
+    txn Sender
+    frame_dig -1
+    concat
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:70
+    // new Bool(false);
+    pushbytes 0x00
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:69-70
+    // this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
+    //   new Bool(false);
+    box_put
+    retsub
+
+
+// contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.verifyCreator(optIn: uint64) -> void:
+verifyCreator:
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:74
+    // verifyCreator(optIn: gtxn.AssetTransferTxn): void {
+    proto 1 0
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:79
+    // new Address(optIn.sender),
+    frame_dig -1
+    gtxns Sender
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:80
+    // new Address(optIn.xferAsset.creator),
+    frame_dig -1
+    gtxns XferAsset
+    asset_params_get AssetCreator
+    assert // asset exists
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:78-81
+    // new Tuple(
+    //   new Address(optIn.sender),
+    //   new Address(optIn.xferAsset.creator),
+    // ),
+    concat
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:82
+    // ).value.native,
+    box_get
+    assert // Box must have value
+    intc_1 // 0
+    getbit
+    // contracts/lsig-with-app/lsig-with-app.algo.ts:76-83
+    // assert(
+    //   this.allowedCreators(
+    //     new Tuple(
+    //       new Address(optIn.sender),
+    //       new Address(optIn.xferAsset.creator),
+    //     ),
+    //   ).value.native,
+    // );
+    assert
+    retsub

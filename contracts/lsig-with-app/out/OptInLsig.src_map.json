@@ -1,0 +1,360 @@
+[
+  {
+    "teal": 1,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:8"
+  },
+  {
+    "teal": 3,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:8"
+  },
+  {
+    "teal": 10,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:8",
+    "pc": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "teal": 15,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "teal": 16,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      7
+    ]
+  },
+  {
+    "teal": 17,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      8
+    ]
+  },
+  {
+    "teal": 23,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "teal": 26,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      12,
+      13
+    ]
+  },
+  {
+    "teal": 41,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:14",
+    "pc": [
+      14,
+      15
+    ]
+  },
+  {
+    "teal": 42,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:14",
+    "pc": [
+      16,
+      17
+    ]
+  },
+  {
+    "teal": 43,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:14",
+    "pc": [
+      18
+    ]
+  },
+  {
+    "teal": 46,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:14",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"typeEnum\",\"expected\":\"axfer\"}",
+    "pc": [
+      19
+    ]
+  },
+  {
+    "teal": 49,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:15",
+    "pc": [
+      20,
+      21
+    ]
+  },
+  {
+    "teal": 50,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:15",
+    "pc": [
+      22
+    ]
+  },
+  {
+    "teal": 51,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:15",
+    "pc": [
+      23
+    ]
+  },
+  {
+    "teal": 54,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:15",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"assetAmount\",\"expected\":\"0\"}",
+    "pc": [
+      24
+    ]
+  },
+  {
+    "teal": 57,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:16",
+    "pc": [
+      25,
+      26
+    ]
+  },
+  {
+    "teal": 58,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:16",
+    "pc": [
+      27,
+      28
+    ]
+  },
+  {
+    "teal": 59,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:16",
+    "pc": [
+      29
+    ]
+  },
+  {
+    "teal": 62,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:16",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"assetReceiver\",\"expected\":\"this.txn.sender\"}",
+    "pc": [
+      30
+    ]
+  },
+  {
+    "teal": 65,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:19",
+    "pc": [
+      31,
+      32
+    ]
+  },
+  {
+    "teal": 66,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:19",
+    "pc": [
+      33
+    ]
+  },
+  {
+    "teal": 67,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:19",
+    "pc": [
+      34
+    ]
+  },
+  {
+    "teal": 70,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:19",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"fee\",\"expected\":\"0\"}",
+    "pc": [
+      35
+    ]
+  },
+  {
+    "teal": 73,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:21",
+    "pc": [
+      36,
+      37
+    ]
+  },
+  {
+    "teal": 74,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:21",
+    "pc": [
+      38,
+      39
+    ]
+  },
+  {
+    "teal": 75,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:21",
+    "pc": [
+      40
+    ]
+  },
+  {
+    "teal": 78,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:21",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"rekeyTo\",\"expected\":\"globals.zeroAddress\"}",
+    "pc": [
+      41
+    ]
+  },
+  {
+    "teal": 81,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:23",
+    "pc": [
+      42,
+      43
+    ]
+  },
+  {
+    "teal": 82,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:23",
+    "pc": [
+      44,
+      45
+    ]
+  },
+  {
+    "teal": 83,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:23",
+    "pc": [
+      46
+    ]
+  },
+  {
+    "teal": 86,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:23",
+    "errorMessage": "transaction verification failed: {\"txn\":\"this.txn\",\"field\":\"assetCloseTo\",\"expected\":\"globals.zeroAddress\"}",
+    "pc": [
+      47
+    ]
+  },
+  {
+    "teal": 90,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:26",
+    "pc": [
+      48,
+      49
+    ]
+  },
+  {
+    "teal": 91,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:26",
+    "pc": [
+      50
+    ]
+  },
+  {
+    "teal": 92,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:26",
+    "pc": [
+      51
+    ]
+  },
+  {
+    "teal": 93,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:26",
+    "pc": [
+      52,
+      53
+    ]
+  },
+  {
+    "teal": 97,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:29",
+    "pc": [
+      54,
+      55
+    ]
+  },
+  {
+    "teal": 98,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:29",
+    "pc": [
+      56,
+      57
+    ]
+  },
+  {
+    "teal": 99,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:29",
+    "pc": [
+      58
+    ]
+  },
+  {
+    "teal": 100,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:29",
+    "pc": [
+      59
+    ]
+  },
+  {
+    "teal": 101,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:29",
+    "pc": [
+      60
+    ]
+  },
+  {
+    "teal": 105,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:30",
+    "pc": [
+      61,
+      62
+    ]
+  },
+  {
+    "teal": 106,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:30",
+    "pc": [
+      63,
+      64,
+      65
+    ]
+  },
+  {
+    "teal": 107,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:30",
+    "pc": [
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ]
+  },
+  {
+    "teal": 108,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:30",
+    "pc": [
+      72
+    ]
+  },
+  {
+    "teal": 109,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:30",
+    "pc": [
+      73
+    ]
+  },
+  {
+    "teal": 110,
+    "source": "contracts/lsig-with-app/lsig-with-app.algo.ts:12",
+    "pc": [
+      74
+    ]
+  }
+]
