@@ -1,0 +1,176 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0
+    // contracts/itxns/itxns.algo.ts:15
+    // export class NFTFactory extends Contract {
+    txn NumAppArgs
+    bz main_after_if_else@9
+    pushbytess 0xb8447b36 0xd2024c73 0xc7e260af // method "createApplication()void", method "createNFT(string,string)uint64", method "transferNFT(uint64,address)void"
+    txna ApplicationArgs 0
+    match main_createApplication_route@3 main_createNFT_route@4 main_transferNFT_route@5
+
+main_after_if_else@9:
+    // contracts/itxns/itxns.algo.ts:15
+    // export class NFTFactory extends Contract {
+    intc_1 // 0
+    return
+
+main_transferNFT_route@5:
+    // contracts/itxns/itxns.algo.ts:29
+    // transferNFT(assetId: uint64, receiver: Address): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/itxns/itxns.algo.ts:15
+    // export class NFTFactory extends Contract {
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    // contracts/itxns/itxns.algo.ts:29
+    // transferNFT(assetId: uint64, receiver: Address): void {
+    callsub transferNFT
+    intc_0 // 1
+    return
+
+main_createNFT_route@4:
+    // contracts/itxns/itxns.algo.ts:19
+    // createNFT(name: string, unitName: string): uint64 {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/itxns/itxns.algo.ts:15
+    // export class NFTFactory extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    extract 2 0
+    // contracts/itxns/itxns.algo.ts:19
+    // createNFT(name: string, unitName: string): uint64 {
+    callsub createNFT
+    itob
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_createApplication_route@3:
+    // contracts/itxns/itxns.algo.ts:16
+    // @abimethod({ onCreate: "require" })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// contracts/itxns/itxns.algo.ts::NFTFactory.createNFT(name: bytes, unitName: bytes) -> uint64:
+createNFT:
+    // contracts/itxns/itxns.algo.ts:19
+    // createNFT(name: string, unitName: string): uint64 {
+    proto 2 1
+    // contracts/itxns/itxns.algo.ts:20-26
+    // return itxn
+    //   .assetConfig({
+    //     assetName: name,
+    //     unitName: unitName,
+    //     total: 1,
+    //   })
+    //   .submit().createdAsset.id;
+    itxn_begin
+    // contracts/itxns/itxns.algo.ts:24
+    // total: 1,
+    intc_0 // 1
+    itxn_field ConfigAssetTotal
+    frame_dig -1
+    itxn_field ConfigAssetUnitName
+    frame_dig -2
+    itxn_field ConfigAssetName
+    // contracts/itxns/itxns.algo.ts:20-25
+    // return itxn
+    //   .assetConfig({
+    //     assetName: name,
+    //     unitName: unitName,
+    //     total: 1,
+    //   })
+    pushint 3 // 3
+    itxn_field TypeEnum
+    intc_1 // 0
+    itxn_field Fee
+    // contracts/itxns/itxns.algo.ts:20-26
+    // return itxn
+    //   .assetConfig({
+    //     assetName: name,
+    //     unitName: unitName,
+    //     total: 1,
+    //   })
+    //   .submit().createdAsset.id;
+    itxn_submit
+    // contracts/itxns/itxns.algo.ts:26
+    // .submit().createdAsset.id;
+    itxn CreatedAssetID
+    // contracts/itxns/itxns.algo.ts:20-26
+    // return itxn
+    //   .assetConfig({
+    //     assetName: name,
+    //     unitName: unitName,
+    //     total: 1,
+    //   })
+    //   .submit().createdAsset.id;
+    retsub
+
+
+// contracts/itxns/itxns.algo.ts::NFTFactory.transferNFT(assetId: uint64, receiver: bytes) -> void:
+transferNFT:
+    // contracts/itxns/itxns.algo.ts:29
+    // transferNFT(assetId: uint64, receiver: Address): void {
+    proto 2 0
+    // contracts/itxns/itxns.algo.ts:30-36
+    // itxn
+    //   .assetTransfer({
+    //     assetReceiver: receiver.native,
+    //     assetAmount: 1,
+    //     xferAsset: assetId,
+    //   })
+    //   .submit();
+    itxn_begin
+    frame_dig -2
+    itxn_field XferAsset
+    // contracts/itxns/itxns.algo.ts:33
+    // assetAmount: 1,
+    intc_0 // 1
+    itxn_field AssetAmount
+    frame_dig -1
+    itxn_field AssetReceiver
+    // contracts/itxns/itxns.algo.ts:30-35
+    // itxn
+    //   .assetTransfer({
+    //     assetReceiver: receiver.native,
+    //     assetAmount: 1,
+    //     xferAsset: assetId,
+    //   })
+    pushint 4 // 4
+    itxn_field TypeEnum
+    intc_1 // 0
+    itxn_field Fee
+    // contracts/itxns/itxns.algo.ts:30-36
+    // itxn
+    //   .assetTransfer({
+    //     assetReceiver: receiver.native,
+    //     assetAmount: 1,
+    //     xferAsset: assetId,
+    //   })
+    //   .submit();
+    itxn_submit
+    retsub
