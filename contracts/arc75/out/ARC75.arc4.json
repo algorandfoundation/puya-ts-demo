@@ -1,0 +1,112 @@
+{
+  "name": "ARC75",
+  "desc": "",
+  "methods": [
+    {
+      "name": "addAppToWhiteList",
+      "desc": "Add app to whitelist box",
+      "args": [
+        {
+          "name": "arc",
+          "type": "string",
+          "desc": "The ARC the whitelist corresponds to"
+        },
+        {
+          "name": "boxIndex",
+          "type": "uint16",
+          "desc": "The index of the whitelist box to add the app to"
+        },
+        {
+          "name": "appID",
+          "type": "uint64",
+          "desc": "The app ID to add to the whitelist"
+        },
+        {
+          "name": "payment",
+          "type": "pay",
+          "desc": "The payment transaction to cover the MBR change"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "setAppWhitelist",
+      "desc": "Sets a app whitelist for the sender. Should only be used when adding/removing\nmore than one app",
+      "args": [
+        {
+          "name": "arc",
+          "type": "string"
+        },
+        {
+          "name": "boxIndex",
+          "type": "uint16",
+          "desc": "The index of the whitelist box to put the app IDs in"
+        },
+        {
+          "name": "appIDs",
+          "type": "uint64[]",
+          "desc": "Array of app IDs that signify the whitelisted apps"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "deleteWhitelist",
+      "desc": "Deletes a app whitelist for the sender",
+      "args": [
+        {
+          "name": "arc",
+          "type": "string",
+          "desc": "The ARC the whitelist corresponds to"
+        },
+        {
+          "name": "boxIndex",
+          "type": "uint16",
+          "desc": "The index of the whitelist box to delete"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "deleteAppFromWhitelist",
+      "desc": "Deletes a app from a whitelist for the sender",
+      "args": [
+        {
+          "name": "arc",
+          "type": "string"
+        },
+        {
+          "name": "boxIndex",
+          "type": "uint16",
+          "desc": "The index of the whitelist box to delete from"
+        },
+        {
+          "name": "appID",
+          "type": "uint64",
+          "desc": "The app ID to delete from the whitelist"
+        },
+        {
+          "name": "index",
+          "type": "uint64",
+          "desc": "The index of the app in the whitelist"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
