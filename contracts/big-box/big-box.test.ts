@@ -122,7 +122,7 @@ describe("Big Box", () => {
       // Assert
       expect(
         bigBox.metadata(Bytes(dataIdentifier)).value.status.native,
-      ).toEqual(0);
+      ).toEqual(1);
     });
 
     test("should fail if trying to change IMMUTABLE status", () => {

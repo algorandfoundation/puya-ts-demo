@@ -13,7 +13,6 @@
   "exclude": [
     "contracts/**/*Client.ts",
     "contracts/**/*.e2e.ts",
-    "contracts/**/*.tealscript.ts",
-    "contracts/arc75/*.algo.ts"
+    "contracts/**/*.tealscript.ts"
   ]
 }

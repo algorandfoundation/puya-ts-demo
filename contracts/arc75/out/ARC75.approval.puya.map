@@ -1,0 +1,4323 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/parallels/dev/puya-ts-demo/contracts/arc75/arc75.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;AA4BA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;AAkHE;;AAAA;AAAA;AAAA;;AAAA;AAlHF;;;AAAA;;;AAAA;;;AAAA;;;AAAA;AAAA;;;AAAA;AAkHE;;;AAAA;;AArBA;;AAAA;AAAA;AAAA;;AAAA;AA7FF;;;AAAA;;;AAAA;;;AA6FE;;;AAAA;;AA/BA;;AAAA;AAAA;AAAA;;AAAA;AA9DF;;;AAAA;;;AAAA;;;AAAA;;;AA8DE;;;AAAA;;AA/BA;;AAAA;AAAA;AAAA;;AAAA;AA/BF;;;AAAA;;;AAAA;;;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA+BE;;;AAAA;;AAZC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAhBD;;;AACE;;AAAA;;AACmB;;AADnB;AAAA;;;AAAA;;AAAA;;AAEiB;;AAA0B;;AAAA;AAAjC;;AAAA;AAFV;AAAA;;;;AAAA;;;;;;AAMF;;;AACE;AAEkB;;AACU;;AAA0B;;AAAA;AAA1C;;AAAA;AAAA;;;;;AAHZ;;;AAAA;;;AAAA;;AAoBF;;;AAMwB;;AAA0B;;AAAA;AAErB;;AAEpB;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAHW;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMY;AAAA;;AAA9B;;;AAC4B;AAAA;AAAA;AAA1B;;;AAAqC;;AAAA;AAArC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAMF;;AAAA;;AAAA;;;;AAJiD;;AAAA;AAA1B;;;;AAAA;AAAA;AACrB;AAAA;AAAA;;AAAA;AAAA;;;;AAcJ;;;AACwB;;AAA0B;;AAAA;AAErB;;AAEpB;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAHW;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMQ;;AAEL;AACA;AAAc;;AAAA;AAAA;AAAX;;AAAA;AAAxB;;;AACE;;AAAA;;;AAA8B;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAZ;AAAlB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;AADyC;AAAA;AAAA;;;;;AAI3C;;AAAA;AAAA;;AAAA;;AAAA;AAEoB;;AAA0B;;AAAA;AAA1C;;AAAA;AAAJ;;;AACE;;AAAA;;;;AAE0C;;AAAa;AAAjB;AAAhB;AAAA;;AAAA;AAAA;AAAA;AAAtB;;AAAA;;;;AAWJ;;;AACwB;;AAA0B;;AAAA;AAErB;;AAEpB;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAHW;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMQ;;AAE1B;;;;AAWF;;;;AAMwB;;AAA0B;;AAAA;AAErB;;AAEpB;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAHW;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAMwB;AAAA;AAA1B;;;AAAA;;AAAA;AAAA;AAEK;AACA;AAAiC;;AAAA;AAAA;AAAM;AAAA;AAApC;;AAAA;AAAxB;;;AACM;;AAAA;;AAAA;;;;;AAAJ;;;AACE;;AAAA;;;AAA4C;;AAAA;AAAA;AAA1B;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAlB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;;;;;;;AAFgE;;AAAA;AAAA;AAAA;;;;;AAKpE;;AAAA;AAAA;;AAAA;;AAAA;AAEe;;AAAA;;AAAA;AAAR;;AAAA;AAAP;AAEA;;AAAA;;;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0 8"
+    },
+    "6": {
+      "op": "bytecblock 0x0024 0x0000"
+    },
+    "14": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "16": {
+      "op": "bz main_after_if_else@11",
+      "stack_out": []
+    },
+    "19": {
+      "op": "pushbytess 0xb8447b36 0x467c7cbd 0xd198fcb8 0x7c33e832 0x7e1674ac // method \"createApplication()void\", method \"addAppToWhiteList(string,uint16,uint64,pay)void\", method \"setAppWhitelist(string,uint16,uint64[])void\", method \"deleteWhitelist(string,uint16)void\", method \"deleteAppFromWhitelist(string,uint16,uint64,uint64)void\"",
+      "defined_out": [
+        "Method(addAppToWhiteList(string,uint16,uint64,pay)void)",
+        "Method(createApplication()void)",
+        "Method(deleteAppFromWhitelist(string,uint16,uint64,uint64)void)",
+        "Method(deleteWhitelist(string,uint16)void)",
+        "Method(setAppWhitelist(string,uint16,uint64[])void)"
+      ],
+      "stack_out": [
+        "Method(createApplication()void)",
+        "Method(addAppToWhiteList(string,uint16,uint64,pay)void)",
+        "Method(setAppWhitelist(string,uint16,uint64[])void)",
+        "Method(deleteWhitelist(string,uint16)void)",
+        "Method(deleteAppFromWhitelist(string,uint16,uint64,uint64)void)"
+      ]
+    },
+    "46": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(addAppToWhiteList(string,uint16,uint64,pay)void)",
+        "Method(createApplication()void)",
+        "Method(deleteAppFromWhitelist(string,uint16,uint64,uint64)void)",
+        "Method(deleteWhitelist(string,uint16)void)",
+        "Method(setAppWhitelist(string,uint16,uint64[])void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(createApplication()void)",
+        "Method(addAppToWhiteList(string,uint16,uint64,pay)void)",
+        "Method(setAppWhitelist(string,uint16,uint64[])void)",
+        "Method(deleteWhitelist(string,uint16)void)",
+        "Method(deleteAppFromWhitelist(string,uint16,uint64,uint64)void)",
+        "tmp%2#0"
+      ]
+    },
+    "49": {
+      "op": "match main_createApplication_route@3 main_addAppToWhiteList_route@4 main_setAppWhitelist_route@5 main_deleteWhitelist_route@6 main_deleteAppFromWhitelist_route@7",
+      "stack_out": []
+    },
+    "61": {
+      "block": "main_after_if_else@11",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "62": {
+      "op": "return",
+      "stack_out": []
+    },
+    "63": {
+      "block": "main_deleteAppFromWhitelist_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "65": {
+      "op": "!",
+      "defined_out": [
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%28#0"
+      ]
+    },
+    "66": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "67": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "69": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "70": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "73": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "76": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[2]%3#0",
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[2]%3#0"
+      ]
+    },
+    "79": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[2]%3#0",
+        "reinterpret_bytes[8]%1#0",
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[2]%3#0",
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "82": {
+      "op": "btoi",
+      "defined_out": [
+        "reinterpret_bytes[2]%3#0",
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[2]%3#0",
+        "tmp%33#0"
+      ]
+    },
+    "83": {
+      "op": "txna ApplicationArgs 4",
+      "defined_out": [
+        "reinterpret_bytes[2]%3#0",
+        "reinterpret_bytes[8]%2#0",
+        "tmp%32#0",
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[2]%3#0",
+        "tmp%33#0",
+        "reinterpret_bytes[8]%2#0"
+      ]
+    },
+    "86": {
+      "op": "btoi",
+      "defined_out": [
+        "reinterpret_bytes[2]%3#0",
+        "tmp%32#0",
+        "tmp%33#0",
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%32#0",
+        "reinterpret_bytes[2]%3#0",
+        "tmp%33#0",
+        "tmp%34#0"
+      ]
+    },
+    "87": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.deleteAppFromWhitelist",
+      "op": "callsub deleteAppFromWhitelist",
+      "stack_out": []
+    },
+    "90": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "91": {
+      "op": "return",
+      "stack_out": []
+    },
+    "92": {
+      "block": "main_deleteWhitelist_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "94": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "95": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "96": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "98": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "99": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "102": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "105": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[2]%2#0",
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "reinterpret_bytes[2]%2#0"
+      ]
+    },
+    "108": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.deleteWhitelist",
+      "op": "callsub deleteWhitelist",
+      "stack_out": []
+    },
+    "111": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "112": {
+      "op": "return",
+      "stack_out": []
+    },
+    "113": {
+      "block": "main_setAppWhitelist_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "115": {
+      "op": "!",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "116": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "117": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "119": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "120": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%19#0"
+      ]
+    },
+    "123": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "126": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[2]%1#0",
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0",
+        "reinterpret_bytes[2]%1#0"
+      ]
+    },
+    "129": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[2]%1#0",
+        "reinterpret_uint64[]%0#0",
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0",
+        "reinterpret_bytes[2]%1#0",
+        "reinterpret_uint64[]%0#0"
+      ]
+    },
+    "132": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.setAppWhitelist",
+      "op": "callsub setAppWhitelist",
+      "stack_out": []
+    },
+    "135": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "136": {
+      "op": "return",
+      "stack_out": []
+    },
+    "137": {
+      "block": "main_addAppToWhiteList_route@4",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "139": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "140": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "141": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "143": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "144": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "147": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "150": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0"
+      ]
+    },
+    "153": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[2]%0#0",
+        "reinterpret_bytes[8]%0#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "156": {
+      "op": "btoi",
+      "defined_out": [
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0"
+      ]
+    },
+    "157": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ]
+    },
+    "159": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "tmp%14#0",
+        "1"
+      ]
+    },
+    "160": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0"
+      ]
+    },
+    "161": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "162": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "164": {
+      "op": "intc_0 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "165": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "166": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "tmp%12#0",
+        "reinterpret_bytes[2]%0#0",
+        "tmp%13#0",
+        "gtxn_idx%0#0"
+      ]
+    },
+    "167": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.addAppToWhiteList",
+      "op": "callsub addAppToWhiteList",
+      "stack_out": []
+    },
+    "170": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "171": {
+      "op": "return",
+      "stack_out": []
+    },
+    "172": {
+      "block": "main_createApplication_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "174": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "175": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "176": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "178": {
+      "op": "!",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "179": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "180": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "181": {
+      "op": "return",
+      "stack_out": []
+    },
+    "182": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.verifyMBRPayment",
+      "params": {
+        "payment#0": "uint64",
+        "preMBR#0": "uint64"
+      },
+      "block": "verifyMBRPayment",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "185": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "payment#0 (copy)"
+      ],
+      "stack_out": [
+        "payment#0 (copy)"
+      ]
+    },
+    "187": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "189": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "191": {
+      "op": "==",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "192": {
+      "op": "bz verifyMBRPayment_bool_false@3",
+      "stack_out": []
+    },
+    "195": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "payment#0 (copy)"
+      ]
+    },
+    "197": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "199": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "201": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "tmp%3#0",
+        "value%0#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "value%0#0",
+        "check%0#0"
+      ]
+    },
+    "203": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "tmp%3#0",
+        "value%0#0"
+      ]
+    },
+    "204": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "preMBR#0 (copy)",
+        "tmp%3#0",
+        "value%0#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "value%0#0",
+        "preMBR#0 (copy)"
+      ]
+    },
+    "206": {
+      "op": "-",
+      "defined_out": [
+        "tmp%3#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%3#0",
+        "tmp%5#0"
+      ]
+    },
+    "207": {
+      "op": "==",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "208": {
+      "op": "bz verifyMBRPayment_bool_false@3",
+      "stack_out": []
+    },
+    "211": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "and_result%0#0"
+      ],
+      "stack_out": [
+        "and_result%0#0"
+      ]
+    },
+    "212": {
+      "block": "verifyMBRPayment_bool_merge@4",
+      "stack_in": [
+        "and_result%0#0"
+      ],
+      "error": "assert target is match for conditions",
+      "op": "assert // assert target is match for conditions",
+      "defined_out": [],
+      "stack_out": []
+    },
+    "213": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "214": {
+      "block": "verifyMBRPayment_bool_false@3",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "and_result%0#0"
+      ],
+      "stack_out": [
+        "and_result%0#0"
+      ]
+    },
+    "215": {
+      "op": "b verifyMBRPayment_bool_merge@4"
+    },
+    "218": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.sendMBRPayment",
+      "params": {
+        "preMBR#0": "uint64"
+      },
+      "block": "sendMBRPayment",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "221": {
+      "op": "itxn_begin"
+    },
+    "222": {
+      "op": "txn Sender",
+      "defined_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ],
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "224": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "tmp%0#0"
+      ]
+    },
+    "226": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "value%0#0"
+      ],
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "value%0#0",
+        "check%0#0"
+      ]
+    },
+    "228": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "value%0#0"
+      ]
+    },
+    "229": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "preMBR#0 (copy)",
+        "value%0#0"
+      ],
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "value%0#0",
+        "preMBR#0 (copy)"
+      ]
+    },
+    "231": {
+      "op": "swap",
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "preMBR#0 (copy)",
+        "value%0#0"
+      ]
+    },
+    "232": {
+      "op": "-",
+      "defined_out": [
+        "inner_txn_params%0%%param_Amount_idx_0#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ],
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "inner_txn_params%0%%param_Amount_idx_0#0"
+      ]
+    },
+    "233": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "235": {
+      "op": "itxn_field Receiver",
+      "stack_out": []
+    },
+    "237": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "238": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "240": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "241": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "243": {
+      "op": "itxn_submit"
+    },
+    "244": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "245": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.addAppToWhiteList",
+      "params": {
+        "arc#0": "bytes",
+        "boxIndex#0": "bytes",
+        "appID#0": "uint64",
+        "payment#0": "uint64"
+      },
+      "block": "addAppToWhiteList",
+      "stack_in": [],
+      "op": "proto 4 0"
+    },
+    "248": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "250": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "check%0#0"
+      ]
+    },
+    "252": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "253": {
+      "op": "txn Sender",
+      "defined_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ]
+    },
+    "255": {
+      "op": "frame_dig -4",
+      "defined_out": [
+        "arc#0 (copy)",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "257": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length%0#0"
+      ]
+    },
+    "258": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "259": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "262": {
+      "op": "frame_dig -4",
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "264": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "265": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0"
+      ]
+    },
+    "266": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "boxIndex#0 (copy)",
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0",
+        "boxIndex#0 (copy)"
+      ]
+    },
+    "268": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "269": {
+      "op": "bytec_0 // 0x0024",
+      "defined_out": [
+        "0x0024",
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0",
+        "0x0024"
+      ]
+    },
+    "270": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "271": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "272": {
+      "op": "concat",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "273": {
+      "op": "dup",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "whitelist#0"
+      ]
+    },
+    "274": {
+      "op": "box_len",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "275": {
+      "op": "bury 1",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "277": {
+      "op": "bz addAppToWhiteList_else_body@2",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "280": {
+      "op": "dup",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ]
+    },
+    "281": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "282": {
+      "error": "Box must have value",
+      "op": "assert // Box must have value",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "283": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "expr_value_trimmed%0#0"
+      ]
+    },
+    "286": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "appID#0 (copy)",
+        "expr_value_trimmed%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "expr_value_trimmed%0#0",
+        "appID#0 (copy)"
+      ]
+    },
+    "288": {
+      "op": "itob",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "preMBR#0",
+        "val_as_bytes%0#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "expr_value_trimmed%0#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "289": {
+      "op": "concat",
+      "defined_out": [
+        "concatenated%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0"
+      ]
+    },
+    "290": {
+      "op": "dup",
+      "defined_out": [
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)"
+      ]
+    },
+    "291": {
+      "op": "len",
+      "defined_out": [
+        "byte_len%0#0",
+        "concatenated%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "byte_len%0#0"
+      ]
+    },
+    "292": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "byte_len%0#0",
+        "concatenated%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "byte_len%0#0",
+        "8"
+      ]
+    },
+    "293": {
+      "op": "/",
+      "defined_out": [
+        "concatenated%0#0",
+        "len_%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "len_%0#0"
+      ]
+    },
+    "294": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%4#0",
+        "concatenated%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "as_bytes%4#0"
+      ]
+    },
+    "295": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "concatenated%0#0",
+        "len_16_bit%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concatenated%0#0",
+        "len_16_bit%0#0"
+      ]
+    },
+    "298": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "len_16_bit%0#0",
+        "concatenated%0#0"
+      ]
+    },
+    "299": {
+      "op": "concat",
+      "defined_out": [
+        "concat_result%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concat_result%0#0"
+      ]
+    },
+    "300": {
+      "op": "dig 1",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concat_result%0#0",
+        "whitelist#0 (copy)"
+      ]
+    },
+    "302": {
+      "op": "box_del",
+      "defined_out": [
+        "concat_result%0#0",
+        "preMBR#0",
+        "whitelist#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concat_result%0#0",
+        "{box_del}"
+      ]
+    },
+    "303": {
+      "op": "pop",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "concat_result%0#0"
+      ]
+    },
+    "304": {
+      "op": "box_put",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "305": {
+      "block": "addAppToWhiteList_after_if_else@3",
+      "stack_in": [
+        "preMBR#0"
+      ],
+      "op": "frame_dig -1",
+      "defined_out": [
+        "payment#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "307": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "payment#0 (copy)",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "payment#0 (copy)",
+        "preMBR#0"
+      ]
+    },
+    "309": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.verifyMBRPayment",
+      "op": "callsub verifyMBRPayment",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "312": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "313": {
+      "block": "addAppToWhiteList_else_body@2",
+      "stack_in": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "op": "frame_dig -2",
+      "defined_out": [
+        "appID#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "appID#0 (copy)"
+      ]
+    },
+    "315": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "316": {
+      "op": "pushbytes 0x0001",
+      "defined_out": [
+        "0x0001",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "val_as_bytes%1#0",
+        "0x0001"
+      ]
+    },
+    "320": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "0x0001",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "321": {
+      "op": "concat",
+      "defined_out": [
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0"
+      ]
+    },
+    "322": {
+      "op": "swap",
+      "defined_out": [
+        "newWhitelist#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "newWhitelist#0",
+        "whitelist#0"
+      ]
+    },
+    "323": {
+      "op": "dup",
+      "defined_out": [
+        "newWhitelist#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "newWhitelist#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ]
+    },
+    "324": {
+      "op": "box_del",
+      "defined_out": [
+        "newWhitelist#0",
+        "whitelist#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "newWhitelist#0",
+        "whitelist#0",
+        "{box_del}"
+      ]
+    },
+    "325": {
+      "op": "pop",
+      "stack_out": [
+        "preMBR#0",
+        "newWhitelist#0",
+        "whitelist#0"
+      ]
+    },
+    "326": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0"
+      ]
+    },
+    "327": {
+      "op": "box_put",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "328": {
+      "op": "b addAppToWhiteList_after_if_else@3"
+    },
+    "331": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.setAppWhitelist",
+      "params": {
+        "arc#0": "bytes",
+        "boxIndex#0": "bytes",
+        "appIDs#0": "bytes"
+      },
+      "block": "setAppWhitelist",
+      "stack_in": [],
+      "op": "proto 3 0"
+    },
+    "334": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "336": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "check%0#0"
+      ]
+    },
+    "338": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "339": {
+      "op": "txn Sender",
+      "defined_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ]
+    },
+    "341": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "arc#0 (copy)",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "343": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length%0#0"
+      ]
+    },
+    "344": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "345": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "348": {
+      "op": "frame_dig -3",
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "350": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "351": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0"
+      ]
+    },
+    "352": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "boxIndex#0 (copy)",
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0",
+        "boxIndex#0 (copy)"
+      ]
+    },
+    "354": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "355": {
+      "op": "bytec_0 // 0x0024",
+      "defined_out": [
+        "0x0024",
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0",
+        "0x0024"
+      ]
+    },
+    "356": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "357": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "358": {
+      "op": "concat",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "359": {
+      "op": "dup",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "whitelist#0"
+      ]
+    },
+    "360": {
+      "op": "box_del",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "{box_del}"
+      ]
+    },
+    "361": {
+      "op": "pop",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "362": {
+      "op": "bytec_1 // 0x0000"
+    },
+    "363": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "i#0",
+        "newWhitelist#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "364": {
+      "block": "setAppWhitelist_while_top@1",
+      "stack_in": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ],
+      "op": "frame_dig -1",
+      "defined_out": [
+        "appIDs#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "appIDs#0 (copy)"
+      ]
+    },
+    "366": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "appIDs#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "appIDs#0 (copy)",
+        "0"
+      ]
+    },
+    "367": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%5#0"
+      ]
+    },
+    "368": {
+      "op": "frame_dig 3",
+      "defined_out": [
+        "i#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%5#0",
+        "i#0"
+      ]
+    },
+    "370": {
+      "op": ">",
+      "defined_out": [
+        "i#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%6#0"
+      ]
+    },
+    "371": {
+      "op": "bz setAppWhitelist_after_while@3",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "374": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "newWhitelist#0"
+      ]
+    },
+    "376": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "expr_value_trimmed%0#0"
+      ]
+    },
+    "379": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "appIDs#0 (copy)"
+      ]
+    },
+    "381": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0"
+      ]
+    },
+    "384": {
+      "op": "frame_dig 3",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0",
+        "i#0"
+      ]
+    },
+    "386": {
+      "op": "dup",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "387": {
+      "op": "cover 3",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "389": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "array_head_and_tail%0#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0",
+        "i#0 (copy)",
+        "8"
+      ]
+    },
+    "390": {
+      "op": "*",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "item_offset%0#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0"
+      ]
+    },
+    "391": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhitelist#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "392": {
+      "op": "itob",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhitelist#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "393": {
+      "op": "concat",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0"
+      ]
+    },
+    "394": {
+      "op": "dup",
+      "defined_out": [
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)"
+      ]
+    },
+    "395": {
+      "op": "len",
+      "defined_out": [
+        "byte_len%0#0",
+        "concatenated%0#0",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "byte_len%0#0"
+      ]
+    },
+    "396": {
+      "op": "intc_2 // 8",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "byte_len%0#0",
+        "8"
+      ]
+    },
+    "397": {
+      "op": "/",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "len_%0#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "len_%0#0"
+      ]
+    },
+    "398": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%4#0",
+        "concatenated%0#0",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "as_bytes%4#0"
+      ]
+    },
+    "399": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "len_16_bit%0#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "concatenated%0#0",
+        "len_16_bit%0#0"
+      ]
+    },
+    "402": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "len_16_bit%0#0",
+        "concatenated%0#0"
+      ]
+    },
+    "403": {
+      "op": "concat",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "newWhitelist#0"
+      ]
+    },
+    "404": {
+      "op": "frame_bury 2",
+      "defined_out": [
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "406": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "i#0",
+        "newWhitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "407": {
+      "op": "+",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "408": {
+      "op": "frame_bury 3",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "410": {
+      "op": "b setAppWhitelist_while_top@1"
+    },
+    "413": {
+      "block": "setAppWhitelist_after_while@3",
+      "stack_in": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "whitelist#0"
+      ]
+    },
+    "415": {
+      "op": "dup",
+      "defined_out": [
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ]
+    },
+    "416": {
+      "op": "box_del",
+      "defined_out": [
+        "whitelist#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "whitelist#0",
+        "{box_del}"
+      ]
+    },
+    "417": {
+      "op": "pop",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "whitelist#0"
+      ]
+    },
+    "418": {
+      "op": "frame_dig 2",
+      "defined_out": [
+        "newWhitelist#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "whitelist#0",
+        "newWhitelist#0"
+      ]
+    },
+    "420": {
+      "op": "box_put",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "421": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "newWhitelist#0",
+        "tmp%8#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%8#0"
+      ]
+    },
+    "423": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%1#0",
+        "newWhitelist#0",
+        "value%1#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "value%1#0",
+        "check%1#0"
+      ]
+    },
+    "425": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "value%1#0"
+      ]
+    },
+    "426": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "newWhitelist#0",
+        "preMBR#0",
+        "value%1#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "value%1#0",
+        "preMBR#0"
+      ]
+    },
+    "428": {
+      "op": "<",
+      "defined_out": [
+        "newWhitelist#0",
+        "preMBR#0",
+        "tmp%9#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%9#0"
+      ]
+    },
+    "429": {
+      "op": "bz setAppWhitelist_else_body@5",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "432": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "preMBR#0"
+      ]
+    },
+    "434": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.sendMBRPayment",
+      "op": "callsub sendMBRPayment",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "437": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "438": {
+      "block": "setAppWhitelist_else_body@5",
+      "stack_in": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ],
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%10#0"
+      ]
+    },
+    "440": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "tmp%10#0",
+        "1"
+      ]
+    },
+    "441": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0"
+      ]
+    },
+    "442": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "443": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "445": {
+      "op": "intc_0 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "446": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "447": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0"
+      ]
+    },
+    "448": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0",
+        "gtxn_idx%0#0",
+        "preMBR#0"
+      ]
+    },
+    "450": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.verifyMBRPayment",
+      "op": "callsub verifyMBRPayment",
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0",
+        "newWhitelist#0",
+        "i#0"
+      ]
+    },
+    "453": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "454": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.deleteWhitelist",
+      "params": {
+        "arc#0": "bytes",
+        "boxIndex#0": "bytes"
+      },
+      "block": "deleteWhitelist",
+      "stack_in": [],
+      "op": "proto 2 0"
+    },
+    "457": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "459": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "check%0#0"
+      ]
+    },
+    "461": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "462": {
+      "op": "txn Sender",
+      "defined_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ]
+    },
+    "464": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "arc#0 (copy)",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "466": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length%0#0"
+      ]
+    },
+    "467": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "468": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "471": {
+      "op": "frame_dig -2",
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "473": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "tmp%1#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "474": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0"
+      ]
+    },
+    "475": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "boxIndex#0 (copy)",
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0",
+        "boxIndex#0 (copy)"
+      ]
+    },
+    "477": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "478": {
+      "op": "bytec_0 // 0x0024",
+      "defined_out": [
+        "0x0024",
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0",
+        "0x0024"
+      ]
+    },
+    "479": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "480": {
+      "op": "swap",
+      "stack_out": [
+        "preMBR#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "481": {
+      "op": "concat",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "482": {
+      "op": "box_del",
+      "defined_out": [
+        "preMBR#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "preMBR#0",
+        "{box_del}"
+      ]
+    },
+    "483": {
+      "op": "pop",
+      "stack_out": [
+        "preMBR#0"
+      ]
+    },
+    "484": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.sendMBRPayment",
+      "op": "callsub sendMBRPayment",
+      "stack_out": []
+    },
+    "487": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "488": {
+      "subroutine": "contracts/arc75/arc75.algo.ts::ARC75.deleteAppFromWhitelist",
+      "params": {
+        "arc#0": "bytes",
+        "boxIndex#0": "bytes",
+        "appID#0": "uint64",
+        "index#0": "uint64"
+      },
+      "block": "deleteAppFromWhitelist",
+      "stack_in": [],
+      "op": "proto 4 0"
+    },
+    "491": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "newWhiteList#9"
+      ]
+    },
+    "492": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "tmp%0#0"
+      ]
+    },
+    "494": {
+      "op": "acct_params_get AcctMinBalance",
+      "defined_out": [
+        "check%0#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "check%0#0"
+      ]
+    },
+    "496": {
+      "error": "account funded",
+      "op": "assert // account funded",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0"
+      ]
+    },
+    "497": {
+      "op": "txn Sender",
+      "defined_out": [
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0"
+      ]
+    },
+    "499": {
+      "op": "frame_dig -4",
+      "defined_out": [
+        "arc#0 (copy)",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "501": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "length%0#0"
+      ]
+    },
+    "502": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "503": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "506": {
+      "op": "frame_dig -4",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "length_uint16%0#0",
+        "arc#0 (copy)"
+      ]
+    },
+    "508": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "tmp%1#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "509": {
+      "op": "swap",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0"
+      ]
+    },
+    "510": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "boxIndex#0 (copy)",
+        "encoded_value%2#0",
+        "preMBR#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_value%2#0",
+        "tmp%1#0",
+        "boxIndex#0 (copy)"
+      ]
+    },
+    "512": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "513": {
+      "op": "bytec_0 // 0x0024",
+      "defined_out": [
+        "0x0024",
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%2#0",
+        "0x0024"
+      ]
+    },
+    "514": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0",
+        "preMBR#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_value%2#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "515": {
+      "op": "swap",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%2#0"
+      ]
+    },
+    "516": {
+      "op": "concat",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0"
+      ]
+    },
+    "517": {
+      "op": "dup",
+      "defined_out": [
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "whitelist#0"
+      ]
+    },
+    "518": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "519": {
+      "error": "Box must have value",
+      "op": "assert // Box must have value",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "520": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0"
+      ]
+    },
+    "523": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "index#0 (copy)",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "index#0 (copy)"
+      ]
+    },
+    "525": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "array_head_and_tail%0#0",
+        "index#0 (copy)",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "index#0 (copy)",
+        "8"
+      ]
+    },
+    "526": {
+      "op": "*",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0"
+      ]
+    },
+    "527": {
+      "op": "bytec_1 // 0x0000"
+    },
+    "528": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "i#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "529": {
+      "block": "deleteAppFromWhitelist_while_top@1",
+      "stack_in": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ],
+      "op": "frame_dig 2",
+      "defined_out": [
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0"
+      ]
+    },
+    "531": {
+      "op": "box_get",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "532": {
+      "error": "Box must have value",
+      "op": "assert // Box must have value",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "533": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "maybe_value%1#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "534": {
+      "op": "extract_uint16",
+      "defined_out": [
+        "tmp%6#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%6#0"
+      ]
+    },
+    "535": {
+      "op": "frame_dig 6",
+      "defined_out": [
+        "i#0",
+        "tmp%6#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%6#0",
+        "i#0"
+      ]
+    },
+    "537": {
+      "op": ">",
+      "defined_out": [
+        "i#0",
+        "tmp%7#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%7#0"
+      ]
+    },
+    "538": {
+      "op": "bz deleteAppFromWhitelist_after_while@5",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "541": {
+      "op": "frame_dig 6",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "543": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "i#0",
+        "index#0 (copy)",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "i#0",
+        "index#0 (copy)"
+      ]
+    },
+    "545": {
+      "op": "!=",
+      "defined_out": [
+        "i#0",
+        "tmp%8#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%8#0"
+      ]
+    },
+    "546": {
+      "op": "frame_dig 5",
+      "defined_out": [
+        "i#0",
+        "newWhiteList#9",
+        "tmp%8#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%8#0",
+        "newWhiteList#9"
+      ]
+    },
+    "548": {
+      "op": "frame_bury 0",
+      "defined_out": [
+        "i#0",
+        "newWhiteList#9",
+        "tmp%8#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%8#0"
+      ]
+    },
+    "550": {
+      "op": "bz deleteAppFromWhitelist_after_if_else@4",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "553": {
+      "op": "frame_dig 5",
+      "defined_out": [
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "newWhiteList#0"
+      ]
+    },
+    "555": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0"
+      ]
+    },
+    "558": {
+      "op": "frame_dig 2",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "whitelist#0"
+      ]
+    },
+    "560": {
+      "op": "box_get",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "maybe_exists%2#0",
+        "maybe_value%2#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "561": {
+      "error": "Box must have value",
+      "op": "assert // Box must have value",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "562": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "array_head_and_tail%1#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%1#0"
+      ]
+    },
+    "565": {
+      "op": "frame_dig 6",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%1#0",
+        "i#0"
+      ]
+    },
+    "567": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "array_head_and_tail%1#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%1#0",
+        "i#0",
+        "8"
+      ]
+    },
+    "568": {
+      "op": "*",
+      "defined_out": [
+        "array_head_and_tail%1#0",
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "item_offset%1#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%1#0",
+        "item_offset%1#0"
+      ]
+    },
+    "569": {
+      "op": "intc_2 // 8",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "array_head_and_tail%1#0",
+        "item_offset%1#0",
+        "8"
+      ]
+    },
+    "570": {
+      "error": "Index access is out of bounds",
+      "op": "extract3 // on error: Index access is out of bounds",
+      "defined_out": [
+        "expr_value_trimmed%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "tmp%10#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "expr_value_trimmed%0#0",
+        "tmp%10#0"
+      ]
+    },
+    "571": {
+      "op": "concat",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0"
+      ]
+    },
+    "572": {
+      "op": "dup",
+      "defined_out": [
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "concatenated%0#0 (copy)"
+      ]
+    },
+    "573": {
+      "op": "len",
+      "defined_out": [
+        "byte_len%0#0",
+        "concatenated%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "byte_len%0#0"
+      ]
+    },
+    "574": {
+      "op": "intc_2 // 8",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "byte_len%0#0",
+        "8"
+      ]
+    },
+    "575": {
+      "op": "/",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "len_%0#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "len_%0#0"
+      ]
+    },
+    "576": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%4#0",
+        "concatenated%0#0",
+        "i#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "as_bytes%4#0"
+      ]
+    },
+    "577": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "concatenated%0#0",
+        "i#0",
+        "len_16_bit%0#0",
+        "newWhiteList#0",
+        "newWhiteList#9",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "concatenated%0#0",
+        "len_16_bit%0#0"
+      ]
+    },
+    "580": {
+      "op": "swap",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "len_16_bit%0#0",
+        "concatenated%0#0"
+      ]
+    },
+    "581": {
+      "op": "concat",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "newWhiteList#9"
+      ]
+    },
+    "582": {
+      "op": "frame_bury 0",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "584": {
+      "block": "deleteAppFromWhitelist_after_if_else@4",
+      "stack_in": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ],
+      "op": "frame_dig 0",
+      "defined_out": [
+        "newWhiteList#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "newWhiteList#0"
+      ]
+    },
+    "586": {
+      "op": "frame_bury 5",
+      "defined_out": [
+        "newWhiteList#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "588": {
+      "op": "frame_dig 6",
+      "defined_out": [
+        "i#0",
+        "newWhiteList#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "590": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "i#0",
+        "newWhiteList#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "591": {
+      "op": "+",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "592": {
+      "op": "frame_bury 6",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "594": {
+      "op": "b deleteAppFromWhitelist_while_top@1"
+    },
+    "597": {
+      "block": "deleteAppFromWhitelist_after_while@5",
+      "stack_in": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ],
+      "op": "frame_dig 2",
+      "defined_out": [
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0"
+      ]
+    },
+    "599": {
+      "op": "dup",
+      "defined_out": [
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0",
+        "whitelist#0 (copy)"
+      ]
+    },
+    "600": {
+      "op": "box_del",
+      "defined_out": [
+        "whitelist#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0",
+        "{box_del}"
+      ]
+    },
+    "601": {
+      "op": "pop",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0"
+      ]
+    },
+    "602": {
+      "op": "frame_dig 5",
+      "defined_out": [
+        "newWhiteList#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "whitelist#0",
+        "newWhiteList#0"
+      ]
+    },
+    "604": {
+      "op": "box_put",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "605": {
+      "op": "frame_dig 3",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "newWhiteList#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "array_head_and_tail%0#0"
+      ]
+    },
+    "607": {
+      "op": "frame_dig 4",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0"
+      ]
+    },
+    "609": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "tmp%12#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%12#0"
+      ]
+    },
+    "610": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "appID#0 (copy)",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "tmp%12#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%12#0",
+        "appID#0 (copy)"
+      ]
+    },
+    "612": {
+      "op": "==",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "tmp%13#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "tmp%13#0"
+      ]
+    },
+    "613": {
+      "op": "assert",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "614": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "preMBR#0",
+        "whitelist#0"
+      ],
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0",
+        "preMBR#0"
+      ]
+    },
+    "616": {
+      "callsub": "contracts/arc75/arc75.algo.ts::ARC75.sendMBRPayment",
+      "op": "callsub sendMBRPayment",
+      "stack_out": [
+        "newWhiteList#9",
+        "preMBR#0",
+        "whitelist#0",
+        "array_head_and_tail%0#0",
+        "item_offset%0#0",
+        "newWhiteList#0",
+        "i#0"
+      ]
+    },
+    "619": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}

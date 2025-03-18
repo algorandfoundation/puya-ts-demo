@@ -1,24 +1,52 @@
-import { Contract } from "@algorandfoundation/tealscript";
+import {
+  assert,
+  assertMatch,
+  BoxMap,
+  Bytes,
+  Contract,
+  Global,
+  itxn,
+  Txn,
+} from "@algorandfoundation/algorand-typescript";
+import { gtxn } from "@algorandfoundation/algorand-typescript";
+import type { uint64 } from "@algorandfoundation/algorand-typescript";
+import {
+  abimethod,
+  Address,
+  DynamicArray,
+  Str,
+  Struct,
+  UintN16,
+  UintN64,
+} from "@algorandfoundation/algorand-typescript/arc4";
 
-type Whitelist = { account: Address; boxIndex: uint16; arc: string };
+export class Whitelist extends Struct<{
+  account: Address;
+  boxIndex: UintN16;
+  arc: Str;
+}> {}
 
-// eslint-disable-next-line no-unused-vars
-class ARC75 extends Contract {
-  whitelist = BoxMap<Whitelist, uint64[]>();
+export class ARC75 extends Contract {
+  whitelist = BoxMap<Whitelist, DynamicArray<UintN64>>({ keyPrefix: Bytes() });
 
-  private verifyMBRPayment(payment: PayTxn, preMBR: uint64): void {
-    verifyPayTxn(payment, {
-      receiver: this.app.address,
-      amount: this.app.address.minBalance - preMBR,
+  private verifyMBRPayment(payment: gtxn.PaymentTxn, preMBR: uint64): void {
+    assertMatch(payment, {
+      receiver: Global.currentApplicationAddress,
+      amount: Global.currentApplicationAddress.minBalance - preMBR,
     });
   }
 
   private sendMBRPayment(preMBR: uint64): void {
-    sendPayment({
-      receiver: this.txn.sender,
-      amount: preMBR - this.app.address.minBalance,
-    });
+    itxn
+      .payment({
+        receiver: Txn.sender,
+        amount: preMBR - Global.currentApplicationAddress.minBalance,
+      })
+      .submit();
   }
+
+  @abimethod({ onCreate: "require" })
+  createApplication(): void {}
 
   /**
    * Add app to whitelist box
@@ -31,22 +59,22 @@ class ARC75 extends Contract {
    */
   addAppToWhiteList(
     arc: string,
-    boxIndex: uint16,
+    boxIndex: UintN16,
     appID: uint64,
-    payment: PayTxn,
+    payment: gtxn.PaymentTxn,
   ): void {
-    const preMBR = this.app.address.minBalance;
-    const whitelist: Whitelist = {
-      account: this.txn.sender,
+    const preMBR = Global.currentApplicationAddress.minBalance;
+    const whitelist = new Whitelist({
+      account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: arc,
-    };
+      arc: new Str(arc),
+    });
 
     if (this.whitelist(whitelist).exists) {
-      this.whitelist(whitelist).value.push(appID);
+      this.whitelist(whitelist).value.push(new UintN64(appID));
     } else {
-      const newWhitelist: uint64[] = [appID];
-      this.whitelist(whitelist).value = newWhitelist;
+      const newWhitelist = new DynamicArray<UintN64>(new UintN64(appID));
+      this.whitelist(whitelist).value = newWhitelist.copy();
     }
 
     this.verifyMBRPayment(payment, preMBR);
@@ -60,25 +88,27 @@ class ARC75 extends Contract {
    * @param appIDs - Array of app IDs that signify the whitelisted apps
    *
    */
-  setAppWhitelist(arc: string, boxIndex: uint16, appIDs: uint64[]): void {
-    const preMBR = this.app.address.minBalance;
-    const whitelist: Whitelist = {
-      account: this.txn.sender,
+  setAppWhitelist(arc: string, boxIndex: UintN16, appIDs: uint64[]): void {
+    const preMBR = Global.currentApplicationAddress.minBalance;
+    const whitelist = new Whitelist({
+      account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: arc,
-    };
+      arc: new Str(arc),
+    });
 
     this.whitelist(whitelist).delete();
 
-    this.whitelist(whitelist).value = appIDs;
+    const newWhitelist = new DynamicArray<UintN64>();
+    for (let i: uint64 = 0; i < appIDs.length; i++) {
+      newWhitelist.push(new UintN64(appIDs[i]));
+    }
 
-    if (preMBR > this.app.address.minBalance) {
+    this.whitelist(whitelist).value = newWhitelist.copy();
+
+    if (preMBR > Global.currentApplicationAddress.minBalance) {
       this.sendMBRPayment(preMBR);
     } else {
-      this.verifyMBRPayment(
-        this.txnGroup[this.txn.groupIndex - 1] as PayTxn,
-        preMBR,
-      );
+      this.verifyMBRPayment(gtxn.PaymentTxn(Txn.groupIndex - 1), preMBR);
     }
   }
 
@@ -89,13 +119,13 @@ class ARC75 extends Contract {
    * @param boxIndex - The index of the whitelist box to delete
    *
    */
-  deleteWhitelist(arc: string, boxIndex: uint16): void {
-    const preMBR = this.app.address.minBalance;
-    const whitelist: Whitelist = {
-      account: this.txn.sender,
+  deleteWhitelist(arc: string, boxIndex: UintN16): void {
+    const preMBR = Global.currentApplicationAddress.minBalance;
+    const whitelist = new Whitelist({
+      account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: arc,
-    };
+      arc: new Str(arc),
+    });
 
     this.whitelist(whitelist).delete();
 
@@ -112,20 +142,28 @@ class ARC75 extends Contract {
    */
   deleteAppFromWhitelist(
     arc: string,
-    boxIndex: uint16,
+    boxIndex: UintN16,
     appID: uint64,
     index: uint64,
   ): void {
-    const preMBR = this.app.address.minBalance;
-    const whitelist: Whitelist = {
-      account: this.txn.sender,
+    const preMBR = Global.currentApplicationAddress.minBalance;
+    const whitelist = new Whitelist({
+      account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: arc,
-    };
+      arc: new Str(arc),
+    });
 
-    const spliced = this.whitelist(whitelist).value.splice(index, 1);
+    const spliced = this.whitelist(whitelist).value.at(index);
 
-    assert(spliced[0] === appID);
+    const newWhiteList = new DynamicArray<UintN64>();
+    for (let i: uint64 = 0; i < this.whitelist(whitelist).value.length; i++) {
+      if (i !== index) {
+        newWhiteList.push(this.whitelist(whitelist).value.at(i));
+      }
+    }
+    this.whitelist(whitelist).value = newWhiteList.copy();
+
+    assert(spliced.native === appID);
 
     this.sendMBRPayment(preMBR);
   }
