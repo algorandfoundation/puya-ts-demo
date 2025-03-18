@@ -31,6 +31,7 @@ const jestConfig: JestConfigWithTsJest = {
     ],
   },
   extensionsToTreatAsEsm: [".ts"],
+  testTimeout: 30_000,
 };
 
 export default jestConfig;

@@ -1,0 +1,90 @@
+{
+  "name": "BigBox",
+  "desc": "",
+  "methods": [
+    {
+      "name": "startUpload",
+      "desc": "Allocate boxes to begin data upload process",
+      "args": [
+        {
+          "name": "dataIdentifier",
+          "type": "string",
+          "desc": "The unique identifier for the data"
+        },
+        {
+          "name": "numBoxes",
+          "type": "uint64",
+          "desc": "The number of boxes that the data will take up"
+        },
+        {
+          "name": "endBoxSize",
+          "type": "uint64",
+          "desc": "The size of the last box"
+        },
+        {
+          "name": "mbrPayment",
+          "type": "pay",
+          "desc": "Payment from the uploader to cover the box MBR"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "upload",
+      "desc": "Upload data to a specific offset in a box",
+      "args": [
+        {
+          "name": "dataIdentifier",
+          "type": "string",
+          "desc": "The unique identifier for the data"
+        },
+        {
+          "name": "boxIndex",
+          "type": "uint64",
+          "desc": "The index of the box to upload the given chunk of data to"
+        },
+        {
+          "name": "offset",
+          "type": "uint64",
+          "desc": "The offset within the box to start writing the data"
+        },
+        {
+          "name": "data",
+          "type": "byte[]",
+          "desc": "The data to write"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "setStatus",
+      "desc": "Set the status of the data",
+      "args": [
+        {
+          "name": "dataIdentifier",
+          "type": "string",
+          "desc": "The unique identifier for the data"
+        },
+        {
+          "name": "status",
+          "type": "uint8",
+          "desc": "The new status for the data"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
