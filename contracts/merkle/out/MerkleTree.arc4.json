@@ -1,0 +1,72 @@
+{
+  "name": "MerkleTree",
+  "desc": "",
+  "methods": [
+    {
+      "name": "deleteApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "createApplication",
+      "args": [],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "verify",
+      "args": [
+        {
+          "name": "data",
+          "type": "byte[]"
+        },
+        {
+          "name": "path",
+          "type": "byte[33][3]"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "appendLeaf",
+      "args": [
+        {
+          "name": "data",
+          "type": "byte[]"
+        },
+        {
+          "name": "path",
+          "type": "byte[33][3]"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    },
+    {
+      "name": "updateLeaf",
+      "args": [
+        {
+          "name": "oldData",
+          "type": "byte[]"
+        },
+        {
+          "name": "newData",
+          "type": "byte[]"
+        },
+        {
+          "name": "path",
+          "type": "byte[33][3]"
+        }
+      ],
+      "returns": {
+        "type": "void"
+      }
+    }
+  ]
+}
