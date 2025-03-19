@@ -4,6 +4,7 @@ const presetConfig = createDefaultEsmPreset({});
 const ignorePatterns = [
   "<rootDir>/contracts/simple/simple.e2e.ts",
   "<rootDir>/contracts/itxns/itxns.e2e.ts",
+  "<rootDir>/contracts/merkle/merkle.e2e.ts",
   "@algorandfoundation/tealscript",
 ];
 
