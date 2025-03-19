@@ -1,57 +1,83 @@
-import { Contract } from "@algorandfoundation/tealscript";
+import {
+  assert,
+  assertMatch,
+  Bytes,
+  Contract,
+  GlobalState,
+} from "@algorandfoundation/algorand-typescript";
+import { abimethod } from "@algorandfoundation/algorand-typescript/arc4";
+import type {
+  bytes,
+  FixedArray,
+  uint64,
+} from "@algorandfoundation/algorand-typescript";
+import {
+  extract,
+  getByte,
+  Global,
+  sha256,
+  Txn,
+} from "@algorandfoundation/algorand-typescript/op";
 
-const TREE_DEPTH = 3;
+const TREE_DEPTH: uint64 = 3;
 const EMPTY_HASH =
   "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
-const RIGHT_SIBLING_PREFIX = 170;
+const RIGHT_SIBLING_PREFIX: uint64 = 170;
 
 type Branch = bytes<33>;
-type Path = StaticArray<Branch, typeof TREE_DEPTH>;
+type Path = FixedArray<Branch, 3>;
 
-// eslint-disable-next-line no-unused-vars
-class MerkleTree extends Contract {
-  root = GlobalStateKey<bytes32>();
+export class MerkleTree extends Contract {
+  root = GlobalState<bytes<32>>();
 
-  size = GlobalStateKey<uint64>();
+  size = GlobalState<uint64>({ initialValue: 0 });
 
-  private calcInitRoot(): bytes32 {
-    let result = hex(EMPTY_HASH) as bytes32;
+  private calcInitRoot(): bytes<32> {
+    let result = Bytes.fromHex<32>(EMPTY_HASH);
 
-    for (let i = 0; i < TREE_DEPTH; i = i + 1) {
-      result = sha256(result + result);
+    for (let i: uint64 = 0; i < TREE_DEPTH; i = i + 1) {
+      result = sha256(result.concat(result));
     }
 
     return result;
   }
 
-  private hashConcat(left: bytes32, right: bytes32): bytes32 {
-    return sha256(left + right);
+  private hashConcat(left: bytes<32>, right: bytes<32>): bytes<32> {
+    return sha256(left.concat(right));
   }
 
   private isRightSibling(elem: Branch): boolean {
-    return getbyte(elem, 0) === RIGHT_SIBLING_PREFIX;
+    return getByte(elem, 0) === RIGHT_SIBLING_PREFIX;
   }
 
-  private calcRoot(leaf: bytes32, path: Path): bytes32 {
+  private calcRoot(leaf: bytes<32>, path: Path): bytes<32> {
     let result = leaf;
 
-    for (let i = 0; i < TREE_DEPTH; i = i + 1) {
+    for (let i: uint64 = 0; i < TREE_DEPTH; i = i + 1) {
       const elem = path[i];
 
       if (this.isRightSibling(elem)) {
-        result = this.hashConcat(result, extract3(elem, 1, 32) as bytes32);
+        result = this.hashConcat(
+          result,
+          extract(elem, 1, 32).toFixed({ length: 32 }),
+        );
       } else {
-        result = this.hashConcat(extract3(elem, 1, 32) as bytes32, result);
+        result = this.hashConcat(
+          extract(elem, 1, 32).toFixed({ length: 32 }),
+          result,
+        );
       }
     }
 
     return result;
   }
 
+  @abimethod({ allowActions: "DeleteApplication" })
   deleteApplication(): void {
-    verifyAppCallTxn(this.txn, { sender: this.app.creator });
+    assertMatch(Txn, { sender: Global.currentApplicationId.creator });
   }
 
+  @abimethod({ onCreate: "require" })
   createApplication(): void {
     this.root.value = this.calcInitRoot();
   }
@@ -61,8 +87,10 @@ class MerkleTree extends Contract {
   }
 
   appendLeaf(data: bytes, path: Path): void {
-    assert(data !== "");
-    assert(this.root.value === this.calcRoot(hex(EMPTY_HASH) as bytes32, path));
+    assert(data !== Bytes());
+    assert(
+      this.root.value === this.calcRoot(Bytes.fromHex<32>(EMPTY_HASH), path),
+    );
 
     this.root.value = this.calcRoot(sha256(data), path);
 
@@ -70,7 +98,7 @@ class MerkleTree extends Contract {
   }
 
   updateLeaf(oldData: bytes, newData: bytes, path: Path): void {
-    assert(newData !== "");
+    assert(newData !== Bytes());
     assert(this.root.value === this.calcRoot(sha256(oldData), path));
 
     this.root.value = this.calcRoot(sha256(newData), path);
