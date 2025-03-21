@@ -784,12 +784,12 @@
       "defined_out": [
         "endBox#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0"
+        "val_as_bytes%1#0"
       ],
       "stack_out": [
         "endBox#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0"
+        "val_as_bytes%1#0"
       ]
     },
     "189": {
@@ -798,12 +798,12 @@
         "endBox#0",
         "endBoxSize#0 (copy)",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0"
+        "val_as_bytes%1#0"
       ],
       "stack_out": [
         "endBox#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0",
+        "val_as_bytes%1#0",
         "endBoxSize#0 (copy)"
       ]
     },
@@ -812,23 +812,23 @@
       "defined_out": [
         "endBox#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%11#0",
-        "val_as_bytes%4#0"
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
       ],
       "stack_out": [
         "endBox#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0",
-        "val_as_bytes%11#0"
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
       ]
     },
     "192": {
       "op": "cover 2",
       "stack_out": [
         "endBox#0",
-        "val_as_bytes%11#0",
+        "val_as_bytes%2#0",
         "val_as_bytes%0#0",
-        "val_as_bytes%4#0"
+        "val_as_bytes%1#0"
       ]
     },
     "194": {
@@ -836,11 +836,11 @@
       "defined_out": [
         "encoded_tuple_buffer%2#0",
         "endBox#0",
-        "val_as_bytes%11#0"
+        "val_as_bytes%2#0"
       ],
       "stack_out": [
         "endBox#0",
-        "val_as_bytes%11#0",
+        "val_as_bytes%2#0",
         "encoded_tuple_buffer%2#0"
       ]
     },
@@ -850,11 +850,11 @@
         "0x00",
         "encoded_tuple_buffer%2#0",
         "endBox#0",
-        "val_as_bytes%11#0"
+        "val_as_bytes%2#0"
       ],
       "stack_out": [
         "endBox#0",
-        "val_as_bytes%11#0",
+        "val_as_bytes%2#0",
         "encoded_tuple_buffer%2#0",
         "0x00"
       ]
@@ -864,11 +864,11 @@
       "defined_out": [
         "encoded_tuple_buffer%3#0",
         "endBox#0",
-        "val_as_bytes%11#0"
+        "val_as_bytes%2#0"
       ],
       "stack_out": [
         "endBox#0",
-        "val_as_bytes%11#0",
+        "val_as_bytes%2#0",
         "encoded_tuple_buffer%3#0"
       ]
     },
@@ -877,7 +877,7 @@
       "stack_out": [
         "endBox#0",
         "encoded_tuple_buffer%3#0",
-        "val_as_bytes%11#0"
+        "val_as_bytes%2#0"
       ]
     },
     "198": {

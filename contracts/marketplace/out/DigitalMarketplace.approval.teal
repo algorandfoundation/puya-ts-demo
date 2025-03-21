@@ -614,30 +614,30 @@ deposit:
     dup
     box_get
     assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:142
-    // deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
+    // contracts/marketplace/marketplace.algo.ts:138
+    // bid: existing.bid,
     dup
-    intc_1 // 0
-    extract_uint64
-    uncover 3
-    +
-    itob
-    // contracts/marketplace/marketplace.algo.ts:141
-    // unitaryPrice: existing.unitaryPrice,
+    extract 48 8 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:139
+    // bidUnitaryPrice: existing.bidUnitaryPrice,
     dig 1
-    extract 8 8 // on error: Index access is out of bounds
+    extract 56 8 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:140
     // bidder: existing.bidder,
     dig 2
     extract 16 32 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:138
-    // bid: existing.bid,
+    // contracts/marketplace/marketplace.algo.ts:141
+    // unitaryPrice: existing.unitaryPrice,
     dig 3
-    extract 48 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:139
-    // bidUnitaryPrice: existing.bidUnitaryPrice,
+    extract 8 8 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:142
+    // deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
     uncover 4
-    extract 56 8 // on error: Index access is out of bounds
+    intc_1 // 0
+    extract_uint64
+    uncover 6
+    +
+    itob
     // contracts/marketplace/marketplace.algo.ts:137-143
     // this.listings(key).value = new ListingValue({
     //   bid: existing.bid,
@@ -646,10 +646,9 @@ deposit:
     //   unitaryPrice: existing.unitaryPrice,
     //   deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
     // });
-    uncover 4
-    uncover 4
+    swap
     concat
-    uncover 3
+    swap
     concat
     uncover 2
     concat
@@ -691,22 +690,22 @@ setPrice:
     dup
     box_get
     assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:159
-    // deposited: existing.deposited,
-    dup
-    extract 0 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:158
-    // bidder: existing.bidder,
-    dig 1
-    extract 16 32 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:156
     // bid: existing.bid,
-    dig 2
+    dup
     extract 48 8 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:157
     // bidUnitaryPrice: existing.bidUnitaryPrice,
-    uncover 3
+    dig 1
     extract 56 8 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:158
+    // bidder: existing.bidder,
+    dig 2
+    extract 16 32 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:159
+    // deposited: existing.deposited,
+    uncover 3
+    extract 0 8 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:155-161
     // this.listings(key).value = new ListingValue({
     //   bid: existing.bid,
@@ -715,10 +714,9 @@ setPrice:
     //   deposited: existing.deposited,
     //   unitaryPrice: unitaryPrice,
     // });
-    uncover 3
     frame_dig -1
     concat
-    uncover 3
+    swap
     concat
     uncover 2
     concat
@@ -806,26 +804,26 @@ buy:
     gtxns Amount
     ==
     assert
+    // contracts/marketplace/marketplace.algo.ts:191
+    // bid: listing.bid,
+    dig 1
+    extract 48 8 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:192
+    // bidUnitaryPrice: listing.bidUnitaryPrice,
+    dig 2
+    extract 56 8 // on error: Index access is out of bounds
+    // contracts/marketplace/marketplace.algo.ts:193
+    // bidder: listing.bidder,
+    dig 3
+    extract 16 32 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:195
     // deposited: new arc4.UintN64(listing.deposited.native - quantity),
-    dig 1
+    uncover 4
     intc_1 // 0
     extract_uint64
     frame_dig -1
     -
     itob
-    // contracts/marketplace/marketplace.algo.ts:193
-    // bidder: listing.bidder,
-    dig 2
-    extract 16 32 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:191
-    // bid: listing.bid,
-    dig 3
-    extract 48 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:192
-    // bidUnitaryPrice: listing.bidUnitaryPrice,
-    uncover 4
-    extract 56 8 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:190-196
     // this.listings(key).value = new ListingValue({
     //   bid: listing.bid,
@@ -834,10 +832,9 @@ buy:
     //   unitaryPrice: listing.unitaryPrice,
     //   deposited: new arc4.UintN64(listing.deposited.native - quantity),
     // });
-    uncover 3
     uncover 4
     concat
-    uncover 3
+    swap
     concat
     uncover 2
     concat
@@ -1371,24 +1368,21 @@ acceptBid_ternary_merge@3:
     //   })
     //   .submit();
     itxn_submit
+    // contracts/marketplace/marketplace.algo.ts:326
+    // unitaryPrice: listing.unitaryPrice,
+    uncover 3
+    extract 8 8 // on error: Index access is out of bounds
     // contracts/marketplace/marketplace.algo.ts:327
     // deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
     frame_dig 3
-    dig 1
+    dig 2
     -
     itob
     // contracts/marketplace/marketplace.algo.ts:328
     // bid: new arc4.UintN64(listing.bid.native - minQuantity),
     frame_dig 4
-    uncover 2
+    uncover 3
     -
-    // contracts/marketplace/marketplace.algo.ts:326
-    // unitaryPrice: listing.unitaryPrice,
-    uncover 4
-    extract 8 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:328
-    // bid: new arc4.UintN64(listing.bid.native - minQuantity),
-    swap
     itob
     // contracts/marketplace/marketplace.algo.ts:323-329
     // this.listings(key).value = new ListingValue({
@@ -1398,7 +1392,8 @@ acceptBid_ternary_merge@3:
     //   deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
     //   bid: new arc4.UintN64(listing.bid.native - minQuantity),
     // });
-    cover 2
+    swap
+    uncover 2
     concat
     uncover 2
     concat
