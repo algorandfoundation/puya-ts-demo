@@ -1,0 +1,640 @@
+#pragma version 10
+#pragma typetrack false
+
+// @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
+main:
+    intcblock 1 0 8
+    bytecblock 0x0024 0x0000
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    txn NumAppArgs
+    bz main_after_if_else@11
+    pushbytess 0xb8447b36 0x467c7cbd 0xd198fcb8 0x7c33e832 0x7e1674ac // method "createApplication()void", method "addAppToWhiteList(string,uint16,uint64,pay)void", method "setAppWhitelist(string,uint16,uint64[])void", method "deleteWhitelist(string,uint16)void", method "deleteAppFromWhitelist(string,uint16,uint64,uint64)void"
+    txna ApplicationArgs 0
+    match main_createApplication_route@3 main_addAppToWhiteList_route@4 main_setAppWhitelist_route@5 main_deleteWhitelist_route@6 main_deleteAppFromWhitelist_route@7
+
+main_after_if_else@11:
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    intc_1 // 0
+    return
+
+main_deleteAppFromWhitelist_route@7:
+    // contracts/arc75/arc75.algo.ts:143-148
+    // deleteAppFromWhitelist(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   index: uint64,
+    // ): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    txna ApplicationArgs 3
+    btoi
+    txna ApplicationArgs 4
+    btoi
+    // contracts/arc75/arc75.algo.ts:143-148
+    // deleteAppFromWhitelist(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   index: uint64,
+    // ): void {
+    callsub deleteAppFromWhitelist
+    intc_0 // 1
+    return
+
+main_deleteWhitelist_route@6:
+    // contracts/arc75/arc75.algo.ts:122
+    // deleteWhitelist(arc: string, boxIndex: UintN16): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    // contracts/arc75/arc75.algo.ts:122
+    // deleteWhitelist(arc: string, boxIndex: UintN16): void {
+    callsub deleteWhitelist
+    intc_0 // 1
+    return
+
+main_setAppWhitelist_route@5:
+    // contracts/arc75/arc75.algo.ts:91
+    // setAppWhitelist(arc: string, boxIndex: UintN16, appIDs: uint64[]): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    txna ApplicationArgs 3
+    // contracts/arc75/arc75.algo.ts:91
+    // setAppWhitelist(arc: string, boxIndex: UintN16, appIDs: uint64[]): void {
+    callsub setAppWhitelist
+    intc_0 // 1
+    return
+
+main_addAppToWhiteList_route@4:
+    // contracts/arc75/arc75.algo.ts:60-65
+    // addAppToWhiteList(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   payment: gtxn.PaymentTxn,
+    // ): void {
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // contracts/arc75/arc75.algo.ts:29
+    // export class ARC75 extends Contract {
+    txna ApplicationArgs 1
+    extract 2 0
+    txna ApplicationArgs 2
+    txna ApplicationArgs 3
+    btoi
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_0 // pay
+    ==
+    assert // transaction type is pay
+    // contracts/arc75/arc75.algo.ts:60-65
+    // addAppToWhiteList(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   payment: gtxn.PaymentTxn,
+    // ): void {
+    callsub addAppToWhiteList
+    intc_0 // 1
+    return
+
+main_createApplication_route@3:
+    // contracts/arc75/arc75.algo.ts:48
+    // @abimethod({ onCreate: "require" })
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.verifyMBRPayment(payment: uint64, preMBR: uint64) -> void:
+verifyMBRPayment:
+    // contracts/arc75/arc75.algo.ts:32
+    // private verifyMBRPayment(payment: gtxn.PaymentTxn, preMBR: uint64): void {
+    proto 2 0
+    // contracts/arc75/arc75.algo.ts:33-36
+    // assertMatch(payment, {
+    //   receiver: Global.currentApplicationAddress,
+    //   amount: Global.currentApplicationAddress.minBalance - preMBR,
+    // });
+    frame_dig -2
+    gtxns Receiver
+    // contracts/arc75/arc75.algo.ts:34
+    // receiver: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // contracts/arc75/arc75.algo.ts:33-36
+    // assertMatch(payment, {
+    //   receiver: Global.currentApplicationAddress,
+    //   amount: Global.currentApplicationAddress.minBalance - preMBR,
+    // });
+    ==
+    bz verifyMBRPayment_bool_false@3
+    frame_dig -2
+    gtxns Amount
+    // contracts/arc75/arc75.algo.ts:35
+    // amount: Global.currentApplicationAddress.minBalance - preMBR,
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    frame_dig -1
+    -
+    // contracts/arc75/arc75.algo.ts:33-36
+    // assertMatch(payment, {
+    //   receiver: Global.currentApplicationAddress,
+    //   amount: Global.currentApplicationAddress.minBalance - preMBR,
+    // });
+    ==
+    bz verifyMBRPayment_bool_false@3
+    intc_0 // 1
+
+verifyMBRPayment_bool_merge@4:
+    // contracts/arc75/arc75.algo.ts:33-36
+    // assertMatch(payment, {
+    //   receiver: Global.currentApplicationAddress,
+    //   amount: Global.currentApplicationAddress.minBalance - preMBR,
+    // });
+    assert // assert target is match for conditions
+    retsub
+
+verifyMBRPayment_bool_false@3:
+    intc_1 // 0
+    b verifyMBRPayment_bool_merge@4
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.sendMBRPayment(preMBR: uint64) -> void:
+sendMBRPayment:
+    // contracts/arc75/arc75.algo.ts:39
+    // private sendMBRPayment(preMBR: uint64): void {
+    proto 1 0
+    // contracts/arc75/arc75.algo.ts:40-45
+    // itxn
+    //   .payment({
+    //     receiver: Txn.sender,
+    //     amount: preMBR - Global.currentApplicationAddress.minBalance,
+    //   })
+    //   .submit();
+    itxn_begin
+    // contracts/arc75/arc75.algo.ts:42
+    // receiver: Txn.sender,
+    txn Sender
+    // contracts/arc75/arc75.algo.ts:43
+    // amount: preMBR - Global.currentApplicationAddress.minBalance,
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    frame_dig -1
+    swap
+    -
+    itxn_field Amount
+    itxn_field Receiver
+    // contracts/arc75/arc75.algo.ts:40-44
+    // itxn
+    //   .payment({
+    //     receiver: Txn.sender,
+    //     amount: preMBR - Global.currentApplicationAddress.minBalance,
+    //   })
+    intc_0 // 1
+    itxn_field TypeEnum
+    intc_1 // 0
+    itxn_field Fee
+    // contracts/arc75/arc75.algo.ts:40-45
+    // itxn
+    //   .payment({
+    //     receiver: Txn.sender,
+    //     amount: preMBR - Global.currentApplicationAddress.minBalance,
+    //   })
+    //   .submit();
+    itxn_submit
+    retsub
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.addAppToWhiteList(arc: bytes, boxIndex: bytes, appID: uint64, payment: uint64) -> void:
+addAppToWhiteList:
+    // contracts/arc75/arc75.algo.ts:60-65
+    // addAppToWhiteList(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   payment: gtxn.PaymentTxn,
+    // ): void {
+    proto 4 0
+    // contracts/arc75/arc75.algo.ts:66
+    // const preMBR = Global.currentApplicationAddress.minBalance;
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // contracts/arc75/arc75.algo.ts:68
+    // account: new Address(Txn.sender),
+    txn Sender
+    // contracts/arc75/arc75.algo.ts:70
+    // arc: new Str(arc),
+    frame_dig -4
+    len
+    itob
+    extract 6 2
+    frame_dig -4
+    concat
+    // contracts/arc75/arc75.algo.ts:67-71
+    // const whitelist = new Whitelist({
+    //   account: new Address(Txn.sender),
+    //   boxIndex: boxIndex,
+    //   arc: new Str(arc),
+    // });
+    swap
+    frame_dig -3
+    concat
+    bytec_0 // 0x0024
+    concat
+    swap
+    concat
+    dup
+    // contracts/arc75/arc75.algo.ts:73
+    // if (this.whitelist(whitelist).exists) {
+    box_len
+    bury 1
+    bz addAppToWhiteList_else_body@2
+    // contracts/arc75/arc75.algo.ts:74
+    // this.whitelist(whitelist).value.push(new UintN64(appID));
+    dup
+    box_get
+    assert // Box must have value
+    extract 2 0
+    frame_dig -2
+    itob
+    concat
+    dup
+    len
+    intc_2 // 8
+    /
+    itob
+    extract 6 2
+    swap
+    concat
+    dig 1
+    box_del
+    pop
+    box_put
+
+addAppToWhiteList_after_if_else@3:
+    // contracts/arc75/arc75.algo.ts:80
+    // this.verifyMBRPayment(payment, preMBR);
+    frame_dig -1
+    frame_dig 0
+    callsub verifyMBRPayment
+    retsub
+
+addAppToWhiteList_else_body@2:
+    // contracts/arc75/arc75.algo.ts:76
+    // const newWhitelist = new DynamicArray<UintN64>(new UintN64(appID));
+    frame_dig -2
+    itob
+    pushbytes 0x0001
+    swap
+    concat
+    // contracts/arc75/arc75.algo.ts:77
+    // this.whitelist(whitelist).value = newWhitelist.copy();
+    swap
+    dup
+    box_del
+    pop
+    swap
+    box_put
+    b addAppToWhiteList_after_if_else@3
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.setAppWhitelist(arc: bytes, boxIndex: bytes, appIDs: bytes) -> void:
+setAppWhitelist:
+    // contracts/arc75/arc75.algo.ts:91
+    // setAppWhitelist(arc: string, boxIndex: UintN16, appIDs: uint64[]): void {
+    proto 3 0
+    // contracts/arc75/arc75.algo.ts:92
+    // const preMBR = Global.currentApplicationAddress.minBalance;
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // contracts/arc75/arc75.algo.ts:94
+    // account: new Address(Txn.sender),
+    txn Sender
+    // contracts/arc75/arc75.algo.ts:96
+    // arc: new Str(arc),
+    frame_dig -3
+    len
+    itob
+    extract 6 2
+    frame_dig -3
+    concat
+    // contracts/arc75/arc75.algo.ts:93-97
+    // const whitelist = new Whitelist({
+    //   account: new Address(Txn.sender),
+    //   boxIndex: boxIndex,
+    //   arc: new Str(arc),
+    // });
+    swap
+    frame_dig -2
+    concat
+    bytec_0 // 0x0024
+    concat
+    swap
+    concat
+    dup
+    // contracts/arc75/arc75.algo.ts:99
+    // this.whitelist(whitelist).delete();
+    box_del
+    pop
+    // contracts/arc75/arc75.algo.ts:101
+    // const newWhitelist = new DynamicArray<UintN64>();
+    bytec_1 // 0x0000
+    // contracts/arc75/arc75.algo.ts:102
+    // for (let i: uint64 = 0; i < appIDs.length; i++) {
+    intc_1 // 0
+
+setAppWhitelist_while_top@1:
+    // contracts/arc75/arc75.algo.ts:102
+    // for (let i: uint64 = 0; i < appIDs.length; i++) {
+    frame_dig -1
+    intc_1 // 0
+    extract_uint16
+    frame_dig 3
+    >
+    bz setAppWhitelist_after_while@3
+    // contracts/arc75/arc75.algo.ts:103
+    // newWhitelist.push(new UintN64(appIDs[i]));
+    frame_dig 2
+    extract 2 0
+    frame_dig -1
+    extract 2 0
+    frame_dig 3
+    dup
+    cover 3
+    intc_2 // 8
+    *
+    extract_uint64
+    itob
+    concat
+    dup
+    len
+    intc_2 // 8
+    /
+    itob
+    extract 6 2
+    swap
+    concat
+    frame_bury 2
+    // contracts/arc75/arc75.algo.ts:102
+    // for (let i: uint64 = 0; i < appIDs.length; i++) {
+    intc_0 // 1
+    +
+    frame_bury 3
+    b setAppWhitelist_while_top@1
+
+setAppWhitelist_after_while@3:
+    // contracts/arc75/arc75.algo.ts:106
+    // this.whitelist(whitelist).value = newWhitelist.copy();
+    frame_dig 1
+    dup
+    box_del
+    pop
+    frame_dig 2
+    box_put
+    // contracts/arc75/arc75.algo.ts:108
+    // if (preMBR > Global.currentApplicationAddress.minBalance) {
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    frame_dig 0
+    <
+    bz setAppWhitelist_else_body@5
+    // contracts/arc75/arc75.algo.ts:109
+    // this.sendMBRPayment(preMBR);
+    frame_dig 0
+    callsub sendMBRPayment
+    retsub
+
+setAppWhitelist_else_body@5:
+    // contracts/arc75/arc75.algo.ts:111
+    // this.verifyMBRPayment(gtxn.PaymentTxn(Txn.groupIndex - 1), preMBR);
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_0 // pay
+    ==
+    assert // transaction type is pay
+    frame_dig 0
+    callsub verifyMBRPayment
+    retsub
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.deleteWhitelist(arc: bytes, boxIndex: bytes) -> void:
+deleteWhitelist:
+    // contracts/arc75/arc75.algo.ts:122
+    // deleteWhitelist(arc: string, boxIndex: UintN16): void {
+    proto 2 0
+    // contracts/arc75/arc75.algo.ts:123
+    // const preMBR = Global.currentApplicationAddress.minBalance;
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // contracts/arc75/arc75.algo.ts:125
+    // account: new Address(Txn.sender),
+    txn Sender
+    // contracts/arc75/arc75.algo.ts:127
+    // arc: new Str(arc),
+    frame_dig -2
+    len
+    itob
+    extract 6 2
+    frame_dig -2
+    concat
+    // contracts/arc75/arc75.algo.ts:124-128
+    // const whitelist = new Whitelist({
+    //   account: new Address(Txn.sender),
+    //   boxIndex: boxIndex,
+    //   arc: new Str(arc),
+    // });
+    swap
+    frame_dig -1
+    concat
+    bytec_0 // 0x0024
+    concat
+    swap
+    concat
+    // contracts/arc75/arc75.algo.ts:130
+    // this.whitelist(whitelist).delete();
+    box_del
+    pop
+    // contracts/arc75/arc75.algo.ts:132
+    // this.sendMBRPayment(preMBR);
+    callsub sendMBRPayment
+    retsub
+
+
+// contracts/arc75/arc75.algo.ts::ARC75.deleteAppFromWhitelist(arc: bytes, boxIndex: bytes, appID: uint64, index: uint64) -> void:
+deleteAppFromWhitelist:
+    // contracts/arc75/arc75.algo.ts:143-148
+    // deleteAppFromWhitelist(
+    //   arc: string,
+    //   boxIndex: UintN16,
+    //   appID: uint64,
+    //   index: uint64,
+    // ): void {
+    proto 4 0
+    intc_1 // 0
+    // contracts/arc75/arc75.algo.ts:149
+    // const preMBR = Global.currentApplicationAddress.minBalance;
+    global CurrentApplicationAddress
+    acct_params_get AcctMinBalance
+    assert // account funded
+    // contracts/arc75/arc75.algo.ts:151
+    // account: new Address(Txn.sender),
+    txn Sender
+    // contracts/arc75/arc75.algo.ts:153
+    // arc: new Str(arc),
+    frame_dig -4
+    len
+    itob
+    extract 6 2
+    frame_dig -4
+    concat
+    // contracts/arc75/arc75.algo.ts:150-154
+    // const whitelist = new Whitelist({
+    //   account: new Address(Txn.sender),
+    //   boxIndex: boxIndex,
+    //   arc: new Str(arc),
+    // });
+    swap
+    frame_dig -3
+    concat
+    bytec_0 // 0x0024
+    concat
+    swap
+    concat
+    dup
+    // contracts/arc75/arc75.algo.ts:156
+    // const spliced = this.whitelist(whitelist).value.at(index);
+    box_get
+    assert // Box must have value
+    extract 2 0
+    frame_dig -1
+    intc_2 // 8
+    *
+    // contracts/arc75/arc75.algo.ts:158
+    // const newWhiteList = new DynamicArray<UintN64>();
+    bytec_1 // 0x0000
+    // contracts/arc75/arc75.algo.ts:159
+    // for (let i: uint64 = 0; i < this.whitelist(whitelist).value.length; i++) {
+    intc_1 // 0
+
+deleteAppFromWhitelist_while_top@1:
+    // contracts/arc75/arc75.algo.ts:159
+    // for (let i: uint64 = 0; i < this.whitelist(whitelist).value.length; i++) {
+    frame_dig 2
+    box_get
+    assert // Box must have value
+    intc_1 // 0
+    extract_uint16
+    frame_dig 6
+    >
+    bz deleteAppFromWhitelist_after_while@5
+    // contracts/arc75/arc75.algo.ts:160
+    // if (i !== index) {
+    frame_dig 6
+    frame_dig -1
+    !=
+    frame_dig 5
+    frame_bury 0
+    bz deleteAppFromWhitelist_after_if_else@4
+    // contracts/arc75/arc75.algo.ts:161
+    // newWhiteList.push(this.whitelist(whitelist).value.at(i));
+    frame_dig 5
+    extract 2 0
+    frame_dig 2
+    box_get
+    assert // Box must have value
+    extract 2 0
+    frame_dig 6
+    intc_2 // 8
+    *
+    intc_2 // 8
+    extract3 // on error: Index access is out of bounds
+    concat
+    dup
+    len
+    intc_2 // 8
+    /
+    itob
+    extract 6 2
+    swap
+    concat
+    frame_bury 0
+
+deleteAppFromWhitelist_after_if_else@4:
+    frame_dig 0
+    frame_bury 5
+    // contracts/arc75/arc75.algo.ts:159
+    // for (let i: uint64 = 0; i < this.whitelist(whitelist).value.length; i++) {
+    frame_dig 6
+    intc_0 // 1
+    +
+    frame_bury 6
+    b deleteAppFromWhitelist_while_top@1
+
+deleteAppFromWhitelist_after_while@5:
+    // contracts/arc75/arc75.algo.ts:164
+    // this.whitelist(whitelist).value = newWhiteList.copy();
+    frame_dig 2
+    dup
+    box_del
+    pop
+    frame_dig 5
+    box_put
+    // contracts/arc75/arc75.algo.ts:166
+    // assert(spliced.native === appID);
+    frame_dig 3
+    frame_dig 4
+    extract_uint64
+    frame_dig -2
+    ==
+    assert
+    // contracts/arc75/arc75.algo.ts:168
+    // this.sendMBRPayment(preMBR);
+    frame_dig 1
+    callsub sendMBRPayment
+    retsub

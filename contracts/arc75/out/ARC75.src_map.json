@@ -1,0 +1,3238 @@
+[
+  {
+    "teal": 1,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      0
+    ]
+  },
+  {
+    "teal": 2,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "teal": 3,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "teal": 15,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      13,
+      14
+    ]
+  },
+  {
+    "teal": 16,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      15
+    ]
+  },
+  {
+    "teal": 17,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      16,
+      17
+    ]
+  },
+  {
+    "teal": 18,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      18
+    ]
+  },
+  {
+    "teal": 19,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      19,
+      20
+    ]
+  },
+  {
+    "teal": 20,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      21
+    ]
+  },
+  {
+    "teal": 21,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ]
+  },
+  {
+    "teal": 25,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "errorMessage": "The requested action is not implemented in this contract. Are you using the correct OnComplete? Did you set your app ID?",
+    "pc": [
+      48
+    ]
+  },
+  {
+    "teal": 29,
+    "source": "contracts/arc75/arc75.algo.ts:9",
+    "pc": [
+      49,
+      50,
+      51
+    ]
+  },
+  {
+    "teal": 37,
+    "source": "contracts/arc75/arc75.algo.ts:10",
+    "pc": [
+      52,
+      53
+    ]
+  },
+  {
+    "teal": 38,
+    "source": "contracts/arc75/arc75.algo.ts:11",
+    "pc": [
+      54,
+      55
+    ]
+  },
+  {
+    "teal": 39,
+    "source": "contracts/arc75/arc75.algo.ts:11",
+    "pc": [
+      56,
+      57
+    ]
+  },
+  {
+    "teal": 40,
+    "source": "contracts/arc75/arc75.algo.ts:11",
+    "pc": [
+      58
+    ]
+  },
+  {
+    "teal": 43,
+    "source": "contracts/arc75/arc75.algo.ts:11",
+    "errorMessage": "transaction verification failed: {\"txn\":\"payment\",\"field\":\"receiver\",\"expected\":\"this.app.address\"}",
+    "pc": [
+      59
+    ]
+  },
+  {
+    "teal": 46,
+    "source": "contracts/arc75/arc75.algo.ts:10",
+    "pc": [
+      60,
+      61
+    ]
+  },
+  {
+    "teal": 47,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      62,
+      63
+    ]
+  },
+  {
+    "teal": 48,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      64,
+      65
+    ]
+  },
+  {
+    "teal": 49,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      66,
+      67
+    ]
+  },
+  {
+    "teal": 50,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      68
+    ]
+  },
+  {
+    "teal": 51,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      69,
+      70
+    ]
+  },
+  {
+    "teal": 52,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      71
+    ]
+  },
+  {
+    "teal": 53,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "pc": [
+      72
+    ]
+  },
+  {
+    "teal": 56,
+    "source": "contracts/arc75/arc75.algo.ts:12",
+    "errorMessage": "transaction verification failed: {\"txn\":\"payment\",\"field\":\"amount\",\"expected\":\"this.app.address.minBalance - preMBR\"}",
+    "pc": [
+      73
+    ]
+  },
+  {
+    "teal": 57,
+    "source": "contracts/arc75/arc75.algo.ts:9",
+    "pc": [
+      74
+    ]
+  },
+  {
+    "teal": 61,
+    "source": "contracts/arc75/arc75.algo.ts:16",
+    "pc": [
+      75,
+      76,
+      77
+    ]
+  },
+  {
+    "teal": 68,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      78
+    ]
+  },
+  {
+    "teal": 69,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      79
+    ]
+  },
+  {
+    "teal": 70,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      80,
+      81
+    ]
+  },
+  {
+    "teal": 74,
+    "source": "contracts/arc75/arc75.algo.ts:18",
+    "pc": [
+      82,
+      83
+    ]
+  },
+  {
+    "teal": 75,
+    "source": "contracts/arc75/arc75.algo.ts:18",
+    "pc": [
+      84,
+      85
+    ]
+  },
+  {
+    "teal": 79,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      86,
+      87
+    ]
+  },
+  {
+    "teal": 80,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      88,
+      89
+    ]
+  },
+  {
+    "teal": 81,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      90,
+      91
+    ]
+  },
+  {
+    "teal": 82,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      92
+    ]
+  },
+  {
+    "teal": 83,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      93
+    ]
+  },
+  {
+    "teal": 84,
+    "source": "contracts/arc75/arc75.algo.ts:19",
+    "pc": [
+      94,
+      95
+    ]
+  },
+  {
+    "teal": 87,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      96
+    ]
+  },
+  {
+    "teal": 88,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      97,
+      98
+    ]
+  },
+  {
+    "teal": 91,
+    "source": "contracts/arc75/arc75.algo.ts:17",
+    "pc": [
+      99
+    ]
+  },
+  {
+    "teal": 92,
+    "source": "contracts/arc75/arc75.algo.ts:16",
+    "pc": [
+      100
+    ]
+  },
+  {
+    "teal": 97,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      101,
+      102
+    ]
+  },
+  {
+    "teal": 98,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      103
+    ]
+  },
+  {
+    "teal": 99,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      104
+    ]
+  },
+  {
+    "teal": 100,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      105
+    ]
+  },
+  {
+    "teal": 101,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      106,
+      107
+    ]
+  },
+  {
+    "teal": 102,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      108
+    ]
+  },
+  {
+    "teal": 103,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "pc": [
+      109
+    ]
+  },
+  {
+    "teal": 106,
+    "source": "contracts/arc75/arc75.algo.ts:36",
+    "errorMessage": "argument 0 (payment) for addAppToWhiteList must be a pay transaction",
+    "pc": [
+      110
+    ]
+  },
+  {
+    "teal": 109,
+    "source": "contracts/arc75/arc75.algo.ts:35",
+    "pc": [
+      111,
+      112,
+      113
+    ]
+  },
+  {
+    "teal": 110,
+    "source": "contracts/arc75/arc75.algo.ts:35",
+    "pc": [
+      114
+    ]
+  },
+  {
+    "teal": 113,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      115,
+      116,
+      117
+    ]
+  },
+  {
+    "teal": 114,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      118
+    ]
+  },
+  {
+    "teal": 115,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      119
+    ]
+  },
+  {
+    "teal": 116,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      120
+    ]
+  },
+  {
+    "teal": 117,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      121
+    ]
+  },
+  {
+    "teal": 120,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "errorMessage": "argument 2 (boxIndex) for addAppToWhiteList must be a uint16",
+    "pc": [
+      122
+    ]
+  },
+  {
+    "teal": 121,
+    "source": "contracts/arc75/arc75.algo.ts:34",
+    "pc": [
+      123
+    ]
+  },
+  {
+    "teal": 124,
+    "source": "contracts/arc75/arc75.algo.ts:33",
+    "pc": [
+      124,
+      125,
+      126
+    ]
+  },
+  {
+    "teal": 125,
+    "source": "contracts/arc75/arc75.algo.ts:33",
+    "pc": [
+      127,
+      128,
+      129
+    ]
+  },
+  {
+    "teal": 128,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      130,
+      131,
+      132
+    ]
+  },
+  {
+    "teal": 129,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      133
+    ]
+  },
+  {
+    "teal": 130,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      134
+    ]
+  },
+  {
+    "teal": 141,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      135,
+      136,
+      137
+    ]
+  },
+  {
+    "teal": 144,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      138
+    ]
+  },
+  {
+    "teal": 145,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      139,
+      140
+    ]
+  },
+  {
+    "teal": 149,
+    "source": "contracts/arc75/arc75.algo.ts:38",
+    "pc": [
+      141,
+      142
+    ]
+  },
+  {
+    "teal": 150,
+    "source": "contracts/arc75/arc75.algo.ts:38",
+    "pc": [
+      143,
+      144
+    ]
+  },
+  {
+    "teal": 151,
+    "source": "contracts/arc75/arc75.algo.ts:38",
+    "pc": [
+      145
+    ]
+  },
+  {
+    "teal": 152,
+    "source": "contracts/arc75/arc75.algo.ts:38",
+    "pc": [
+      146,
+      147
+    ]
+  },
+  {
+    "teal": 160,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      148
+    ]
+  },
+  {
+    "teal": 161,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      149
+    ]
+  },
+  {
+    "teal": 162,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      150
+    ]
+  },
+  {
+    "teal": 163,
+    "source": "contracts/arc75/arc75.algo.ts:40",
+    "pc": [
+      151,
+      152
+    ]
+  },
+  {
+    "teal": 164,
+    "source": "contracts/arc75/arc75.algo.ts:40",
+    "pc": [
+      153,
+      154,
+      155
+    ]
+  },
+  {
+    "teal": 165,
+    "source": "contracts/arc75/arc75.algo.ts:41",
+    "pc": [
+      156,
+      157
+    ]
+  },
+  {
+    "teal": 166,
+    "source": "contracts/arc75/arc75.algo.ts:41",
+    "pc": [
+      158
+    ]
+  },
+  {
+    "teal": 167,
+    "source": "contracts/arc75/arc75.algo.ts:41",
+    "pc": [
+      159,
+      160,
+      161
+    ]
+  },
+  {
+    "teal": 168,
+    "source": "contracts/arc75/arc75.algo.ts:41",
+    "pc": [
+      162,
+      163,
+      164
+    ]
+  },
+  {
+    "teal": 169,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      165,
+      166
+    ]
+  },
+  {
+    "teal": 170,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      167
+    ]
+  },
+  {
+    "teal": 171,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      168
+    ]
+  },
+  {
+    "teal": 172,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      169
+    ]
+  },
+  {
+    "teal": 173,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      170,
+      171,
+      172
+    ]
+  },
+  {
+    "teal": 174,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      173
+    ]
+  },
+  {
+    "teal": 175,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      174
+    ]
+  },
+  {
+    "teal": 176,
+    "source": "contracts/arc75/arc75.algo.ts:42",
+    "pc": [
+      175,
+      176,
+      177
+    ]
+  },
+  {
+    "teal": 177,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      178
+    ]
+  },
+  {
+    "teal": 178,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      179
+    ]
+  },
+  {
+    "teal": 179,
+    "source": "contracts/arc75/arc75.algo.ts:39",
+    "pc": [
+      180,
+      181
+    ]
+  },
+  {
+    "teal": 184,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      182,
+      183
+    ]
+  },
+  {
+    "teal": 185,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      184
+    ]
+  },
+  {
+    "teal": 186,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      185
+    ]
+  },
+  {
+    "teal": 187,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      186
+    ]
+  },
+  {
+    "teal": 188,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      187,
+      188,
+      189
+    ]
+  },
+  {
+    "teal": 193,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      190,
+      191
+    ]
+  },
+  {
+    "teal": 194,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      192
+    ]
+  },
+  {
+    "teal": 197,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "errorMessage": "box value does not exist: this.whitelist(whitelist).value",
+    "pc": [
+      193
+    ]
+  },
+  {
+    "teal": 198,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      194,
+      195,
+      196
+    ]
+  },
+  {
+    "teal": 199,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      197,
+      198
+    ]
+  },
+  {
+    "teal": 200,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      199
+    ]
+  },
+  {
+    "teal": 201,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      200
+    ]
+  },
+  {
+    "teal": 202,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      201,
+      202
+    ]
+  },
+  {
+    "teal": 203,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      203
+    ]
+  },
+  {
+    "teal": 204,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      204
+    ]
+  },
+  {
+    "teal": 205,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      205
+    ]
+  },
+  {
+    "teal": 206,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      206
+    ]
+  },
+  {
+    "teal": 207,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      207
+    ]
+  },
+  {
+    "teal": 208,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      208
+    ]
+  },
+  {
+    "teal": 209,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      209
+    ]
+  },
+  {
+    "teal": 210,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      210
+    ]
+  },
+  {
+    "teal": 211,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      211
+    ]
+  },
+  {
+    "teal": 212,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      212,
+      213,
+      214
+    ]
+  },
+  {
+    "teal": 213,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      215
+    ]
+  },
+  {
+    "teal": 214,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      216
+    ]
+  },
+  {
+    "teal": 215,
+    "source": "contracts/arc75/arc75.algo.ts:46",
+    "pc": [
+      217
+    ]
+  },
+  {
+    "teal": 216,
+    "source": "contracts/arc75/arc75.algo.ts:45",
+    "pc": [
+      218,
+      219,
+      220
+    ]
+  },
+  {
+    "teal": 221,
+    "source": "contracts/arc75/arc75.algo.ts:48",
+    "pc": [
+      221,
+      222
+    ]
+  },
+  {
+    "teal": 222,
+    "source": "contracts/arc75/arc75.algo.ts:48",
+    "pc": [
+      223
+    ]
+  },
+  {
+    "teal": 223,
+    "source": "contracts/arc75/arc75.algo.ts:48",
+    "pc": [
+      224,
+      225
+    ]
+  },
+  {
+    "teal": 227,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      226,
+      227
+    ]
+  },
+  {
+    "teal": 228,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      228
+    ]
+  },
+  {
+    "teal": 229,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      229
+    ]
+  },
+  {
+    "teal": 230,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      230
+    ]
+  },
+  {
+    "teal": 231,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      231,
+      232
+    ]
+  },
+  {
+    "teal": 232,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      233
+    ]
+  },
+  {
+    "teal": 233,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      234
+    ]
+  },
+  {
+    "teal": 234,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      235
+    ]
+  },
+  {
+    "teal": 235,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      236
+    ]
+  },
+  {
+    "teal": 236,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      237
+    ]
+  },
+  {
+    "teal": 237,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      238,
+      239,
+      240
+    ]
+  },
+  {
+    "teal": 238,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      241
+    ]
+  },
+  {
+    "teal": 239,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      242
+    ]
+  },
+  {
+    "teal": 240,
+    "source": "contracts/arc75/arc75.algo.ts:49",
+    "pc": [
+      243
+    ]
+  },
+  {
+    "teal": 245,
+    "source": "contracts/arc75/arc75.algo.ts:52",
+    "pc": [
+      244,
+      245
+    ]
+  },
+  {
+    "teal": 246,
+    "source": "contracts/arc75/arc75.algo.ts:52",
+    "pc": [
+      246,
+      247
+    ]
+  },
+  {
+    "teal": 247,
+    "source": "contracts/arc75/arc75.algo.ts:52",
+    "pc": [
+      248,
+      249,
+      250
+    ]
+  },
+  {
+    "teal": 248,
+    "source": "contracts/arc75/arc75.algo.ts:32",
+    "pc": [
+      251
+    ]
+  },
+  {
+    "teal": 253,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      252,
+      253,
+      254
+    ]
+  },
+  {
+    "teal": 254,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      255,
+      256,
+      257
+    ]
+  },
+  {
+    "teal": 257,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      258,
+      259,
+      260
+    ]
+  },
+  {
+    "teal": 258,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      261
+    ]
+  },
+  {
+    "teal": 259,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      262
+    ]
+  },
+  {
+    "teal": 260,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      263
+    ]
+  },
+  {
+    "teal": 261,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      264
+    ]
+  },
+  {
+    "teal": 264,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "errorMessage": "argument 1 (boxIndex) for setAppWhitelist must be a uint16",
+    "pc": [
+      265
+    ]
+  },
+  {
+    "teal": 265,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      266
+    ]
+  },
+  {
+    "teal": 268,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      267,
+      268,
+      269
+    ]
+  },
+  {
+    "teal": 269,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      270,
+      271,
+      272
+    ]
+  },
+  {
+    "teal": 272,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      273,
+      274,
+      275
+    ]
+  },
+  {
+    "teal": 273,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      276
+    ]
+  },
+  {
+    "teal": 274,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      277
+    ]
+  },
+  {
+    "teal": 284,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      278,
+      279,
+      280
+    ]
+  },
+  {
+    "teal": 287,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      281
+    ]
+  },
+  {
+    "teal": 288,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      282
+    ]
+  },
+  {
+    "teal": 292,
+    "source": "contracts/arc75/arc75.algo.ts:64",
+    "pc": [
+      283,
+      284
+    ]
+  },
+  {
+    "teal": 293,
+    "source": "contracts/arc75/arc75.algo.ts:64",
+    "pc": [
+      285,
+      286
+    ]
+  },
+  {
+    "teal": 294,
+    "source": "contracts/arc75/arc75.algo.ts:64",
+    "pc": [
+      287
+    ]
+  },
+  {
+    "teal": 295,
+    "source": "contracts/arc75/arc75.algo.ts:64",
+    "pc": [
+      288,
+      289
+    ]
+  },
+  {
+    "teal": 303,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      290
+    ]
+  },
+  {
+    "teal": 304,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      291
+    ]
+  },
+  {
+    "teal": 305,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      292
+    ]
+  },
+  {
+    "teal": 306,
+    "source": "contracts/arc75/arc75.algo.ts:66",
+    "pc": [
+      293,
+      294
+    ]
+  },
+  {
+    "teal": 307,
+    "source": "contracts/arc75/arc75.algo.ts:66",
+    "pc": [
+      295,
+      296,
+      297
+    ]
+  },
+  {
+    "teal": 308,
+    "source": "contracts/arc75/arc75.algo.ts:67",
+    "pc": [
+      298,
+      299
+    ]
+  },
+  {
+    "teal": 309,
+    "source": "contracts/arc75/arc75.algo.ts:67",
+    "pc": [
+      300
+    ]
+  },
+  {
+    "teal": 310,
+    "source": "contracts/arc75/arc75.algo.ts:67",
+    "pc": [
+      301,
+      302,
+      303
+    ]
+  },
+  {
+    "teal": 311,
+    "source": "contracts/arc75/arc75.algo.ts:67",
+    "pc": [
+      304,
+      305,
+      306
+    ]
+  },
+  {
+    "teal": 312,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      307,
+      308
+    ]
+  },
+  {
+    "teal": 313,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      309
+    ]
+  },
+  {
+    "teal": 314,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      310
+    ]
+  },
+  {
+    "teal": 315,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      311
+    ]
+  },
+  {
+    "teal": 316,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      312,
+      313,
+      314
+    ]
+  },
+  {
+    "teal": 317,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      315
+    ]
+  },
+  {
+    "teal": 318,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      316
+    ]
+  },
+  {
+    "teal": 319,
+    "source": "contracts/arc75/arc75.algo.ts:68",
+    "pc": [
+      317,
+      318,
+      319
+    ]
+  },
+  {
+    "teal": 320,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      320
+    ]
+  },
+  {
+    "teal": 321,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      321
+    ]
+  },
+  {
+    "teal": 322,
+    "source": "contracts/arc75/arc75.algo.ts:65",
+    "pc": [
+      322,
+      323
+    ]
+  },
+  {
+    "teal": 326,
+    "source": "contracts/arc75/arc75.algo.ts:71",
+    "pc": [
+      324,
+      325
+    ]
+  },
+  {
+    "teal": 327,
+    "source": "contracts/arc75/arc75.algo.ts:71",
+    "pc": [
+      326
+    ]
+  },
+  {
+    "teal": 331,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      327,
+      328
+    ]
+  },
+  {
+    "teal": 332,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      329
+    ]
+  },
+  {
+    "teal": 333,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      330
+    ]
+  },
+  {
+    "teal": 334,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      331
+    ]
+  },
+  {
+    "teal": 335,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      332,
+      333
+    ]
+  },
+  {
+    "teal": 336,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      334
+    ]
+  },
+  {
+    "teal": 337,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      335
+    ]
+  },
+  {
+    "teal": 338,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      336
+    ]
+  },
+  {
+    "teal": 339,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      337
+    ]
+  },
+  {
+    "teal": 340,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      338
+    ]
+  },
+  {
+    "teal": 341,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      339,
+      340,
+      341
+    ]
+  },
+  {
+    "teal": 342,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      342
+    ]
+  },
+  {
+    "teal": 343,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      343
+    ]
+  },
+  {
+    "teal": 344,
+    "source": "contracts/arc75/arc75.algo.ts:73",
+    "pc": [
+      344
+    ]
+  },
+  {
+    "teal": 349,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      345,
+      346
+    ]
+  },
+  {
+    "teal": 350,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      347,
+      348
+    ]
+  },
+  {
+    "teal": 351,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      349,
+      350
+    ]
+  },
+  {
+    "teal": 352,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      351
+    ]
+  },
+  {
+    "teal": 353,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      352
+    ]
+  },
+  {
+    "teal": 354,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      353,
+      354,
+      355
+    ]
+  },
+  {
+    "teal": 359,
+    "source": "contracts/arc75/arc75.algo.ts:76",
+    "pc": [
+      356,
+      357
+    ]
+  },
+  {
+    "teal": 360,
+    "source": "contracts/arc75/arc75.algo.ts:76",
+    "pc": [
+      358,
+      359,
+      360
+    ]
+  },
+  {
+    "teal": 361,
+    "source": "contracts/arc75/arc75.algo.ts:75",
+    "pc": [
+      361,
+      362,
+      363
+    ]
+  },
+  {
+    "teal": 369,
+    "source": "contracts/arc75/arc75.algo.ts:80",
+    "pc": [
+      364,
+      365
+    ]
+  },
+  {
+    "teal": 370,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      366,
+      367
+    ]
+  },
+  {
+    "teal": 371,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      368
+    ]
+  },
+  {
+    "teal": 372,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      369
+    ]
+  },
+  {
+    "teal": 373,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      370
+    ]
+  },
+  {
+    "teal": 374,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      371,
+      372
+    ]
+  },
+  {
+    "teal": 375,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      373
+    ]
+  },
+  {
+    "teal": 376,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "pc": [
+      374
+    ]
+  },
+  {
+    "teal": 379,
+    "source": "contracts/arc75/arc75.algo.ts:79",
+    "errorMessage": "failed to cast this.txnGroup[this.txn.groupIndex - 1] to pay",
+    "pc": [
+      375
+    ]
+  },
+  {
+    "teal": 380,
+    "source": "contracts/arc75/arc75.algo.ts:78",
+    "pc": [
+      376,
+      377,
+      378
+    ]
+  },
+  {
+    "teal": 383,
+    "source": "contracts/arc75/arc75.algo.ts:63",
+    "pc": [
+      379
+    ]
+  },
+  {
+    "teal": 388,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      380,
+      381,
+      382
+    ]
+  },
+  {
+    "teal": 389,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      383
+    ]
+  },
+  {
+    "teal": 390,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      384
+    ]
+  },
+  {
+    "teal": 391,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      385
+    ]
+  },
+  {
+    "teal": 392,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      386
+    ]
+  },
+  {
+    "teal": 395,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "errorMessage": "argument 0 (boxIndex) for deleteWhitelist must be a uint16",
+    "pc": [
+      387
+    ]
+  },
+  {
+    "teal": 396,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      388
+    ]
+  },
+  {
+    "teal": 399,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      389,
+      390,
+      391
+    ]
+  },
+  {
+    "teal": 400,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      392,
+      393,
+      394
+    ]
+  },
+  {
+    "teal": 403,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      395,
+      396,
+      397
+    ]
+  },
+  {
+    "teal": 404,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      398
+    ]
+  },
+  {
+    "teal": 405,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      399
+    ]
+  },
+  {
+    "teal": 414,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      400,
+      401,
+      402
+    ]
+  },
+  {
+    "teal": 417,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      403
+    ]
+  },
+  {
+    "teal": 418,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      404
+    ]
+  },
+  {
+    "teal": 422,
+    "source": "contracts/arc75/arc75.algo.ts:93",
+    "pc": [
+      405,
+      406
+    ]
+  },
+  {
+    "teal": 423,
+    "source": "contracts/arc75/arc75.algo.ts:93",
+    "pc": [
+      407,
+      408
+    ]
+  },
+  {
+    "teal": 424,
+    "source": "contracts/arc75/arc75.algo.ts:93",
+    "pc": [
+      409
+    ]
+  },
+  {
+    "teal": 425,
+    "source": "contracts/arc75/arc75.algo.ts:93",
+    "pc": [
+      410,
+      411
+    ]
+  },
+  {
+    "teal": 433,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      412
+    ]
+  },
+  {
+    "teal": 434,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      413
+    ]
+  },
+  {
+    "teal": 435,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      414
+    ]
+  },
+  {
+    "teal": 436,
+    "source": "contracts/arc75/arc75.algo.ts:95",
+    "pc": [
+      415,
+      416
+    ]
+  },
+  {
+    "teal": 437,
+    "source": "contracts/arc75/arc75.algo.ts:95",
+    "pc": [
+      417,
+      418,
+      419
+    ]
+  },
+  {
+    "teal": 438,
+    "source": "contracts/arc75/arc75.algo.ts:96",
+    "pc": [
+      420,
+      421
+    ]
+  },
+  {
+    "teal": 439,
+    "source": "contracts/arc75/arc75.algo.ts:96",
+    "pc": [
+      422
+    ]
+  },
+  {
+    "teal": 440,
+    "source": "contracts/arc75/arc75.algo.ts:96",
+    "pc": [
+      423,
+      424,
+      425
+    ]
+  },
+  {
+    "teal": 441,
+    "source": "contracts/arc75/arc75.algo.ts:96",
+    "pc": [
+      426,
+      427,
+      428
+    ]
+  },
+  {
+    "teal": 442,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      429,
+      430
+    ]
+  },
+  {
+    "teal": 443,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      431
+    ]
+  },
+  {
+    "teal": 444,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      432
+    ]
+  },
+  {
+    "teal": 445,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      433
+    ]
+  },
+  {
+    "teal": 446,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      434,
+      435,
+      436
+    ]
+  },
+  {
+    "teal": 447,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      437
+    ]
+  },
+  {
+    "teal": 448,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      438
+    ]
+  },
+  {
+    "teal": 449,
+    "source": "contracts/arc75/arc75.algo.ts:97",
+    "pc": [
+      439,
+      440,
+      441
+    ]
+  },
+  {
+    "teal": 450,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      442
+    ]
+  },
+  {
+    "teal": 451,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      443
+    ]
+  },
+  {
+    "teal": 452,
+    "source": "contracts/arc75/arc75.algo.ts:94",
+    "pc": [
+      444,
+      445
+    ]
+  },
+  {
+    "teal": 456,
+    "source": "contracts/arc75/arc75.algo.ts:100",
+    "pc": [
+      446,
+      447
+    ]
+  },
+  {
+    "teal": 457,
+    "source": "contracts/arc75/arc75.algo.ts:100",
+    "pc": [
+      448
+    ]
+  },
+  {
+    "teal": 461,
+    "source": "contracts/arc75/arc75.algo.ts:102",
+    "pc": [
+      449,
+      450
+    ]
+  },
+  {
+    "teal": 462,
+    "source": "contracts/arc75/arc75.algo.ts:102",
+    "pc": [
+      451,
+      452,
+      453
+    ]
+  },
+  {
+    "teal": 463,
+    "source": "contracts/arc75/arc75.algo.ts:92",
+    "pc": [
+      454
+    ]
+  },
+  {
+    "teal": 468,
+    "source": "contracts/arc75/arc75.algo.ts:117",
+    "pc": [
+      455,
+      456,
+      457
+    ]
+  },
+  {
+    "teal": 469,
+    "source": "contracts/arc75/arc75.algo.ts:117",
+    "pc": [
+      458
+    ]
+  },
+  {
+    "teal": 472,
+    "source": "contracts/arc75/arc75.algo.ts:116",
+    "pc": [
+      459,
+      460,
+      461
+    ]
+  },
+  {
+    "teal": 473,
+    "source": "contracts/arc75/arc75.algo.ts:116",
+    "pc": [
+      462
+    ]
+  },
+  {
+    "teal": 476,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      463,
+      464,
+      465
+    ]
+  },
+  {
+    "teal": 477,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      466
+    ]
+  },
+  {
+    "teal": 478,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      467
+    ]
+  },
+  {
+    "teal": 479,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      468
+    ]
+  },
+  {
+    "teal": 480,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      469
+    ]
+  },
+  {
+    "teal": 483,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "errorMessage": "argument 2 (boxIndex) for deleteAppFromWhitelist must be a uint16",
+    "pc": [
+      470
+    ]
+  },
+  {
+    "teal": 484,
+    "source": "contracts/arc75/arc75.algo.ts:115",
+    "pc": [
+      471
+    ]
+  },
+  {
+    "teal": 487,
+    "source": "contracts/arc75/arc75.algo.ts:114",
+    "pc": [
+      472,
+      473,
+      474
+    ]
+  },
+  {
+    "teal": 488,
+    "source": "contracts/arc75/arc75.algo.ts:114",
+    "pc": [
+      475,
+      476,
+      477
+    ]
+  },
+  {
+    "teal": 491,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      478,
+      479,
+      480
+    ]
+  },
+  {
+    "teal": 492,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      481
+    ]
+  },
+  {
+    "teal": 493,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      482
+    ]
+  },
+  {
+    "teal": 503,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      483,
+      484,
+      485
+    ]
+  },
+  {
+    "teal": 506,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      486
+    ]
+  },
+  {
+    "teal": 507,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      487,
+      488
+    ]
+  },
+  {
+    "teal": 511,
+    "source": "contracts/arc75/arc75.algo.ts:119",
+    "pc": [
+      489,
+      490
+    ]
+  },
+  {
+    "teal": 512,
+    "source": "contracts/arc75/arc75.algo.ts:119",
+    "pc": [
+      491,
+      492
+    ]
+  },
+  {
+    "teal": 513,
+    "source": "contracts/arc75/arc75.algo.ts:119",
+    "pc": [
+      493
+    ]
+  },
+  {
+    "teal": 514,
+    "source": "contracts/arc75/arc75.algo.ts:119",
+    "pc": [
+      494,
+      495
+    ]
+  },
+  {
+    "teal": 522,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      496
+    ]
+  },
+  {
+    "teal": 523,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      497
+    ]
+  },
+  {
+    "teal": 524,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      498
+    ]
+  },
+  {
+    "teal": 525,
+    "source": "contracts/arc75/arc75.algo.ts:121",
+    "pc": [
+      499,
+      500
+    ]
+  },
+  {
+    "teal": 526,
+    "source": "contracts/arc75/arc75.algo.ts:121",
+    "pc": [
+      501,
+      502,
+      503
+    ]
+  },
+  {
+    "teal": 527,
+    "source": "contracts/arc75/arc75.algo.ts:122",
+    "pc": [
+      504,
+      505
+    ]
+  },
+  {
+    "teal": 528,
+    "source": "contracts/arc75/arc75.algo.ts:122",
+    "pc": [
+      506
+    ]
+  },
+  {
+    "teal": 529,
+    "source": "contracts/arc75/arc75.algo.ts:122",
+    "pc": [
+      507,
+      508,
+      509
+    ]
+  },
+  {
+    "teal": 530,
+    "source": "contracts/arc75/arc75.algo.ts:122",
+    "pc": [
+      510,
+      511,
+      512
+    ]
+  },
+  {
+    "teal": 531,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      513,
+      514
+    ]
+  },
+  {
+    "teal": 532,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      515
+    ]
+  },
+  {
+    "teal": 533,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      516
+    ]
+  },
+  {
+    "teal": 534,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      517
+    ]
+  },
+  {
+    "teal": 535,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      518,
+      519,
+      520
+    ]
+  },
+  {
+    "teal": 536,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      521
+    ]
+  },
+  {
+    "teal": 537,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      522
+    ]
+  },
+  {
+    "teal": 538,
+    "source": "contracts/arc75/arc75.algo.ts:123",
+    "pc": [
+      523,
+      524,
+      525
+    ]
+  },
+  {
+    "teal": 539,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      526
+    ]
+  },
+  {
+    "teal": 540,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      527
+    ]
+  },
+  {
+    "teal": 541,
+    "source": "contracts/arc75/arc75.algo.ts:120",
+    "pc": [
+      528,
+      529
+    ]
+  },
+  {
+    "teal": 545,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      530,
+      531
+    ]
+  },
+  {
+    "teal": 546,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      532
+    ]
+  },
+  {
+    "teal": 549,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "errorMessage": "box value does not exist: this.whitelist(whitelist).value",
+    "pc": [
+      533
+    ]
+  },
+  {
+    "teal": 550,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      534,
+      535,
+      536
+    ]
+  },
+  {
+    "teal": 551,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      537
+    ]
+  },
+  {
+    "teal": 552,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      538,
+      539
+    ]
+  },
+  {
+    "teal": 553,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      540
+    ]
+  },
+  {
+    "teal": 554,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      541
+    ]
+  },
+  {
+    "teal": 555,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      542,
+      543
+    ]
+  },
+  {
+    "teal": 556,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      544,
+      545
+    ]
+  },
+  {
+    "teal": 557,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      546,
+      547
+    ]
+  },
+  {
+    "teal": 558,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      548,
+      549
+    ]
+  },
+  {
+    "teal": 559,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      550
+    ]
+  },
+  {
+    "teal": 562,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "errorMessage": "box value does not exist: this.whitelist(whitelist).value",
+    "pc": [
+      551
+    ]
+  },
+  {
+    "teal": 563,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      552,
+      553,
+      554
+    ]
+  },
+  {
+    "teal": 564,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      555
+    ]
+  },
+  {
+    "teal": 565,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      556,
+      557
+    ]
+  },
+  {
+    "teal": 566,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      558
+    ]
+  },
+  {
+    "teal": 567,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      559,
+      560
+    ]
+  },
+  {
+    "teal": 568,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      561
+    ]
+  },
+  {
+    "teal": 571,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "errorMessage": "box value does not exist: this.whitelist(whitelist).value",
+    "pc": [
+      562
+    ]
+  },
+  {
+    "teal": 572,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      563,
+      564,
+      565
+    ]
+  },
+  {
+    "teal": 573,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      566
+    ]
+  },
+  {
+    "teal": 574,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      567
+    ]
+  },
+  {
+    "teal": 575,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      568,
+      569
+    ]
+  },
+  {
+    "teal": 576,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      570,
+      571
+    ]
+  },
+  {
+    "teal": 577,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      572
+    ]
+  },
+  {
+    "teal": 578,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      573
+    ]
+  },
+  {
+    "teal": 579,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      574
+    ]
+  },
+  {
+    "teal": 580,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      575
+    ]
+  },
+  {
+    "teal": 581,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      576
+    ]
+  },
+  {
+    "teal": 582,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      577
+    ]
+  },
+  {
+    "teal": 583,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      578,
+      579
+    ]
+  },
+  {
+    "teal": 584,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      580
+    ]
+  },
+  {
+    "teal": 587,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "errorMessage": "box value does not exist: this.whitelist(whitelist).value",
+    "pc": [
+      581
+    ]
+  },
+  {
+    "teal": 588,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      582,
+      583,
+      584
+    ]
+  },
+  {
+    "teal": 589,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      585,
+      586
+    ]
+  },
+  {
+    "teal": 590,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      587,
+      588
+    ]
+  },
+  {
+    "teal": 591,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      589
+    ]
+  },
+  {
+    "teal": 592,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      590
+    ]
+  },
+  {
+    "teal": 593,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      591
+    ]
+  },
+  {
+    "teal": 594,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      592
+    ]
+  },
+  {
+    "teal": 595,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      593,
+      594
+    ]
+  },
+  {
+    "teal": 596,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      595
+    ]
+  },
+  {
+    "teal": 597,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      596
+    ]
+  },
+  {
+    "teal": 598,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      597
+    ]
+  },
+  {
+    "teal": 599,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      598
+    ]
+  },
+  {
+    "teal": 600,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      599
+    ]
+  },
+  {
+    "teal": 601,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      600
+    ]
+  },
+  {
+    "teal": 602,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      601
+    ]
+  },
+  {
+    "teal": 603,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      602
+    ]
+  },
+  {
+    "teal": 604,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      603
+    ]
+  },
+  {
+    "teal": 605,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      604,
+      605,
+      606
+    ]
+  },
+  {
+    "teal": 606,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      607
+    ]
+  },
+  {
+    "teal": 607,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      608
+    ]
+  },
+  {
+    "teal": 608,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      609
+    ]
+  },
+  {
+    "teal": 609,
+    "source": "contracts/arc75/arc75.algo.ts:126",
+    "pc": [
+      610,
+      611
+    ]
+  },
+  {
+    "teal": 613,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      612,
+      613
+    ]
+  },
+  {
+    "teal": 614,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      614,
+      615
+    ]
+  },
+  {
+    "teal": 615,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      616,
+      617
+    ]
+  },
+  {
+    "teal": 616,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      618,
+      619,
+      620
+    ]
+  },
+  {
+    "teal": 617,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      621
+    ]
+  },
+  {
+    "teal": 618,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      622,
+      623
+    ]
+  },
+  {
+    "teal": 619,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      624
+    ]
+  },
+  {
+    "teal": 620,
+    "source": "contracts/arc75/arc75.algo.ts:128",
+    "pc": [
+      625
+    ]
+  },
+  {
+    "teal": 624,
+    "source": "contracts/arc75/arc75.algo.ts:130",
+    "pc": [
+      626,
+      627
+    ]
+  },
+  {
+    "teal": 625,
+    "source": "contracts/arc75/arc75.algo.ts:130",
+    "pc": [
+      628,
+      629,
+      630
+    ]
+  },
+  {
+    "teal": 626,
+    "source": "contracts/arc75/arc75.algo.ts:113",
+    "pc": [
+      631
+    ]
+  },
+  {
+    "teal": 629,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      632
+    ]
+  },
+  {
+    "teal": 630,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      633
+    ]
+  },
+  {
+    "teal": 633,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      634,
+      635,
+      636,
+      637,
+      638,
+      639
+    ]
+  },
+  {
+    "teal": 634,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      640,
+      641,
+      642
+    ]
+  },
+  {
+    "teal": 635,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      643,
+      644,
+      645,
+      646
+    ]
+  },
+  {
+    "teal": 638,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "errorMessage": "this contract does not implement the given ABI method for create NoOp",
+    "pc": [
+      647
+    ]
+  },
+  {
+    "teal": 641,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      648,
+      649,
+      650,
+      651,
+      652,
+      653
+    ]
+  },
+  {
+    "teal": 642,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      654,
+      655,
+      656,
+      657,
+      658,
+      659
+    ]
+  },
+  {
+    "teal": 643,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      660,
+      661,
+      662,
+      663,
+      664,
+      665
+    ]
+  },
+  {
+    "teal": 644,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      666,
+      667,
+      668,
+      669,
+      670,
+      671
+    ]
+  },
+  {
+    "teal": 645,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      672,
+      673,
+      674
+    ]
+  },
+  {
+    "teal": 646,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684
+    ]
+  },
+  {
+    "teal": 649,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "errorMessage": "this contract does not implement the given ABI method for call NoOp",
+    "pc": [
+      685
+    ]
+  },
+  {
+    "teal": 652,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      686,
+      687,
+      688
+    ]
+  },
+  {
+    "teal": 653,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      689,
+      690
+    ]
+  },
+  {
+    "teal": 654,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      691,
+      692
+    ]
+  },
+  {
+    "teal": 655,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      693
+    ]
+  },
+  {
+    "teal": 656,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      694,
+      695
+    ]
+  },
+  {
+    "teal": 657,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      696,
+      697
+    ]
+  },
+  {
+    "teal": 658,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      698
+    ]
+  },
+  {
+    "teal": 661,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      699,
+      700,
+      701
+    ]
+  },
+  {
+    "teal": 662,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      702,
+      703
+    ]
+  },
+  {
+    "teal": 663,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      704,
+      705
+    ]
+  },
+  {
+    "teal": 664,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      706
+    ]
+  },
+  {
+    "teal": 665,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      707,
+      708
+    ]
+  },
+  {
+    "teal": 666,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      709,
+      710
+    ]
+  },
+  {
+    "teal": 667,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      711
+    ]
+  },
+  {
+    "teal": 668,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      712
+    ]
+  },
+  {
+    "teal": 669,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      713,
+      714
+    ]
+  },
+  {
+    "teal": 670,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      715
+    ]
+  },
+  {
+    "teal": 671,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      716
+    ]
+  },
+  {
+    "teal": 672,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      717
+    ]
+  },
+  {
+    "teal": 673,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      718,
+      719,
+      720
+    ]
+  },
+  {
+    "teal": 674,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      721,
+      722
+    ]
+  },
+  {
+    "teal": 675,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      723,
+      724
+    ]
+  },
+  {
+    "teal": 676,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      725
+    ]
+  },
+  {
+    "teal": 677,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      726
+    ]
+  },
+  {
+    "teal": 678,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      727,
+      728
+    ]
+  },
+  {
+    "teal": 679,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      729,
+      730
+    ]
+  },
+  {
+    "teal": 680,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      731,
+      732
+    ]
+  },
+  {
+    "teal": 681,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      733,
+      734
+    ]
+  },
+  {
+    "teal": 682,
+    "source": "contracts/arc75/arc75.algo.ts:6",
+    "pc": [
+      735
+    ]
+  }
+]
