@@ -1126,21 +1126,21 @@
     "264": {
       "op": "concat",
       "defined_out": [
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
         "tmp%1#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "265": {
       "op": "swap",
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0"
       ]
     },
@@ -1148,13 +1148,13 @@
       "op": "frame_dig -3",
       "defined_out": [
         "boxIndex#0 (copy)",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0",
         "boxIndex#0 (copy)"
       ]
@@ -1163,12 +1163,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0"
       ]
     },
@@ -1177,12 +1177,12 @@
       "defined_out": [
         "0x0024",
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0",
         "0x0024"
       ]
@@ -1191,12 +1191,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%3#0"
       ]
     },
@@ -1205,7 +1205,7 @@
       "stack_out": [
         "preMBR#0",
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "272": {
@@ -1419,7 +1419,7 @@
     "294": {
       "op": "itob",
       "defined_out": [
-        "as_bytes%4#0",
+        "as_bytes%2#0",
         "concatenated%0#0",
         "preMBR#0",
         "whitelist#0"
@@ -1428,7 +1428,7 @@
         "preMBR#0",
         "whitelist#0",
         "concatenated%0#0",
-        "as_bytes%4#0"
+        "as_bytes%2#0"
       ]
     },
     "295": {
@@ -1781,21 +1781,21 @@
     "350": {
       "op": "concat",
       "defined_out": [
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
         "tmp%1#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "351": {
       "op": "swap",
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0"
       ]
     },
@@ -1803,13 +1803,13 @@
       "op": "frame_dig -2",
       "defined_out": [
         "boxIndex#0 (copy)",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0",
         "boxIndex#0 (copy)"
       ]
@@ -1818,12 +1818,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0"
       ]
     },
@@ -1832,12 +1832,12 @@
       "defined_out": [
         "0x0024",
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0",
         "0x0024"
       ]
@@ -1846,12 +1846,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%3#0"
       ]
     },
@@ -1860,7 +1860,7 @@
       "stack_out": [
         "preMBR#0",
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "358": {
@@ -1962,28 +1962,28 @@
     "367": {
       "op": "extract_uint16",
       "defined_out": [
-        "tmp%5#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "preMBR#0",
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%5#0"
+        "tmp%3#0"
       ]
     },
     "368": {
       "op": "frame_dig 3",
       "defined_out": [
         "i#0",
-        "tmp%5#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "preMBR#0",
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%5#0",
+        "tmp%3#0",
         "i#0"
       ]
     },
@@ -1991,14 +1991,14 @@
       "op": ">",
       "defined_out": [
         "i#0",
-        "tmp%6#0"
+        "tmp%4#0"
       ],
       "stack_out": [
         "preMBR#0",
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%6#0"
+        "tmp%4#0"
       ]
     },
     "371": {
@@ -2276,7 +2276,7 @@
     "398": {
       "op": "itob",
       "defined_out": [
-        "as_bytes%4#0",
+        "as_bytes%2#0",
         "concatenated%0#0",
         "i#0",
         "newWhitelist#0"
@@ -2288,7 +2288,7 @@
         "i#0",
         "i#0",
         "concatenated%0#0",
-        "as_bytes%4#0"
+        "as_bytes%2#0"
       ]
     },
     "399": {
@@ -2472,7 +2472,7 @@
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "newWhitelist#0",
-        "tmp%8#0",
+        "tmp%6#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -2480,7 +2480,7 @@
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%8#0"
+        "tmp%6#0"
       ]
     },
     "423": {
@@ -2533,7 +2533,7 @@
       "defined_out": [
         "newWhitelist#0",
         "preMBR#0",
-        "tmp%9#0",
+        "tmp%7#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -2541,7 +2541,7 @@
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%9#0"
+        "tmp%7#0"
       ]
     },
     "429": {
@@ -2587,28 +2587,28 @@
       ],
       "op": "txn GroupIndex",
       "defined_out": [
-        "tmp%10#0"
+        "tmp%8#0"
       ],
       "stack_out": [
         "preMBR#0",
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%10#0"
+        "tmp%8#0"
       ]
     },
     "440": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
-        "tmp%10#0"
+        "tmp%8#0"
       ],
       "stack_out": [
         "preMBR#0",
         "whitelist#0",
         "newWhitelist#0",
         "i#0",
-        "tmp%10#0",
+        "tmp%8#0",
         "1"
       ]
     },
@@ -2839,21 +2839,21 @@
     "473": {
       "op": "concat",
       "defined_out": [
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
         "tmp%1#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "474": {
       "op": "swap",
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0"
       ]
     },
@@ -2861,13 +2861,13 @@
       "op": "frame_dig -1",
       "defined_out": [
         "boxIndex#0 (copy)",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0",
         "boxIndex#0 (copy)"
       ]
@@ -2876,12 +2876,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0"
       ]
     },
@@ -2890,12 +2890,12 @@
       "defined_out": [
         "0x0024",
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0",
         "0x0024"
       ]
@@ -2904,12 +2904,12 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%3#0"
       ]
     },
@@ -2918,7 +2918,7 @@
       "stack_out": [
         "preMBR#0",
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "481": {
@@ -3087,7 +3087,7 @@
     "508": {
       "op": "concat",
       "defined_out": [
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
@@ -3095,7 +3095,7 @@
         "newWhiteList#9",
         "preMBR#0",
         "tmp%1#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "509": {
@@ -3103,7 +3103,7 @@
       "stack_out": [
         "newWhiteList#9",
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0"
       ]
     },
@@ -3111,14 +3111,14 @@
       "op": "frame_dig -3",
       "defined_out": [
         "boxIndex#0 (copy)",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0",
         "tmp%1#0"
       ],
       "stack_out": [
         "newWhiteList#9",
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "tmp%1#0",
         "boxIndex#0 (copy)"
       ]
@@ -3127,13 +3127,13 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "newWhiteList#9",
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0"
       ]
     },
@@ -3142,13 +3142,13 @@
       "defined_out": [
         "0x0024",
         "encoded_tuple_buffer%2#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "newWhiteList#9",
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%2#0",
         "0x0024"
       ]
@@ -3157,13 +3157,13 @@
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "preMBR#0"
       ],
       "stack_out": [
         "newWhiteList#9",
         "preMBR#0",
-        "encoded_value%2#0",
+        "encoded_value%0#0",
         "encoded_tuple_buffer%3#0"
       ]
     },
@@ -3173,7 +3173,7 @@
         "newWhiteList#9",
         "preMBR#0",
         "encoded_tuple_buffer%3#0",
-        "encoded_value%2#0"
+        "encoded_value%0#0"
       ]
     },
     "516": {
@@ -3395,7 +3395,7 @@
     "534": {
       "op": "extract_uint16",
       "defined_out": [
-        "tmp%6#0",
+        "tmp%4#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3406,14 +3406,14 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%6#0"
+        "tmp%4#0"
       ]
     },
     "535": {
       "op": "frame_dig 6",
       "defined_out": [
         "i#0",
-        "tmp%6#0",
+        "tmp%4#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3424,7 +3424,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%6#0",
+        "tmp%4#0",
         "i#0"
       ]
     },
@@ -3432,7 +3432,7 @@
       "op": ">",
       "defined_out": [
         "i#0",
-        "tmp%7#0",
+        "tmp%5#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3443,7 +3443,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%7#0"
+        "tmp%5#0"
       ]
     },
     "538": {
@@ -3494,7 +3494,7 @@
       "op": "!=",
       "defined_out": [
         "i#0",
-        "tmp%8#0",
+        "tmp%6#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3505,7 +3505,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%8#0"
+        "tmp%6#0"
       ]
     },
     "546": {
@@ -3513,7 +3513,7 @@
       "defined_out": [
         "i#0",
         "newWhiteList#9",
-        "tmp%8#0",
+        "tmp%6#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3524,7 +3524,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%8#0",
+        "tmp%6#0",
         "newWhiteList#9"
       ]
     },
@@ -3533,7 +3533,7 @@
       "defined_out": [
         "i#0",
         "newWhiteList#9",
-        "tmp%8#0",
+        "tmp%6#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3544,7 +3544,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%8#0"
+        "tmp%6#0"
       ]
     },
     "550": {
@@ -3761,7 +3761,7 @@
         "i#0",
         "newWhiteList#0",
         "newWhiteList#9",
-        "tmp%10#0",
+        "tmp%8#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -3773,7 +3773,7 @@
         "newWhiteList#0",
         "i#0",
         "expr_value_trimmed%0#0",
-        "tmp%10#0"
+        "tmp%8#0"
       ]
     },
     "571": {
@@ -3880,7 +3880,7 @@
     "576": {
       "op": "itob",
       "defined_out": [
-        "as_bytes%4#0",
+        "as_bytes%2#0",
         "concatenated%0#0",
         "i#0",
         "newWhiteList#0",
@@ -3896,7 +3896,7 @@
         "newWhiteList#0",
         "i#0",
         "concatenated%0#0",
-        "as_bytes%4#0"
+        "as_bytes%2#0"
       ]
     },
     "577": {
@@ -4214,7 +4214,7 @@
         "array_head_and_tail%0#0",
         "item_offset%0#0",
         "newWhiteList#0",
-        "tmp%12#0",
+        "tmp%10#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -4225,7 +4225,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%12#0"
+        "tmp%10#0"
       ]
     },
     "610": {
@@ -4235,7 +4235,7 @@
         "array_head_and_tail%0#0",
         "item_offset%0#0",
         "newWhiteList#0",
-        "tmp%12#0",
+        "tmp%10#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -4246,7 +4246,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%12#0",
+        "tmp%10#0",
         "appID#0 (copy)"
       ]
     },
@@ -4256,7 +4256,7 @@
         "array_head_and_tail%0#0",
         "item_offset%0#0",
         "newWhiteList#0",
-        "tmp%13#0",
+        "tmp%11#0",
         "whitelist#0"
       ],
       "stack_out": [
@@ -4267,7 +4267,7 @@
         "item_offset%0#0",
         "newWhiteList#0",
         "i#0",
-        "tmp%13#0"
+        "tmp%11#0"
       ]
     },
     "613": {
