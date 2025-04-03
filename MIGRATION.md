@@ -16,9 +16,9 @@ Puya, whilst initially built to support Algorand Python has been architected as 
 - Repeated code elimination
 - Intrinsic op simplification
 
-[Puya-ts](https://github.com/algorandfoundation/puya-ts) is the new compiler built to take advantage of the Puya base compiler. As part of building puya-ts, we also took the chance to design Algorand TypeScript as the new supported language. It was built taking inspiration from the learnings of TealScript but differs in several ways which can best be summarised as:
+[Puya-ts](https://github.com/algorandfoundation/puya-ts) is the new compiler built to take advantage of the Puya base compiler. As part of building puya-ts, we also took the chance to design Algorand TypeScript as the new supported language. It was built taking inspiration from the learnings of TealScript but differs in several ways which can best be summarized as:
 
-- Changes that were necessary to support the design goal of Semantic Compatability
+- Changes that were necessary to support the design goal of Semantic Compatibility
 - Changes that were desirable to more closely align Algorand TypeScript with Algorand Python
 - Changes where we felt we could improve upon the approach used by TealScript
 
@@ -55,33 +55,6 @@ These are minor changes to the syntax of the language/API. This list is not exha
 
 These are major changes to the syntax of the language/API.
 
-### Method Routing
-
-#### TEALScript
-
-Each action (OnCompletes and create) has a method name that is used to route to the correct method when that action/OC is performed.
-
-```ts
-createApplication() {
-```
-
-Alternatively, decorators can be used for more complex contracts
-
-```ts
-@allow.create('NoOp')
-myCustomCreateMethod() { 
-```
-
-#### PuyaTS
-
-Decorators must be used to specify the action/OC if it differs from the default (NoOp/onCreate=disallow)
-
-```ts
-myPublicMethod() {
-
-@abimethod({ onCreate: "require", allowActions: "NoOp" })
-createApplication() {
-```
 
 ### Math Typing
 
@@ -240,56 +213,6 @@ let favorites: Favorites = {
 favorites = { ...favorites,  number: favorites.number + 1 }
 ```
 
-### ARC4 Types in State
-
-#### TEALScript
-
-In TEALScript, the same types used within method logic can be stored in state or used as state map keys.
-
-```ts
-export type ListingKey = {
-    owner: Address,
-    asset: Asset,
-    nonce: uint64,
-}
-```
-
-```ts
-updateListing(xfer: AssetTransferTxn, nonce: uint64)
-    const key: ListingKey = {
-      owner: this.txn.sender,
-      asset: xfer.xferAsset,
-      nonce: nonce,
-    })
-
-    const listing = this.listings(key).value
-```
-
-#### PuyaTS
-
-In PuyaTS, state can only hold ARC4 types.
-
-```ts
-export class ListingKey extends arc4.Struct<{
-  owner: arc4.Address
-  asset: arc4.UintN64
-  nonce: arc4.UintN64
-}> {}
-```
-
-```ts
-updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
-    const key = new ListingKey({
-      owner: new arc4.Address(Txn.sender),
-      asset: new arc4.UintN64(xfer.xferAsset.id),
-      nonce: nonce,
-    })
-
-    const listing = this.listings(key).value.copy()
-```
-
-It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `nonce`. If `nonce` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
-
 ### State References
 
 #### TEALScript
@@ -359,59 +282,83 @@ doMath(): UintN8 {
 
 This will result in roughly the same behavior as TEALScript.
 
-### State Value Assertions
+## Changes Subject To Change
+
+### ARC4 Types in State
 
 #### TEALScript
 
-In TEALScript, when you access state the value is always asserted to exist.
+In TEALScript, the same types used within method logic can be stored in state or used as state map keys.
 
 ```ts
-const listing = this.listings(keyThatDoesNotExist).value // panic, failed assert
+export type ListingKey = {
+    owner: Address,
+    asset: Asset,
+    nonce: uint64,
+}
 ```
 
-This commonly results in this pattern:
-
 ```ts
-let listing: Listing
+updateListing(xfer: AssetTransferTxn, nonce: uint64)
+    const key: ListingKey = {
+      owner: this.txn.sender,
+      asset: xfer.xferAsset,
+      nonce: nonce,
+    })
 
-if (this.listings(keyThatMightExist).exists) {
-    listing = this.listings(keyThatMightExist).value
-} else {
-    listing = createNewListing()
-}
-
-listing.newPrice = newPrice; 
+    const listing = this.listings(key).value
 ```
 
 #### PuyaTS
 
-In PuyaTS, state values are NOT asserted when accessed.
+In PuyaTS, state can only hold ARC4 types.
 
 ```ts
-const listing = this.listings(keyThatDoesNotExist).value // no error, but value is 0x
-
-listing.newPrice = newPrice; // panic because value is 0x (depending on usage, the op it errors on would be different)
+export class ListingKey extends arc4.Struct<{
+  owner: arc4.Address
+  asset: arc4.UintN64
+  nonce: arc4.UintN64
+}> {}
 ```
-
-The same pattern as TEALScript can be used:
 
 ```ts
-let listing: Listing
+updateListing(xfer: AssetTransferTransaction, nonce: arc4.UintN64) {
+    const key = new ListingKey({
+      owner: new arc4.Address(Txn.sender),
+      asset: new arc4.UintN64(xfer.xferAsset.id),
+      nonce: nonce,
+    })
 
-if (this.listings(keyThatMightExist).exists) {
-    listing = this.listings(keyThatMightExist).value.copy()
-} else {
-    listing = createNewListing()
-}
+    const listing = this.listings(key).value.copy()
 ```
 
-PuyaTS also has a `maybe()` function that returns a tuple:
+It should be noted that an `arc4.Struct` can only hold other ARC4 types. This is why we've used `arc4.UintN64` instead of `uint64` for the type of `nonce`. If `nonce` was a `uint64`, we would not be able to store it in the struct directly and would need to call `arc.UintN64(nonce)`
+
+### Method Routing
+
+#### TEALScript
+
+Each action (OnCompletes and create) has a method name that is used to route to the correct method when that action/OC is performed.
 
 ```ts
-let [listing, exists] = this.listings(keyThatMightExist).maybe();
-if (!exists) {
-    listing = createNewListing()
-}
-
-listing.newPrice = newPrice;
+createApplication() {
 ```
+
+Alternatively, decorators can be used for more complex contracts
+
+```ts
+@allow.create('NoOp')
+myCustomCreateMethod() { 
+```
+
+#### PuyaTS
+
+Decorators must be used to specify the action/OC if it differs from the default (NoOp/onCreate=disallow)
+
+```ts
+myPublicMethod() {
+
+@abimethod({ onCreate: "require", allowActions: "NoOp" })
+createApplication() {
+```
+
