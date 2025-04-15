@@ -791,36 +791,36 @@
     "201": {
       "op": "len",
       "defined_out": [
-        "len_%0#0",
-        "to_encode%0#0"
+        "to_encode%0#0",
+        "value_len%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "len_%0#0"
+        "value_len%0#0"
       ]
     },
     "202": {
       "op": "intc_2 // 32",
       "defined_out": [
         "32",
-        "len_%0#0",
-        "to_encode%0#0"
+        "to_encode%0#0",
+        "value_len%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "len_%0#0",
+        "value_len%0#0",
         "32"
       ]
     },
     "203": {
       "op": "<=",
       "defined_out": [
-        "no_overflow%0#0",
+        "len_ok%0#0",
         "to_encode%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "no_overflow%0#0"
+        "len_ok%0#0"
       ]
     },
     "204": {
@@ -840,21 +840,21 @@
     "206": {
       "op": "bzero",
       "defined_out": [
-        "b_zeros%0#0",
+        "bzero%0#0",
         "to_encode%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "b_zeros%0#0"
+        "bzero%0#0"
       ]
     },
     "207": {
       "op": "b|",
       "defined_out": [
-        "tmp%0#0"
+        "arc4_encoded%0#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "arc4_encoded%0#0"
       ]
     },
     "208": {
@@ -914,36 +914,36 @@
     "218": {
       "op": "len",
       "defined_out": [
-        "len_%0#0",
-        "to_encode%0#0"
+        "to_encode%0#0",
+        "value_len%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "len_%0#0"
+        "value_len%0#0"
       ]
     },
     "219": {
       "op": "intc_2 // 32",
       "defined_out": [
         "32",
-        "len_%0#0",
-        "to_encode%0#0"
+        "to_encode%0#0",
+        "value_len%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "len_%0#0",
+        "value_len%0#0",
         "32"
       ]
     },
     "220": {
       "op": "<=",
       "defined_out": [
-        "no_overflow%0#0",
+        "len_ok%0#0",
         "to_encode%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "no_overflow%0#0"
+        "len_ok%0#0"
       ]
     },
     "221": {
@@ -963,21 +963,21 @@
     "223": {
       "op": "bzero",
       "defined_out": [
-        "b_zeros%0#0",
+        "bzero%0#0",
         "to_encode%0#0"
       ],
       "stack_out": [
         "to_encode%0#0",
-        "b_zeros%0#0"
+        "bzero%0#0"
       ]
     },
     "224": {
       "op": "b|",
       "defined_out": [
-        "tmp%0#0"
+        "arc4_encoded%0#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "arc4_encoded%0#0"
       ]
     },
     "225": {

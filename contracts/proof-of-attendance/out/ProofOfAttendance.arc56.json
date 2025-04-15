@@ -271,18 +271,18 @@
                 }
             },
             "local": {},
-            "box": {
-                "boxMap": {
-                    "keyType": "AVMString",
-                    "valueType": "AVMUint64",
-                    "key": "Ym94TWFw"
-                }
-            }
+            "box": {}
         },
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "boxMap": {
+                    "keyType": "AVMBytes",
+                    "valueType": "uint64",
+                    "prefix": "Ym94TWFw"
+                }
+            }
         }
     },
     "bareActions": {
@@ -459,8 +459,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],

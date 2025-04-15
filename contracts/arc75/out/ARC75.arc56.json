@@ -1,6 +1,21 @@
 {
     "name": "ARC75",
-    "structs": {},
+    "structs": {
+        "Whitelist": [
+            {
+                "name": "account",
+                "type": "address"
+            },
+            {
+                "name": "boxIndex",
+                "type": "uint16"
+            },
+            {
+                "name": "arc",
+                "type": "string"
+            }
+        ]
+    },
     "methods": [
         {
             "name": "createApplication",
@@ -173,18 +188,18 @@
         "keys": {
             "global": {},
             "local": {},
-            "box": {
-                "whitelist": {
-                    "keyType": "AVMBytes",
-                    "valueType": "uint64[]",
-                    "key": ""
-                }
-            }
+            "box": {}
         },
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "whitelist": {
+                    "keyType": "Whitelist",
+                    "valueType": "uint64[]",
+                    "prefix": ""
+                }
+            }
         }
     },
     "bareActions": {
@@ -279,8 +294,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],

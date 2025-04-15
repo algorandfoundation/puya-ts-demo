@@ -1,6 +1,20 @@
 {
     "name": "DigitalMarketplace",
     "structs": {
+        "ListingKey": [
+            {
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "name": "asset",
+                "type": "uint64"
+            },
+            {
+                "name": "nonce",
+                "type": "uint64"
+            }
+        ],
         "ListingValue": [
             {
                 "name": "deposited",
@@ -346,18 +360,18 @@
         "keys": {
             "global": {},
             "local": {},
-            "box": {
-                "listings": {
-                    "keyType": "AVMString",
-                    "valueType": "ListingValue",
-                    "key": "bGlzdGluZ3M="
-                }
-            }
+            "box": {}
         },
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "listings": {
+                    "keyType": "ListingKey",
+                    "valueType": "ListingValue",
+                    "prefix": "bGlzdGluZ3M="
+                }
+            }
         }
     },
     "bareActions": {
@@ -488,8 +502,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],

@@ -41,7 +41,7 @@ export class OptInLsig extends LogicSig {
       assetCloseTo: Global.zeroAddress,
     });
 
-    const appCall = gtxn.ApplicationTxn(Txn.groupIndex + 1);
+    const appCall = gtxn.ApplicationCallTxn(Txn.groupIndex + 1);
     // Use assert instead of verifyTxn because applicationArgs array is not yet supported in verifyTxn
     assert(appCall.appId === TemplateVar<Application>("APP_ID"));
     assert(appCall.appArgs(0) === methodSelector("verifyCreator(axfer)void"));

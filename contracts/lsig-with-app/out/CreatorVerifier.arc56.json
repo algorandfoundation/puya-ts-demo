@@ -103,19 +103,19 @@
         "keys": {
             "global": {},
             "local": {},
-            "box": {
-                "allowedCreators": {
-                    "keyType": "AVMBytes",
-                    "valueType": "bool",
-                    "key": "",
-                    "desc": "Mapping of [user,creator] to determine which creators the user will allow opt-ins from"
-                }
-            }
+            "box": {}
         },
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "allowedCreators": {
+                    "keyType": "(address,address)",
+                    "valueType": "bool",
+                    "desc": "Mapping of [user,creator] to determine which creators the user will allow opt-ins from",
+                    "prefix": ""
+                }
+            }
         }
     },
     "bareActions": {
@@ -186,8 +186,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],
