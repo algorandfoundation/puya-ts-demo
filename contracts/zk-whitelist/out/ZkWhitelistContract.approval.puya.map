@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/zk-whitelist/zk-whitelist.algo.ts"
   ],
-  "mappings": "AA2BA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;AAqEE;;AAAA;AAAA;AAAA;;AAAA;AArEF;;;AAAA;AAAA;;;AAAA;;;AAqEE;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAZC;;AAAA;AAAA;AAAA;;AAAA;AAzDH;;;AAyDG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAnCA;;AAAA;AAAA;AAAA;;AAAA;AAtBH;;;AAAA;;;AAsBG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAJH;;;AAIG;;;AAAA;;AAAD;;;AAHA;;;;;;;;;AAME;;AAAA;;AAMc;;AAAuB;;AAA9B;AAAP;;AASF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAea;;AAAT;AAAuB;;AAzCzB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyC+B;AAA7B;AAMA;;;;AAAA;AAAA;AAFA;AADe;;AAAA;;AAAA;;;AAAA;AAAA;;;AAKH;AAAV;;;AACK;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAIM;;AAAJ;;AAAA;AAAJ;;;AACS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAEF;;AAnDF;AAmDkC;AAAhC;AACO;;;;AAAP;AAGF;;;AAIQ;;AAAwC;;AAA9B;AACZ;;;AACK;AAAP;AAE0C;;AAAA;AA/D9C;AA+D8C;AAAA;AACrC;AAAA;AAAA;;AAAA;AAAP;AAGF;;;AAMmB;AASkB;;;AAJ7B;;;;;;;;;;;;;;;;;;;;AALW;;;AAGR;;;AAHQ;AAWL;;AACL;AAAA;;;AAAA;AAAA;;;AAA0C;AAA1C;AAAA;AAAP;;AAAA;;AAAA",
+  "mappings": "AA2BA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;AAqEE;;AAAA;AAAA;AAAA;;AAAA;AArEF;;;AAAA;AAAA;;;AAAA;;;AAqEE;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAZC;;AAAA;AAAA;AAAA;;AAAA;AAzDH;;;AAyDG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAnCA;;AAAA;AAAA;AAAA;;AAAA;AAtBH;;;AAAA;;;AAsBG;;;AAAA;AAAA;AAAA;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AANA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAJH;;;AAIG;;;AAAA;;AAAD;;;AAHA;;;;;;;;;AAME;;AAAA;;AAMc;;AAAuB;;AAA9B;AAAP;;AASF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAea;;AAAT;AAA6B;;AAzC/B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyC+B;AAA7B;AAMA;;;;AAAA;AAAA;AAFA;AADe;;AAAA;;AAAA;;;AAAA;AAAA;;;AAKH;AAAV;;;AACK;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAIM;;AAAJ;;AAAA;AAAJ;;;AACS;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAP;AAEF;;AAnDF;AAmDkC;AAAhC;AACO;;;;AAAP;AAGF;;;AAIQ;;AAAwC;;AAA9B;AACZ;;;AACK;AAAP;AAE0C;;AAAA;AA/D9C;AA+D8C;AAAA;AACrC;AAAA;AAAA;;AAAA;AAAP;AAGF;;;AAMmB;AASkB;;;AAJ7B;;;;;;;;;;;;;;;;;;;;AALW;;;AAGR;;;AAHQ;AAWL;;AACL;AAAA;;;AAAA;AAAA;;;AAA0C;AAA1C;AAAA;AAAP;;AAAA;;AAAA",
   "op_pc_offset": 2,
   "pc_events": {
     "0": {
@@ -796,10 +796,10 @@
     "201": {
       "op": ">",
       "defined_out": [
-        "tmp%1#0"
+        "tmp%1#1"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "tmp%1#1"
       ]
     },
     "202": {
@@ -924,12 +924,12 @@
     "265": {
       "op": "b%",
       "defined_out": [
-        "reinterpret_bytes%0#0",
-        "tmp%0#0"
+        "tmp%0#0",
+        "tmp%1#0"
       ],
       "stack_out": [
         "tmp%0#0",
-        "reinterpret_bytes%0#0"
+        "tmp%1#0"
       ]
     },
     "266": {
@@ -1041,10 +1041,10 @@
     "285": {
       "op": "getbit",
       "defined_out": [
-        "tmp%1#0"
+        "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "tmp%2#0"
       ]
     },
     "286": {
@@ -1069,30 +1069,30 @@
       "stack_in": [],
       "op": "txn Sender",
       "defined_out": [
-        "tmp%2#0"
+        "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%2#0"
+        "tmp%3#0"
       ]
     },
     "321": {
       "op": "frame_dig -2",
       "defined_out": [
         "address#0 (copy)",
-        "tmp%2#0"
+        "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%2#0",
+        "tmp%3#0",
         "address#0 (copy)"
       ]
     },
     "323": {
       "op": "!=",
       "defined_out": [
-        "tmp%3#0"
+        "tmp%4#0"
       ],
       "stack_out": [
-        "tmp%3#0"
+        "tmp%4#0"
       ]
     },
     "324": {

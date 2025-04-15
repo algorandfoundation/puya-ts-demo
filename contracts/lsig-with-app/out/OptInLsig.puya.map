@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/lsig-with-app/lsig-with-app.algo.ts"
   ],
-  "mappings": "AA+BI;;AAAA;;;AAAA;;AAEqB;;AAFrB;AAAA;;;AAAA;;AAAA;;;AAAA;;AAOkB;;AAPlB;AAAA;;;AAAA;;AASuB;;AATvB;AAAA;;;;AAAA;AAYwC;;AAAa;AAAjB;AAApB;AAAA;;AAAA;;AAAA;AAAA;AAED;AAAA;;AAAU;AAAlB;AAAP;AACuB;AAAhB;;AAAuB;;;;;;AAAvB;AAAP;AACO;AAAP;;",
+  "mappings": "AA+BI;;AAAA;;;AAAA;;AAEqB;;AAFrB;AAAA;;;AAAA;;AAAA;;;AAAA;;AAOkB;;AAPlB;AAAA;;;AAAA;;AASuB;;AATvB;AAAA;;;;AAAA;AAY4C;;AAAa;AAAjB;AAAxB;AAAA;;AAAA;;AAAA;AAAA;AAED;AAAA;;AAAU;AAAlB;AAAP;AACuB;AAAhB;;AAAuB;;;;;;AAAvB;AAAP;AACO;AAAP;;",
   "op_pc_offset": 1,
   "pc_events": {
     "0": {

@@ -162,23 +162,23 @@
                 }
             },
             "local": {},
-            "box": {
-                "dataBoxes": {
-                    "keyType": "AVMBytes",
-                    "valueType": "AVMBytes",
-                    "key": ""
-                },
-                "metadata": {
-                    "keyType": "AVMBytes",
-                    "valueType": "Metadata",
-                    "key": ""
-                }
-            }
+            "box": {}
         },
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "dataBoxes": {
+                    "keyType": "uint64",
+                    "valueType": "AVMBytes",
+                    "prefix": ""
+                },
+                "metadata": {
+                    "keyType": "AVMBytes",
+                    "valueType": "Metadata",
+                    "prefix": ""
+                }
+            }
         }
     },
     "bareActions": {
@@ -265,8 +265,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],

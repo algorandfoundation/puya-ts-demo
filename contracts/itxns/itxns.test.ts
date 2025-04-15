@@ -1,9 +1,11 @@
 import { Bytes } from "@algorandfoundation/algorand-typescript";
-import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
+import {
+  ApplicationSpy,
+  TestExecutionContext,
+} from "@algorandfoundation/algorand-typescript-testing";
 import { afterEach, describe, expect, test } from "@jest/globals";
 import { FactoryCaller, NFTFactory } from "./itxns.algo";
 
-const ABI_RETURN_VALUE_LOG_PREFIX = Bytes.fromHex("151F7C75");
 describe("itxns", () => {
   const ctx = new TestExecutionContext();
   afterEach(() => {
@@ -14,9 +16,13 @@ describe("itxns", () => {
     const asset = ctx.any.asset();
     const helloApp = ctx.any.application({
       approvalProgram: ctx.any.bytes(20),
-      appLogs: [ABI_RETURN_VALUE_LOG_PREFIX.concat(Bytes(asset.id))],
     });
     ctx.setCompiledApp(NFTFactory, helloApp.id);
+
+    const spy = new ApplicationSpy(NFTFactory);
+    spy.on.createApplication(() => helloApp.id);
+    spy.on.createNFT((itxnContext) => itxnContext.setReturnValue(asset.id));
+    ctx.addApplicationSpy(spy);
 
     const factoryCaller = ctx.contract.create(FactoryCaller);
 

@@ -91,7 +91,7 @@ main_bool_merge@7:
     // });
     assert // assert target is match for conditions
     // contracts/lsig-with-app/lsig-with-app.algo.ts:44
-    // const appCall = gtxn.ApplicationTxn(Txn.groupIndex + 1);
+    // const appCall = gtxn.ApplicationCallTxn(Txn.groupIndex + 1);
     txn GroupIndex
     intc_0 // 1
     +

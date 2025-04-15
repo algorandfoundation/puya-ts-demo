@@ -5906,56 +5906,56 @@
     "1050": {
       "op": "btoi",
       "defined_out": [
-        "tmp%11#0"
+        "tmp%12#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0"
+        "tmp%12#0"
       ]
     },
     "1051": {
       "op": "frame_dig -1",
       "defined_out": [
-        "tmp%11#0",
+        "tmp%12#0",
         "unitaryPrice#0 (copy)"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0",
+        "tmp%12#0",
         "unitaryPrice#0 (copy)"
       ]
     },
     "1053": {
       "op": "btoi",
       "defined_out": [
-        "tmp%11#0",
-        "tmp%12#0"
+        "tmp%12#0",
+        "tmp%13#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0",
-        "tmp%12#0"
+        "tmp%12#0",
+        "tmp%13#0"
       ]
     },
     "1054": {
       "op": "frame_dig -5",
       "defined_out": [
         "asset#0 (copy)",
-        "tmp%11#0",
-        "tmp%12#0"
+        "tmp%12#0",
+        "tmp%13#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0",
         "tmp%12#0",
+        "tmp%13#0",
         "asset#0 (copy)"
       ]
     },
@@ -5963,16 +5963,16 @@
       "op": "asset_params_get AssetDecimals",
       "defined_out": [
         "check%1#0",
-        "tmp%11#0",
         "tmp%12#0",
+        "tmp%13#0",
         "value%1#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0",
         "tmp%12#0",
+        "tmp%13#0",
         "value%1#0",
         "check%1#0"
       ]
@@ -5984,8 +5984,8 @@
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%11#0",
         "tmp%12#0",
+        "tmp%13#0",
         "value%1#0"
       ]
     },
@@ -6020,44 +6020,44 @@
       "op": "gtxns Sender",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%13#0"
+        "tmp%14#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%13#0"
+        "tmp%14#0"
       ]
     },
     "1066": {
       "op": "txn Sender",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%13#0",
-        "tmp%14#0"
+        "tmp%14#0",
+        "tmp%15#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%13#0",
-        "tmp%14#0"
+        "tmp%14#0",
+        "tmp%15#0"
       ]
     },
     "1068": {
       "op": "==",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%15#0"
+        "tmp%16#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%15#0"
+        "tmp%16#0"
       ]
     },
     "1069": {
@@ -6083,44 +6083,44 @@
       "op": "gtxns Receiver",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%16#0"
+        "tmp%17#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%16#0"
+        "tmp%17#0"
       ]
     },
     "1074": {
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%16#0",
-        "tmp%17#0"
+        "tmp%17#0",
+        "tmp%18#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%16#0",
-        "tmp%17#0"
+        "tmp%17#0",
+        "tmp%18#0"
       ]
     },
     "1076": {
       "op": "==",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%18#0"
+        "tmp%19#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%18#0"
+        "tmp%19#0"
       ]
     },
     "1077": {
@@ -6146,26 +6146,26 @@
       "op": "gtxns Amount",
       "defined_out": [
         "amountToBeBid#0",
-        "tmp%19#0"
+        "tmp%20#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "amountToBeBid#0",
-        "tmp%19#0"
+        "tmp%20#0"
       ]
     },
     "1082": {
       "op": "==",
       "defined_out": [
-        "tmp%20#0"
+        "tmp%21#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%20#0"
+        "tmp%21#0"
       ]
     },
     "1083": {
@@ -6207,14 +6207,14 @@
       "op": "extract 0 8 // on error: Index access is out of bounds",
       "defined_out": [
         "listing#0",
-        "tmp%21#0"
+        "tmp%22#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
         "listing#0",
-        "tmp%21#0"
+        "tmp%22#0"
       ]
     },
     "1090": {
@@ -6223,7 +6223,7 @@
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%21#0",
+        "tmp%22#0",
         "listing#0"
       ]
     },
@@ -6232,32 +6232,32 @@
       "op": "extract 8 8 // on error: Index access is out of bounds",
       "defined_out": [
         "listing#0",
-        "tmp%21#0",
-        "tmp%22#0"
+        "tmp%22#0",
+        "tmp%23#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%21#0",
-        "tmp%22#0"
+        "tmp%22#0",
+        "tmp%23#0"
       ]
     },
     "1094": {
       "op": "txn Sender",
       "defined_out": [
         "listing#0",
-        "tmp%21#0",
         "tmp%22#0",
-        "tmp%23#0"
+        "tmp%23#0",
+        "tmp%24#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%21#0",
         "tmp%22#0",
-        "tmp%23#0"
+        "tmp%23#0",
+        "tmp%24#0"
       ]
     },
     "1096": {
@@ -6266,9 +6266,9 @@
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%23#0",
-        "tmp%21#0",
-        "tmp%22#0"
+        "tmp%24#0",
+        "tmp%22#0",
+        "tmp%23#0"
       ]
     },
     "1098": {
@@ -6276,13 +6276,13 @@
       "defined_out": [
         "encoded_tuple_buffer%6#0",
         "listing#0",
-        "tmp%23#0"
+        "tmp%24#0"
       ],
       "stack_out": [
         "tmp%0#0",
         "listing#0",
         "tmp%1#0",
-        "tmp%23#0",
+        "tmp%24#0",
         "encoded_tuple_buffer%6#0"
       ]
     },
@@ -6293,7 +6293,7 @@
         "listing#0",
         "tmp%1#0",
         "encoded_tuple_buffer%6#0",
-        "tmp%23#0"
+        "tmp%24#0"
       ]
     },
     "1100": {
@@ -7429,7 +7429,7 @@
         "listing#0",
         "minQuantity#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0"
       ],
       "stack_out": [
@@ -7441,7 +7441,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0"
+        "tmp%16#0"
       ]
     },
     "1228": {
@@ -7450,7 +7450,7 @@
         "listing#0",
         "minQuantity#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0"
       ],
@@ -7463,7 +7463,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%5#0"
       ]
     },
@@ -7478,7 +7478,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%5#0",
         "minQuantity#0 (copy)"
       ]
@@ -7489,7 +7489,7 @@
         "listing#0",
         "minQuantity#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0",
         "to_encode%0#0"
@@ -7503,7 +7503,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "to_encode%0#0"
       ]
     },
@@ -7513,7 +7513,7 @@
         "listing#0",
         "minQuantity#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0",
         "val_as_bytes%1#0"
@@ -7527,7 +7527,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%1#0"
       ]
     },
@@ -7537,7 +7537,7 @@
         "listing#0",
         "minQuantity#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0",
         "tmp%7#0",
@@ -7552,7 +7552,7 @@
         "tmp%11#0",
         "tmp%2#0",
         "minQuantity#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%1#0",
         "tmp%7#0"
       ]
@@ -7567,7 +7567,7 @@
         "tmp%7#0",
         "tmp%11#0",
         "tmp%2#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%1#0",
         "tmp%7#0",
         "minQuantity#0"
@@ -7578,7 +7578,7 @@
       "defined_out": [
         "listing#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0",
         "tmp%7#0",
@@ -7593,7 +7593,7 @@
         "tmp%7#0",
         "tmp%11#0",
         "tmp%2#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%1#0",
         "to_encode%1#0"
       ]
@@ -7603,7 +7603,7 @@
       "defined_out": [
         "listing#0",
         "tmp%11#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "tmp%2#0",
         "tmp%5#0",
         "tmp%7#0",
@@ -7618,7 +7618,7 @@
         "tmp%7#0",
         "tmp%11#0",
         "tmp%2#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%1#0",
         "val_as_bytes%2#0"
       ]
@@ -7633,7 +7633,7 @@
         "tmp%7#0",
         "tmp%11#0",
         "tmp%2#0",
-        "tmp%15#0",
+        "tmp%16#0",
         "val_as_bytes%2#0",
         "val_as_bytes%1#0"
       ]
@@ -7650,7 +7650,7 @@
         "tmp%2#0",
         "val_as_bytes%2#0",
         "val_as_bytes%1#0",
-        "tmp%15#0"
+        "tmp%16#0"
       ]
     },
     "1243": {

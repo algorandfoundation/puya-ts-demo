@@ -223,11 +223,6 @@
                     "valueType": "uint64[]",
                     "key": "Yg=="
                 },
-                "boxMap": {
-                    "keyType": "AVMString",
-                    "valueType": "AVMBytes",
-                    "key": ""
-                },
                 "boxRef": {
                     "keyType": "AVMBytes",
                     "valueType": "AVMBytes",
@@ -238,7 +233,13 @@
         "maps": {
             "global": {},
             "local": {},
-            "box": {}
+            "box": {
+                "boxMap": {
+                    "keyType": "address",
+                    "valueType": "AVMBytes",
+                    "prefix": ""
+                }
+            }
         }
     },
     "bareActions": {
@@ -336,8 +337,8 @@
         "compiler": "puya",
         "compilerVersion": {
             "major": 4,
-            "minor": 5,
-            "patch": 3
+            "minor": 7,
+            "patch": 0
         }
     },
     "events": [],
