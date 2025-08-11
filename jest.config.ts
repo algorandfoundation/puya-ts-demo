@@ -2,14 +2,14 @@ import { createDefaultEsmPreset, type JestConfigWithTsJest } from "ts-jest";
 
 const presetConfig = createDefaultEsmPreset({});
 const ignorePatterns = [
-  "<rootDir>/contracts/simple/simple.e2e.ts",
-  "<rootDir>/contracts/itxns/itxns.e2e.ts",
+  "<rootDir>/contracts/simple/simple.e2e.test.ts",
+  "<rootDir>/contracts/itxns/itxns.e2e.test.ts",
   "@algorandfoundation/tealscript",
 ];
 
 const jestConfig: JestConfigWithTsJest = {
   ...presetConfig,
-  testMatch: ["**/*.test.ts", "**/*.e2e.ts"],
+  testMatch: ["**/*.algo.test.ts", "**/*.e2e.test.ts"],
   testPathIgnorePatterns: ignorePatterns,
   coveragePathIgnorePatterns: ignorePatterns,
   modulePathIgnorePatterns: ignorePatterns,

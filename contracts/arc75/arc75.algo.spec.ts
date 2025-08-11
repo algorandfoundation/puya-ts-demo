@@ -1,10 +1,10 @@
 import { describe, expect, test, afterEach } from "vitest";
-import { ARC75, Whitelist } from "./arc75.algo";
+import { ARC75 } from "./arc75.algo";
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
 import {
   Address,
   Str,
-  UintN16,
+  Uint16,
 } from "@algorandfoundation/algorand-typescript/arc4";
 
 describe("ARC75", () => {
@@ -21,7 +21,7 @@ describe("ARC75", () => {
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
 
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const appId = 123;
 
       // Create a payment transaction for MBR
@@ -35,15 +35,15 @@ describe("ARC75", () => {
       arc75.addAppToWhiteList(arcName, boxIndex, appId, paymentTxn);
 
       // Assert
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).exists).toEqual(true);
       expect(arc75.whitelist(whitelistKey).value.length).toEqual(1);
-      expect(arc75.whitelist(whitelistKey).value.at(0).native).toEqual(appId);
+      expect(arc75.whitelist(whitelistKey).value[0]).toEqual(appId);
     });
 
     test("should add app to an existing whitelist", () => {
@@ -52,7 +52,7 @@ describe("ARC75", () => {
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
 
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const firstApp = ctx.any.application();
       const secondApp = ctx.any.application();
 
@@ -80,19 +80,15 @@ describe("ARC75", () => {
       );
 
       // Assert
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).value.length).toEqual(2);
-      expect(arc75.whitelist(whitelistKey).value.at(0).native).toEqual(
-        firstApp.id,
-      );
-      expect(arc75.whitelist(whitelistKey).value.at(1).native).toEqual(
-        secondApp.id,
-      );
+      expect(arc75.whitelist(whitelistKey).value[0]).toEqual(firstApp.id);
+      expect(arc75.whitelist(whitelistKey).value[1]).toEqual(secondApp.id);
     });
   });
 
@@ -103,7 +99,7 @@ describe("ARC75", () => {
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
 
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const appIds = [123, 456, 789];
 
       // Create a payment transaction
@@ -123,19 +119,17 @@ describe("ARC75", () => {
           arc75.setAppWhitelist(arcName, boxIndex, appIds);
         });
       // Assert
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).exists).toEqual(true);
       expect(arc75.whitelist(whitelistKey).value.length).toEqual(appIds.length);
 
       for (let i = 0; i < appIds.length; i++) {
-        expect(arc75.whitelist(whitelistKey).value.at(i).native).toEqual(
-          appIds[i],
-        );
+        expect(arc75.whitelist(whitelistKey).value[i]).toEqual(appIds[i]);
       }
     });
 
@@ -144,7 +138,7 @@ describe("ARC75", () => {
       const arc75 = ctx.contract.create(ARC75);
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
 
       const initialAppIds = [123, 456];
       const newAppIds = [789, 101112];
@@ -163,18 +157,18 @@ describe("ARC75", () => {
         .execute(() => {
           arc75.setAppWhitelist(arcName, boxIndex, initialAppIds);
         });
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).value.length).toEqual(
         initialAppIds.length,
       );
 
       for (let i = 0; i < newAppIds.length; i++) {
-        expect(arc75.whitelist(whitelistKey).value.at(i).native).toEqual(
+        expect(arc75.whitelist(whitelistKey).value[i]).toEqual(
           initialAppIds[i],
         );
       }
@@ -196,9 +190,7 @@ describe("ARC75", () => {
       );
 
       for (let i = 0; i < newAppIds.length; i++) {
-        expect(arc75.whitelist(whitelistKey).value.at(i).native).toEqual(
-          newAppIds[i],
-        );
+        expect(arc75.whitelist(whitelistKey).value[i]).toEqual(newAppIds[i]);
       }
     });
   });
@@ -209,7 +201,7 @@ describe("ARC75", () => {
       const arc75 = ctx.contract.create(ARC75);
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const appIds = [123, 456];
 
       const paymentTxn = ctx.any.txn.payment({
@@ -231,11 +223,11 @@ describe("ARC75", () => {
       arc75.deleteWhitelist(arcName, boxIndex);
 
       // Assert
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).exists).toEqual(false);
     });
@@ -248,7 +240,7 @@ describe("ARC75", () => {
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
 
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const appIds = [123, 456, 789];
       const appToDeleteId = 456;
       const appToDeleteIndex = 1;
@@ -277,16 +269,16 @@ describe("ARC75", () => {
       );
 
       // Assert
-      const whitelistKey = new Whitelist({
+      const whitelistKey = {
         account: new Address(ctx.defaultSender),
         boxIndex: boxIndex,
-        arc: new Str(arcName),
-      });
+        arc: arcName,
+      };
 
       expect(arc75.whitelist(whitelistKey).exists).toEqual(true);
       expect(arc75.whitelist(whitelistKey).value.length).toEqual(2);
-      expect(arc75.whitelist(whitelistKey).value.at(0).native).toEqual(123);
-      expect(arc75.whitelist(whitelistKey).value.at(1).native).toEqual(789);
+      expect(arc75.whitelist(whitelistKey).value[0]).toEqual(123);
+      expect(arc75.whitelist(whitelistKey).value[1]).toEqual(789);
     });
 
     test("should throw when app ID at index doesn't match", () => {
@@ -295,7 +287,7 @@ describe("ARC75", () => {
       const arc75App = ctx.ledger.getApplicationForContract(arc75);
 
       const arcName = "arc20";
-      const boxIndex = new UintN16(1);
+      const boxIndex = new Uint16(1);
       const appIds = [123, 456, 789];
       const incorrectAppId = 999;
       const appToDeleteIndex = 1;

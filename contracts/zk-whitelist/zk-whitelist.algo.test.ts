@@ -1,4 +1,4 @@
-import { arc4, Bytes, Uint64 } from "@algorandfoundation/algorand-typescript";
+import { arc4, Bytes } from "@algorandfoundation/algorand-typescript";
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
 import { afterEach, describe, expect, it } from "@jest/globals";
 import ZkWhitelistContract from "./zk-whitelist.algo";

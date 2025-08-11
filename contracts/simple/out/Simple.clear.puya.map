@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/simple/simple.algo.ts"
   ],
-  "mappings": ";;;;;;;;;;;AASuC;;AAAA;AAAA;AAAA;AA0Bb;;AAvBD;AAHc;AAGnC;AAAA;AAwBO;;AAAP",
+  "mappings": ";;;;;;;;;;;AAYsC;;AAH1B;AAG0B;AAAA;AAuBZ;;AAvBD;AAHb;AAGR;AAAA;AAwBO;;AAAP",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -65,16 +65,16 @@
     "18": {
       "op": "+",
       "defined_out": [
-        "new_state_value%0#0"
+        "tmp%0#0"
       ],
       "stack_out": [
-        "new_state_value%0#0"
+        "tmp%0#0"
       ]
     },
     "19": {
       "op": "bytec_0 // \"counter\"",
       "stack_out": [
-        "new_state_value%0#0",
+        "tmp%0#0",
         "\"counter\""
       ]
     },
@@ -82,7 +82,7 @@
       "op": "swap",
       "stack_out": [
         "\"counter\"",
-        "new_state_value%0#0"
+        "tmp%0#0"
       ]
     },
     "21": {

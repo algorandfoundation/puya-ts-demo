@@ -1,7 +1,7 @@
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
 import { afterEach, describe, expect, test } from "vitest";
 import Simple from "./simple.algo";
-import { UintN256 } from "@algorandfoundation/algorand-typescript/arc4";
+import { Uint256 } from "@algorandfoundation/algorand-typescript/arc4";
 
 describe("Simple", () => {
   const ctx = new TestExecutionContext();
@@ -23,16 +23,16 @@ describe("Simple", () => {
   test("should correctly add two biguints", () => {
     const simple = ctx.contract.create(Simple);
 
-    const addResult = simple.add(new UintN256(123), new UintN256(456));
+    const addResult = simple.add(new Uint256(123), new Uint256(456));
 
-    expect(addResult.native).toEqual(123 + 456);
+    expect(addResult.asBigUint()).toEqual(123 + 456);
   });
 
   test("should correctly subtract two biguints", () => {
     const simple = ctx.contract.create(Simple);
 
-    const subResult = simple.sub(new UintN256(5), new UintN256(3));
+    const subResult = simple.sub(new Uint256(5), new Uint256(3));
 
-    expect(subResult.native).toEqual(5 - 3);
+    expect(subResult.asBigUint()).toEqual(5 - 3);
   });
 });

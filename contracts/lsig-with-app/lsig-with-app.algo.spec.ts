@@ -50,9 +50,10 @@ describe("Lsig With App", () => {
 
       creatorVerifier.allowOptInsFrom(creator);
 
-      const isAllowed = creatorVerifier.allowedCreators(
-        new Tuple(new Address(ctx.defaultSender), creator),
-      ).value;
+      const isAllowed = creatorVerifier.allowedCreators([
+        ctx.defaultSender,
+        creator.native,
+      ]).value;
       expect(isAllowed.native).toBe(true);
     });
 
@@ -62,9 +63,10 @@ describe("Lsig With App", () => {
 
       creatorVerifier.disableOptInsFrom(creator);
 
-      const isAllowed = creatorVerifier.allowedCreators(
-        new Tuple(new Address(ctx.defaultSender), creator),
-      ).value;
+      const isAllowed = creatorVerifier.allowedCreators([
+        ctx.defaultSender,
+        creator.native,
+      ]).value;
       expect(isAllowed.native).toBe(false);
     });
 

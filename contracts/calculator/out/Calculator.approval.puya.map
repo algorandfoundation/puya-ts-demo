@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/calculator/calculator.algo.ts"
   ],
-  "mappings": ";AAOA;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAAA;;;;;;AAAA;;;AAmCE;;AAAA;AAAA;AAAA;;AAAA;AAnCF;;;AAAA;AAAA;;;AAAA;AAAA;;;AAAA;;;AAmCE;;;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;;AAlCC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;;AAkCD;;;AAGM;;AAAc;;;;;AAAd;AAAJ;;;AA1BO;;AAAA;;AAAA;AAgCP;AAJW;;AAAc;;;;;;;;;;;;AAAd;AAAJ;AAjBA;;AAAA;;AAAA;AAAA;;;AAAS;;AAAA;;AAAA;AAqBhB;AArBwB;;AAAA;;AAAA;AAqBxB",
+  "mappings": ";AAOA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AACG;;AAAA;AAkCD;;;AAAA;AAAA;;;AAAA;AAAA;;;AAAA;;;AAAA;AAGoB;;;;;AAAd;AAAJ;;;AA1BO;;AAAA;;AAAA;AAuBT;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAKa;AAAc;;;;;;;;;;;;AAAd;AAAJ;AAjBA;;AAAA;;AAAA;AAAA;;;AAAS;;AAAA;;AAAA;;;;AAAQ;;AAAA;;AAAA;",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -11,7 +11,7 @@
       "params": {},
       "block": "main",
       "stack_in": [],
-      "op": "txn NumAppArgs",
+      "op": "txn OnCompletion",
       "defined_out": [
         "tmp%0#1"
       ],
@@ -20,487 +20,533 @@
       ]
     },
     "3": {
-      "op": "bz main_after_if_else@8",
+      "op": "!",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "4": {
+      "error": "OnCompletion must be NoOp",
+      "op": "assert // OnCompletion must be NoOp",
       "stack_out": []
     },
-    "6": {
-      "op": "pushbytess 0xb8447b36 0x76a7ef33 // method \"createApplication()void\", method \"doMath(uint64,uint64,string)uint64\"",
+    "5": {
+      "op": "txn ApplicationID",
       "defined_out": [
-        "Method(createApplication()void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "7": {
+      "op": "bz main_create_NoOp@5",
+      "stack_out": []
+    },
+    "10": {
+      "op": "pushbytes 0x76a7ef33 // method \"doMath(uint64,uint64,string)uint64\"",
+      "defined_out": [
         "Method(doMath(uint64,uint64,string)uint64)"
       ],
       "stack_out": [
-        "Method(createApplication()void)",
         "Method(doMath(uint64,uint64,string)uint64)"
       ]
     },
-    "18": {
+    "16": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(doMath(uint64,uint64,string)uint64)",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "Method(doMath(uint64,uint64,string)uint64)",
+        "tmp%4#0"
+      ]
+    },
+    "19": {
+      "op": "match doMath",
+      "stack_out": []
+    },
+    "23": {
+      "op": "err"
+    },
+    "24": {
+      "block": "main_create_NoOp@5",
+      "stack_in": [],
+      "op": "pushbytes 0xb8447b36 // method \"createApplication()void\"",
+      "defined_out": [
+        "Method(createApplication()void)"
+      ],
+      "stack_out": [
+        "Method(createApplication()void)"
+      ]
+    },
+    "30": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(createApplication()void)",
-        "Method(doMath(uint64,uint64,string)uint64)",
-        "tmp%2#0"
+        "tmp%5#0"
       ],
       "stack_out": [
         "Method(createApplication()void)",
-        "Method(doMath(uint64,uint64,string)uint64)",
-        "tmp%2#0"
-      ]
-    },
-    "21": {
-      "op": "match main_createApplication_route@3 main_doMath_route@4",
-      "stack_out": []
-    },
-    "27": {
-      "block": "main_after_if_else@8",
-      "stack_in": [],
-      "op": "pushint 0 // 0",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "29": {
-      "op": "return",
-      "stack_out": []
-    },
-    "30": {
-      "block": "main_doMath_route@4",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%7#0"
-      ]
-    },
-    "32": {
-      "op": "!",
-      "defined_out": [
-        "tmp%8#0"
-      ],
-      "stack_out": [
-        "tmp%8#0"
+        "tmp%5#0"
       ]
     },
     "33": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "34": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%9#0"
-      ]
-    },
-    "36": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
+      "op": "match main_createApplication_route@6",
       "stack_out": []
     },
     "37": {
-      "op": "txna ApplicationArgs 1",
+      "op": "err"
+    },
+    "38": {
+      "block": "main_createApplication_route@6",
+      "stack_in": [],
+      "op": "pushint 1 // 1",
       "defined_out": [
-        "reinterpret_bytes[8]%0#0"
+        "1"
       ],
       "stack_out": [
-        "reinterpret_bytes[8]%0#0"
+        "1"
       ]
     },
     "40": {
-      "op": "btoi",
-      "defined_out": [
-        "tmp%11#0"
-      ],
-      "stack_out": [
-        "tmp%11#0"
-      ]
+      "op": "return",
+      "stack_out": []
     },
     "41": {
-      "op": "txna ApplicationArgs 2",
+      "subroutine": "contracts/calculator/calculator.algo.ts::Calculator.doMath[routing]",
+      "params": {},
+      "block": "doMath",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "reinterpret_bytes[8]%1#0",
-        "tmp%11#0"
+        "reinterpret_Encoded(uint64)%0#0"
       ],
       "stack_out": [
-        "tmp%11#0",
-        "reinterpret_bytes[8]%1#0"
+        "reinterpret_Encoded(uint64)%0#0"
       ]
     },
     "44": {
       "op": "btoi",
       "defined_out": [
-        "tmp%11#0",
-        "tmp%12#0"
+        "a#0"
       ],
       "stack_out": [
-        "tmp%11#0",
-        "tmp%12#0"
+        "a#0"
       ]
     },
     "45": {
-      "op": "txna ApplicationArgs 3",
+      "op": "txna ApplicationArgs 2",
       "defined_out": [
-        "tmp%11#0",
-        "tmp%12#0",
-        "tmp%13#0"
+        "a#0",
+        "reinterpret_Encoded(uint64)%1#0"
       ],
       "stack_out": [
-        "tmp%11#0",
-        "tmp%12#0",
-        "tmp%13#0"
+        "a#0",
+        "reinterpret_Encoded(uint64)%1#0"
       ]
     },
     "48": {
+      "op": "btoi",
+      "defined_out": [
+        "a#0",
+        "b#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0"
+      ]
+    },
+    "49": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "a#0",
+        "b#0",
+        "reinterpret_Encoded(len+utf8[])%0#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "reinterpret_Encoded(len+utf8[])%0#0"
+      ]
+    },
+    "52": {
       "op": "extract 2 0",
       "defined_out": [
-        "tmp%11#0",
-        "tmp%12#0",
-        "tmp%14#0"
+        "a#0",
+        "b#0",
+        "operation#0"
       ],
       "stack_out": [
-        "tmp%11#0",
-        "tmp%12#0",
-        "tmp%14#0"
-      ]
-    },
-    "51": {
-      "callsub": "contracts/calculator/calculator.algo.ts::Calculator.doMath",
-      "op": "callsub doMath",
-      "defined_out": [
-        "to_encode%0#0"
-      ],
-      "stack_out": [
-        "to_encode%0#0"
-      ]
-    },
-    "54": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%0#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%0#0"
+        "a#0",
+        "b#0",
+        "operation#0"
       ]
     },
     "55": {
-      "op": "pushbytes 0x151f7c75",
+      "op": "dup",
       "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
+        "a#0",
+        "b#0",
+        "operation#0"
       ],
       "stack_out": [
-        "val_as_bytes%0#0",
-        "0x151f7c75"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "operation#0"
       ]
     },
-    "61": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
-      ]
-    },
-    "62": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%15#0"
-      ],
-      "stack_out": [
-        "tmp%15#0"
-      ]
-    },
-    "63": {
-      "op": "log",
-      "stack_out": []
-    },
-    "64": {
-      "op": "pushint 1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "66": {
-      "op": "return",
-      "stack_out": []
-    },
-    "67": {
-      "block": "main_createApplication_route@3",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%3#0"
-      ]
-    },
-    "69": {
-      "op": "!",
-      "defined_out": [
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%4#0"
-      ]
-    },
-    "70": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "71": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%5#0"
-      ]
-    },
-    "73": {
-      "op": "!",
-      "defined_out": [
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0"
-      ]
-    },
-    "74": {
-      "error": "can only call when creating",
-      "op": "assert // can only call when creating",
-      "stack_out": []
-    },
-    "75": {
-      "op": "pushint 1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "77": {
-      "op": "return",
-      "stack_out": []
-    },
-    "78": {
-      "subroutine": "contracts/calculator/calculator.algo.ts::Calculator.doMath",
-      "params": {
-        "a#0": "uint64",
-        "b#0": "uint64",
-        "operation#0": "bytes"
-      },
-      "block": "doMath",
-      "stack_in": [],
-      "op": "proto 3 1"
-    },
-    "81": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "operation#0 (copy)"
-      ],
-      "stack_out": [
-        "operation#0 (copy)"
-      ]
-    },
-    "83": {
+    "56": {
       "op": "pushbytes \"sum\"",
       "defined_out": [
         "\"sum\"",
-        "operation#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0"
       ],
       "stack_out": [
-        "operation#0 (copy)",
+        "a#0",
+        "b#0",
+        "operation#0",
+        "operation#0",
         "\"sum\""
       ]
     },
-    "88": {
+    "61": {
       "op": "==",
       "defined_out": [
-        "tmp%0#0"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%0#1"
       ]
     },
-    "89": {
-      "op": "bz doMath_else_body@2",
-      "stack_out": []
-    },
-    "92": {
-      "op": "frame_dig -3",
-      "defined_out": [
-        "a#0 (copy)"
-      ],
+    "62": {
+      "op": "bz doMath_else_body@3",
       "stack_out": [
-        "a#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0"
       ]
     },
-    "94": {
-      "op": "frame_dig -2",
-      "defined_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
-      ],
+    "65": {
+      "op": "dig 2",
       "stack_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0"
       ]
     },
-    "96": {
+    "67": {
+      "op": "dig 2",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0",
+        "b#0"
+      ]
+    },
+    "69": {
       "op": "+",
       "defined_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
         "result#0"
       ],
       "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
         "result#0"
       ]
     },
-    "97": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "98": {
-      "block": "doMath_else_body@2",
-      "stack_in": [],
-      "op": "frame_dig -1",
+    "70": {
+      "block": "doMath_after_if_else@7",
+      "stack_in": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "result#0"
+      ],
+      "op": "itob",
       "defined_out": [
-        "operation#0 (copy)"
+        "aggregate%val_as_bytes%0#0"
       ],
       "stack_out": [
-        "operation#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "aggregate%val_as_bytes%0#0"
       ]
     },
-    "100": {
+    "71": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "77": {
+      "op": "swap",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "78": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%5#0"
+      ]
+    },
+    "79": {
+      "op": "log",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ]
+    },
+    "80": {
+      "op": "pushint 1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "1"
+      ]
+    },
+    "82": {
+      "op": "return",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ]
+    },
+    "83": {
+      "block": "doMath_else_body@3",
+      "stack_in": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "operation#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "operation#0"
+      ]
+    },
+    "84": {
       "op": "pushbytes \"difference\"",
       "defined_out": [
         "\"difference\"",
-        "operation#0 (copy)"
+        "operation#0"
       ],
       "stack_out": [
-        "operation#0 (copy)",
+        "a#0",
+        "b#0",
+        "operation#0",
+        "operation#0",
         "\"difference\""
       ]
     },
-    "112": {
+    "96": {
       "op": "==",
       "defined_out": [
-        "tmp%1#0"
+        "operation#0",
+        "tmp%2#1"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%2#1"
       ]
     },
-    "113": {
+    "97": {
       "error": "Invalid operation",
       "op": "assert // Invalid operation",
-      "stack_out": []
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ]
     },
-    "114": {
-      "op": "frame_dig -3",
+    "98": {
+      "op": "dig 2",
       "defined_out": [
-        "a#0 (copy)"
+        "a#0",
+        "operation#0"
       ],
       "stack_out": [
-        "a#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0"
+      ]
+    },
+    "100": {
+      "op": "dig 2",
+      "defined_out": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0",
+        "b#0"
+      ]
+    },
+    "102": {
+      "op": ">=",
+      "defined_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "tmp%0#1"
+      ]
+    },
+    "103": {
+      "op": "bz doMath_ternary_false@10",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ]
+    },
+    "106": {
+      "op": "dig 2",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0"
+      ]
+    },
+    "108": {
+      "op": "dig 2",
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "a#0",
+        "b#0"
+      ]
+    },
+    "110": {
+      "op": "-",
+      "defined_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "result#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "result#0"
+      ]
+    },
+    "111": {
+      "op": "b doMath_after_if_else@7"
+    },
+    "114": {
+      "block": "doMath_ternary_false@10",
+      "stack_in": [
+        "a#0",
+        "b#0",
+        "operation#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "b#0"
+      ],
+      "stack_out": [
+        "a#0",
+        "b#0",
+        "operation#0",
+        "b#0"
       ]
     },
     "116": {
-      "op": "frame_dig -2",
+      "op": "dig 3",
       "defined_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
+        "a#0",
+        "b#0"
       ],
       "stack_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "b#0",
+        "a#0"
       ]
     },
     "118": {
-      "op": ">=",
+      "op": "-",
       "defined_out": [
-        "tmp%0#0"
+        "a#0",
+        "b#0",
+        "result#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "a#0",
+        "b#0",
+        "operation#0",
+        "result#0"
       ]
     },
     "119": {
-      "op": "bz doMath_ternary_false@9",
-      "stack_out": []
-    },
-    "122": {
-      "op": "frame_dig -3",
-      "stack_out": [
-        "a#0 (copy)"
-      ]
-    },
-    "124": {
-      "op": "frame_dig -2",
-      "stack_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
-      ]
-    },
-    "126": {
-      "op": "-",
-      "defined_out": [
-        "result#0"
-      ],
-      "stack_out": [
-        "result#0"
-      ]
-    },
-    "127": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "128": {
-      "block": "doMath_ternary_false@9",
-      "stack_in": [],
-      "op": "frame_dig -2",
-      "defined_out": [
-        "b#0 (copy)"
-      ],
-      "stack_out": [
-        "b#0 (copy)"
-      ]
-    },
-    "130": {
-      "op": "frame_dig -3",
-      "defined_out": [
-        "a#0 (copy)",
-        "b#0 (copy)"
-      ],
-      "stack_out": [
-        "b#0 (copy)",
-        "a#0 (copy)"
-      ]
-    },
-    "132": {
-      "op": "-",
-      "defined_out": [
-        "result#0"
-      ],
-      "stack_out": [
-        "result#0"
-      ]
-    },
-    "133": {
-      "retsub": true,
-      "op": "retsub"
+      "op": "b doMath_after_if_else@7"
     }
   }
 }

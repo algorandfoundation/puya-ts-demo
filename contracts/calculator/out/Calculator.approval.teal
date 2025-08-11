@@ -5,37 +5,56 @@
 main:
     // contracts/calculator/calculator.algo.ts:8
     // export class Calculator extends Contract {
-    txn NumAppArgs
-    bz main_after_if_else@8
-    pushbytess 0xb8447b36 0x76a7ef33 // method "createApplication()void", method "doMath(uint64,uint64,string)uint64"
-    txna ApplicationArgs 0
-    match main_createApplication_route@3 main_doMath_route@4
-
-main_after_if_else@8:
-    // contracts/calculator/calculator.algo.ts:8
-    // export class Calculator extends Contract {
-    pushint 0 // 0
-    return
-
-main_doMath_route@4:
-    // contracts/calculator/calculator.algo.ts:43
-    // doMath(a: uint64, b: uint64, operation: string): uint64 {
     txn OnCompletion
     !
-    assert // OnCompletion is not NoOp
+    assert // OnCompletion must be NoOp
     txn ApplicationID
-    assert // can only call when not creating
+    bz main_create_NoOp@5
+    pushbytes 0x76a7ef33 // method "doMath(uint64,uint64,string)uint64"
+    txna ApplicationArgs 0
+    match doMath
+    err
+
+main_create_NoOp@5:
     // contracts/calculator/calculator.algo.ts:8
     // export class Calculator extends Contract {
+    pushbytes 0xb8447b36 // method "createApplication()void"
+    txna ApplicationArgs 0
+    match main_createApplication_route@6
+    err
+
+main_createApplication_route@6:
+    // contracts/calculator/calculator.algo.ts:9
+    // @abimethod({ onCreate: "require" })
+    pushint 1 // 1
+    return
+
+
+// contracts/calculator/calculator.algo.ts::Calculator.doMath[routing]() -> void:
+doMath:
+    // contracts/calculator/calculator.algo.ts:43
+    // doMath(a: uint64, b: uint64, operation: string): uint64 {
     txna ApplicationArgs 1
     btoi
     txna ApplicationArgs 2
     btoi
     txna ApplicationArgs 3
     extract 2 0
+    dup
+    // contracts/calculator/calculator.algo.ts:46
+    // if (operation === "sum") {
+    pushbytes "sum"
+    ==
+    bz doMath_else_body@3
+    // contracts/calculator/calculator.algo.ts:20
+    // return a + b;
+    dig 2
+    dig 2
+    +
+
+doMath_after_if_else@7:
     // contracts/calculator/calculator.algo.ts:43
     // doMath(a: uint64, b: uint64, operation: string): uint64 {
-    callsub doMath
     itob
     pushbytes 0x151f7c75
     swap
@@ -44,65 +63,28 @@ main_doMath_route@4:
     pushint 1 // 1
     return
 
-main_createApplication_route@3:
-    // contracts/calculator/calculator.algo.ts:9
-    // @abimethod({ onCreate: "require" })
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    !
-    assert // can only call when creating
-    pushint 1 // 1
-    return
-
-
-// contracts/calculator/calculator.algo.ts::Calculator.doMath(a: uint64, b: uint64, operation: bytes) -> uint64:
-doMath:
-    // contracts/calculator/calculator.algo.ts:43
-    // doMath(a: uint64, b: uint64, operation: string): uint64 {
-    proto 3 1
-    // contracts/calculator/calculator.algo.ts:46
-    // if (operation === "sum") {
-    frame_dig -1
-    pushbytes "sum"
-    ==
-    bz doMath_else_body@2
-    // contracts/calculator/calculator.algo.ts:20
-    // return a + b;
-    frame_dig -3
-    frame_dig -2
-    +
-    // contracts/calculator/calculator.algo.ts:52
-    // return result;
-    retsub
-
-doMath_else_body@2:
+doMath_else_body@3:
     // contracts/calculator/calculator.algo.ts:48
     // } else if (operation === "difference") {
-    frame_dig -1
+    dup
     pushbytes "difference"
     ==
     assert // Invalid operation
     // contracts/calculator/calculator.algo.ts:31
     // return a >= b ? a - b : b - a;
-    frame_dig -3
-    frame_dig -2
+    dig 2
+    dig 2
     >=
-    bz doMath_ternary_false@9
-    frame_dig -3
-    frame_dig -2
+    bz doMath_ternary_false@10
+    dig 2
+    dig 2
     -
-    // contracts/calculator/calculator.algo.ts:52
-    // return result;
-    retsub
+    b doMath_after_if_else@7
 
-doMath_ternary_false@9:
+doMath_ternary_false@10:
     // contracts/calculator/calculator.algo.ts:31
     // return a >= b ? a - b : b - a;
-    frame_dig -2
-    frame_dig -3
+    dig 1
+    dig 3
     -
-    // contracts/calculator/calculator.algo.ts:52
-    // return result;
-    retsub
+    b doMath_after_if_else@7

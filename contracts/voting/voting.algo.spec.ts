@@ -1,7 +1,7 @@
-import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
-import { afterEach, describe, expect, test } from "@jest/globals";
-import VotingContract from "./voting.algo";
 import { Uint64 } from "@algorandfoundation/algorand-typescript";
+import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
+import { afterEach, describe, expect, test } from "vitest";
+import VotingContract from "./voting.algo";
 
 describe("Voting contract", () => {
   const ctx = new TestExecutionContext();
@@ -40,6 +40,6 @@ describe("Voting contract", () => {
 
     contract.votes.value = Uint64(5);
     const votes = contract.getVotes();
-    expect(votes.native).toEqual(5);
+    expect(votes.asUint64()).toEqual(5);
   });
 });
