@@ -4,12 +4,12 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "patch-package",
-    "build:puya": "puya-ts contracts/arc75 contracts/big-box contracts/calculator contracts/hello-world contracts/itxns contracts/kitchen-sink contracts/lsig-with-app contracts/marketplace contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
+    "build:puya": "puya-ts contracts/arc75 contracts/big-box contracts/calculator contracts/hello-world contracts/itxns contracts/kitchen-sink contracts/lsig-with-app contracts/marketplace contracts/merkle contracts/proof-of-attendance contracts/simple contracts/voting contracts/zk-whitelist",
     "build:tealscript": "",
-    "generateclient": "npx algokitgen generate -a contracts/lsig-with-app/out/CreatorVerifier.arc32.json -o contracts/lsig-with-app/CreatorVerifierClient.ts && npx algokitgen generate -a contracts/itxns/out/FactoryCaller.arc32.json -o contracts/itxns/FactoryCallerClient.ts && npx algokitgen generate -a contracts/simple/out/Simple.arc32.json -o contracts/simple/SimpleClient.ts && npx algokitgen generate -a contracts/arc75/out/ARC75.arc32.json -o contracts/arc75/ARC75Client.ts",
+    "generateclient": "npx algokitgen generate -a contracts/lsig-with-app/out/CreatorVerifier.arc32.json -o contracts/lsig-with-app/CreatorVerifierClient.ts && npx algokitgen generate -a contracts/itxns/out/FactoryCaller.arc32.json -o contracts/itxns/FactoryCallerClient.ts && npx algokitgen generate -a contracts/simple/out/Simple.arc32.json -o contracts/simple/SimpleClient.ts && npx algokitgen generate -a contracts/arc75/out/ARC75.arc32.json -o contracts/arc75/ARC75Client.ts && npx algokitgen generate -a contracts/merkle/out/MerkleTree.arc32.json -o contracts/merkle/MerkleTreeClient.ts",
     "test:jest": "tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.algo.test.ts",
     "test:vitest": "vitest run",
-    "test:e2e": "npx tsx contracts/simple/simple.e2e.test.ts && npx tsx contracts/itxns/itxns.e2e.test.ts && tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.e2e.test.ts",
+    "test:e2e": "npx tsx contracts/simple/simple.e2e.test.ts && npx tsx contracts/itxns/itxns.e2e.test.ts && npx tsx contracts/merkle/merkle.e2e.test.ts && tsc && node --experimental-vm-modules --experimental-require-module node_modules/jest/bin/jest contracts/**/*.e2e.test.ts",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },
