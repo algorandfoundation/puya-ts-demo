@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/lsig-with-app/lsig-with-app.algo.ts"
   ],
-  "mappings": ";;;;;AAmDA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;;AAsBE;;AAAA;AAAA;AAAA;;AAAA;AAtBF;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAsBE;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAhBF;;;AAgBE;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAVF;;;AAUE;;;AAAA;;AATC;;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;;AASD;;;AACiD;;AAA1B;;AAAA;AACnB;;;AADF;;AAKF;;;AACiD;;AAA1B;;AAAA;AACnB;;;AADF;;AAKF;;;AAK0B;;AAAA;;AACA;;AAAA;;AAAU;;AAAA;AAF9B;AAIA;AAAA;;AAAM;AANV;",
+  "mappings": ";;;;AAiDA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AACG;AAAA;AAU2B;;AAD5B;;;AACuB;AAAsC;;;AAA3D;AADF;AAAA;AAM4B;;AAD5B;;;AACuB;AAAsC;;;AAA3D;AADF;AAAA;AAKA;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAGgC;AAAA;;AAAc;AAAA;;AAAU;;AAAA;AAA/B;AAAyC;AAAA;AAC3D;;AAAA;AAJP",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -11,205 +11,178 @@
       "params": {},
       "block": "main",
       "stack_in": [],
-      "op": "intcblock 1 0"
+      "op": "intcblock 1"
     },
-    "5": {
-      "op": "txn NumAppArgs",
+    "4": {
+      "op": "txn OnCompletion",
       "defined_out": [
         "tmp%0#1"
       ],
       "stack_out": [
         "tmp%0#1"
+      ]
+    },
+    "6": {
+      "op": "!",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
       ]
     },
     "7": {
-      "op": "bz main_after_if_else@10",
+      "error": "OnCompletion must be NoOp",
+      "op": "assert // OnCompletion must be NoOp",
       "stack_out": []
     },
+    "8": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
     "10": {
-      "op": "pushbytess 0xb8447b36 0xf1bf2ca8 0xbc28ac2b 0x8d5aa727 // method \"createApplication()void\", method \"allowOptInsFrom(address)void\", method \"disableOptInsFrom(address)void\", method \"verifyCreator(axfer)void\"",
+      "op": "bz main_create_NoOp@7",
+      "stack_out": []
+    },
+    "13": {
+      "op": "pushbytess 0xf1bf2ca8 0xbc28ac2b 0x8d5aa727 // method \"allowOptInsFrom(address)void\", method \"disableOptInsFrom(address)void\", method \"verifyCreator(axfer)void\"",
       "defined_out": [
         "Method(allowOptInsFrom(address)void)",
-        "Method(createApplication()void)",
         "Method(disableOptInsFrom(address)void)",
         "Method(verifyCreator(axfer)void)"
       ],
       "stack_out": [
-        "Method(createApplication()void)",
         "Method(allowOptInsFrom(address)void)",
         "Method(disableOptInsFrom(address)void)",
         "Method(verifyCreator(axfer)void)"
       ]
     },
-    "32": {
+    "30": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(allowOptInsFrom(address)void)",
-        "Method(createApplication()void)",
         "Method(disableOptInsFrom(address)void)",
         "Method(verifyCreator(axfer)void)",
-        "tmp%2#0"
+        "tmp%4#0"
       ],
       "stack_out": [
-        "Method(createApplication()void)",
         "Method(allowOptInsFrom(address)void)",
         "Method(disableOptInsFrom(address)void)",
         "Method(verifyCreator(axfer)void)",
-        "tmp%2#0"
+        "tmp%4#0"
       ]
     },
-    "35": {
-      "op": "match main_createApplication_route@3 main_allowOptInsFrom_route@4 main_disableOptInsFrom_route@5 main_verifyCreator_route@6",
+    "33": {
+      "op": "match allowOptInsFrom disableOptInsFrom verifyCreator",
       "stack_out": []
     },
-    "45": {
-      "block": "main_after_if_else@10",
+    "41": {
+      "op": "err"
+    },
+    "42": {
+      "block": "main_create_NoOp@7",
       "stack_in": [],
-      "op": "intc_1 // 0",
+      "op": "pushbytes 0xb8447b36 // method \"createApplication()void\"",
       "defined_out": [
-        "tmp%0#0"
+        "Method(createApplication()void)"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "Method(createApplication()void)"
       ]
     },
-    "46": {
-      "op": "return",
-      "stack_out": []
-    },
-    "47": {
-      "block": "main_verifyCreator_route@6",
-      "stack_in": [],
-      "op": "txn OnCompletion",
+    "48": {
+      "op": "txna ApplicationArgs 0",
       "defined_out": [
-        "tmp%15#0"
+        "Method(createApplication()void)",
+        "tmp%5#0"
       ],
       "stack_out": [
-        "tmp%15#0"
+        "Method(createApplication()void)",
+        "tmp%5#0"
       ]
-    },
-    "49": {
-      "op": "!",
-      "defined_out": [
-        "tmp%16#0"
-      ],
-      "stack_out": [
-        "tmp%16#0"
-      ]
-    },
-    "50": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
     },
     "51": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%17#0"
-      ],
-      "stack_out": [
-        "tmp%17#0"
-      ]
-    },
-    "53": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
+      "op": "match main_createApplication_route@8",
       "stack_out": []
     },
-    "54": {
-      "op": "txn GroupIndex",
-      "defined_out": [
-        "tmp%19#0"
-      ],
-      "stack_out": [
-        "tmp%19#0"
-      ]
+    "55": {
+      "op": "err"
     },
     "56": {
+      "block": "main_createApplication_route@8",
+      "stack_in": [],
       "op": "intc_0 // 1",
       "defined_out": [
-        "1",
-        "tmp%19#0"
+        "1"
       ],
       "stack_out": [
-        "tmp%19#0",
         "1"
       ]
     },
     "57": {
-      "op": "-",
-      "defined_out": [
-        "gtxn_idx%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0"
-      ]
+      "op": "return",
+      "stack_out": []
     },
     "58": {
-      "op": "dup",
+      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.allowOptInsFrom[routing]",
+      "params": {},
+      "block": "allowOptInsFrom",
+      "stack_in": [],
+      "op": "txn Sender",
       "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_idx%0#0 (copy)"
+        "tmp%1#0"
       ],
       "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_idx%0#0 (copy)"
+        "tmp%1#0"
       ]
     },
-    "59": {
-      "op": "gtxns TypeEnum",
+    "60": {
+      "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
+        "creator#0",
+        "tmp%1#0"
       ],
       "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
-      ]
-    },
-    "61": {
-      "op": "pushint 4 // axfer",
-      "defined_out": [
-        "axfer",
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0",
-        "axfer"
+        "tmp%1#0",
+        "creator#0"
       ]
     },
     "63": {
-      "op": "==",
+      "op": "concat",
       "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type_matches%0#0"
+        "aggregate%head%1#0"
       ],
       "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type_matches%0#0"
+        "aggregate%head%1#0"
       ]
     },
     "64": {
-      "error": "transaction type is axfer",
-      "op": "assert // transaction type is axfer",
+      "op": "pushbytes 0x80",
+      "defined_out": [
+        "0x80",
+        "aggregate%head%1#0"
+      ],
       "stack_out": [
-        "gtxn_idx%0#0"
+        "aggregate%head%1#0",
+        "0x80"
       ]
     },
-    "65": {
-      "callsub": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.verifyCreator",
-      "op": "callsub verifyCreator",
+    "67": {
+      "op": "box_put",
       "stack_out": []
     },
     "68": {
       "op": "intc_0 // 1",
       "defined_out": [
-        "tmp%0#0"
+        "1"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "1"
       ]
     },
     "69": {
@@ -217,60 +190,72 @@
       "stack_out": []
     },
     "70": {
-      "block": "main_disableOptInsFrom_route@5",
+      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.disableOptInsFrom[routing]",
+      "params": {},
+      "block": "disableOptInsFrom",
       "stack_in": [],
-      "op": "txn OnCompletion",
+      "op": "txn Sender",
       "defined_out": [
-        "tmp%11#0"
+        "tmp%1#0"
       ],
       "stack_out": [
-        "tmp%11#0"
+        "tmp%1#0"
       ]
     },
     "72": {
-      "op": "!",
+      "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "tmp%12#0"
+        "creator#0",
+        "tmp%1#0"
       ],
       "stack_out": [
-        "tmp%12#0"
+        "tmp%1#0",
+        "creator#0"
       ]
     },
-    "73": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "74": {
-      "op": "txn ApplicationID",
+    "75": {
+      "op": "concat",
       "defined_out": [
-        "tmp%13#0"
+        "aggregate%head%1#0"
       ],
       "stack_out": [
-        "tmp%13#0"
+        "aggregate%head%1#0"
       ]
     },
     "76": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "77": {
-      "op": "txna ApplicationArgs 1",
+      "op": "pushbytes 0x00",
       "defined_out": [
-        "reinterpret_bytes[32]%1#0"
+        "0x00",
+        "aggregate%head%1#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[32]%1#0"
+        "aggregate%head%1#0",
+        "0x00"
       ]
     },
-    "80": {
-      "callsub": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.disableOptInsFrom",
-      "op": "callsub disableOptInsFrom",
+    "79": {
+      "op": "box_put",
       "stack_out": []
     },
-    "83": {
+    "80": {
       "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "81": {
+      "op": "return",
+      "stack_out": []
+    },
+    "82": {
+      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.verifyCreator[routing]",
+      "params": {},
+      "block": "verifyCreator",
+      "stack_in": [],
+      "op": "txn GroupIndex",
       "defined_out": [
         "tmp%0#0"
       ],
@@ -279,370 +264,185 @@
       ]
     },
     "84": {
-      "op": "return",
-      "stack_out": []
-    },
-    "85": {
-      "block": "main_allowOptInsFrom_route@4",
-      "stack_in": [],
-      "op": "txn OnCompletion",
+      "op": "intc_0 // 1",
       "defined_out": [
-        "tmp%7#0"
+        "1",
+        "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%7#0"
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "85": {
+      "op": "-",
+      "defined_out": [
+        "optIn#0"
+      ],
+      "stack_out": [
+        "optIn#0"
+      ]
+    },
+    "86": {
+      "op": "dup",
+      "defined_out": [
+        "optIn#0",
+        "optIn#0 (copy)"
+      ],
+      "stack_out": [
+        "optIn#0",
+        "optIn#0 (copy)"
       ]
     },
     "87": {
-      "op": "!",
+      "op": "gtxns TypeEnum",
       "defined_out": [
-        "tmp%8#0"
+        "gtxn_type%0#0",
+        "optIn#0"
       ],
       "stack_out": [
-        "tmp%8#0"
+        "optIn#0",
+        "gtxn_type%0#0"
       ]
     },
-    "88": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
     "89": {
-      "op": "txn ApplicationID",
+      "op": "pushint 4 // axfer",
       "defined_out": [
-        "tmp%9#0"
+        "axfer",
+        "gtxn_type%0#0",
+        "optIn#0"
       ],
       "stack_out": [
-        "tmp%9#0"
+        "optIn#0",
+        "gtxn_type%0#0",
+        "axfer"
       ]
     },
     "91": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "92": {
-      "op": "txna ApplicationArgs 1",
+      "op": "==",
       "defined_out": [
-        "reinterpret_bytes[32]%0#0"
+        "gtxn_type_matches%0#0",
+        "optIn#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[32]%0#0"
+        "optIn#0",
+        "gtxn_type_matches%0#0"
       ]
     },
-    "95": {
-      "callsub": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.allowOptInsFrom",
-      "op": "callsub allowOptInsFrom",
-      "stack_out": []
+    "92": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "optIn#0"
+      ]
     },
-    "98": {
-      "op": "intc_0 // 1",
+    "93": {
+      "op": "dup",
+      "stack_out": [
+        "optIn#0",
+        "optIn#0 (copy)"
+      ]
+    },
+    "94": {
+      "op": "gtxns Sender",
       "defined_out": [
-        "tmp%0#0"
+        "optIn#0",
+        "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "optIn#0",
+        "tmp%0#1"
+      ]
+    },
+    "96": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%0#1",
+        "optIn#0"
+      ]
+    },
+    "97": {
+      "op": "gtxns XferAsset",
+      "defined_out": [
+        "tmp%0#1",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#1",
+        "tmp%1#0"
       ]
     },
     "99": {
-      "op": "return",
-      "stack_out": []
-    },
-    "100": {
-      "block": "main_createApplication_route@3",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%3#0"
-      ]
-    },
-    "102": {
-      "op": "!",
-      "defined_out": [
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%4#0"
-      ]
-    },
-    "103": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "104": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%5#0"
-      ]
-    },
-    "106": {
-      "op": "!",
-      "defined_out": [
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0"
-      ]
-    },
-    "107": {
-      "error": "can only call when creating",
-      "op": "assert // can only call when creating",
-      "stack_out": []
-    },
-    "108": {
-      "op": "intc_0 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "109": {
-      "op": "return",
-      "stack_out": []
-    },
-    "110": {
-      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.allowOptInsFrom",
-      "params": {
-        "creator#0": "bytes"
-      },
-      "block": "allowOptInsFrom",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "113": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "115": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "creator#0 (copy)",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0",
-        "creator#0 (copy)"
-      ]
-    },
-    "117": {
-      "op": "concat",
-      "defined_out": [
-        "encoded_tuple_buffer%2#0"
-      ],
-      "stack_out": [
-        "encoded_tuple_buffer%2#0"
-      ]
-    },
-    "118": {
-      "op": "pushbytes 0x80",
-      "defined_out": [
-        "0x80",
-        "encoded_tuple_buffer%2#0"
-      ],
-      "stack_out": [
-        "encoded_tuple_buffer%2#0",
-        "0x80"
-      ]
-    },
-    "121": {
-      "op": "box_put",
-      "stack_out": []
-    },
-    "122": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "123": {
-      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.disableOptInsFrom",
-      "params": {
-        "creator#0": "bytes"
-      },
-      "block": "disableOptInsFrom",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "126": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "128": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "creator#0 (copy)",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0",
-        "creator#0 (copy)"
-      ]
-    },
-    "130": {
-      "op": "concat",
-      "defined_out": [
-        "encoded_tuple_buffer%2#0"
-      ],
-      "stack_out": [
-        "encoded_tuple_buffer%2#0"
-      ]
-    },
-    "131": {
-      "op": "pushbytes 0x00",
-      "defined_out": [
-        "0x00",
-        "encoded_tuple_buffer%2#0"
-      ],
-      "stack_out": [
-        "encoded_tuple_buffer%2#0",
-        "0x00"
-      ]
-    },
-    "134": {
-      "op": "box_put",
-      "stack_out": []
-    },
-    "135": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "136": {
-      "subroutine": "contracts/lsig-with-app/lsig-with-app.algo.ts::CreatorVerifier.verifyCreator",
-      "params": {
-        "optIn#0": "uint64"
-      },
-      "block": "verifyCreator",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "139": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optIn#0 (copy)"
-      ],
-      "stack_out": [
-        "optIn#0 (copy)"
-      ]
-    },
-    "141": {
-      "op": "gtxns Sender",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "143": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%0#0",
-        "optIn#0 (copy)"
-      ]
-    },
-    "145": {
-      "op": "gtxns XferAsset",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ]
-    },
-    "147": {
       "op": "asset_params_get AssetCreator",
       "defined_out": [
         "check%0#0",
-        "tmp%0#0",
+        "tmp%0#1",
         "value%0#0"
       ],
       "stack_out": [
-        "tmp%0#0",
+        "tmp%0#1",
         "value%0#0",
         "check%0#0"
       ]
     },
-    "149": {
+    "101": {
       "error": "asset exists",
       "op": "assert // asset exists",
       "stack_out": [
-        "tmp%0#0",
+        "tmp%0#1",
         "value%0#0"
       ]
     },
-    "150": {
+    "102": {
       "op": "concat",
       "defined_out": [
-        "encoded_tuple_buffer%2#0"
+        "aggregate%head%1#0"
       ],
       "stack_out": [
-        "encoded_tuple_buffer%2#0"
+        "aggregate%head%1#0"
       ]
     },
-    "151": {
+    "103": {
       "op": "box_get",
       "defined_out": [
-        "maybe_exists%0#0",
-        "maybe_value%0#0"
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0"
       ],
       "stack_out": [
-        "maybe_value%0#0",
-        "maybe_exists%0#0"
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0"
       ]
     },
-    "152": {
+    "104": {
       "error": "Box must have value",
       "op": "assert // Box must have value",
       "stack_out": [
-        "maybe_value%0#0"
+        "aggregate%box_get%0#0"
       ]
     },
-    "153": {
-      "op": "intc_1 // 0",
+    "105": {
+      "op": "pushint 0 // 0",
       "defined_out": [
         "0",
-        "maybe_value%0#0"
+        "aggregate%box_get%0#0"
       ],
       "stack_out": [
-        "maybe_value%0#0",
+        "aggregate%box_get%0#0",
         "0"
       ]
     },
-    "154": {
+    "107": {
       "op": "getbit",
       "defined_out": [
-        "tmp%3#0"
+        "aggregate%get_bit%0#0"
       ],
       "stack_out": [
-        "tmp%3#0"
+        "aggregate%get_bit%0#0"
       ]
     },
-    "155": {
-      "op": "assert",
+    "108": {
+      "op": "return",
       "stack_out": []
-    },
-    "156": {
-      "retsub": true,
-      "op": "retsub"
     }
   }
 }

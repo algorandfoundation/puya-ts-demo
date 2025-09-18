@@ -3,138 +3,60 @@
 
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
-    intcblock 1 0 32
+    intcblock 1 32 0
     bytecblock "counter" 0x151f7c75
     txn ApplicationID
     bnz main_after_if_else@2
     // contracts/simple/simple.algo.ts:10
     // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
     bytec_0 // "counter"
-    intc_1 // 0
+    intc_2 // 0
     app_global_put
 
 main_after_if_else@2:
     // contracts/simple/simple.algo.ts:9
     // export default class Simple extends Contract {
-    txn NumAppArgs
-    bz main_after_if_else@13
-    pushbytess 0xb8447b36 0x9fab8610 0x2e0c5a47 0xac976e02 0x091b32a7 // method "createApplication()void", method "incr(uint64)void", method "decr(uint64)void", method "add(uint256,uint256)uint256", method "sub(uint256,uint256)uint256"
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    bz main_create_NoOp@10
+    pushbytess 0x9fab8610 0x2e0c5a47 0xac976e02 0x091b32a7 // method "incr(uint64)void", method "decr(uint64)void", method "add(uint256,uint256)uint256", method "sub(uint256,uint256)uint256"
     txna ApplicationArgs 0
-    match main_createApplication_route@5 main_incr_route@6 main_decr_route@7 main_add_route@8 main_sub_route@9
+    match incr decr add sub
+    err
 
-main_after_if_else@13:
+main_create_NoOp@10:
     // contracts/simple/simple.algo.ts:9
     // export default class Simple extends Contract {
-    intc_1 // 0
-    return
+    pushbytes 0xb8447b36 // method "createApplication()void"
+    txna ApplicationArgs 0
+    match main_createApplication_route@11
+    err
 
-main_sub_route@9:
-    // contracts/simple/simple.algo.ts:31
-    // sub(a: UintN256, b: UintN256): UintN256 {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/simple/simple.algo.ts:9
-    // export default class Simple extends Contract {
-    txna ApplicationArgs 1
-    txna ApplicationArgs 2
-    // contracts/simple/simple.algo.ts:31
-    // sub(a: UintN256, b: UintN256): UintN256 {
-    callsub sub
-    bytec_1 // 0x151f7c75
-    swap
-    concat
-    log
-    intc_0 // 1
-    return
-
-main_add_route@8:
-    // contracts/simple/simple.algo.ts:27
-    // add(a: UintN256, b: UintN256): UintN256 {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/simple/simple.algo.ts:9
-    // export default class Simple extends Contract {
-    txna ApplicationArgs 1
-    txna ApplicationArgs 2
-    // contracts/simple/simple.algo.ts:27
-    // add(a: UintN256, b: UintN256): UintN256 {
-    callsub add
-    bytec_1 // 0x151f7c75
-    swap
-    concat
-    log
-    intc_0 // 1
-    return
-
-main_decr_route@7:
-    // contracts/simple/simple.algo.ts:23
-    // decr(i: uint64): void {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/simple/simple.algo.ts:9
-    // export default class Simple extends Contract {
-    txna ApplicationArgs 1
-    btoi
-    // contracts/simple/simple.algo.ts:23
-    // decr(i: uint64): void {
-    callsub decr
-    intc_0 // 1
-    return
-
-main_incr_route@6:
-    // contracts/simple/simple.algo.ts:19
-    // incr(i: uint64): void {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/simple/simple.algo.ts:9
-    // export default class Simple extends Contract {
-    txna ApplicationArgs 1
-    btoi
-    // contracts/simple/simple.algo.ts:19
-    // incr(i: uint64): void {
-    callsub incr
-    intc_0 // 1
-    return
-
-main_createApplication_route@5:
+main_createApplication_route@11:
     // contracts/simple/simple.algo.ts:16
     // @abimethod({ onCreate: "require" })
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    !
-    assert // can only call when creating
     intc_0 // 1
     return
 
 
-// contracts/simple/simple.algo.ts::Simple.incr(i: uint64) -> void:
+// contracts/simple/simple.algo.ts::Simple.incr[routing]() -> void:
 incr:
     // contracts/simple/simple.algo.ts:19
     // incr(i: uint64): void {
-    proto 1 0
-    // contracts/simple/simple.algo.ts:10
-    // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
-    intc_1 // 0
-    bytec_0 // "counter"
-    app_global_get_ex
-    assert // check GlobalState exists
+    txna ApplicationArgs 1
+    btoi
     // contracts/simple/simple.algo.ts:13
     // this.counter.value = this.counter.value + i;
-    frame_dig -1
+    intc_2 // 0
+    // contracts/simple/simple.algo.ts:10
+    // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
+    bytec_0 // "counter"
+    // contracts/simple/simple.algo.ts:13
+    // this.counter.value = this.counter.value + i;
+    app_global_get_ex
+    assert // check GlobalState exists
     +
     // contracts/simple/simple.algo.ts:10
     // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
@@ -143,23 +65,29 @@ incr:
     // this.counter.value = this.counter.value + i;
     swap
     app_global_put
-    retsub
+    // contracts/simple/simple.algo.ts:19
+    // incr(i: uint64): void {
+    intc_0 // 1
+    return
 
 
-// contracts/simple/simple.algo.ts::Simple.decr(i: uint64) -> void:
+// contracts/simple/simple.algo.ts::Simple.decr[routing]() -> void:
 decr:
     // contracts/simple/simple.algo.ts:23
     // decr(i: uint64): void {
-    proto 1 0
-    // contracts/simple/simple.algo.ts:10
-    // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
-    intc_1 // 0
-    bytec_0 // "counter"
-    app_global_get_ex
-    assert // check GlobalState exists
+    txna ApplicationArgs 1
+    btoi
     // contracts/simple/simple.algo.ts:24
     // this.counter.value = this.counter.value - i;
-    frame_dig -1
+    intc_2 // 0
+    // contracts/simple/simple.algo.ts:10
+    // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
+    bytec_0 // "counter"
+    // contracts/simple/simple.algo.ts:24
+    // this.counter.value = this.counter.value - i;
+    app_global_get_ex
+    assert // check GlobalState exists
+    swap
     -
     // contracts/simple/simple.algo.ts:10
     // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
@@ -168,46 +96,61 @@ decr:
     // this.counter.value = this.counter.value - i;
     swap
     app_global_put
-    retsub
+    // contracts/simple/simple.algo.ts:23
+    // decr(i: uint64): void {
+    intc_0 // 1
+    return
 
 
-// contracts/simple/simple.algo.ts::Simple.add(a: bytes, b: bytes) -> bytes:
+// contracts/simple/simple.algo.ts::Simple.add[routing]() -> void:
 add:
     // contracts/simple/simple.algo.ts:27
-    // add(a: UintN256, b: UintN256): UintN256 {
-    proto 2 1
+    // add(a: Uint256, b: Uint256): Uint256 {
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
     // contracts/simple/simple.algo.ts:28
-    // return new UintN256(a.native + b.native);
-    frame_dig -2
-    frame_dig -1
+    // return new Uint256(a.asBigUint() + b.asBigUint());
     b+
     dup
     len
-    intc_2 // 32
+    intc_1 // 32
     <=
     assert // overflow
-    intc_2 // 32
+    intc_1 // 32
     bzero
     b|
-    retsub
+    // contracts/simple/simple.algo.ts:27
+    // add(a: Uint256, b: Uint256): Uint256 {
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
 
 
-// contracts/simple/simple.algo.ts::Simple.sub(a: bytes, b: bytes) -> bytes:
+// contracts/simple/simple.algo.ts::Simple.sub[routing]() -> void:
 sub:
     // contracts/simple/simple.algo.ts:31
-    // sub(a: UintN256, b: UintN256): UintN256 {
-    proto 2 1
+    // sub(a: Uint256, b: Uint256): Uint256 {
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
     // contracts/simple/simple.algo.ts:32
-    // return new UintN256(a.native - b.native);
-    frame_dig -2
-    frame_dig -1
+    // return new Uint256(a.asBigUint() - b.asBigUint());
     b-
     dup
     len
-    intc_2 // 32
+    intc_1 // 32
     <=
     assert // overflow
-    intc_2 // 32
+    intc_1 // 32
     bzero
     b|
-    retsub
+    // contracts/simple/simple.algo.ts:31
+    // sub(a: Uint256, b: Uint256): Uint256 {
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return

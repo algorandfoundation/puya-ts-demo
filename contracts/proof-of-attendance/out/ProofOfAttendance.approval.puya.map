@@ -3,7 +3,7 @@
   "sources": [
     "/home/parallels/dev/puya-ts-demo/contracts/proof-of-attendance/proof-of-attendance.algo.ts"
   ],
-  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyBE;AAAkD;;AAAlD;AACA;;AACgB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AADhB;AAGA;AAAoD;AAApD;AALF;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AA8KG;;AAAA;AAAA;AAAA;;AAAA;AA9KH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA8KG;;;AAAA;;AAtBA;;AAAA;AAAA;AAAA;;AAAA;AAxJH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAwJG;;;AAAA;;AAtBA;;AAAA;AAAA;AAAA;;AAAA;AAlIH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAkIG;;;AAAA;;AArBA;;AAAA;AAAA;AAAA;;AAAA;AA7GH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA6GG;;;AAAA;;AAPA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AARA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAPA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAfA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAjBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAjBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAhBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AANA;;AAAA;AAAA;AAAA;;AAAA;AAAA;AARH;;;AAAA;AAQG;;;AAAA;;AAAD;;;AAEa;;AAAkB;;AAAtB;AAAP;AATF;AAUE;;AAAA;;AANF;AAAA;AAAA;AAAA;AAJA;AAAA;AAAA;AAAA;AAgBI;AADF;AAKqC;;AAAjB;;;AAhBtB;AAAA;AAAA;AAAA;AAiB+B;AAA7B;AAjBF;AAiBE;AAAA;AAEyC;;AAAf;AAAA;;AACnB;AAAP;AAEe;;AAAc;AAAA;AAA7B;;AAtBF;AAAA;AAAA;AAAA;AAJA;AAAA;AAAA;AAAA;AAgCI;AADF;AAKqC;;AAAjB;;;AAhCtB;AAAA;AAAA;AAAA;AAiC+B;AAA7B;AAjCF;AAiCE;AAAA;AAEmC;;AACZ;AAAA;AAAA;;AAChB;AAAP;AAEA;AAAA;AAAA;;AAvCF;AAAA;AAAA;AAAA;AAJA;AAAA;AAAA;AAAA;AAiDI;AADF;AAKqC;;AAAjB;;;AAjDtB;AAAA;AAAA;AAAA;AAkD+B;AAA7B;AAlDF;AAkDE;AAAA;AAEiC;;AACP;AAAA;AAAA;;AACnB;AAAP;AAEW;AAAA;AAAX;;AAxDF;AAAA;AAAA;AAAA;AAJA;AAAA;AAAA;AAAA;AAkEI;AADF;AAKqC;;AAAjB;;;AAlEtB;AAAA;AAAA;AAAA;AAmE+B;AAA7B;AAnEF;AAmEE;AAAA;AAlE0C;AAoEP;;AApEO;AAoEO;AAAA;;AAC1C;AAAP;AArE0C;AAuE1B;;AAvE0B;AAuE1C;AAAA;AAAA;;AAIuC;;AAAf;AACxB;AACO;AAAP;AAKmC;;AACX;AAAA;AAAA;AACxB;AAAA;AACA;AAKiC;;AACT;AACxB;AACO;AAAP;AA7F0C;AAkGF;;AAlGE;AAkGlB;AAAA;AAAA;AACxB;AAAA;AACA;AAGF;;;;AAEyC;;AAAf;AACxB;AACgB;;AAAA;;AAAA;AAAA;;AAAiB;AAA1B;AAAP;AACgB;;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AAEW;;AAAA;;AAAoB;;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;;AAA0B;;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;;;;;;;;;;AAGF;;;;AAEqC;;AACX;AAAA;AAAA;AACxB;AAAA;AACgB;;AAAA;;AAAA;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AAEW;;AAAA;;AAAoB;;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;;AAA0B;;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;;;;;;;;;;AAGF;;;;AAEmC;;AACT;AACxB;AACgB;;AAAA;;AAAA;AAAA;;AAAiB;AAA1B;AAAP;AACgB;;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AAEW;;AAAA;;AAAoB;;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;;AAA0B;;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;;;;;;;;;;AAGF;;;;AAxK4C;AA0KF;;AA1KE;AA0KlB;AAAA;AAAA;AACxB;AAAA;AACgB;;AAAA;;AAAA;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AACgB;;AAAA;;AAAT;AAAP;AAEW;;AAAA;;AAAoB;;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;;AAA0B;;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;;;;;;;;;;AAGF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA9LA;AAAA;AAAA;AAAA;AAiMI;AADsB;;;;;;;;;;;;;;;AAAlB;AAAY;AAGX;AAtMT;AAAA;;AAAA;AAAA;;;;;;;AA2MgB;;;AADH;;;AADG;;;;;;;;;AAHP;;;;AAAA;;;AAAA;AASK;;AATZ;AAYF;;;AACE;AAGmB;;AAEF;;;;;;;;;;;;;AALjB;;;AAAA;;;AAAA;",
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAwBE;AAAkD;;AAAlD;AACA;;AACgB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AADhB;AAGA;AAAoD;AAApD;AALF;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AAQG;;;AAAA;AAEY;;AAAkB;;AAAtB;AAAP;AATF;AAUE;AAAA;AAHD;AAAA;AASuB;AAZxB;AAYwB;AAAA;AAA0B;AAhBlD;AAgBkD;AAAA;AAA9C;AADF;AAKqC;;AAAjB;;;AACA;AAjBtB;AAiBsB;AAAA;AAAS;AAA7B;AAjBF;AAiBE;AAAA;AAEyC;;AAAf;AAAA;;AACnB;AAAP;AAEe;;AAAc;AAAA;AAA7B;AAbD;AAAA;AAmBuB;AA5BxB;AA4BwB;AAAA;AAA0B;AAhClD;AAgCkD;AAAA;AAA9C;AADF;AAKqC;;AAAjB;;;AACA;AAjCtB;AAiCsB;AAAA;AAAS;AAA7B;AAjCF;AAiCE;AAAA;AAEmC;;AACZ;AAAA;AAAA;;AAChB;AAAP;AAEI;AAAA;AAAJ;AAdD;AAAA;AAoBuB;AA7CxB;AA6CwB;AAAA;AAA0B;AAjDlD;AAiDkD;AAAA;AAA9C;AADF;AAKqC;;AAAjB;;;AACA;AAlDtB;AAkDsB;AAAA;AAAS;AAA7B;AAlDF;AAkDE;AAAA;AAEqC;;AACX;AAAA;AAAA;;AACnB;AAAP;AAEe;AAAA;AAAf;;AAAA;;AAAA;AAdD;AAAA;AAoBuB;AA9DxB;AA8DwB;AAAA;AAA0B;AAlElD;AAkEkD;AAAA;AAA9C;AADF;AAKqC;;AAAjB;;;AACA;AAnEtB;AAmEsB;AAAA;AAAS;AAA7B;AAnEF;AAmEE;AAAA;AAlEO;AAoE4B;;AApE5B;AAoE0C;AAAA;;AAC1C;AAAP;AArEO;AAuES;;AAvET;AAuEuB;AAAA;AAA9B;AAbD;AAAA;AAiBwC;;AAAf;AACxB;AACO;AAJR;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AASoC;;AACP;AAAJ;AAAA;AACxB;AAAA;AAJD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAUsC;;AACN;AAC/B;AACO;AALR;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAxFQ;AAkGiC;;AAlGjC;AAkG+C;AAA9B;AAAA;AACxB;AAAA;AAHD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAOA;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAEwC;;AAAf;AACxB;AACgB;;AAAA;;AAAA;AAAA;;AAAiB;AAAA;AAA1B;AAAP;AACgB;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AAEW;AAAA;;AAAoB;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;AAAA;;AAA0B;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;AAlBD;AAAA;;;;;;;;;;AAqBA;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAEoC;;AACP;AAAJ;AAAA;AACxB;AAAA;AACgB;;AAAA;;AAAA;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AAEW;AAAA;;AAAoB;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;AAAA;;AAA0B;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;AAnBD;AAAA;;;;;;;;;;AAsBA;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAEsC;;AACN;AAC/B;AACgB;;AAAA;;AAAA;AAAA;;AAAiB;AAAA;AAA1B;AAAP;AACgB;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AAEW;AAAA;;AAAoB;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;AAAA;;AAA0B;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;AAnBD;AAAA;;;;;;;;;;AAsBA;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAxKQ;AA0KiC;;AA1KjC;AA0K+C;AAA9B;AAAA;AACxB;AAAA;AACgB;;AAAA;;AAAA;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AACgB;AAAA;;AAAT;AAAP;AAEW;AAAA;;AAAoB;AAAA;;AAAA;AAAA;;AAA7B;AAAA;;;AACE;AAA+B;;AAA/B;AADF;;;;AADF;AAMW;;AAAA;AAAA;;AAA0B;AAAA;;AAAA;AAAA;;AAAnC;AAAA;;;AACE;;AAA4B;;AAA5B;AADF;;;;AADF;AAMiB;;AAAjB;;AAAA;;;AAlBD;AAAA;;;;;;;;;AAqBD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAGgC;AAjMhC;AAiMgC;AAAA;AAA5B;AADsB;;;;;;;;;;;;;;;AAAN;AAAA;AAGX;AAMgB;AA5MzB;;AA4MyB;AAAA;;;;;;;AADT;;;AADH;;;AADG;;;;;;;;;AAHP;;;;AAAA;;;AAAA;AASK;;AATZ;AAYF;;;AACE;AAGmB;;AAEF;;;;;;;;;;;;;AALjB;;;AAAA;;;AAAA;",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -11,10 +11,10 @@
       "params": {},
       "block": "main",
       "stack_in": [],
-      "op": "intcblock 0 1 4"
+      "op": "intcblock 1 0 4"
     },
     "6": {
-      "op": "bytecblock \"totalAttendees\" \"maxAttendees\" 0x151f7c75 \"boxMap\" \"assetUrl\" 0x068101"
+      "op": "bytecblock \"totalAttendees\" \"maxAttendees\" \"boxMap\" 0x151f7c75 \"assetUrl\" 0x068101"
     },
     "61": {
       "op": "txn ApplicationID",
@@ -87,7 +87,7 @@
       ]
     },
     "129": {
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "\"totalAttendees\"",
         "0"
@@ -104,7 +104,7 @@
     "131": {
       "block": "main_after_if_else@2",
       "stack_in": [],
-      "op": "txn NumAppArgs",
+      "op": "txn OnCompletion",
       "defined_out": [
         "tmp%0#1"
       ],
@@ -113,11 +113,34 @@
       ]
     },
     "133": {
-      "op": "bz main_after_if_else@21",
+      "op": "!",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "134": {
+      "error": "OnCompletion must be NoOp",
+      "op": "assert // OnCompletion must be NoOp",
       "stack_out": []
     },
-    "136": {
-      "op": "pushbytess 0x1bcde52d 0x09527352 0x34ef747b 0x7732a900 0x8485a195 0x7f8cf0ab 0xdd617d7d 0x9b487a80 0xba796fea 0x7de97566 0x83dd375f 0x765a33da 0x2c7a818c // method \"init(uint64)void\", method \"confirmAttendance()void\", method \"confirmAttendanceWithBox()void\", method \"confirmAttendanceWithBoxRef()void\", method \"confirmAttendanceWithBoxMap()void\", method \"getPoaId()uint64\", method \"getPoaIdWithBox()uint64\", method \"getPoaIdWithBoxRef()uint64\", method \"getPoaIdWithBoxMap()uint64\", method \"claimPoa(axfer)void\", method \"claimPoaWithBox(axfer)void\", method \"claimPoaWithBoxRef(axfer)void\", method \"claimPoaWithBoxMap(axfer)void\"",
+    "135": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "137": {
+      "op": "bz main_create_NoOp@18",
+      "stack_out": []
+    },
+    "140": {
+      "op": "pushbytess 0x09527352 0x34ef747b 0x7732a900 0x8485a195 0x7f8cf0ab 0xdd617d7d 0x9b487a80 0xba796fea 0x7de97566 0x83dd375f 0x765a33da 0x2c7a818c // method \"confirmAttendance()void\", method \"confirmAttendanceWithBox()void\", method \"confirmAttendanceWithBoxRef()void\", method \"confirmAttendanceWithBoxMap()void\", method \"getPoaId()uint64\", method \"getPoaIdWithBox()uint64\", method \"getPoaIdWithBoxRef()uint64\", method \"getPoaIdWithBoxMap()uint64\", method \"claimPoa(axfer)void\", method \"claimPoaWithBox(axfer)void\", method \"claimPoaWithBoxRef(axfer)void\", method \"claimPoaWithBoxMap(axfer)void\"",
       "defined_out": [
         "Method(claimPoa(axfer)void)",
         "Method(claimPoaWithBox(axfer)void)",
@@ -130,11 +153,9 @@
         "Method(getPoaId()uint64)",
         "Method(getPoaIdWithBox()uint64)",
         "Method(getPoaIdWithBoxMap()uint64)",
-        "Method(getPoaIdWithBoxRef()uint64)",
-        "Method(init(uint64)void)"
+        "Method(getPoaIdWithBoxRef()uint64)"
       ],
       "stack_out": [
-        "Method(init(uint64)void)",
         "Method(confirmAttendance()void)",
         "Method(confirmAttendanceWithBox()void)",
         "Method(confirmAttendanceWithBoxRef()void)",
@@ -149,7 +170,7 @@
         "Method(claimPoaWithBoxMap(axfer)void)"
       ]
     },
-    "203": {
+    "202": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(claimPoa(axfer)void)",
@@ -164,11 +185,9 @@
         "Method(getPoaIdWithBox()uint64)",
         "Method(getPoaIdWithBoxMap()uint64)",
         "Method(getPoaIdWithBoxRef()uint64)",
-        "Method(init(uint64)void)",
-        "tmp%2#0"
+        "tmp%4#0"
       ],
       "stack_out": [
-        "Method(init(uint64)void)",
         "Method(confirmAttendance()void)",
         "Method(confirmAttendanceWithBox()void)",
         "Method(confirmAttendanceWithBoxRef()void)",
@@ -181,1377 +200,150 @@
         "Method(claimPoaWithBox(axfer)void)",
         "Method(claimPoaWithBoxRef(axfer)void)",
         "Method(claimPoaWithBoxMap(axfer)void)",
-        "tmp%2#0"
+        "tmp%4#0"
       ]
     },
-    "206": {
-      "op": "match main_init_route@5 main_confirmAttendance_route@6 main_confirmAttendanceWithBox_route@7 main_confirmAttendanceWithBoxRef_route@8 main_confirmAttendanceWithBoxMap_route@9 main_getPoaId_route@10 main_getPoaIdWithBox_route@11 main_getPoaIdWithBoxRef_route@12 main_getPoaIdWithBoxMap_route@13 main_claimPoa_route@14 main_claimPoaWithBox_route@15 main_claimPoaWithBoxRef_route@16 main_claimPoaWithBoxMap_route@17",
+    "205": {
+      "op": "match confirmAttendance confirmAttendanceWithBox confirmAttendanceWithBoxRef confirmAttendanceWithBoxMap getPoaId getPoaIdWithBox getPoaIdWithBoxRef getPoaIdWithBoxMap claimPoa claimPoaWithBox claimPoaWithBoxRef claimPoaWithBoxMap",
       "stack_out": []
     },
-    "234": {
-      "block": "main_after_if_else@21",
+    "231": {
+      "op": "err"
+    },
+    "232": {
+      "block": "main_create_NoOp@18",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "pushbytes 0x1bcde52d // method \"init(uint64)void\"",
       "defined_out": [
-        "tmp%0#0"
+        "Method(init(uint64)void)"
       ],
       "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "235": {
-      "op": "return",
-      "stack_out": []
-    },
-    "236": {
-      "block": "main_claimPoaWithBoxMap_route@17",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%59#0"
-      ],
-      "stack_out": [
-        "tmp%59#0"
+        "Method(init(uint64)void)"
       ]
     },
     "238": {
-      "op": "!",
+      "op": "txna ApplicationArgs 0",
       "defined_out": [
-        "tmp%60#0"
+        "Method(init(uint64)void)",
+        "tmp%5#0"
       ],
       "stack_out": [
-        "tmp%60#0"
+        "Method(init(uint64)void)",
+        "tmp%5#0"
       ]
     },
-    "239": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
+    "241": {
+      "op": "match init",
       "stack_out": []
-    },
-    "240": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%61#0"
-      ],
-      "stack_out": [
-        "tmp%61#0"
-      ]
-    },
-    "242": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "243": {
-      "op": "txn GroupIndex",
-      "defined_out": [
-        "tmp%63#0"
-      ],
-      "stack_out": [
-        "tmp%63#0"
-      ]
     },
     "245": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1",
-        "tmp%63#0"
-      ],
-      "stack_out": [
-        "tmp%63#0",
-        "1"
-      ]
+      "op": "err"
     },
     "246": {
-      "op": "-",
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.init[routing]",
+      "params": {},
+      "block": "init",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "gtxn_idx%3#0"
+        "reinterpret_Encoded(uint64)%0#0"
       ],
       "stack_out": [
-        "gtxn_idx%3#0"
+        "reinterpret_Encoded(uint64)%0#0"
       ]
     },
-    "247": {
-      "op": "dup",
+    "249": {
+      "op": "btoi",
       "defined_out": [
-        "gtxn_idx%3#0",
-        "gtxn_idx%3#0 (copy)"
+        "maxAttendees#0"
       ],
       "stack_out": [
-        "gtxn_idx%3#0",
-        "gtxn_idx%3#0 (copy)"
-      ]
-    },
-    "248": {
-      "op": "gtxns TypeEnum",
-      "defined_out": [
-        "gtxn_idx%3#0",
-        "gtxn_type%3#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%3#0",
-        "gtxn_type%3#0"
+        "maxAttendees#0"
       ]
     },
     "250": {
-      "op": "intc_2 // axfer",
+      "op": "txn Sender",
       "defined_out": [
-        "axfer",
-        "gtxn_idx%3#0",
-        "gtxn_type%3#0"
+        "maxAttendees#0",
+        "tmp%0#1"
       ],
       "stack_out": [
-        "gtxn_idx%3#0",
-        "gtxn_type%3#0",
-        "axfer"
-      ]
-    },
-    "251": {
-      "op": "==",
-      "defined_out": [
-        "gtxn_idx%3#0",
-        "gtxn_type_matches%3#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%3#0",
-        "gtxn_type_matches%3#0"
+        "maxAttendees#0",
+        "tmp%0#1"
       ]
     },
     "252": {
-      "error": "transaction type is axfer",
-      "op": "assert // transaction type is axfer",
-      "stack_out": [
-        "gtxn_idx%3#0"
-      ]
-    },
-    "253": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxMap",
-      "op": "callsub claimPoaWithBoxMap",
-      "stack_out": []
-    },
-    "256": {
-      "op": "intc_1 // 1",
+      "op": "global CreatorAddress",
       "defined_out": [
-        "tmp%0#0"
+        "maxAttendees#0",
+        "tmp%0#1",
+        "tmp%1#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "maxAttendees#0",
+        "tmp%0#1",
+        "tmp%1#0"
+      ]
+    },
+    "254": {
+      "op": "==",
+      "defined_out": [
+        "maxAttendees#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "maxAttendees#0",
+        "tmp%2#0"
+      ]
+    },
+    "255": {
+      "error": "Only creator can initialize",
+      "op": "assert // Only creator can initialize",
+      "stack_out": [
+        "maxAttendees#0"
+      ]
+    },
+    "256": {
+      "op": "bytec_1 // \"maxAttendees\"",
+      "defined_out": [
+        "\"maxAttendees\"",
+        "maxAttendees#0"
+      ],
+      "stack_out": [
+        "maxAttendees#0",
+        "\"maxAttendees\""
       ]
     },
     "257": {
-      "op": "return",
-      "stack_out": []
+      "op": "swap",
+      "stack_out": [
+        "\"maxAttendees\"",
+        "maxAttendees#0"
+      ]
     },
     "258": {
-      "block": "main_claimPoaWithBoxRef_route@16",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%54#0"
-      ],
-      "stack_out": [
-        "tmp%54#0"
-      ]
-    },
-    "260": {
-      "op": "!",
-      "defined_out": [
-        "tmp%55#0"
-      ],
-      "stack_out": [
-        "tmp%55#0"
-      ]
-    },
-    "261": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "262": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%56#0"
-      ],
-      "stack_out": [
-        "tmp%56#0"
-      ]
-    },
-    "264": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "265": {
-      "op": "txn GroupIndex",
-      "defined_out": [
-        "tmp%58#0"
-      ],
-      "stack_out": [
-        "tmp%58#0"
-      ]
-    },
-    "267": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1",
-        "tmp%58#0"
-      ],
-      "stack_out": [
-        "tmp%58#0",
-        "1"
-      ]
-    },
-    "268": {
-      "op": "-",
-      "defined_out": [
-        "gtxn_idx%2#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%2#0"
-      ]
-    },
-    "269": {
-      "op": "dup",
-      "defined_out": [
-        "gtxn_idx%2#0",
-        "gtxn_idx%2#0 (copy)"
-      ],
-      "stack_out": [
-        "gtxn_idx%2#0",
-        "gtxn_idx%2#0 (copy)"
-      ]
-    },
-    "270": {
-      "op": "gtxns TypeEnum",
-      "defined_out": [
-        "gtxn_idx%2#0",
-        "gtxn_type%2#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%2#0",
-        "gtxn_type%2#0"
-      ]
-    },
-    "272": {
-      "op": "intc_2 // axfer",
-      "defined_out": [
-        "axfer",
-        "gtxn_idx%2#0",
-        "gtxn_type%2#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%2#0",
-        "gtxn_type%2#0",
-        "axfer"
-      ]
-    },
-    "273": {
-      "op": "==",
-      "defined_out": [
-        "gtxn_idx%2#0",
-        "gtxn_type_matches%2#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%2#0",
-        "gtxn_type_matches%2#0"
-      ]
-    },
-    "274": {
-      "error": "transaction type is axfer",
-      "op": "assert // transaction type is axfer",
-      "stack_out": [
-        "gtxn_idx%2#0"
-      ]
-    },
-    "275": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxRef",
-      "op": "callsub claimPoaWithBoxRef",
-      "stack_out": []
-    },
-    "278": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "279": {
-      "op": "return",
-      "stack_out": []
-    },
-    "280": {
-      "block": "main_claimPoaWithBox_route@15",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%49#0"
-      ],
-      "stack_out": [
-        "tmp%49#0"
-      ]
-    },
-    "282": {
-      "op": "!",
-      "defined_out": [
-        "tmp%50#0"
-      ],
-      "stack_out": [
-        "tmp%50#0"
-      ]
-    },
-    "283": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "284": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%51#0"
-      ],
-      "stack_out": [
-        "tmp%51#0"
-      ]
-    },
-    "286": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "287": {
-      "op": "txn GroupIndex",
-      "defined_out": [
-        "tmp%53#0"
-      ],
-      "stack_out": [
-        "tmp%53#0"
-      ]
-    },
-    "289": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1",
-        "tmp%53#0"
-      ],
-      "stack_out": [
-        "tmp%53#0",
-        "1"
-      ]
-    },
-    "290": {
-      "op": "-",
-      "defined_out": [
-        "gtxn_idx%1#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%1#0"
-      ]
-    },
-    "291": {
-      "op": "dup",
-      "defined_out": [
-        "gtxn_idx%1#0",
-        "gtxn_idx%1#0 (copy)"
-      ],
-      "stack_out": [
-        "gtxn_idx%1#0",
-        "gtxn_idx%1#0 (copy)"
-      ]
-    },
-    "292": {
-      "op": "gtxns TypeEnum",
-      "defined_out": [
-        "gtxn_idx%1#0",
-        "gtxn_type%1#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%1#0",
-        "gtxn_type%1#0"
-      ]
-    },
-    "294": {
-      "op": "intc_2 // axfer",
-      "defined_out": [
-        "axfer",
-        "gtxn_idx%1#0",
-        "gtxn_type%1#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%1#0",
-        "gtxn_type%1#0",
-        "axfer"
-      ]
-    },
-    "295": {
-      "op": "==",
-      "defined_out": [
-        "gtxn_idx%1#0",
-        "gtxn_type_matches%1#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%1#0",
-        "gtxn_type_matches%1#0"
-      ]
-    },
-    "296": {
-      "error": "transaction type is axfer",
-      "op": "assert // transaction type is axfer",
-      "stack_out": [
-        "gtxn_idx%1#0"
-      ]
-    },
-    "297": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBox",
-      "op": "callsub claimPoaWithBox",
-      "stack_out": []
-    },
-    "300": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "301": {
-      "op": "return",
-      "stack_out": []
-    },
-    "302": {
-      "block": "main_claimPoa_route@14",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%44#0"
-      ],
-      "stack_out": [
-        "tmp%44#0"
-      ]
-    },
-    "304": {
-      "op": "!",
-      "defined_out": [
-        "tmp%45#0"
-      ],
-      "stack_out": [
-        "tmp%45#0"
-      ]
-    },
-    "305": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "306": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%46#0"
-      ],
-      "stack_out": [
-        "tmp%46#0"
-      ]
-    },
-    "308": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "309": {
-      "op": "txn GroupIndex",
-      "defined_out": [
-        "tmp%48#0"
-      ],
-      "stack_out": [
-        "tmp%48#0"
-      ]
-    },
-    "311": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "1",
-        "tmp%48#0"
-      ],
-      "stack_out": [
-        "tmp%48#0",
-        "1"
-      ]
-    },
-    "312": {
-      "op": "-",
-      "defined_out": [
-        "gtxn_idx%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0"
-      ]
-    },
-    "313": {
-      "op": "dup",
-      "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_idx%0#0 (copy)"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_idx%0#0 (copy)"
-      ]
-    },
-    "314": {
-      "op": "gtxns TypeEnum",
-      "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
-      ]
-    },
-    "316": {
-      "op": "intc_2 // axfer",
-      "defined_out": [
-        "axfer",
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type%0#0",
-        "axfer"
-      ]
-    },
-    "317": {
-      "op": "==",
-      "defined_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type_matches%0#0"
-      ],
-      "stack_out": [
-        "gtxn_idx%0#0",
-        "gtxn_type_matches%0#0"
-      ]
-    },
-    "318": {
-      "error": "transaction type is axfer",
-      "op": "assert // transaction type is axfer",
-      "stack_out": [
-        "gtxn_idx%0#0"
-      ]
-    },
-    "319": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoa",
-      "op": "callsub claimPoa",
-      "stack_out": []
-    },
-    "322": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "323": {
-      "op": "return",
-      "stack_out": []
-    },
-    "324": {
-      "block": "main_getPoaIdWithBoxMap_route@13",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%39#0"
-      ],
-      "stack_out": [
-        "tmp%39#0"
-      ]
-    },
-    "326": {
-      "op": "!",
-      "defined_out": [
-        "tmp%40#0"
-      ],
-      "stack_out": [
-        "tmp%40#0"
-      ]
-    },
-    "327": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "328": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%41#0"
-      ],
-      "stack_out": [
-        "tmp%41#0"
-      ]
-    },
-    "330": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "331": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxMap",
-      "op": "callsub getPoaIdWithBoxMap",
-      "defined_out": [
-        "to_encode%3#0"
-      ],
-      "stack_out": [
-        "to_encode%3#0"
-      ]
-    },
-    "334": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%3#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%3#0"
-      ]
-    },
-    "335": {
-      "op": "bytec_2 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%3#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%3#0",
-        "0x151f7c75"
-      ]
-    },
-    "336": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%3#0"
-      ]
-    },
-    "337": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%43#0"
-      ],
-      "stack_out": [
-        "tmp%43#0"
-      ]
-    },
-    "338": {
-      "op": "log",
-      "stack_out": []
-    },
-    "339": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "340": {
-      "op": "return",
-      "stack_out": []
-    },
-    "341": {
-      "block": "main_getPoaIdWithBoxRef_route@12",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%34#0"
-      ],
-      "stack_out": [
-        "tmp%34#0"
-      ]
-    },
-    "343": {
-      "op": "!",
-      "defined_out": [
-        "tmp%35#0"
-      ],
-      "stack_out": [
-        "tmp%35#0"
-      ]
-    },
-    "344": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "345": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%36#0"
-      ],
-      "stack_out": [
-        "tmp%36#0"
-      ]
-    },
-    "347": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "348": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxRef",
-      "op": "callsub getPoaIdWithBoxRef",
-      "defined_out": [
-        "to_encode%2#0"
-      ],
-      "stack_out": [
-        "to_encode%2#0"
-      ]
-    },
-    "351": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%2#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%2#0"
-      ]
-    },
-    "352": {
-      "op": "bytec_2 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%2#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%2#0",
-        "0x151f7c75"
-      ]
-    },
-    "353": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%2#0"
-      ]
-    },
-    "354": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%38#0"
-      ],
-      "stack_out": [
-        "tmp%38#0"
-      ]
-    },
-    "355": {
-      "op": "log",
-      "stack_out": []
-    },
-    "356": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "357": {
-      "op": "return",
-      "stack_out": []
-    },
-    "358": {
-      "block": "main_getPoaIdWithBox_route@11",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%29#0"
-      ],
-      "stack_out": [
-        "tmp%29#0"
-      ]
-    },
-    "360": {
-      "op": "!",
-      "defined_out": [
-        "tmp%30#0"
-      ],
-      "stack_out": [
-        "tmp%30#0"
-      ]
-    },
-    "361": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "362": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%31#0"
-      ],
-      "stack_out": [
-        "tmp%31#0"
-      ]
-    },
-    "364": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "365": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBox",
-      "op": "callsub getPoaIdWithBox",
-      "defined_out": [
-        "to_encode%1#0"
-      ],
-      "stack_out": [
-        "to_encode%1#0"
-      ]
-    },
-    "368": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%1#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%1#0"
-      ]
-    },
-    "369": {
-      "op": "bytec_2 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%1#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%1#0",
-        "0x151f7c75"
-      ]
-    },
-    "370": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%1#0"
-      ]
-    },
-    "371": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%33#0"
-      ],
-      "stack_out": [
-        "tmp%33#0"
-      ]
-    },
-    "372": {
-      "op": "log",
-      "stack_out": []
-    },
-    "373": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "374": {
-      "op": "return",
-      "stack_out": []
-    },
-    "375": {
-      "block": "main_getPoaId_route@10",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%24#0"
-      ],
-      "stack_out": [
-        "tmp%24#0"
-      ]
-    },
-    "377": {
-      "op": "!",
-      "defined_out": [
-        "tmp%25#0"
-      ],
-      "stack_out": [
-        "tmp%25#0"
-      ]
-    },
-    "378": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "379": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%26#0"
-      ],
-      "stack_out": [
-        "tmp%26#0"
-      ]
-    },
-    "381": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "382": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaId",
-      "op": "callsub getPoaId",
-      "defined_out": [
-        "to_encode%0#0"
-      ],
-      "stack_out": [
-        "to_encode%0#0"
-      ]
-    },
-    "385": {
-      "op": "itob",
-      "defined_out": [
-        "val_as_bytes%0#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%0#0"
-      ]
-    },
-    "386": {
-      "op": "bytec_2 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
-      ],
-      "stack_out": [
-        "val_as_bytes%0#0",
-        "0x151f7c75"
-      ]
-    },
-    "387": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "val_as_bytes%0#0"
-      ]
-    },
-    "388": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%28#0"
-      ],
-      "stack_out": [
-        "tmp%28#0"
-      ]
-    },
-    "389": {
-      "op": "log",
-      "stack_out": []
-    },
-    "390": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "391": {
-      "op": "return",
-      "stack_out": []
-    },
-    "392": {
-      "block": "main_confirmAttendanceWithBoxMap_route@9",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%20#0"
-      ],
-      "stack_out": [
-        "tmp%20#0"
-      ]
-    },
-    "394": {
-      "op": "!",
-      "defined_out": [
-        "tmp%21#0"
-      ],
-      "stack_out": [
-        "tmp%21#0"
-      ]
-    },
-    "395": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "396": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%22#0"
-      ],
-      "stack_out": [
-        "tmp%22#0"
-      ]
-    },
-    "398": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "399": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxMap",
-      "op": "callsub confirmAttendanceWithBoxMap"
-    },
-    "402": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "403": {
-      "op": "return",
-      "stack_out": []
-    },
-    "404": {
-      "block": "main_confirmAttendanceWithBoxRef_route@8",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%16#0"
-      ],
-      "stack_out": [
-        "tmp%16#0"
-      ]
-    },
-    "406": {
-      "op": "!",
-      "defined_out": [
-        "tmp%17#0"
-      ],
-      "stack_out": [
-        "tmp%17#0"
-      ]
-    },
-    "407": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "408": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%18#0"
-      ],
-      "stack_out": [
-        "tmp%18#0"
-      ]
-    },
-    "410": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "411": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxRef",
-      "op": "callsub confirmAttendanceWithBoxRef"
-    },
-    "414": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "415": {
-      "op": "return",
-      "stack_out": []
-    },
-    "416": {
-      "block": "main_confirmAttendanceWithBox_route@7",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%12#0"
-      ],
-      "stack_out": [
-        "tmp%12#0"
-      ]
-    },
-    "418": {
-      "op": "!",
-      "defined_out": [
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0"
-      ]
-    },
-    "419": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "420": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%14#0"
-      ],
-      "stack_out": [
-        "tmp%14#0"
-      ]
-    },
-    "422": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "423": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBox",
-      "op": "callsub confirmAttendanceWithBox"
-    },
-    "426": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "427": {
-      "op": "return",
-      "stack_out": []
-    },
-    "428": {
-      "block": "main_confirmAttendance_route@6",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%8#0"
-      ],
-      "stack_out": [
-        "tmp%8#0"
-      ]
-    },
-    "430": {
-      "op": "!",
-      "defined_out": [
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%9#0"
-      ]
-    },
-    "431": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "432": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%10#0"
-      ],
-      "stack_out": [
-        "tmp%10#0"
-      ]
-    },
-    "434": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "435": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendance",
-      "op": "callsub confirmAttendance"
-    },
-    "438": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "439": {
-      "op": "return",
-      "stack_out": []
-    },
-    "440": {
-      "block": "main_init_route@5",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%3#0"
-      ]
-    },
-    "442": {
-      "op": "!",
-      "defined_out": [
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%4#0"
-      ]
-    },
-    "443": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "444": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%5#0"
-      ]
-    },
-    "446": {
-      "op": "!",
-      "defined_out": [
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%6#0"
-      ]
-    },
-    "447": {
-      "error": "can only call when creating",
-      "op": "assert // can only call when creating",
-      "stack_out": []
-    },
-    "448": {
-      "op": "txna ApplicationArgs 1",
-      "defined_out": [
-        "reinterpret_bytes[8]%0#0"
-      ],
-      "stack_out": [
-        "reinterpret_bytes[8]%0#0"
-      ]
-    },
-    "451": {
-      "op": "btoi",
-      "defined_out": [
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%7#0"
-      ]
-    },
-    "452": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.init",
-      "op": "callsub init",
-      "stack_out": []
-    },
-    "455": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "456": {
-      "op": "return",
-      "stack_out": []
-    },
-    "457": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.init",
-      "params": {
-        "maxAttendees#0": "uint64"
-      },
-      "block": "init",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "460": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "462": {
-      "op": "global CreatorAddress",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ]
-    },
-    "464": {
-      "op": "==",
-      "defined_out": [
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%2#0"
-      ]
-    },
-    "465": {
-      "error": "Only creator can initialize",
-      "op": "assert // Only creator can initialize",
-      "stack_out": []
-    },
-    "466": {
-      "op": "bytec_1 // \"maxAttendees\"",
-      "defined_out": [
-        "\"maxAttendees\""
-      ],
-      "stack_out": [
-        "\"maxAttendees\""
-      ]
-    },
-    "467": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "\"maxAttendees\"",
-        "maxAttendees#0 (copy)"
-      ],
-      "stack_out": [
-        "\"maxAttendees\"",
-        "maxAttendees#0 (copy)"
-      ]
-    },
-    "469": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "470": {
-      "retsub": true,
-      "op": "retsub"
+    "259": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
     },
-    "471": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendance",
+    "260": {
+      "op": "return",
+      "stack_out": []
+    },
+    "261": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendance[routing]",
       "params": {},
       "block": "confirmAttendance",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -1559,7 +351,7 @@
         "0"
       ]
     },
-    "472": {
+    "262": {
       "op": "bytec_0 // \"totalAttendees\"",
       "defined_out": [
         "\"totalAttendees\"",
@@ -1570,7 +362,7 @@
         "\"totalAttendees\""
       ]
     },
-    "473": {
+    "263": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1581,21 +373,21 @@
         "maybe_exists%0#0"
       ]
     },
-    "474": {
+    "264": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "475": {
-      "op": "intc_0 // 0",
+    "265": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "476": {
+    "266": {
       "op": "bytec_1 // \"maxAttendees\"",
       "defined_out": [
         "\"maxAttendees\"",
@@ -1608,7 +400,7 @@
         "\"maxAttendees\""
       ]
     },
-    "477": {
+    "267": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1621,7 +413,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "478": {
+    "268": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1629,7 +421,7 @@
         "maybe_value%1#0"
       ]
     },
-    "479": {
+    "269": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -1638,12 +430,12 @@
         "tmp%0#0"
       ]
     },
-    "480": {
+    "270": {
       "error": "Max attendees reached",
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "481": {
+    "271": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -1652,7 +444,7 @@
         "tmp%1#0"
       ]
     },
-    "483": {
+    "273": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.mintPoa",
       "op": "callsub mintPoa",
       "defined_out": [
@@ -1662,14 +454,14 @@
         "mintedAsset#0"
       ]
     },
-    "486": {
-      "op": "intc_0 // 0",
+    "276": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "mintedAsset#0",
         "0"
       ]
     },
-    "487": {
+    "277": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
@@ -1677,7 +469,7 @@
         "\"totalAttendees\""
       ]
     },
-    "488": {
+    "278": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1690,7 +482,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "489": {
+    "279": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1698,8 +490,8 @@
         "maybe_value%2#0"
       ]
     },
-    "490": {
-      "op": "intc_1 // 1",
+    "280": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "maybe_value%2#0",
@@ -1711,52 +503,52 @@
         "1"
       ]
     },
-    "491": {
+    "281": {
       "op": "+",
       "defined_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "492": {
+    "282": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0",
+        "tmp%3#0",
         "\"totalAttendees\""
       ]
     },
-    "493": {
+    "283": {
       "op": "swap",
       "stack_out": [
         "mintedAsset#0",
         "\"totalAttendees\"",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "494": {
+    "284": {
       "op": "app_global_put",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "495": {
+    "285": {
       "op": "txn Sender",
       "defined_out": [
         "mintedAsset#0",
-        "tmp%2#0"
+        "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "tmp%2#0"
+        "reinterpret_bytes[32]%0#0"
       ]
     },
-    "497": {
-      "op": "box_get",
+    "287": {
+      "op": "box_len",
       "defined_out": [
         "_id#0",
         "hasClaimed#0",
@@ -1768,74 +560,80 @@
         "hasClaimed#0"
       ]
     },
-    "498": {
+    "288": {
       "op": "bury 1",
       "stack_out": [
         "mintedAsset#0",
         "hasClaimed#0"
       ]
     },
-    "500": {
+    "290": {
       "op": "!",
       "defined_out": [
         "mintedAsset#0",
-        "tmp%3#0"
+        "tmp%4#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "tmp%3#0"
+        "tmp%4#0"
       ]
     },
-    "501": {
+    "291": {
       "error": "Already claimed POA",
       "op": "assert // Already claimed POA",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "502": {
+    "292": {
       "op": "txn Sender",
       "defined_out": [
         "mintedAsset#0",
-        "tmp%4#0"
+        "reinterpret_bytes[32]%1#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "tmp%4#0"
+        "reinterpret_bytes[32]%1#0"
       ]
     },
-    "504": {
+    "294": {
       "op": "swap",
       "stack_out": [
-        "tmp%4#0",
+        "reinterpret_bytes[32]%1#0",
         "mintedAsset#0"
       ]
     },
-    "505": {
+    "295": {
       "op": "itob",
       "defined_out": [
-        "tmp%4#0",
+        "reinterpret_bytes[32]%1#0",
         "tmp%5#0"
       ],
       "stack_out": [
-        "tmp%4#0",
+        "reinterpret_bytes[32]%1#0",
         "tmp%5#0"
       ]
     },
-    "506": {
+    "296": {
       "op": "box_put",
       "stack_out": []
     },
-    "507": {
-      "retsub": true,
-      "op": "retsub"
+    "297": {
+      "op": "intc_0 // 1",
+      "stack_out": [
+        "1"
+      ]
     },
-    "508": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBox",
+    "298": {
+      "op": "return",
+      "stack_out": []
+    },
+    "299": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBox[routing]",
       "params": {},
       "block": "confirmAttendanceWithBox",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -1843,7 +641,7 @@
         "0"
       ]
     },
-    "509": {
+    "300": {
       "op": "bytec_0 // \"totalAttendees\"",
       "defined_out": [
         "\"totalAttendees\"",
@@ -1854,7 +652,7 @@
         "\"totalAttendees\""
       ]
     },
-    "510": {
+    "301": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1865,21 +663,21 @@
         "maybe_exists%0#0"
       ]
     },
-    "511": {
+    "302": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "512": {
-      "op": "intc_0 // 0",
+    "303": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "513": {
+    "304": {
       "op": "bytec_1 // \"maxAttendees\"",
       "defined_out": [
         "\"maxAttendees\"",
@@ -1892,7 +690,7 @@
         "\"maxAttendees\""
       ]
     },
-    "514": {
+    "305": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -1905,7 +703,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "515": {
+    "306": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1913,7 +711,7 @@
         "maybe_value%1#0"
       ]
     },
-    "516": {
+    "307": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -1922,12 +720,12 @@
         "tmp%0#0"
       ]
     },
-    "517": {
+    "308": {
       "error": "Max attendees reached",
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "518": {
+    "309": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -1936,7 +734,7 @@
         "tmp%1#0"
       ]
     },
-    "520": {
+    "311": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.mintPoa",
       "op": "callsub mintPoa",
       "defined_out": [
@@ -1946,14 +744,14 @@
         "mintedAsset#0"
       ]
     },
-    "523": {
-      "op": "intc_0 // 0",
+    "314": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "mintedAsset#0",
         "0"
       ]
     },
-    "524": {
+    "315": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
@@ -1961,7 +759,7 @@
         "\"totalAttendees\""
       ]
     },
-    "525": {
+    "316": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -1974,7 +772,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "526": {
+    "317": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -1982,8 +780,8 @@
         "maybe_value%2#0"
       ]
     },
-    "527": {
-      "op": "intc_1 // 1",
+    "318": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "maybe_value%2#0",
@@ -1995,40 +793,40 @@
         "1"
       ]
     },
-    "528": {
+    "319": {
       "op": "+",
       "defined_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "529": {
+    "320": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0",
+        "tmp%3#0",
         "\"totalAttendees\""
       ]
     },
-    "530": {
+    "321": {
       "op": "swap",
       "stack_out": [
         "mintedAsset#0",
         "\"totalAttendees\"",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "531": {
+    "322": {
       "op": "app_global_put",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "532": {
+    "323": {
       "op": "txn Sender",
       "defined_out": [
         "box#0",
@@ -2039,7 +837,7 @@
         "box#0"
       ]
     },
-    "534": {
+    "325": {
       "op": "dup",
       "defined_out": [
         "box#0",
@@ -2052,22 +850,22 @@
         "box#0 (copy)"
       ]
     },
-    "535": {
+    "326": {
       "op": "box_len",
       "defined_out": [
+        "_%0#0",
         "box#0",
         "hasClaimed#0",
-        "maybe_value%3#0",
         "mintedAsset#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "box#0",
-        "maybe_value%3#0",
+        "_%0#0",
         "hasClaimed#0"
       ]
     },
-    "536": {
+    "327": {
       "op": "bury 1",
       "stack_out": [
         "mintedAsset#0",
@@ -2075,20 +873,20 @@
         "hasClaimed#0"
       ]
     },
-    "538": {
+    "329": {
       "op": "!",
       "defined_out": [
         "box#0",
         "mintedAsset#0",
-        "tmp%2#0"
+        "tmp%4#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "box#0",
-        "tmp%2#0"
+        "tmp%4#0"
       ]
     },
-    "539": {
+    "330": {
       "error": "Already claimed POA",
       "op": "assert // Already claimed POA",
       "stack_out": [
@@ -2096,38 +894,44 @@
         "box#0"
       ]
     },
-    "540": {
+    "331": {
       "op": "swap",
       "stack_out": [
         "box#0",
         "mintedAsset#0"
       ]
     },
-    "541": {
+    "332": {
       "op": "itob",
       "defined_out": [
         "box#0",
-        "new_box_value%0#0"
+        "encoded_value%0#0"
       ],
       "stack_out": [
         "box#0",
-        "new_box_value%0#0"
+        "encoded_value%0#0"
       ]
     },
-    "542": {
+    "333": {
       "op": "box_put",
       "stack_out": []
     },
-    "543": {
-      "retsub": true,
-      "op": "retsub"
+    "334": {
+      "op": "intc_0 // 1",
+      "stack_out": [
+        "1"
+      ]
     },
-    "544": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxRef",
+    "335": {
+      "op": "return",
+      "stack_out": []
+    },
+    "336": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxRef[routing]",
       "params": {},
       "block": "confirmAttendanceWithBoxRef",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -2135,7 +939,7 @@
         "0"
       ]
     },
-    "545": {
+    "337": {
       "op": "bytec_0 // \"totalAttendees\"",
       "defined_out": [
         "\"totalAttendees\"",
@@ -2146,7 +950,7 @@
         "\"totalAttendees\""
       ]
     },
-    "546": {
+    "338": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2157,21 +961,21 @@
         "maybe_exists%0#0"
       ]
     },
-    "547": {
+    "339": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "548": {
-      "op": "intc_0 // 0",
+    "340": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "549": {
+    "341": {
       "op": "bytec_1 // \"maxAttendees\"",
       "defined_out": [
         "\"maxAttendees\"",
@@ -2184,7 +988,7 @@
         "\"maxAttendees\""
       ]
     },
-    "550": {
+    "342": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2197,7 +1001,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "551": {
+    "343": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2205,7 +1009,7 @@
         "maybe_value%1#0"
       ]
     },
-    "552": {
+    "344": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -2214,12 +1018,12 @@
         "tmp%0#0"
       ]
     },
-    "553": {
+    "345": {
       "error": "Max attendees reached",
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "554": {
+    "346": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -2228,7 +1032,7 @@
         "tmp%1#0"
       ]
     },
-    "556": {
+    "348": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.mintPoa",
       "op": "callsub mintPoa",
       "defined_out": [
@@ -2238,14 +1042,14 @@
         "mintedAsset#0"
       ]
     },
-    "559": {
-      "op": "intc_0 // 0",
+    "351": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "mintedAsset#0",
         "0"
       ]
     },
-    "560": {
+    "352": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
@@ -2253,7 +1057,7 @@
         "\"totalAttendees\""
       ]
     },
-    "561": {
+    "353": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2266,7 +1070,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "562": {
+    "354": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2274,8 +1078,8 @@
         "maybe_value%2#0"
       ]
     },
-    "563": {
-      "op": "intc_1 // 1",
+    "355": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "maybe_value%2#0",
@@ -2287,40 +1091,40 @@
         "1"
       ]
     },
-    "564": {
+    "356": {
       "op": "+",
       "defined_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "565": {
+    "357": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0",
+        "tmp%3#0",
         "\"totalAttendees\""
       ]
     },
-    "566": {
+    "358": {
       "op": "swap",
       "stack_out": [
         "mintedAsset#0",
         "\"totalAttendees\"",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "567": {
+    "359": {
       "op": "app_global_put",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "568": {
+    "360": {
       "op": "txn Sender",
       "defined_out": [
         "boxRef#0",
@@ -2331,7 +1135,7 @@
         "boxRef#0"
       ]
     },
-    "570": {
+    "362": {
       "op": "dup",
       "defined_out": [
         "boxRef#0",
@@ -2344,22 +1148,22 @@
         "boxRef#0 (copy)"
       ]
     },
-    "571": {
+    "363": {
       "op": "box_len",
       "defined_out": [
+        "_%0#0",
         "boxRef#0",
         "hasClaimed#0",
-        "maybe_value%3#0",
         "mintedAsset#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "boxRef#0",
-        "maybe_value%3#0",
+        "_%0#0",
         "hasClaimed#0"
       ]
     },
-    "572": {
+    "364": {
       "op": "bury 1",
       "stack_out": [
         "mintedAsset#0",
@@ -2367,20 +1171,20 @@
         "hasClaimed#0"
       ]
     },
-    "574": {
+    "366": {
       "op": "!",
       "defined_out": [
         "boxRef#0",
         "mintedAsset#0",
-        "tmp%2#0"
+        "tmp%4#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "boxRef#0",
-        "tmp%2#0"
+        "tmp%4#0"
       ]
     },
-    "575": {
+    "367": {
       "error": "Already claimed POA",
       "op": "assert // Already claimed POA",
       "stack_out": [
@@ -2388,38 +1192,72 @@
         "boxRef#0"
       ]
     },
-    "576": {
+    "368": {
       "op": "swap",
       "stack_out": [
         "boxRef#0",
         "mintedAsset#0"
       ]
     },
-    "577": {
+    "369": {
       "op": "itob",
       "defined_out": [
         "boxRef#0",
-        "tmp%3#0"
+        "tmp%5#0"
       ],
       "stack_out": [
         "boxRef#0",
-        "tmp%3#0"
+        "tmp%5#0"
       ]
     },
-    "578": {
+    "370": {
+      "op": "dig 1",
+      "stack_out": [
+        "boxRef#0",
+        "tmp%5#0",
+        "boxRef#0 (copy)"
+      ]
+    },
+    "372": {
+      "op": "box_del",
+      "defined_out": [
+        "boxRef#0",
+        "tmp%5#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "boxRef#0",
+        "tmp%5#0",
+        "{box_del}"
+      ]
+    },
+    "373": {
+      "op": "pop",
+      "stack_out": [
+        "boxRef#0",
+        "tmp%5#0"
+      ]
+    },
+    "374": {
       "op": "box_put",
       "stack_out": []
     },
-    "579": {
-      "retsub": true,
-      "op": "retsub"
+    "375": {
+      "op": "intc_0 // 1",
+      "stack_out": [
+        "1"
+      ]
     },
-    "580": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxMap",
+    "376": {
+      "op": "return",
+      "stack_out": []
+    },
+    "377": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.confirmAttendanceWithBoxMap[routing]",
       "params": {},
       "block": "confirmAttendanceWithBoxMap",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -2427,7 +1265,7 @@
         "0"
       ]
     },
-    "581": {
+    "378": {
       "op": "bytec_0 // \"totalAttendees\"",
       "defined_out": [
         "\"totalAttendees\"",
@@ -2438,7 +1276,7 @@
         "\"totalAttendees\""
       ]
     },
-    "582": {
+    "379": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2449,21 +1287,21 @@
         "maybe_exists%0#0"
       ]
     },
-    "583": {
+    "380": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "584": {
-      "op": "intc_0 // 0",
+    "381": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "585": {
+    "382": {
       "op": "bytec_1 // \"maxAttendees\"",
       "defined_out": [
         "\"maxAttendees\"",
@@ -2476,7 +1314,7 @@
         "\"maxAttendees\""
       ]
     },
-    "586": {
+    "383": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -2489,7 +1327,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "587": {
+    "384": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2497,7 +1335,7 @@
         "maybe_value%1#0"
       ]
     },
-    "588": {
+    "385": {
       "op": "<",
       "defined_out": [
         "tmp%0#0"
@@ -2506,12 +1344,12 @@
         "tmp%0#0"
       ]
     },
-    "589": {
+    "386": {
       "error": "Max attendees reached",
       "op": "assert // Max attendees reached",
       "stack_out": []
     },
-    "590": {
+    "387": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%1#0"
@@ -2520,7 +1358,7 @@
         "tmp%1#0"
       ]
     },
-    "592": {
+    "389": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.mintPoa",
       "op": "callsub mintPoa",
       "defined_out": [
@@ -2530,14 +1368,14 @@
         "mintedAsset#0"
       ]
     },
-    "595": {
-      "op": "intc_0 // 0",
+    "392": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "mintedAsset#0",
         "0"
       ]
     },
-    "596": {
+    "393": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
@@ -2545,7 +1383,7 @@
         "\"totalAttendees\""
       ]
     },
-    "597": {
+    "394": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -2558,7 +1396,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "598": {
+    "395": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -2566,8 +1404,8 @@
         "maybe_value%2#0"
       ]
     },
-    "599": {
-      "op": "intc_1 // 1",
+    "396": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "maybe_value%2#0",
@@ -2579,41 +1417,41 @@
         "1"
       ]
     },
-    "600": {
+    "397": {
       "op": "+",
       "defined_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "601": {
+    "398": {
       "op": "bytec_0 // \"totalAttendees\"",
       "stack_out": [
         "mintedAsset#0",
-        "new_state_value%0#0",
+        "tmp%3#0",
         "\"totalAttendees\""
       ]
     },
-    "602": {
+    "399": {
       "op": "swap",
       "stack_out": [
         "mintedAsset#0",
         "\"totalAttendees\"",
-        "new_state_value%0#0"
+        "tmp%3#0"
       ]
     },
-    "603": {
+    "400": {
       "op": "app_global_put",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "604": {
-      "op": "bytec_3 // \"boxMap\"",
+    "401": {
+      "op": "bytec_2 // \"boxMap\"",
       "defined_out": [
         "\"boxMap\"",
         "mintedAsset#0"
@@ -2623,51 +1461,51 @@
         "\"boxMap\""
       ]
     },
-    "605": {
+    "402": {
       "op": "txn Sender",
       "defined_out": [
         "\"boxMap\"",
         "mintedAsset#0",
-        "tmp%2#0"
+        "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "\"boxMap\"",
-        "tmp%2#0"
+        "reinterpret_bytes[32]%0#0"
       ]
     },
-    "607": {
+    "404": {
       "op": "concat",
       "defined_out": [
-        "mintedAsset#0",
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "mintedAsset#0",
-        "tmp%3#0"
-      ]
-    },
-    "608": {
-      "op": "box_len",
-      "defined_out": [
-        "hasClaimed#0",
-        "maybe_value%3#0",
+        "box_prefixed_key%0#0",
         "mintedAsset#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "maybe_value%3#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "405": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "hasClaimed#0",
+        "mintedAsset#0"
+      ],
+      "stack_out": [
+        "mintedAsset#0",
+        "_%0#0",
         "hasClaimed#0"
       ]
     },
-    "609": {
+    "406": {
       "op": "bury 1",
       "stack_out": [
         "mintedAsset#0",
         "hasClaimed#0"
       ]
     },
-    "611": {
+    "408": {
       "op": "!",
       "defined_out": [
         "mintedAsset#0",
@@ -2678,84 +1516,90 @@
         "tmp%4#0"
       ]
     },
-    "612": {
+    "409": {
       "error": "Already claimed POA",
       "op": "assert // Already claimed POA",
       "stack_out": [
         "mintedAsset#0"
       ]
     },
-    "613": {
-      "op": "bytec_3 // \"boxMap\"",
+    "410": {
+      "op": "bytec_2 // \"boxMap\"",
       "stack_out": [
         "mintedAsset#0",
         "\"boxMap\""
       ]
     },
-    "614": {
+    "411": {
       "op": "txn Sender",
       "defined_out": [
         "\"boxMap\"",
         "mintedAsset#0",
-        "tmp%5#0"
+        "reinterpret_bytes[32]%1#0"
       ],
       "stack_out": [
         "mintedAsset#0",
         "\"boxMap\"",
-        "tmp%5#0"
+        "reinterpret_bytes[32]%1#0"
       ]
     },
-    "616": {
+    "413": {
       "op": "concat",
       "defined_out": [
-        "mintedAsset#0",
-        "tmp%6#0"
+        "box_prefixed_key%1#0",
+        "mintedAsset#0"
       ],
       "stack_out": [
         "mintedAsset#0",
-        "tmp%6#0"
+        "box_prefixed_key%1#0"
       ]
     },
-    "617": {
+    "414": {
       "op": "swap",
       "stack_out": [
-        "tmp%6#0",
+        "box_prefixed_key%1#0",
         "mintedAsset#0"
       ]
     },
-    "618": {
+    "415": {
       "op": "itob",
       "defined_out": [
-        "new_box_value%0#0",
-        "tmp%6#0"
+        "box_prefixed_key%1#0",
+        "encoded_value%0#0"
       ],
       "stack_out": [
-        "tmp%6#0",
-        "new_box_value%0#0"
+        "box_prefixed_key%1#0",
+        "encoded_value%0#0"
       ]
     },
-    "619": {
+    "416": {
       "op": "box_put",
       "stack_out": []
     },
-    "620": {
-      "retsub": true,
-      "op": "retsub"
+    "417": {
+      "op": "intc_0 // 1",
+      "stack_out": [
+        "1"
+      ]
     },
-    "621": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaId",
+    "418": {
+      "op": "return",
+      "stack_out": []
+    },
+    "419": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaId[routing]",
       "params": {},
       "block": "getPoaId",
       "stack_in": [],
       "op": "txn Sender",
       "defined_out": [
-        "tmp%0#0"
+        "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "reinterpret_bytes[32]%0#0"
       ]
     },
-    "623": {
+    "421": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2766,28 +1610,77 @@
         "exists#0"
       ]
     },
-    "624": {
+    "422": {
       "error": "POA not found",
       "op": "assert // POA not found",
       "stack_out": [
         "poaId#0"
       ]
     },
-    "625": {
+    "423": {
       "op": "btoi",
       "defined_out": [
-        "tmp%1#0"
+        "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "tmp%0#1"
       ]
     },
-    "626": {
-      "retsub": true,
-      "op": "retsub"
+    "424": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
     },
-    "627": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBox",
+    "425": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "426": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "427": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "428": {
+      "op": "log",
+      "stack_out": []
+    },
+    "429": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "430": {
+      "op": "return",
+      "stack_out": []
+    },
+    "431": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBox[routing]",
       "params": {},
       "block": "getPoaIdWithBox",
       "stack_in": [],
@@ -2799,7 +1692,7 @@
         "box#0"
       ]
     },
-    "629": {
+    "433": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2810,14 +1703,14 @@
         "exists#0"
       ]
     },
-    "630": {
+    "434": {
       "op": "swap",
       "stack_out": [
         "exists#0",
         "maybe_value%0#0"
       ]
     },
-    "631": {
+    "435": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -2828,26 +1721,75 @@
         "poaId#0"
       ]
     },
-    "632": {
+    "436": {
       "op": "swap",
       "stack_out": [
         "poaId#0",
         "exists#0"
       ]
     },
-    "633": {
+    "437": {
       "error": "POA not found",
       "op": "assert // POA not found",
       "stack_out": [
         "poaId#0"
       ]
     },
-    "634": {
-      "retsub": true,
-      "op": "retsub"
+    "438": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
     },
-    "635": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxRef",
+    "439": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "440": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "441": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "442": {
+      "op": "log",
+      "stack_out": []
+    },
+    "443": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "444": {
+      "op": "return",
+      "stack_out": []
+    },
+    "445": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxRef[routing]",
       "params": {},
       "block": "getPoaIdWithBoxRef",
       "stack_in": [],
@@ -2859,7 +1801,7 @@
         "boxRef#0"
       ]
     },
-    "637": {
+    "447": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2870,32 +1812,81 @@
         "exists#0"
       ]
     },
-    "638": {
+    "448": {
       "error": "POA not found",
       "op": "assert // POA not found",
       "stack_out": [
         "poaId#0"
       ]
     },
-    "639": {
+    "449": {
       "op": "btoi",
       "defined_out": [
-        "tmp%0#0"
+        "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "tmp%0#1"
       ]
     },
-    "640": {
-      "retsub": true,
-      "op": "retsub"
+    "450": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
     },
-    "641": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxMap",
+    "451": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "452": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "453": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "454": {
+      "op": "log",
+      "stack_out": []
+    },
+    "455": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "456": {
+      "op": "return",
+      "stack_out": []
+    },
+    "457": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.getPoaIdWithBoxMap[routing]",
       "params": {},
       "block": "getPoaIdWithBoxMap",
       "stack_in": [],
-      "op": "bytec_3 // \"boxMap\"",
+      "op": "bytec_2 // \"boxMap\"",
       "defined_out": [
         "\"boxMap\""
       ],
@@ -2903,27 +1894,27 @@
         "\"boxMap\""
       ]
     },
-    "642": {
+    "458": {
       "op": "txn Sender",
       "defined_out": [
         "\"boxMap\"",
-        "tmp%0#0"
+        "reinterpret_bytes[32]%0#0"
       ],
       "stack_out": [
         "\"boxMap\"",
-        "tmp%0#0"
+        "reinterpret_bytes[32]%0#0"
       ]
     },
-    "644": {
+    "460": {
       "op": "concat",
       "defined_out": [
-        "tmp%1#0"
+        "box_prefixed_key%0#0"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "box_prefixed_key%0#0"
       ]
     },
-    "645": {
+    "461": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
@@ -2934,14 +1925,14 @@
         "exists#0"
       ]
     },
-    "646": {
+    "462": {
       "op": "swap",
       "stack_out": [
         "exists#0",
         "maybe_value%0#0"
       ]
     },
-    "647": {
+    "463": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
@@ -2952,1681 +1943,673 @@
         "poaId#0"
       ]
     },
-    "648": {
+    "464": {
       "op": "swap",
       "stack_out": [
         "poaId#0",
         "exists#0"
       ]
     },
-    "649": {
+    "465": {
       "error": "POA not found",
       "op": "assert // POA not found",
       "stack_out": [
         "poaId#0"
       ]
     },
-    "650": {
-      "retsub": true,
-      "op": "retsub"
+    "466": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
     },
-    "651": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoa",
-      "params": {
-        "optInTxn#0": "uint64"
-      },
+    "467": {
+      "op": "bytec_3 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "468": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "469": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "470": {
+      "op": "log",
+      "stack_out": []
+    },
+    "471": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "472": {
+      "op": "return",
+      "stack_out": []
+    },
+    "473": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoa[routing]",
+      "params": {},
       "block": "claimPoa",
       "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "654": {
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "stack_out": [
-        "tmp%15#0"
+        "tmp%14#0"
       ]
     },
-    "655": {
-      "op": "txn Sender",
+    "474": {
+      "op": "txn GroupIndex",
       "defined_out": [
         "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%15#0",
+        "tmp%14#0",
         "tmp%0#0"
       ]
     },
-    "657": {
+    "476": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "477": {
+      "op": "-",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0"
+      ]
+    },
+    "478": {
+      "op": "dupn 2",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "480": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "482": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer",
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "483": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "484": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0"
+      ]
+    },
+    "485": {
+      "op": "txn Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "reinterpret_bytes[32]%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "reinterpret_bytes[32]%0#0"
+      ]
+    },
+    "487": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
+        "optInTxn#0",
         "poaId#0"
       ],
       "stack_out": [
-        "tmp%15#0",
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
         "exists#0"
       ]
     },
-    "658": {
+    "488": {
       "error": "POA not found, attendance validation failed!",
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0"
       ]
     },
-    "659": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)",
-        "poaId#0"
-      ],
+    "489": {
+      "op": "dig 1",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
         "optInTxn#0 (copy)"
       ]
     },
-    "661": {
+    "491": {
       "op": "gtxns XferAsset",
-      "defined_out": [
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "poaId#0",
-        "tmp%1#0"
+        "tmp%0#0"
       ]
     },
-    "663": {
-      "op": "dup"
-    },
-    "664": {
-      "op": "uncover 2",
-      "defined_out": [
-        "poaId#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%1#0",
-        "poaId#0"
-      ]
-    },
-    "666": {
-      "op": "btoi",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%1#0",
-        "tmp%2#0"
-      ]
-    },
-    "667": {
-      "op": "==",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%3#0"
-      ]
-    },
-    "668": {
-      "error": "POA ID mismatch",
-      "op": "assert // POA ID mismatch",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0"
-      ]
-    },
-    "669": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "671": {
-      "op": "gtxns Fee",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%4#0"
-      ]
-    },
-    "673": {
-      "op": "!",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%5#0"
-      ]
-    },
-    "674": {
-      "error": "We got you covered for free!",
-      "op": "assert // We got you covered for free!",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0"
-      ]
-    },
-    "675": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "677": {
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%6#0"
-      ]
-    },
-    "679": {
-      "op": "!",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%7#0"
-      ]
-    },
-    "680": {
-      "op": "assert",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0"
-      ]
-    },
-    "681": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "683": {
-      "op": "gtxns Sender",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%8#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%8#0"
-      ]
-    },
-    "685": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%8#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "687": {
-      "op": "gtxns AssetReceiver",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ]
-    },
-    "689": {
+    "493": {
       "op": "dup",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%8#0",
-        "tmp%9#0",
-        "tmp%9#0"
-      ]
-    },
-    "690": {
-      "op": "cover 2",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ]
-    },
-    "692": {
-      "op": "==",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%10#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%10#0"
-      ]
-    },
-    "693": {
-      "op": "bz claimPoa_bool_false@3",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "696": {
-      "op": "frame_dig 2",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%9#0"
-      ]
-    },
-    "698": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%12#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%9#0",
-        "tmp%12#0"
-      ]
-    },
-    "700": {
-      "op": "==",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%13#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%13#0"
-      ]
-    },
-    "701": {
-      "op": "bz claimPoa_bool_false@3",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "704": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "and_result%0#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%0#0"
-      ]
-    },
-    "705": {
-      "block": "claimPoa_bool_merge@4",
-      "stack_in": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%0#0"
-      ],
-      "error": "Opt-in transaction sender and receiver must be the same",
-      "op": "assert // Opt-in transaction sender and receiver must be the same",
-      "defined_out": [],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "706": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "708": {
-      "op": "gtxns AssetCloseTo",
-      "defined_out": [
-        "tmp%14#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%14#0"
-      ]
-    },
-    "710": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
         "tmp%14#0",
-        "optInTxn#0 (copy)"
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0",
+        "tmp%0#0"
       ]
     },
-    "712": {
-      "op": "gtxns RekeyTo",
+    "494": {
+      "op": "cover 3",
       "defined_out": [
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
         "tmp%14#0",
-        "tmp%15#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
       ]
     },
-    "714": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0",
-        "tmp%15#0"
-      ]
-    },
-    "715": {
-      "op": "frame_bury 0",
-      "defined_out": [
-        "tmp%14#0",
-        "tmp%15#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0"
-      ]
-    },
-    "717": {
-      "op": "==",
-      "defined_out": [
-        "tmp%15#0",
-        "tmp%16#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%16#0"
-      ]
-    },
-    "718": {
-      "op": "bz claimPoa_bool_false@7",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "721": {
-      "op": "frame_dig 0",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%15#0"
-      ]
-    },
-    "723": {
-      "op": "global ZeroAddress",
-      "defined_out": [
-        "tmp%15#0",
-        "tmp%18#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%15#0",
-        "tmp%18#0"
-      ]
-    },
-    "725": {
-      "op": "==",
-      "defined_out": [
-        "tmp%15#0",
-        "tmp%19#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%19#0"
-      ]
-    },
-    "726": {
-      "op": "bz claimPoa_bool_false@7",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "729": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "and_result%1#0",
-        "tmp%15#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%1#0"
-      ]
-    },
-    "730": {
-      "block": "claimPoa_bool_merge@8",
-      "stack_in": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%1#0"
-      ],
-      "error": "Opt-in transaction close to must be zero address",
-      "op": "assert // Opt-in transaction close to must be zero address",
-      "defined_out": [],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "731": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%20#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%20#0"
-      ]
-    },
-    "733": {
-      "op": "frame_dig 1",
-      "defined_out": [
-        "tmp%1#0",
-        "tmp%20#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "tmp%20#0",
-        "tmp%1#0"
-      ]
-    },
-    "735": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
-      "op": "callsub sendPoa",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ]
-    },
-    "738": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "739": {
-      "block": "claimPoa_bool_false@7",
-      "stack_in": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ],
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "and_result%1#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%1#0"
-      ]
-    },
-    "740": {
-      "op": "b claimPoa_bool_merge@8"
-    },
-    "743": {
-      "block": "claimPoa_bool_false@3",
-      "stack_in": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0"
-      ],
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "and_result%0#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0",
-        "tmp%9#0",
-        "and_result%0#0"
-      ]
-    },
-    "744": {
-      "op": "b claimPoa_bool_merge@4"
-    },
-    "747": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBox",
-      "params": {
-        "optInTxn#0": "uint64"
-      },
-      "block": "claimPoaWithBox",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "750": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%13#0"
-      ]
-    },
-    "751": {
-      "op": "txn Sender",
-      "defined_out": [
-        "box#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "box#0"
-      ]
-    },
-    "753": {
-      "op": "box_get",
-      "defined_out": [
-        "exists#0",
-        "maybe_value%0#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "maybe_value%0#0",
-        "exists#0"
-      ]
-    },
-    "754": {
+    "496": {
       "op": "swap",
       "stack_out": [
-        "tmp%13#0",
-        "exists#0",
-        "maybe_value%0#0"
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "poaId#0"
       ]
     },
-    "755": {
+    "497": {
       "op": "btoi",
       "defined_out": [
-        "exists#0",
-        "poaId#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
       ],
       "stack_out": [
-        "tmp%13#0",
-        "exists#0",
-        "poaId#0"
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
       ]
     },
-    "756": {
+    "498": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%2#0"
+      ]
+    },
+    "499": {
+      "error": "POA ID mismatch",
+      "op": "assert // POA ID mismatch",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "500": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "501": {
+      "op": "gtxns Fee",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%3#0"
+      ]
+    },
+    "503": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%4#0"
+      ]
+    },
+    "504": {
+      "error": "We got you covered for free!",
+      "op": "assert // We got you covered for free!",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "505": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "506": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%5#0"
+      ]
+    },
+    "508": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%6#0"
+      ]
+    },
+    "509": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "510": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "511": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%7#0"
+      ]
+    },
+    "513": {
       "op": "swap",
       "stack_out": [
-        "tmp%13#0",
-        "poaId#0",
-        "exists#0"
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0"
       ]
     },
-    "757": {
-      "error": "POA not found, attendance validation failed!",
-      "op": "assert // POA not found, attendance validation failed!",
-      "stack_out": [
-        "tmp%13#0",
-        "poaId#0"
-      ]
-    },
-    "758": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)",
-        "poaId#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "poaId#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "760": {
-      "op": "gtxns XferAsset",
-      "defined_out": [
-        "poaId#0",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "poaId#0",
-        "tmp%0#0"
-      ]
-    },
-    "762": {
-      "op": "dup"
-    },
-    "763": {
-      "op": "uncover 2",
-      "defined_out": [
-        "poaId#0",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%0#0",
-        "poaId#0"
-      ]
-    },
-    "765": {
-      "op": "==",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%1#0"
-      ]
-    },
-    "766": {
-      "error": "POA ID mismatch",
-      "op": "assert // POA ID mismatch",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0"
-      ]
-    },
-    "767": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "769": {
-      "op": "gtxns Fee",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%2#0"
-      ]
-    },
-    "771": {
-      "op": "!",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%3#0"
-      ]
-    },
-    "772": {
-      "error": "We got you covered for free!",
-      "op": "assert // We got you covered for free!",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0"
-      ]
-    },
-    "773": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "775": {
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%4#0"
-      ]
-    },
-    "777": {
-      "op": "!",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%5#0"
-      ]
-    },
-    "778": {
-      "op": "assert",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0"
-      ]
-    },
-    "779": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "781": {
-      "op": "gtxns Sender",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%6#0"
-      ]
-    },
-    "783": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%6#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "785": {
+    "514": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
-        "tmp%0#0",
-        "tmp%6#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%6#0",
-        "tmp%7#0"
-      ]
-    },
-    "787": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%6#0",
-        "tmp%7#0",
-        "tmp%7#0"
-      ]
-    },
-    "788": {
-      "op": "cover 2",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%6#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%6#0",
-        "tmp%7#0"
-      ]
-    },
-    "790": {
-      "op": "==",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%8#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%8#0"
-      ]
-    },
-    "791": {
-      "op": "bz claimPoaWithBox_bool_false@3",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "794": {
-      "op": "frame_dig 2",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%7#0"
-      ]
-    },
-    "796": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%10#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%7#0",
-        "tmp%10#0"
-      ]
-    },
-    "798": {
-      "op": "==",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%11#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%11#0"
-      ]
-    },
-    "799": {
-      "op": "bz claimPoaWithBox_bool_false@3",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "802": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "and_result%0#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%0#0"
-      ]
-    },
-    "803": {
-      "block": "claimPoaWithBox_bool_merge@4",
-      "stack_in": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%0#0"
-      ],
-      "error": "Opt-in transaction sender and receiver must be the same",
-      "op": "assert // Opt-in transaction sender and receiver must be the same",
-      "defined_out": [],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "804": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "806": {
-      "op": "gtxns AssetCloseTo",
-      "defined_out": [
-        "tmp%12#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%12#0"
-      ]
-    },
-    "808": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%12#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "810": {
-      "op": "gtxns RekeyTo",
-      "defined_out": [
-        "tmp%12#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%12#0",
-        "tmp%13#0"
-      ]
-    },
-    "812": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%12#0",
-        "tmp%13#0",
-        "tmp%13#0"
-      ]
-    },
-    "813": {
-      "op": "frame_bury 0",
-      "defined_out": [
-        "tmp%12#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%12#0",
-        "tmp%13#0"
-      ]
-    },
-    "815": {
-      "op": "==",
-      "defined_out": [
-        "tmp%13#0",
-        "tmp%14#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%14#0"
-      ]
-    },
-    "816": {
-      "op": "bz claimPoaWithBox_bool_false@7",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "819": {
-      "op": "frame_dig 0",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%13#0"
-      ]
-    },
-    "821": {
-      "op": "global ZeroAddress",
-      "defined_out": [
-        "tmp%13#0",
-        "tmp%16#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%13#0",
-        "tmp%16#0"
-      ]
-    },
-    "823": {
-      "op": "==",
-      "defined_out": [
-        "tmp%13#0",
-        "tmp%17#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%17#0"
-      ]
-    },
-    "824": {
-      "op": "bz claimPoaWithBox_bool_false@7",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "827": {
-      "op": "intc_1 // 1",
-      "defined_out": [
-        "and_result%1#0",
-        "tmp%13#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%1#0"
-      ]
-    },
-    "828": {
-      "block": "claimPoaWithBox_bool_merge@8",
-      "stack_in": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%1#0"
-      ],
-      "error": "Opt-in transaction close to must be zero address",
-      "op": "assert // Opt-in transaction close to must be zero address",
-      "defined_out": [],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "829": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%18#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%18#0"
-      ]
-    },
-    "831": {
-      "op": "frame_dig 1",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%18#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "tmp%18#0",
-        "tmp%0#0"
-      ]
-    },
-    "833": {
-      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
-      "op": "callsub sendPoa",
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "836": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "837": {
-      "block": "claimPoaWithBox_bool_false@7",
-      "stack_in": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ],
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "and_result%1#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%1#0"
-      ]
-    },
-    "838": {
-      "op": "b claimPoaWithBox_bool_merge@8"
-    },
-    "841": {
-      "block": "claimPoaWithBox_bool_false@3",
-      "stack_in": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ],
-      "op": "intc_0 // 0",
-      "defined_out": [
-        "and_result%0#0"
-      ],
-      "stack_out": [
-        "tmp%13#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "and_result%0#0"
-      ]
-    },
-    "842": {
-      "op": "b claimPoaWithBox_bool_merge@4"
-    },
-    "845": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxRef",
-      "params": {
-        "optInTxn#0": "uint64"
-      },
-      "block": "claimPoaWithBoxRef",
-      "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "848": {
-      "op": "intc_0 // 0",
-      "stack_out": [
-        "tmp%14#0"
-      ]
-    },
-    "849": {
-      "op": "txn Sender",
-      "defined_out": [
-        "boxRef#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "boxRef#0"
-      ]
-    },
-    "851": {
-      "op": "box_get",
-      "defined_out": [
-        "exists#0",
-        "poaId#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "poaId#0",
-        "exists#0"
-      ]
-    },
-    "852": {
-      "error": "POA not found, attendance validation failed!",
-      "op": "assert // POA not found, attendance validation failed!",
-      "stack_out": [
-        "tmp%14#0",
-        "poaId#0"
-      ]
-    },
-    "853": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)",
-        "poaId#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "poaId#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "855": {
-      "op": "gtxns XferAsset",
-      "defined_out": [
-        "poaId#0",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "poaId#0",
-        "tmp%0#0"
-      ]
-    },
-    "857": {
-      "op": "dup"
-    },
-    "858": {
-      "op": "uncover 2",
-      "defined_out": [
-        "poaId#0",
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%0#0",
-        "poaId#0"
-      ]
-    },
-    "860": {
-      "op": "btoi",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%0#0",
-        "tmp%1#0"
-      ]
-    },
-    "861": {
-      "op": "==",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%2#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%2#0"
-      ]
-    },
-    "862": {
-      "error": "POA ID mismatch",
-      "op": "assert // POA ID mismatch",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0"
-      ]
-    },
-    "863": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "865": {
-      "op": "gtxns Fee",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%3#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%3#0"
-      ]
-    },
-    "867": {
-      "op": "!",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%4#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%4#0"
-      ]
-    },
-    "868": {
-      "error": "We got you covered for free!",
-      "op": "assert // We got you covered for free!",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0"
-      ]
-    },
-    "869": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "871": {
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%5#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%5#0"
-      ]
-    },
-    "873": {
-      "op": "!",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%6#0"
-      ]
-    },
-    "874": {
-      "op": "assert",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0"
-      ]
-    },
-    "875": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "877": {
-      "op": "gtxns Sender",
-      "defined_out": [
-        "tmp%0#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%7#0"
-      ]
-    },
-    "879": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%7#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "881": {
-      "op": "gtxns AssetReceiver",
-      "defined_out": [
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%7#0",
         "tmp%8#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%7#0",
         "tmp%8#0"
       ]
     },
-    "883": {
+    "516": {
       "op": "dup",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%7#0",
         "tmp%8#0",
         "tmp%8#0"
       ]
     },
-    "884": {
+    "517": {
       "op": "cover 2",
       "defined_out": [
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%7#0",
         "tmp%8#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%7#0",
         "tmp%8#0"
       ]
     },
-    "886": {
+    "519": {
       "op": "==",
       "defined_out": [
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%9#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%9#0"
       ]
     },
-    "887": {
-      "op": "bz claimPoaWithBoxRef_bool_false@3",
+    "520": {
+      "op": "bz claimPoa_bool_false@4",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "890": {
-      "op": "frame_dig 2",
-      "stack_out": [
-        "tmp%14#0",
-        "tmp%0#0",
-        "tmp%8#0",
-        "tmp%8#0"
-      ]
+    "523": {
+      "op": "dup"
     },
-    "892": {
+    "524": {
       "op": "txn Sender",
       "defined_out": [
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%11#0",
         "tmp%8#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%8#0",
         "tmp%11#0"
       ]
     },
-    "894": {
+    "526": {
       "op": "==",
       "defined_out": [
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%12#0",
         "tmp%8#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%12#0"
       ]
     },
-    "895": {
-      "op": "bz claimPoaWithBoxRef_bool_false@3",
+    "527": {
+      "op": "bz claimPoa_bool_false@4",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "898": {
-      "op": "intc_1 // 1",
+    "530": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "and_result%0#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%0#0"
       ]
     },
-    "899": {
-      "block": "claimPoaWithBoxRef_bool_merge@4",
+    "531": {
+      "error": "Opt-in transaction sender and receiver must be the same",
+      "block": "claimPoa_bool_merge@5",
       "stack_in": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%0#0"
       ],
-      "error": "Opt-in transaction sender and receiver must be the same",
       "op": "assert // Opt-in transaction sender and receiver must be the same",
       "defined_out": [],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "900": {
-      "op": "frame_dig -1",
+    "532": {
+      "op": "dig 2",
       "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "optInTxn#0"
+      ]
+    },
+    "534": {
+      "op": "dup",
+      "defined_out": [
+        "optInTxn#0",
         "optInTxn#0 (copy)"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
+        "optInTxn#0",
         "optInTxn#0 (copy)"
       ]
     },
-    "902": {
+    "535": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
+        "optInTxn#0",
         "tmp%13#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
+        "optInTxn#0",
         "tmp%13#0"
       ]
     },
-    "904": {
-      "op": "frame_dig -1",
+    "537": {
+      "op": "swap",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%13#0",
-        "optInTxn#0 (copy)"
+        "optInTxn#0"
       ]
     },
-    "906": {
+    "538": {
       "op": "gtxns RekeyTo",
       "defined_out": [
+        "optInTxn#0",
         "tmp%13#0",
         "tmp%14#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%13#0",
         "tmp%14#0"
       ]
     },
-    "908": {
+    "540": {
       "op": "dup",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%13#0",
@@ -4634,847 +2617,2796 @@
         "tmp%14#0"
       ]
     },
-    "909": {
-      "op": "frame_bury 0",
+    "541": {
+      "op": "bury 6",
       "defined_out": [
+        "optInTxn#0",
         "tmp%13#0",
         "tmp%14#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%13#0",
         "tmp%14#0"
       ]
     },
-    "911": {
+    "543": {
       "op": "==",
       "defined_out": [
+        "optInTxn#0",
         "tmp%14#0",
         "tmp%15#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%15#0"
       ]
     },
-    "912": {
-      "op": "bz claimPoaWithBoxRef_bool_false@7",
+    "544": {
+      "op": "bz claimPoa_bool_false@8",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "915": {
-      "op": "frame_dig 0",
+    "547": {
+      "op": "dig 3",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%14#0"
       ]
     },
-    "917": {
+    "549": {
       "op": "global ZeroAddress",
       "defined_out": [
+        "optInTxn#0",
         "tmp%14#0",
         "tmp%17#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%14#0",
         "tmp%17#0"
       ]
     },
-    "919": {
+    "551": {
       "op": "==",
       "defined_out": [
+        "optInTxn#0",
         "tmp%14#0",
         "tmp%18#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%18#0"
       ]
     },
-    "920": {
-      "op": "bz claimPoaWithBoxRef_bool_false@7",
+    "552": {
+      "op": "bz claimPoa_bool_false@8",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "923": {
-      "op": "intc_1 // 1",
+    "555": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "and_result%1#0",
+        "optInTxn#0",
         "tmp%14#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%1#0"
       ]
     },
-    "924": {
-      "block": "claimPoaWithBoxRef_bool_merge@8",
+    "556": {
+      "error": "Opt-in transaction close to must be zero address",
+      "block": "claimPoa_bool_merge@9",
       "stack_in": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%1#0"
       ],
-      "error": "Opt-in transaction close to must be zero address",
       "op": "assert // Opt-in transaction close to must be zero address",
       "defined_out": [],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "925": {
+    "557": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%19#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%19#0"
       ]
     },
-    "927": {
-      "op": "frame_dig 1",
+    "559": {
+      "op": "dig 2",
       "defined_out": [
         "tmp%0#0",
         "tmp%19#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "tmp%19#0",
         "tmp%0#0"
       ]
     },
-    "929": {
+    "561": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
       "op": "callsub sendPoa",
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ]
     },
-    "932": {
-      "retsub": true,
-      "op": "retsub"
+    "564": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "1"
+      ]
     },
-    "933": {
-      "block": "claimPoaWithBoxRef_bool_false@7",
+    "565": {
+      "op": "return",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "566": {
+      "block": "claimPoa_bool_false@8",
       "stack_in": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "and_result%1#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%1#0"
       ]
     },
-    "934": {
-      "op": "b claimPoaWithBoxRef_bool_merge@8"
+    "567": {
+      "op": "b claimPoa_bool_merge@9"
     },
-    "937": {
-      "block": "claimPoaWithBoxRef_bool_false@3",
+    "570": {
+      "block": "claimPoa_bool_false@4",
       "stack_in": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0"
       ],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "and_result%0#0"
       ],
       "stack_out": [
         "tmp%14#0",
+        "optInTxn#0",
         "tmp%0#0",
         "tmp%8#0",
         "and_result%0#0"
       ]
     },
-    "938": {
-      "op": "b claimPoaWithBoxRef_bool_merge@4"
+    "571": {
+      "op": "b claimPoa_bool_merge@5"
     },
-    "941": {
-      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxMap",
-      "params": {
-        "optInTxn#0": "uint64"
-      },
-      "block": "claimPoaWithBoxMap",
+    "574": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBox[routing]",
+      "params": {},
+      "block": "claimPoaWithBox",
       "stack_in": [],
-      "op": "proto 1 0"
-    },
-    "944": {
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "stack_out": [
-        "tmp%15#0"
+        "tmp%13#0"
       ]
     },
-    "945": {
-      "op": "bytec_3 // \"boxMap\"",
+    "575": {
+      "op": "txn GroupIndex",
       "defined_out": [
-        "\"boxMap\""
+        "tmp%0#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "\"boxMap\""
+        "tmp%13#0",
+        "tmp%0#0"
       ]
     },
-    "946": {
+    "577": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "578": {
+      "op": "-",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0"
+      ]
+    },
+    "579": {
+      "op": "dupn 2",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "581": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "583": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer",
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "584": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "585": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0"
+      ]
+    },
+    "586": {
       "op": "txn Sender",
       "defined_out": [
-        "\"boxMap\"",
-        "tmp%0#0"
+        "box#0",
+        "optInTxn#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "\"boxMap\"",
-        "tmp%0#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "box#0"
       ]
     },
-    "948": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%1#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%1#0"
-      ]
-    },
-    "949": {
+    "588": {
       "op": "box_get",
       "defined_out": [
         "exists#0",
-        "maybe_value%0#0"
+        "maybe_value%0#0",
+        "optInTxn#0"
       ],
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "maybe_value%0#0",
         "exists#0"
       ]
     },
-    "950": {
+    "589": {
       "op": "swap",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "exists#0",
         "maybe_value%0#0"
       ]
     },
-    "951": {
+    "590": {
       "op": "btoi",
       "defined_out": [
         "exists#0",
+        "optInTxn#0",
         "poaId#0"
       ],
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "exists#0",
         "poaId#0"
       ]
     },
-    "952": {
+    "591": {
       "op": "swap",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
         "exists#0"
       ]
     },
-    "953": {
+    "592": {
       "error": "POA not found, attendance validation failed!",
       "op": "assert // POA not found, attendance validation failed!",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0"
       ]
     },
-    "954": {
-      "op": "frame_dig -1",
-      "defined_out": [
-        "optInTxn#0 (copy)",
-        "poaId#0"
-      ],
+    "593": {
+      "op": "dig 1",
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
         "optInTxn#0 (copy)"
       ]
     },
-    "956": {
+    "595": {
       "op": "gtxns XferAsset",
-      "defined_out": [
-        "poaId#0",
-        "tmp%2#0"
-      ],
       "stack_out": [
-        "tmp%15#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
         "poaId#0",
-        "tmp%2#0"
+        "tmp%0#0"
       ]
     },
-    "958": {
-      "op": "dup"
-    },
-    "959": {
-      "op": "uncover 2",
-      "defined_out": [
-        "poaId#0",
-        "tmp%2#0"
-      ],
+    "597": {
+      "op": "dup",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%2#0",
-        "poaId#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0",
+        "tmp%0#0"
       ]
     },
-    "961": {
+    "598": {
+      "op": "cover 3",
+      "defined_out": [
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ]
+    },
+    "600": {
       "op": "==",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%3#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%3#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%1#0"
       ]
     },
-    "962": {
+    "601": {
       "error": "POA ID mismatch",
       "op": "assert // POA ID mismatch",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
       ]
     },
-    "963": {
-      "op": "frame_dig -1",
+    "602": {
+      "op": "dup",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
         "optInTxn#0 (copy)"
       ]
     },
-    "965": {
+    "603": {
       "op": "gtxns Fee",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%4#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%4#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%2#0"
       ]
     },
-    "967": {
+    "605": {
       "op": "!",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%5#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%5#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%3#0"
       ]
     },
-    "968": {
+    "606": {
       "error": "We got you covered for free!",
       "op": "assert // We got you covered for free!",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
       ]
     },
-    "969": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "971": {
-      "op": "gtxns AssetAmount",
-      "defined_out": [
-        "tmp%2#0",
-        "tmp%6#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%6#0"
-      ]
-    },
-    "973": {
-      "op": "!",
-      "defined_out": [
-        "tmp%2#0",
-        "tmp%7#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%7#0"
-      ]
-    },
-    "974": {
-      "op": "assert",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0"
-      ]
-    },
-    "975": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "977": {
-      "op": "gtxns Sender",
-      "defined_out": [
-        "tmp%2#0",
-        "tmp%8#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%8#0"
-      ]
-    },
-    "979": {
-      "op": "frame_dig -1",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%8#0",
-        "optInTxn#0 (copy)"
-      ]
-    },
-    "981": {
-      "op": "gtxns AssetReceiver",
-      "defined_out": [
-        "tmp%2#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%8#0",
-        "tmp%9#0"
-      ]
-    },
-    "983": {
+    "607": {
       "op": "dup",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%8#0",
-        "tmp%9#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
       ]
     },
-    "984": {
+    "608": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%4#0"
+      ]
+    },
+    "610": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%5#0"
+      ]
+    },
+    "611": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "612": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "613": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%6#0"
+      ]
+    },
+    "615": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "optInTxn#0"
+      ]
+    },
+    "616": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ]
+    },
+    "618": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0",
+        "tmp%7#0"
+      ]
+    },
+    "619": {
       "op": "cover 2",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%8#0",
-        "tmp%9#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%8#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%6#0",
+        "tmp%7#0"
       ]
     },
-    "986": {
+    "621": {
       "op": "==",
       "defined_out": [
-        "tmp%10#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "622": {
+      "op": "bz claimPoaWithBox_bool_false@4",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "625": {
+      "op": "dup"
+    },
+    "626": {
+      "op": "txn Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%10#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%7#0",
         "tmp%10#0"
       ]
     },
-    "987": {
-      "op": "bz claimPoaWithBoxMap_bool_false@3",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
-      ]
-    },
-    "990": {
-      "op": "frame_dig 2",
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%9#0"
-      ]
-    },
-    "992": {
-      "op": "txn Sender",
-      "defined_out": [
-        "tmp%12#0",
-        "tmp%2#0",
-        "tmp%9#0"
-      ],
-      "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%9#0",
-        "tmp%12#0"
-      ]
-    },
-    "994": {
+    "628": {
       "op": "==",
       "defined_out": [
-        "tmp%13#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%11#0",
+        "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%13#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%11#0"
       ]
     },
-    "995": {
-      "op": "bz claimPoaWithBoxMap_bool_false@3",
+    "629": {
+      "op": "bz claimPoaWithBox_bool_false@4",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "998": {
-      "op": "intc_1 // 1",
+    "632": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "and_result%0#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%0#0"
       ]
     },
-    "999": {
-      "block": "claimPoaWithBoxMap_bool_merge@4",
+    "633": {
+      "error": "Opt-in transaction sender and receiver must be the same",
+      "block": "claimPoaWithBox_bool_merge@5",
       "stack_in": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%0#0"
       ],
-      "error": "Opt-in transaction sender and receiver must be the same",
       "op": "assert // Opt-in transaction sender and receiver must be the same",
       "defined_out": [],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "1000": {
-      "op": "frame_dig -1",
+    "634": {
+      "op": "dig 2",
       "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0"
+      ]
+    },
+    "636": {
+      "op": "dup",
+      "defined_out": [
+        "optInTxn#0",
         "optInTxn#0 (copy)"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0",
         "optInTxn#0 (copy)"
       ]
     },
-    "1002": {
+    "637": {
       "op": "gtxns AssetCloseTo",
       "defined_out": [
-        "tmp%14#0"
+        "optInTxn#0",
+        "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%14#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0",
+        "tmp%12#0"
       ]
     },
-    "1004": {
-      "op": "frame_dig -1",
+    "639": {
+      "op": "swap",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "optInTxn#0 (copy)"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "optInTxn#0"
       ]
     },
-    "1006": {
+    "640": {
       "op": "gtxns RekeyTo",
       "defined_out": [
-        "tmp%14#0",
-        "tmp%15#0"
+        "optInTxn#0",
+        "tmp%12#0",
+        "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0"
       ]
     },
-    "1008": {
+    "642": {
       "op": "dup",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0",
-        "tmp%15#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0",
+        "tmp%13#0"
       ]
     },
-    "1009": {
-      "op": "frame_bury 0",
+    "643": {
+      "op": "bury 6",
       "defined_out": [
-        "tmp%14#0",
-        "tmp%15#0"
+        "optInTxn#0",
+        "tmp%12#0",
+        "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%14#0",
-        "tmp%15#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0"
       ]
     },
-    "1011": {
+    "645": {
       "op": "==",
       "defined_out": [
-        "tmp%15#0",
-        "tmp%16#0"
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%14#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%16#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%14#0"
       ]
     },
-    "1012": {
-      "op": "bz claimPoaWithBoxMap_bool_false@7",
+    "646": {
+      "op": "bz claimPoaWithBox_bool_false@8",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "1015": {
-      "op": "frame_dig 0",
+    "649": {
+      "op": "dig 3",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%15#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%13#0"
       ]
     },
-    "1017": {
+    "651": {
       "op": "global ZeroAddress",
       "defined_out": [
-        "tmp%15#0",
-        "tmp%18#0"
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%16#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%15#0",
-        "tmp%18#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%13#0",
+        "tmp%16#0"
       ]
     },
-    "1019": {
+    "653": {
       "op": "==",
       "defined_out": [
-        "tmp%15#0",
-        "tmp%19#0"
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%17#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%19#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%17#0"
       ]
     },
-    "1020": {
-      "op": "bz claimPoaWithBoxMap_bool_false@7",
+    "654": {
+      "op": "bz claimPoaWithBox_bool_false@8",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "1023": {
-      "op": "intc_1 // 1",
+    "657": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "and_result%1#0",
-        "tmp%15#0"
+        "optInTxn#0",
+        "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%1#0"
       ]
     },
-    "1024": {
-      "block": "claimPoaWithBoxMap_bool_merge@8",
+    "658": {
+      "error": "Opt-in transaction close to must be zero address",
+      "block": "claimPoaWithBox_bool_merge@9",
       "stack_in": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%1#0"
       ],
-      "error": "Opt-in transaction close to must be zero address",
       "op": "assert // Opt-in transaction close to must be zero address",
       "defined_out": [],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "1025": {
+    "659": {
       "op": "txn Sender",
       "defined_out": [
-        "tmp%20#0"
+        "tmp%18#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%20#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%18#0"
       ]
     },
-    "1027": {
-      "op": "frame_dig 1",
+    "661": {
+      "op": "dig 2",
       "defined_out": [
-        "tmp%2#0",
-        "tmp%20#0"
+        "tmp%0#0",
+        "tmp%18#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
-        "tmp%20#0",
-        "tmp%2#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%18#0",
+        "tmp%0#0"
       ]
     },
-    "1029": {
+    "663": {
       "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
       "op": "callsub sendPoa",
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ]
     },
-    "1032": {
-      "retsub": true,
-      "op": "retsub"
-    },
-    "1033": {
-      "block": "claimPoaWithBoxMap_bool_false@7",
-      "stack_in": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+    "666": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
       ],
-      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "1"
+      ]
+    },
+    "667": {
+      "op": "return",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "668": {
+      "block": "claimPoaWithBox_bool_false@8",
+      "stack_in": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "op": "intc_1 // 0",
       "defined_out": [
         "and_result%1#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%1#0"
       ]
     },
-    "1034": {
-      "op": "b claimPoaWithBoxMap_bool_merge@8"
+    "669": {
+      "op": "b claimPoaWithBox_bool_merge@9"
     },
-    "1037": {
-      "block": "claimPoaWithBoxMap_bool_false@3",
+    "672": {
+      "block": "claimPoaWithBox_bool_false@4",
       "stack_in": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0"
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
       ],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "and_result%0#0"
       ],
       "stack_out": [
-        "tmp%15#0",
-        "tmp%2#0",
-        "tmp%9#0",
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
         "and_result%0#0"
       ]
     },
-    "1038": {
-      "op": "b claimPoaWithBoxMap_bool_merge@4"
+    "673": {
+      "op": "b claimPoaWithBox_bool_merge@5"
     },
-    "1041": {
+    "676": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxRef[routing]",
+      "params": {},
+      "block": "claimPoaWithBoxRef",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "677": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "tmp%0#0"
+      ]
+    },
+    "679": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "680": {
+      "op": "-",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0"
+      ]
+    },
+    "681": {
+      "op": "dupn 2",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "683": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "685": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer",
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "686": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "687": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0"
+      ]
+    },
+    "688": {
+      "op": "txn Sender",
+      "defined_out": [
+        "boxRef#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "boxRef#0"
+      ]
+    },
+    "690": {
+      "op": "box_get",
+      "defined_out": [
+        "exists#0",
+        "optInTxn#0",
+        "poaId#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "exists#0"
+      ]
+    },
+    "691": {
+      "error": "POA not found, attendance validation failed!",
+      "op": "assert // POA not found, attendance validation failed!",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0"
+      ]
+    },
+    "692": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "694": {
+      "op": "gtxns XferAsset",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ]
+    },
+    "696": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0",
+        "tmp%0#0"
+      ]
+    },
+    "697": {
+      "op": "cover 3",
+      "defined_out": [
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ]
+    },
+    "699": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "poaId#0"
+      ]
+    },
+    "700": {
+      "op": "btoi",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "701": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%2#0"
+      ]
+    },
+    "702": {
+      "error": "POA ID mismatch",
+      "op": "assert // POA ID mismatch",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "703": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "704": {
+      "op": "gtxns Fee",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%3#0"
+      ]
+    },
+    "706": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%4#0"
+      ]
+    },
+    "707": {
+      "error": "We got you covered for free!",
+      "op": "assert // We got you covered for free!",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "708": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "709": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%5#0"
+      ]
+    },
+    "711": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%6#0"
+      ]
+    },
+    "712": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "713": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "714": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%7#0"
+      ]
+    },
+    "716": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0"
+      ]
+    },
+    "717": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "719": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0",
+        "tmp%8#0"
+      ]
+    },
+    "720": {
+      "op": "cover 2",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "722": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "723": {
+      "op": "bz claimPoaWithBoxRef_bool_false@4",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "726": {
+      "op": "dup"
+    },
+    "727": {
+      "op": "txn Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%11#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%8#0",
+        "tmp%11#0"
+      ]
+    },
+    "729": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%12#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%12#0"
+      ]
+    },
+    "730": {
+      "op": "bz claimPoaWithBoxRef_bool_false@4",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "733": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "and_result%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%0#0"
+      ]
+    },
+    "734": {
+      "error": "Opt-in transaction sender and receiver must be the same",
+      "block": "claimPoaWithBoxRef_bool_merge@5",
+      "stack_in": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%0#0"
+      ],
+      "op": "assert // Opt-in transaction sender and receiver must be the same",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "735": {
+      "op": "dig 2",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "optInTxn#0"
+      ]
+    },
+    "737": {
+      "op": "dup",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "738": {
+      "op": "gtxns AssetCloseTo",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "optInTxn#0",
+        "tmp%13#0"
+      ]
+    },
+    "740": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%13#0",
+        "optInTxn#0"
+      ]
+    },
+    "741": {
+      "op": "gtxns RekeyTo",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ]
+    },
+    "743": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%13#0",
+        "tmp%14#0",
+        "tmp%14#0"
+      ]
+    },
+    "744": {
+      "op": "bury 6",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ]
+    },
+    "746": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%14#0",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%15#0"
+      ]
+    },
+    "747": {
+      "op": "bz claimPoaWithBoxRef_bool_false@8",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "750": {
+      "op": "dig 3",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%14#0"
+      ]
+    },
+    "752": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%14#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%14#0",
+        "tmp%17#0"
+      ]
+    },
+    "754": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%14#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%18#0"
+      ]
+    },
+    "755": {
+      "op": "bz claimPoaWithBoxRef_bool_false@8",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "758": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "and_result%1#0",
+        "optInTxn#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%1#0"
+      ]
+    },
+    "759": {
+      "error": "Opt-in transaction close to must be zero address",
+      "block": "claimPoaWithBoxRef_bool_merge@9",
+      "stack_in": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%1#0"
+      ],
+      "op": "assert // Opt-in transaction close to must be zero address",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "760": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%19#0"
+      ]
+    },
+    "762": {
+      "op": "dig 2",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "tmp%19#0",
+        "tmp%0#0"
+      ]
+    },
+    "764": {
+      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
+      "op": "callsub sendPoa",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "767": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "1"
+      ]
+    },
+    "768": {
+      "op": "return",
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ]
+    },
+    "769": {
+      "block": "claimPoaWithBoxRef_bool_false@8",
+      "stack_in": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "and_result%1#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%1#0"
+      ]
+    },
+    "770": {
+      "op": "b claimPoaWithBoxRef_bool_merge@9"
+    },
+    "773": {
+      "block": "claimPoaWithBoxRef_bool_false@4",
+      "stack_in": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0"
+      ],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "and_result%0#0"
+      ],
+      "stack_out": [
+        "tmp%14#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%8#0",
+        "and_result%0#0"
+      ]
+    },
+    "774": {
+      "op": "b claimPoaWithBoxRef_bool_merge@5"
+    },
+    "777": {
+      "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.claimPoaWithBoxMap[routing]",
+      "params": {},
+      "block": "claimPoaWithBoxMap",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "778": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "tmp%0#0"
+      ]
+    },
+    "780": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "tmp%0#0",
+        "1"
+      ]
+    },
+    "781": {
+      "op": "-",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0"
+      ]
+    },
+    "782": {
+      "op": "dupn 2",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "784": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "786": {
+      "op": "intc_2 // axfer",
+      "defined_out": [
+        "axfer",
+        "gtxn_type%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "787": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_type_matches%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "788": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0"
+      ]
+    },
+    "789": {
+      "op": "bytec_2 // \"boxMap\"",
+      "defined_out": [
+        "\"boxMap\"",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "\"boxMap\""
+      ]
+    },
+    "790": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"boxMap\"",
+        "optInTxn#0",
+        "reinterpret_bytes[32]%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "\"boxMap\"",
+        "reinterpret_bytes[32]%0#0"
+      ]
+    },
+    "792": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "793": {
+      "op": "box_get",
+      "defined_out": [
+        "exists#0",
+        "maybe_value%0#0",
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "maybe_value%0#0",
+        "exists#0"
+      ]
+    },
+    "794": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "exists#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "795": {
+      "op": "btoi",
+      "defined_out": [
+        "exists#0",
+        "optInTxn#0",
+        "poaId#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "exists#0",
+        "poaId#0"
+      ]
+    },
+    "796": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "exists#0"
+      ]
+    },
+    "797": {
+      "error": "POA not found, attendance validation failed!",
+      "op": "assert // POA not found, attendance validation failed!",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0"
+      ]
+    },
+    "798": {
+      "op": "dig 1",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "800": {
+      "op": "gtxns XferAsset",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ]
+    },
+    "802": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0",
+        "tmp%0#0"
+      ]
+    },
+    "803": {
+      "op": "cover 3",
+      "defined_out": [
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "poaId#0",
+        "tmp%0#0"
+      ]
+    },
+    "805": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%1#0"
+      ]
+    },
+    "806": {
+      "error": "POA ID mismatch",
+      "op": "assert // POA ID mismatch",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "807": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "808": {
+      "op": "gtxns Fee",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%2#0"
+      ]
+    },
+    "810": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%3#0"
+      ]
+    },
+    "811": {
+      "error": "We got you covered for free!",
+      "op": "assert // We got you covered for free!",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "812": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "813": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%4#0"
+      ]
+    },
+    "815": {
+      "op": "!",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%5#0"
+      ]
+    },
+    "816": {
+      "op": "assert",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0"
+      ]
+    },
+    "817": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "818": {
+      "op": "gtxns Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "optInTxn#0",
+        "tmp%6#0"
+      ]
+    },
+    "820": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "optInTxn#0"
+      ]
+    },
+    "821": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ]
+    },
+    "823": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0",
+        "tmp%7#0"
+      ]
+    },
+    "824": {
+      "op": "cover 2",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%6#0",
+        "tmp%7#0"
+      ]
+    },
+    "826": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "827": {
+      "op": "bz claimPoaWithBoxMap_bool_false@4",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "830": {
+      "op": "dup"
+    },
+    "831": {
+      "op": "txn Sender",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%10#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%7#0",
+        "tmp%10#0"
+      ]
+    },
+    "833": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%11#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%11#0"
+      ]
+    },
+    "834": {
+      "op": "bz claimPoaWithBoxMap_bool_false@4",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "837": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "and_result%0#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%0#0"
+      ]
+    },
+    "838": {
+      "error": "Opt-in transaction sender and receiver must be the same",
+      "block": "claimPoaWithBoxMap_bool_merge@5",
+      "stack_in": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%0#0"
+      ],
+      "op": "assert // Opt-in transaction sender and receiver must be the same",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "839": {
+      "op": "dig 2",
+      "defined_out": [
+        "optInTxn#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0"
+      ]
+    },
+    "841": {
+      "op": "dup",
+      "defined_out": [
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0",
+        "optInTxn#0 (copy)"
+      ]
+    },
+    "842": {
+      "op": "gtxns AssetCloseTo",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "optInTxn#0",
+        "tmp%12#0"
+      ]
+    },
+    "844": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "optInTxn#0"
+      ]
+    },
+    "845": {
+      "op": "gtxns RekeyTo",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ]
+    },
+    "847": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0",
+        "tmp%13#0"
+      ]
+    },
+    "848": {
+      "op": "bury 6",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%12#0",
+        "tmp%13#0"
+      ]
+    },
+    "850": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%14#0"
+      ]
+    },
+    "851": {
+      "op": "bz claimPoaWithBoxMap_bool_false@8",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "854": {
+      "op": "dig 3",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%13#0"
+      ]
+    },
+    "856": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%13#0",
+        "tmp%16#0"
+      ]
+    },
+    "858": {
+      "op": "==",
+      "defined_out": [
+        "optInTxn#0",
+        "tmp%13#0",
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%17#0"
+      ]
+    },
+    "859": {
+      "op": "bz claimPoaWithBoxMap_bool_false@8",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "862": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "and_result%1#0",
+        "optInTxn#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%1#0"
+      ]
+    },
+    "863": {
+      "error": "Opt-in transaction close to must be zero address",
+      "block": "claimPoaWithBoxMap_bool_merge@9",
+      "stack_in": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%1#0"
+      ],
+      "op": "assert // Opt-in transaction close to must be zero address",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "864": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%18#0"
+      ]
+    },
+    "866": {
+      "op": "dig 2",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "tmp%18#0",
+        "tmp%0#0"
+      ]
+    },
+    "868": {
+      "callsub": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
+      "op": "callsub sendPoa",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "871": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "1"
+      ]
+    },
+    "872": {
+      "op": "return",
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ]
+    },
+    "873": {
+      "block": "claimPoaWithBoxMap_bool_false@8",
+      "stack_in": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "and_result%1#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%1#0"
+      ]
+    },
+    "874": {
+      "op": "b claimPoaWithBoxMap_bool_merge@9"
+    },
+    "877": {
+      "block": "claimPoaWithBoxMap_bool_false@4",
+      "stack_in": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0"
+      ],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "and_result%0#0"
+      ],
+      "stack_out": [
+        "tmp%13#0",
+        "optInTxn#0",
+        "tmp%0#0",
+        "tmp%7#0",
+        "and_result%0#0"
+      ]
+    },
+    "878": {
+      "op": "b claimPoaWithBoxMap_bool_merge@5"
+    },
+    "881": {
       "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.mintPoa",
       "params": {
         "claimer#0": "bytes"
@@ -5483,7 +5415,7 @@
       "stack_in": [],
       "op": "proto 1 1"
     },
-    "1044": {
+    "884": {
       "block": "mintPoa_while_top@3",
       "stack_in": [],
       "op": "pushint 10010 // 10010",
@@ -5494,34 +5426,34 @@
         "10010"
       ]
     },
-    "1047": {
+    "887": {
       "op": "global OpcodeBudget",
       "defined_out": [
         "10010",
-        "tmp%0#1"
+        "tmp%1#1"
       ],
       "stack_out": [
         "10010",
-        "tmp%0#1"
+        "tmp%1#1"
       ]
     },
-    "1049": {
+    "889": {
       "op": ">",
       "defined_out": [
-        "tmp%1#1"
+        "tmp%2#1"
       ],
       "stack_out": [
-        "tmp%1#1"
+        "tmp%2#1"
       ]
     },
-    "1050": {
+    "890": {
       "op": "bz mintPoa_after_while@8",
       "stack_out": []
     },
-    "1053": {
+    "893": {
       "op": "itxn_begin"
     },
-    "1054": {
+    "894": {
       "op": "pushint 6 // appl",
       "defined_out": [
         "appl"
@@ -5530,11 +5462,11 @@
         "appl"
       ]
     },
-    "1056": {
+    "896": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "1058": {
+    "898": {
       "op": "pushint 5 // DeleteApplication",
       "defined_out": [
         "DeleteApplication"
@@ -5543,11 +5475,11 @@
         "DeleteApplication"
       ]
     },
-    "1060": {
+    "900": {
       "op": "itxn_field OnCompletion",
       "stack_out": []
     },
-    "1062": {
+    "902": {
       "op": "bytec 5 // 0x068101",
       "defined_out": [
         "0x068101"
@@ -5556,43 +5488,43 @@
         "0x068101"
       ]
     },
-    "1064": {
+    "904": {
       "op": "itxn_field ApprovalProgram",
       "stack_out": []
     },
-    "1066": {
+    "906": {
       "op": "bytec 5 // 0x068101",
       "stack_out": [
         "0x068101"
       ]
     },
-    "1068": {
+    "908": {
       "op": "itxn_field ClearStateProgram",
       "stack_out": []
     },
-    "1070": {
+    "910": {
       "op": "global MinTxnFee",
       "defined_out": [
-        "tmp%2#0"
+        "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%2#0"
+        "tmp%3#0"
       ]
     },
-    "1072": {
+    "912": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "1074": {
+    "914": {
       "op": "itxn_submit"
     },
-    "1075": {
+    "915": {
       "op": "b mintPoa_while_top@3"
     },
-    "1078": {
+    "918": {
       "block": "mintPoa_after_while@8",
       "stack_in": [],
-      "op": "intc_0 // 0",
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -5600,7 +5532,7 @@
         "0"
       ]
     },
-    "1079": {
+    "919": {
       "op": "bytec_0 // \"totalAttendees\"",
       "defined_out": [
         "\"totalAttendees\"",
@@ -5611,7 +5543,7 @@
         "\"totalAttendees\""
       ]
     },
-    "1080": {
+    "920": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -5622,14 +5554,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "1081": {
+    "921": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "1082": {
+    "922": {
       "op": "itob",
       "defined_out": [
         "tmp%0#0"
@@ -5638,7 +5570,7 @@
         "tmp%0#0"
       ]
     },
-    "1083": {
+    "923": {
       "op": "pushbytes \"AlgoKit POA #\"",
       "defined_out": [
         "\"AlgoKit POA #\"",
@@ -5649,14 +5581,14 @@
         "\"AlgoKit POA #\""
       ]
     },
-    "1098": {
+    "938": {
       "op": "swap",
       "stack_out": [
         "\"AlgoKit POA #\"",
         "tmp%0#0"
       ]
     },
-    "1099": {
+    "939": {
       "op": "concat",
       "defined_out": [
         "assetName#0"
@@ -5665,17 +5597,17 @@
         "assetName#0"
       ]
     },
-    "1100": {
+    "940": {
       "op": "itxn_begin"
     },
-    "1101": {
-      "op": "intc_0 // 0",
+    "941": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "assetName#0",
         "0"
       ]
     },
-    "1102": {
+    "942": {
       "op": "bytec 4 // \"assetUrl\"",
       "defined_out": [
         "\"assetUrl\"",
@@ -5688,7 +5620,7 @@
         "\"assetUrl\""
       ]
     },
-    "1104": {
+    "944": {
       "op": "app_global_get_ex",
       "defined_out": [
         "assetName#0",
@@ -5701,7 +5633,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "1105": {
+    "945": {
       "error": "check GlobalState exists",
       "op": "assert // check GlobalState exists",
       "stack_out": [
@@ -5709,7 +5641,7 @@
         "maybe_value%1#0"
       ]
     },
-    "1106": {
+    "946": {
       "op": "frame_dig -1",
       "defined_out": [
         "assetName#0",
@@ -5722,34 +5654,34 @@
         "claimer#0 (copy)"
       ]
     },
-    "1108": {
+    "948": {
       "op": "itxn_field ConfigAssetManager",
       "stack_out": [
         "assetName#0",
         "maybe_value%1#0"
       ]
     },
-    "1110": {
+    "950": {
       "op": "itxn_field ConfigAssetURL",
       "stack_out": [
         "assetName#0"
       ]
     },
-    "1112": {
-      "op": "intc_0 // 0",
+    "952": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "assetName#0",
         "0"
       ]
     },
-    "1113": {
+    "953": {
       "op": "itxn_field ConfigAssetDecimals",
       "stack_out": [
         "assetName#0"
       ]
     },
-    "1115": {
-      "op": "intc_1 // 1",
+    "955": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "assetName#0"
@@ -5759,13 +5691,13 @@
         "1"
       ]
     },
-    "1116": {
+    "956": {
       "op": "itxn_field ConfigAssetTotal",
       "stack_out": [
         "assetName#0"
       ]
     },
-    "1118": {
+    "958": {
       "op": "pushbytes \"POA\"",
       "defined_out": [
         "\"POA\"",
@@ -5776,17 +5708,17 @@
         "\"POA\""
       ]
     },
-    "1123": {
+    "963": {
       "op": "itxn_field ConfigAssetUnitName",
       "stack_out": [
         "assetName#0"
       ]
     },
-    "1125": {
+    "965": {
       "op": "itxn_field ConfigAssetName",
       "stack_out": []
     },
-    "1127": {
+    "967": {
       "op": "pushint 3 // 3",
       "defined_out": [
         "3"
@@ -5795,37 +5727,37 @@
         "3"
       ]
     },
-    "1129": {
+    "969": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "1131": {
-      "op": "intc_0 // 0",
+    "971": {
+      "op": "intc_1 // 0",
       "stack_out": [
         "0"
       ]
     },
-    "1132": {
+    "972": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "1134": {
+    "974": {
       "op": "itxn_submit"
     },
-    "1135": {
+    "975": {
       "op": "itxn CreatedAssetID",
       "defined_out": [
-        "tmp%1#0"
+        "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%1#0"
+        "tmp%2#0"
       ]
     },
-    "1137": {
+    "977": {
       "retsub": true,
       "op": "retsub"
     },
-    "1138": {
+    "978": {
       "subroutine": "contracts/proof-of-attendance/proof-of-attendance.algo.ts::ProofOfAttendance.sendPoa",
       "params": {
         "receiver#0": "bytes",
@@ -5835,10 +5767,10 @@
       "stack_in": [],
       "op": "proto 2 0"
     },
-    "1141": {
+    "981": {
       "op": "itxn_begin"
     },
-    "1142": {
+    "982": {
       "op": "global CurrentApplicationAddress",
       "defined_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
@@ -5847,8 +5779,8 @@
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "1144": {
-      "op": "intc_1 // 1",
+    "984": {
+      "op": "intc_0 // 1",
       "defined_out": [
         "1",
         "inner_txn_params%0%%param_Sender_idx_0#0"
@@ -5858,13 +5790,13 @@
         "1"
       ]
     },
-    "1145": {
+    "985": {
       "op": "itxn_field AssetAmount",
       "stack_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "1147": {
+    "987": {
       "op": "frame_dig -2",
       "defined_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0",
@@ -5875,17 +5807,17 @@
         "receiver#0 (copy)"
       ]
     },
-    "1149": {
+    "989": {
       "op": "itxn_field AssetReceiver",
       "stack_out": [
         "inner_txn_params%0%%param_Sender_idx_0#0"
       ]
     },
-    "1151": {
+    "991": {
       "op": "itxn_field Sender",
       "stack_out": []
     },
-    "1153": {
+    "993": {
       "op": "frame_dig -1",
       "defined_out": [
         "asset#0 (copy)"
@@ -5894,11 +5826,11 @@
         "asset#0 (copy)"
       ]
     },
-    "1155": {
+    "995": {
       "op": "itxn_field XferAsset",
       "stack_out": []
     },
-    "1157": {
+    "997": {
       "op": "intc_2 // 4",
       "defined_out": [
         "4"
@@ -5907,12 +5839,12 @@
         "4"
       ]
     },
-    "1158": {
+    "998": {
       "op": "itxn_field TypeEnum",
       "stack_out": []
     },
-    "1160": {
-      "op": "intc_0 // 0",
+    "1000": {
+      "op": "intc_1 // 0",
       "defined_out": [
         "0"
       ],
@@ -5920,14 +5852,14 @@
         "0"
       ]
     },
-    "1161": {
+    "1001": {
       "op": "itxn_field Fee",
       "stack_out": []
     },
-    "1163": {
+    "1003": {
       "op": "itxn_submit"
     },
-    "1164": {
+    "1004": {
       "retsub": true,
       "op": "retsub"
     }

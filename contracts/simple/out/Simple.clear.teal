@@ -4,10 +4,14 @@
 // contracts/simple/simple.algo.ts::Simple.clearStateProgram() -> uint64:
 main:
     bytecblock "counter"
+    // contracts/simple/simple.algo.ts:13
+    // this.counter.value = this.counter.value + i;
+    pushint 0 // 0
     // contracts/simple/simple.algo.ts:10
     // counter = GlobalState<uint64>({ key: "counter", initialValue: 0 });
-    pushint 0 // 0
     bytec_0 // "counter"
+    // contracts/simple/simple.algo.ts:13
+    // this.counter.value = this.counter.value + i;
     app_global_get_ex
     assert // check GlobalState exists
     // contracts/simple/simple.algo.ts:36

@@ -3,21 +3,17 @@ import {
   assertMatch,
   BoxMap,
   Bytes,
-  Contract,
+  clone,
   Global,
   GlobalState,
+  Contract,
 } from "@algorandfoundation/algorand-typescript";
 import type {
   bytes,
   gtxn,
   uint64,
 } from "@algorandfoundation/algorand-typescript";
-import {
-  abimethod,
-  Struct,
-  UintN,
-  UintN64,
-} from "@algorandfoundation/algorand-typescript/arc4";
+import { abimethod, Uint } from "@algorandfoundation/algorand-typescript/arc4";
 
 /*
 start - The index of the box at which the data starts
@@ -25,22 +21,20 @@ end - The index of the box at which the data ends
 status - 0: in progress, 1: ready, 2: immutable
 endSize - The size of the last box
 */
-export class Metadata extends Struct<{
-  start: UintN64;
-  end: UintN64;
-  status: UintN<8>;
-  endSize: UintN64;
-}> {}
+type Metadata = {
+  start: uint64;
+  end: uint64;
+  status: Uint<8>;
+  endSize: uint64;
+};
 
-const IN_PROGRESS = new UintN<8>(0);
-const READY = new UintN<8>(1);
-const IMMUTABLE = new UintN<8>(2);
+const IN_PROGRESS = new Uint<8>(0);
+const READY = new Uint<8>(1);
+const IMMUTABLE = new Uint<8>(2);
 
 const COST_PER_BYTE: uint64 = 400;
 const COST_PER_BOX: uint64 = 2500;
-
-// reduced to max bytes length (4096) as BoxMap in puya-ts does not support storing values exceeding max bytes length.
-const MAX_BOX_SIZE: uint64 = 4096;
+const MAX_BOX_SIZE: uint64 = 32768;
 
 export class BigBox extends Contract {
   // The boxes that contain the data, indexed by uint64
@@ -74,17 +68,17 @@ export class BigBox extends Contract {
     const startBox = this.currentIndex.value;
     const endBox: uint64 = startBox + numBoxes - 1;
 
-    const metadata = new Metadata({
-      start: new UintN64(startBox),
-      end: new UintN64(endBox),
+    const metadata: Metadata = {
+      start: startBox,
+      end: endBox,
       status: IN_PROGRESS,
-      endSize: new UintN64(endBoxSize),
-    });
+      endSize: endBoxSize,
+    };
 
     const dataIdentifierBytes = Bytes(dataIdentifier);
     assert(!this.metadata(dataIdentifierBytes).exists);
 
-    this.metadata(dataIdentifierBytes).value = metadata.copy();
+    this.metadata(dataIdentifierBytes).value = clone(metadata);
 
     this.currentIndex.value = endBox + 1;
 
@@ -103,26 +97,29 @@ export class BigBox extends Contract {
   /**
    *
    * Upload data to a specific offset in a box
-   * `offset` parameter is removed as it is no longer used.
    *
    * @param dataIdentifier The unique identifier for the data
    * @param boxIndex The index of the box to upload the given chunk of data to
+   * @param offset The offset within the box to start writing the data
    * @param data The data to write
    */
-  upload(dataIdentifier: string, boxIndex: uint64, data: bytes): void {
-    const dataIdentifierBytes = Bytes(dataIdentifier);
-    const metadata = this.metadata(dataIdentifierBytes).value.copy();
+  upload(
+    dataIdentifier: string,
+    boxIndex: uint64,
+    offset: uint64,
+    data: bytes,
+  ): void {
+    const metadata = clone(this.metadata(Bytes(dataIdentifier)).value);
     assert(metadata.status === IN_PROGRESS);
-    assert(
-      metadata.start.native <= boxIndex && boxIndex <= metadata.end.native,
-    );
+    assert(metadata.start <= boxIndex && boxIndex <= metadata.end);
 
-    if (!this.dataBoxes(boxIndex).exists) {
-      this.dataBoxes(boxIndex).value = data;
-    } else {
-      this.dataBoxes(boxIndex).value =
-        this.dataBoxes(boxIndex).value.concat(data);
+    if (offset === 0) {
+      this.dataBoxes(boxIndex).create({
+        size: boxIndex === metadata.end ? metadata.endSize : MAX_BOX_SIZE,
+      });
     }
+
+    this.dataBoxes(boxIndex).replace(offset, data);
   }
 
   /**
@@ -132,7 +129,7 @@ export class BigBox extends Contract {
    * @param dataIdentifier The unique identifier for the data
    * @param status The new status for the data
    */
-  setStatus(dataIdentifier: string, status: UintN<8>): void {
+  setStatus(dataIdentifier: string, status: Uint<8>): void {
     const dataIdentifierBytes = Bytes(dataIdentifier);
     const currentStatus = this.metadata(dataIdentifierBytes).value.status;
 

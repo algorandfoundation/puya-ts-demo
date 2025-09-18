@@ -1,5 +1,4 @@
 import {
-  compile,
   Contract,
   Global,
   itxn,
@@ -8,8 +7,7 @@ import type { uint64 } from "@algorandfoundation/algorand-typescript";
 import {
   abimethod,
   Address,
-  decodeArc4,
-  methodSelector,
+  compileArc4,
 } from "@algorandfoundation/algorand-typescript/arc4";
 
 export class NFTFactory extends Contract {
@@ -42,14 +40,9 @@ export class FactoryCaller extends Contract {
   createApplication(): void {}
 
   mintAndGetAsset(): uint64 {
-    const factory = compile(NFTFactory);
-    const factoryApp = itxn
-      .applicationCall({
-        appArgs: [methodSelector(NFTFactory.prototype.createApplication)],
-        approvalProgram: factory.approvalProgram,
-        clearStateProgram: factory.clearStateProgram,
-      })
-      .submit().createdApp;
+    const factory = compileArc4(NFTFactory);
+
+    const factoryApp = factory.call.createApplication().itxn.createdApp;
 
     itxn
       .payment({
@@ -58,17 +51,10 @@ export class FactoryCaller extends Contract {
       })
       .submit();
 
-    const createNFTTxn = itxn
-      .applicationCall({
-        appArgs: [
-          methodSelector(NFTFactory.prototype.createNFT),
-          "My NFT",
-          "MNFT",
-        ],
-        appId: factoryApp,
-      })
-      .submit();
-    const createdAssetId = decodeArc4<uint64>(createNFTTxn.lastLog, "log");
+    const createdAssetId = factory.call.createNFT({
+      appId: factoryApp,
+      args: ["My NFT", "MNFT"],
+    }).returnValue;
 
     itxn
       .assetTransfer({
@@ -78,16 +64,10 @@ export class FactoryCaller extends Contract {
       })
       .submit();
 
-    itxn
-      .applicationCall({
-        appArgs: [
-          methodSelector(NFTFactory.prototype.transferNFT),
-          createdAssetId,
-          Global.currentApplicationAddress,
-        ],
-        appId: factoryApp,
-      })
-      .submit();
+    factory.call.transferNFT({
+      appId: factoryApp,
+      args: [createdAssetId, new Address(Global.currentApplicationAddress)],
+    });
 
     return createdAssetId;
   }

@@ -1,4 +1,5 @@
 import {
+  Account,
   Application,
   assert,
   assertMatch,
@@ -13,12 +14,9 @@ import {
 } from "@algorandfoundation/algorand-typescript";
 import {
   abimethod,
-  Address,
-  Bool,
   methodSelector,
-  Tuple,
 } from "@algorandfoundation/algorand-typescript/arc4";
-import { GTxn } from "@algorandfoundation/algorand-typescript/op";
+import { Address, Bool } from "@algorandfoundation/algorand-typescript/arc4";
 
 /**
  * This lsig approves transactions that opt in to an asset AND
@@ -54,32 +52,26 @@ export class CreatorVerifier extends Contract {
   createApplication(): void {}
 
   /** Mapping of [user,creator] to determine which creators the user will allow opt-ins from */
-  allowedCreators = BoxMap<Tuple<[Address, Address]>, Bool>({
+  allowedCreators = BoxMap<[Account, Account], Bool>({
     keyPrefix: Bytes(),
   });
 
   /** Allow anyone to use the lsig to opt in the txn sender into an asset created by the creator */
   allowOptInsFrom(creator: Address): void {
-    this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
-      new Bool(true);
+    this.allowedCreators([Txn.sender, creator.native]).value = new Bool(true);
   }
 
   /** Disable opt-ins for ASAs from the given creator */
   disableOptInsFrom(creator: Address): void {
-    this.allowedCreators(new Tuple(new Address(Txn.sender), creator)).value =
-      new Bool(false);
+    this.allowedCreators([Txn.sender, creator.native]).value = new Bool(false);
   }
 
   // eslint-disable-next-line no-unused-vars
   verifyCreator(optIn: gtxn.AssetTransferTxn): void {
     /** assert that the user has allowed optIns from the ASA creator */
     assert(
-      this.allowedCreators(
-        new Tuple(
-          new Address(optIn.sender),
-          new Address(optIn.xferAsset.creator),
-        ),
-      ).value.native,
+      this.allowedCreators([optIn.sender, optIn.xferAsset.creator]).value
+        .native,
     );
   }
 }

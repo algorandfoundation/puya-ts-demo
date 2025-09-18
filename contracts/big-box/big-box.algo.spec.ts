@@ -1,8 +1,8 @@
 import { describe, expect, afterEach, test } from "vitest";
-import { BigBox, Metadata } from "./big-box.algo";
+import { BigBox } from "./big-box.algo";
 import { Bytes } from "@algorandfoundation/algorand-typescript";
 import { TestExecutionContext } from "@algorandfoundation/algorand-typescript-testing";
-import { UintN, UintN64 } from "@algorandfoundation/algorand-typescript/arc4";
+import { Uint } from "@algorandfoundation/algorand-typescript/arc4";
 
 describe("Big Box", () => {
   const ctx = new TestExecutionContext();
@@ -21,7 +21,7 @@ describe("Big Box", () => {
       const bigBoxApp = ctx.ledger.getApplicationForContract(bigBox);
       const paymentTxn = ctx.any.txn.payment({
         receiver: bigBoxApp.address,
-        amount: 2104200,
+        amount: 13573000,
       });
 
       // Act
@@ -31,10 +31,10 @@ describe("Big Box", () => {
       expect(bigBox.currentIndex.value).toBe(2); // startBox(0) + numBoxes(2)
 
       const metadata = bigBox.metadata(Bytes(dataIdentifier)).value;
-      expect(metadata.start.native).toEqual(0);
-      expect(metadata.end.native).toEqual(1);
-      expect(metadata.status.native).toEqual(0),
-        expect(metadata.endSize.native).toEqual(1024);
+      expect(metadata.start).toEqual(0);
+      expect(metadata.end).toEqual(1);
+      expect(metadata.status.asUint64()).toEqual(0);
+      expect(metadata.endSize).toEqual(1024);
     });
 
     test("should fail if data identifier already exists", () => {
@@ -47,12 +47,12 @@ describe("Big Box", () => {
         amount: 2104200,
       });
 
-      bigBox.metadata(Bytes(dataIdentifier)).value = new Metadata({
-        start: new UintN64(0),
-        end: new UintN64(1),
-        status: new UintN<8>(0),
-        endSize: new UintN64(1024),
-      });
+      bigBox.metadata(Bytes(dataIdentifier)).value = {
+        start: 0,
+        end: 1,
+        status: new Uint<8>(0),
+        endSize: 1024,
+      };
 
       // Act & Assert
       expect(() => {
@@ -65,22 +65,23 @@ describe("Big Box", () => {
       // Arrange
       const dataIdentifier = "testData";
       const boxIndex = 3;
+      const offset = 0;
       const data = Bytes("testData");
 
       const bigBox = ctx.contract.create(BigBox);
-      bigBox.metadata(Bytes(dataIdentifier)).value = new Metadata({
-        start: new UintN64(0),
-        end: new UintN64(4),
-        status: new UintN<8>(0),
-        endSize: new UintN64(1024),
-      });
+      bigBox.metadata(Bytes(dataIdentifier)).value = {
+        start: 0,
+        end: 4,
+        status: new Uint<8>(0),
+        endSize: 1024,
+      };
 
       // Act
-      bigBox.upload(dataIdentifier, boxIndex, data);
+      bigBox.upload(dataIdentifier, boxIndex, offset, data);
 
       // Assert
       expect(bigBox.dataBoxes(0).exists).toEqual(false);
-      expect(bigBox.dataBoxes(boxIndex).value).toEqual(data);
+      expect(bigBox.dataBoxes(boxIndex).extract(0, data.length)).toEqual(data);
     });
 
     test("should fail if data status is not IN_PROGRESS", () => {
@@ -88,16 +89,16 @@ describe("Big Box", () => {
       const dataIdentifier = "testData";
       const bigBox = ctx.contract.create(BigBox);
 
-      bigBox.metadata(Bytes(dataIdentifier)).value = new Metadata({
-        start: new UintN64(0),
-        end: new UintN64(4),
-        status: new UintN<8>(1),
-        endSize: new UintN64(1024),
-      });
+      bigBox.metadata(Bytes(dataIdentifier)).value = {
+        start: 0,
+        end: 4,
+        status: new Uint<8>(1),
+        endSize: 1024,
+      };
 
       // Act & Assert
       expect(() => {
-        bigBox.upload(dataIdentifier, 0, Bytes("test"));
+        bigBox.upload(dataIdentifier, 0, 0, Bytes("test"));
       }).toThrow();
     });
   });
@@ -107,21 +108,21 @@ describe("Big Box", () => {
       // Arrange
       const dataIdentifier = "testData";
       const bigBox = ctx.contract.create(BigBox);
-      bigBox.metadata(Bytes(dataIdentifier)).value = new Metadata({
-        start: new UintN64(0),
-        end: new UintN64(4),
-        status: new UintN<8>(0), // IN_PROGRESS
-        endSize: new UintN64(1024),
-      });
+      bigBox.metadata(Bytes(dataIdentifier)).value = {
+        start: 0,
+        end: 4,
+        status: new Uint<8>(0), // IN_PROGRESS
+        endSize: 1024,
+      };
 
-      const newStatus = new UintN<8>(1); // READY
+      const newStatus = new Uint<8>(1); // READY
 
       // Act
       bigBox.setStatus(dataIdentifier, newStatus);
 
       // Assert
       expect(
-        bigBox.metadata(Bytes(dataIdentifier)).value.status.native,
+        bigBox.metadata(Bytes(dataIdentifier)).value.status.asUint64(),
       ).toEqual(1);
     });
 
@@ -129,14 +130,14 @@ describe("Big Box", () => {
       // Arrange
       const dataIdentifier = "testData";
       const bigBox = ctx.contract.create(BigBox);
-      bigBox.metadata(Bytes(dataIdentifier)).value = new Metadata({
-        start: new UintN64(0),
-        end: new UintN64(4),
-        status: new UintN<8>(2), // IMMUTABLE
-        endSize: new UintN64(1024),
-      });
+      bigBox.metadata(Bytes(dataIdentifier)).value = {
+        start: 0,
+        end: 4,
+        status: new Uint<8>(2), // IMMUTABLE
+        endSize: 1024,
+      };
 
-      const newStatus = new UintN<8>(1); // READY
+      const newStatus = new Uint<8>(1); // READY
 
       // Act & Assert
       expect(() => {

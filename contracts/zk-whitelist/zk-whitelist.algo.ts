@@ -6,6 +6,7 @@ import {
   assert,
   BigUint,
   Bytes,
+  clone,
   ensureBudget,
   Global,
   GlobalState,
@@ -61,8 +62,9 @@ export default class ZkWhitelistContract extends arc4.Contract {
     // The verifier expects public inputs to be in the curve field, but an
     // Algorand address might represent a number larger than the field
     // modulus, so to be safe we take the address modulo the field modulus
-    const addressMod = arc4.interpretAsArc4<arc4.Address>(
+    const addressMod = arc4.convertBytes<arc4.Address>(
       op.bzero(32).bitwiseOr(Bytes(BigUint(address.bytes) % curveMod)),
+      { strategy: "unsafe-cast" },
     );
     // Verify the proof by calling the deposit verifier app
     const verified = this.verifyProof(
@@ -106,12 +108,15 @@ export default class ZkWhitelistContract extends arc4.Contract {
         fee: 0,
         appArgs: [
           arc4.methodSelector("verify(byte[32][],byte[32][])bool"),
-          proof.copy(),
-          publicInputs.copy(),
+          clone(proof),
+          clone(publicInputs),
         ],
         onCompletion: OnCompleteAction.NoOp,
       })
       .submit().lastLog;
-    return arc4.interpretAsArc4<arc4.Bool>(verified, "log");
+    return arc4.convertBytes<arc4.Bool>(verified, {
+      prefix: "log",
+      strategy: "unsafe-cast",
+    });
   }
 }

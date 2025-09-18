@@ -3,6 +3,7 @@ import {
   assertMatch,
   BoxMap,
   Bytes,
+  clone,
   Contract,
   Global,
   itxn,
@@ -13,21 +14,17 @@ import type { uint64 } from "@algorandfoundation/algorand-typescript";
 import {
   abimethod,
   Address,
-  DynamicArray,
-  Str,
-  Struct,
-  UintN16,
-  UintN64,
+  Uint16,
 } from "@algorandfoundation/algorand-typescript/arc4";
 
-export class Whitelist extends Struct<{
+type Whitelist = {
   account: Address;
-  boxIndex: UintN16;
-  arc: Str;
-}> {}
+  boxIndex: Uint16;
+  arc: string;
+};
 
 export class ARC75 extends Contract {
-  whitelist = BoxMap<Whitelist, DynamicArray<UintN64>>({ keyPrefix: Bytes() });
+  whitelist = BoxMap<Whitelist, uint64[]>({ keyPrefix: Bytes() });
 
   private verifyMBRPayment(payment: gtxn.PaymentTxn, preMBR: uint64): void {
     assertMatch(payment, {
@@ -59,22 +56,21 @@ export class ARC75 extends Contract {
    */
   addAppToWhiteList(
     arc: string,
-    boxIndex: UintN16,
+    boxIndex: Uint16,
     appID: uint64,
     payment: gtxn.PaymentTxn,
   ): void {
     const preMBR = Global.currentApplicationAddress.minBalance;
-    const whitelist = new Whitelist({
+    const whitelist = {
       account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: new Str(arc),
-    });
+      arc: arc,
+    };
 
     if (this.whitelist(whitelist).exists) {
-      this.whitelist(whitelist).value.push(new UintN64(appID));
+      this.whitelist(whitelist).value.push(appID);
     } else {
-      const newWhitelist = new DynamicArray<UintN64>(new UintN64(appID));
-      this.whitelist(whitelist).value = newWhitelist.copy();
+      this.whitelist(whitelist).value = [appID];
     }
 
     this.verifyMBRPayment(payment, preMBR);
@@ -88,22 +84,17 @@ export class ARC75 extends Contract {
    * @param appIDs - Array of app IDs that signify the whitelisted apps
    *
    */
-  setAppWhitelist(arc: string, boxIndex: UintN16, appIDs: uint64[]): void {
+  setAppWhitelist(arc: string, boxIndex: Uint16, appIDs: uint64[]): void {
     const preMBR = Global.currentApplicationAddress.minBalance;
-    const whitelist = new Whitelist({
+    const whitelist = {
       account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: new Str(arc),
-    });
+      arc: arc,
+    };
 
     this.whitelist(whitelist).delete();
 
-    const newWhitelist = new DynamicArray<UintN64>();
-    for (let i: uint64 = 0; i < appIDs.length; i++) {
-      newWhitelist.push(new UintN64(appIDs[i]));
-    }
-
-    this.whitelist(whitelist).value = newWhitelist.copy();
+    this.whitelist(whitelist).value = clone(appIDs);
 
     if (preMBR > Global.currentApplicationAddress.minBalance) {
       this.sendMBRPayment(preMBR);
@@ -119,13 +110,13 @@ export class ARC75 extends Contract {
    * @param boxIndex - The index of the whitelist box to delete
    *
    */
-  deleteWhitelist(arc: string, boxIndex: UintN16): void {
+  deleteWhitelist(arc: string, boxIndex: Uint16): void {
     const preMBR = Global.currentApplicationAddress.minBalance;
-    const whitelist = new Whitelist({
+    const whitelist = {
       account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: new Str(arc),
-    });
+      arc: arc,
+    };
 
     this.whitelist(whitelist).delete();
 
@@ -142,28 +133,28 @@ export class ARC75 extends Contract {
    */
   deleteAppFromWhitelist(
     arc: string,
-    boxIndex: UintN16,
+    boxIndex: Uint16,
     appID: uint64,
     index: uint64,
   ): void {
     const preMBR = Global.currentApplicationAddress.minBalance;
-    const whitelist = new Whitelist({
+    const whitelist = {
       account: new Address(Txn.sender),
       boxIndex: boxIndex,
-      arc: new Str(arc),
-    });
+      arc: arc,
+    };
 
-    const spliced = this.whitelist(whitelist).value.at(index);
+    const spliced = this.whitelist(whitelist).value[index];
 
-    const newWhiteList = new DynamicArray<UintN64>();
+    const newWhiteList: uint64[] = [];
     for (let i: uint64 = 0; i < this.whitelist(whitelist).value.length; i++) {
       if (i !== index) {
-        newWhiteList.push(this.whitelist(whitelist).value.at(i));
+        newWhiteList.push(this.whitelist(whitelist).value[i]);
       }
     }
-    this.whitelist(whitelist).value = newWhiteList.copy();
+    this.whitelist(whitelist).value = clone(newWhiteList);
 
-    assert(spliced.native === appID);
+    assert(spliced === appID);
 
     this.sendMBRPayment(preMBR);
   }

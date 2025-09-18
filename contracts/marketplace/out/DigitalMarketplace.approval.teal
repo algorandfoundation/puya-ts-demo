@@ -3,180 +3,186 @@
 
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
-    intcblock 1 0 4 48 50500
-    bytecblock "listings" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) 0x151f7c75000000000000c544 0x0000000000000000
-    // contracts/marketplace/marketplace.algo.ts:30
+    intcblock 1 0 10 4 50500
+    bytecblock "listings" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) 0x151f7c75000000000000c544
+    // contracts/marketplace/marketplace.algo.ts:31
     // export default class DigitalMarketplace extends arc4.Contract {
     txn NumAppArgs
-    bz main_bare_routing@16
-    pushbytess 0xbe4b31e3 0xa0cb3693 0xd98ef6a9 0x56efcfb5 0x12f08c98 0x9b4b8234 0x5a05bc57 0x1c80d714 0xcbc819e5 0xbc75ceb1 0xdd619204 // method "listingsBoxMbr()uint64", method "quantityPrice(uint64,uint64,uint64)uint64", method "getListingsMbr()uint64", method "allowAsset(pay,asset)void", method "firstDeposit(pay,axfer,uint64,uint64)void", method "deposit(axfer,uint64)void", method "setPrice(asset,uint64,uint64)void", method "buy(address,asset,uint64,pay,uint64)void", method "withdraw(asset,uint64)void", method "bid(address,asset,uint64,pay,uint64,uint64)void", method "acceptBid(asset,uint64)void"
+    bz main___algots__.defaultCreate@18
+    txn OnCompletion
+    !
+    assert // OnCompletion must be NoOp
+    txn ApplicationID
+    assert
+    pushbytess 0xbe4b31e3 0xa0cb3693 0xd98ef6a9 0x6a4e7fca 0x12f08c98 0x9b4b8234 0x4d8b23d8 0x52ac5df7 0xe3aeb25c 0x3234b711 0xcc826346 // method "listingsBoxMbr()uint64", method "quantityPrice(uint64,uint64,uint64)uint64", method "getListingsMbr()uint64", method "allowAsset(pay,uint64)void", method "firstDeposit(pay,axfer,uint64,uint64)void", method "deposit(axfer,uint64)void", method "setPrice(uint64,uint64,uint64)void", method "buy(address,uint64,uint64,pay,uint64)void", method "withdraw(uint64,uint64)void", method "bid(address,uint64,uint64,pay,uint64,uint64)void", method "acceptBid(uint64,uint64)void"
     txna ApplicationArgs 0
-    match main_listingsBoxMbr_route@3 main_quantityPrice_route@4 main_getListingsMbr_route@5 main_allowAsset_route@6 main_firstDeposit_route@7 main_deposit_route@8 main_setPrice_route@9 main_buy_route@10 main_withdraw_route@11 main_bid_route@12 main_acceptBid_route@13
+    match main_listingsBoxMbr_route@4 quantityPrice main_getListingsMbr_route@6 allowAsset firstDeposit deposit setPrice buy withdraw bid acceptBid
+    err
 
-main_after_if_else@20:
-    // contracts/marketplace/marketplace.algo.ts:30
+main_getListingsMbr_route@6:
+    // contracts/marketplace/marketplace.algo.ts:73
+    // @arc4.abimethod({ readonly: true })
+    bytec_2 // 0x151f7c75000000000000c544
+    log
+    intc_0 // 1
+    return
+
+main_listingsBoxMbr_route@4:
+    // contracts/marketplace/marketplace.algo.ts:34
+    // listingsBoxMbr(): uint64 {
+    bytec_2 // 0x151f7c75000000000000c544
+    log
+    intc_0 // 1
+    return
+
+main___algots__.defaultCreate@18:
+    // contracts/marketplace/marketplace.algo.ts:31
     // export default class DigitalMarketplace extends arc4.Contract {
+    txn OnCompletion
+    !
+    txn ApplicationID
+    !
+    &&
+    return // on error: OnCompletion must be NoOp && can only call when creating
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.quantityPrice[routing]() -> void:
+quantityPrice:
+    // contracts/marketplace/marketplace.algo.ts:54-58
+    // quantityPrice(
+    //   quantity: uint64,
+    //   price: uint64,
+    //   assetDecimals: uint64,
+    // ): uint64 {
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    txna ApplicationArgs 3
+    btoi
+    // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    swap
+    uncover 2
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
+    // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    intc_2 // 10
+    uncover 3
+    expw
+    // contracts/marketplace/marketplace.algo.ts:62-67
+    // op.divmodw(
+    //   amountNotScaledHigh,
+    //   amountNotScaledLow,
+    //   scalingFactorHigh,
+    //   scalingFactorLow,
+    // );
+    divmodw
+    popn 2
+    swap
+    // contracts/marketplace/marketplace.algo.ts:68
+    // assert(_quotientHigh === 0);
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:54-58
+    // quantityPrice(
+    //   quantity: uint64,
+    //   price: uint64,
+    //   assetDecimals: uint64,
+    // ): uint64 {
+    itob
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.allowAsset[routing]() -> void:
+allowAsset:
+    // contracts/marketplace/marketplace.algo.ts:78
+    // @arc4.abimethod()
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_0 // pay
+    ==
+    assert // transaction type is pay
+    txna ApplicationArgs 1
+    btoi
+    // contracts/marketplace/marketplace.algo.ts:80
+    // assert(!Global.currentApplicationAddress.isOptedIn(asset));
+    global CurrentApplicationAddress
+    dig 1
+    asset_holding_get AssetBalance
+    bury 1
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:82
+    // assert(mbrPay.receiver === Global.currentApplicationAddress);
+    dig 1
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:83
+    // assert(mbrPay.amount === Global.assetOptInMinBalance);
+    swap
+    gtxns Amount
+    global AssetOptInMinBalance
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:85-91
+    // itxn
+    //   .assetTransfer({
+    //     xferAsset: asset,
+    //     assetReceiver: Global.currentApplicationAddress,
+    //     assetAmount: 0,
+    //   })
+    //   .submit();
+    itxn_begin
+    // contracts/marketplace/marketplace.algo.ts:88
+    // assetReceiver: Global.currentApplicationAddress,
+    global CurrentApplicationAddress
+    // contracts/marketplace/marketplace.algo.ts:89
+    // assetAmount: 0,
     intc_1 // 0
-    return
-
-main_acceptBid_route@13:
-    // contracts/marketplace/marketplace.algo.ts:291
+    itxn_field AssetAmount
+    itxn_field AssetReceiver
+    itxn_field XferAsset
+    // contracts/marketplace/marketplace.algo.ts:85-90
+    // itxn
+    //   .assetTransfer({
+    //     xferAsset: asset,
+    //     assetReceiver: Global.currentApplicationAddress,
+    //     assetAmount: 0,
+    //   })
+    intc_3 // 4
+    itxn_field TypeEnum
+    intc_1 // 0
+    itxn_field Fee
+    // contracts/marketplace/marketplace.algo.ts:85-91
+    // itxn
+    //   .assetTransfer({
+    //     xferAsset: asset,
+    //     assetReceiver: Global.currentApplicationAddress,
+    //     assetAmount: 0,
+    //   })
+    //   .submit();
+    itxn_submit
+    // contracts/marketplace/marketplace.algo.ts:78
     // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    btoi
-    txnas Assets
-    txna ApplicationArgs 2
-    // contracts/marketplace/marketplace.algo.ts:291
-    // @arc4.abimethod()
-    callsub acceptBid
     intc_0 // 1
     return
 
-main_bid_route@12:
-    // contracts/marketplace/marketplace.algo.ts:242
-    // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    txna ApplicationArgs 2
-    btoi
-    txnas Assets
-    txna ApplicationArgs 3
-    txn GroupIndex
-    intc_0 // 1
-    -
-    dup
-    gtxns TypeEnum
-    intc_0 // pay
-    ==
-    assert // transaction type is pay
-    txna ApplicationArgs 4
-    txna ApplicationArgs 5
-    // contracts/marketplace/marketplace.algo.ts:242
-    // @arc4.abimethod()
-    callsub bid
-    intc_0 // 1
-    return
 
-main_withdraw_route@11:
-    // contracts/marketplace/marketplace.algo.ts:207
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.firstDeposit[routing]() -> void:
+firstDeposit:
+    // contracts/marketplace/marketplace.algo.ts:94
     // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    btoi
-    txnas Assets
-    txna ApplicationArgs 2
-    // contracts/marketplace/marketplace.algo.ts:207
-    // @arc4.abimethod()
-    callsub withdraw
-    intc_0 // 1
-    return
-
-main_buy_route@10:
-    // contracts/marketplace/marketplace.algo.ts:164
-    // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    txna ApplicationArgs 2
-    btoi
-    txnas Assets
-    txna ApplicationArgs 3
-    txn GroupIndex
-    intc_0 // 1
-    -
-    dup
-    gtxns TypeEnum
-    intc_0 // pay
-    ==
-    assert // transaction type is pay
-    txna ApplicationArgs 4
-    btoi
-    // contracts/marketplace/marketplace.algo.ts:164
-    // @arc4.abimethod()
-    callsub buy
-    intc_0 // 1
-    return
-
-main_setPrice_route@9:
-    // contracts/marketplace/marketplace.algo.ts:146
-    // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    btoi
-    txnas Assets
-    txna ApplicationArgs 2
-    txna ApplicationArgs 3
-    // contracts/marketplace/marketplace.algo.ts:146
-    // @arc4.abimethod()
-    callsub setPrice
-    intc_0 // 1
-    return
-
-main_deposit_route@8:
-    // contracts/marketplace/marketplace.algo.ts:124
-    // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txn GroupIndex
-    intc_0 // 1
-    -
-    dup
-    gtxns TypeEnum
-    intc_2 // axfer
-    ==
-    assert // transaction type is axfer
-    txna ApplicationArgs 1
-    // contracts/marketplace/marketplace.algo.ts:124
-    // @arc4.abimethod()
-    callsub deposit
-    intc_0 // 1
-    return
-
-main_firstDeposit_route@7:
-    // contracts/marketplace/marketplace.algo.ts:93
-    // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
     txn GroupIndex
     pushint 2 // 2
     -
@@ -190,27 +196,313 @@ main_firstDeposit_route@7:
     -
     dup
     gtxns TypeEnum
-    intc_2 // axfer
+    intc_3 // axfer
     ==
     assert // transaction type is axfer
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // contracts/marketplace/marketplace.algo.ts:93
+    // contracts/marketplace/marketplace.algo.ts:101
+    // assert(mbrPay.sender === Txn.sender);
+    dig 3
+    gtxns Sender
+    txn Sender
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:102
+    // assert(mbrPay.receiver === Global.currentApplicationAddress);
+    dig 3
+    gtxns Receiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:103
+    // assert(mbrPay.amount === this.listingsBoxMbr());
+    uncover 3
+    gtxns Amount
+    // contracts/marketplace/marketplace.algo.ts:36-50
+    // 2_500 +
+    // // fmt: off
+    // // Key length
+    // (8 +
+    //   32 +
+    //   8 +
+    //   8 +
+    //   // Value length
+    //   8 +
+    //   8 +
+    //   32 +
+    //   8 +
+    //   8) *
+    //   // fmt: on
+    //   400
+    intc 4 // 50500
+    // contracts/marketplace/marketplace.algo.ts:103
+    // assert(mbrPay.amount === this.listingsBoxMbr());
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:106
+    // owner: new arc4.Address(Txn.sender),
+    txn Sender
+    // contracts/marketplace/marketplace.algo.ts:107
+    // asset: new arc4.Uint64(xfer.xferAsset.id),
+    dig 3
+    gtxns XferAsset
+    itob
+    // contracts/marketplace/marketplace.algo.ts:105-109
+    // const key = new ListingKey({
+    //   owner: new arc4.Address(Txn.sender),
+    //   asset: new arc4.Uint64(xfer.xferAsset.id),
+    //   nonce: nonce,
+    // });
+    concat
+    swap
+    concat
+    // contracts/marketplace/marketplace.algo.ts:32
+    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
+    bytec_0 // "listings"
+    swap
+    concat
+    // contracts/marketplace/marketplace.algo.ts:110
+    // assert(!this.listings(key).exists);
+    dup
+    box_len
+    bury 1
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:112
+    // assert(xfer.sender === Txn.sender);
+    dig 2
+    gtxns Sender
+    txn Sender
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:113
+    // assert(xfer.assetReceiver === Global.currentApplicationAddress);
+    dig 2
+    gtxns AssetReceiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:114
+    // assert(xfer.assetAmount > 0);
+    uncover 2
+    gtxns AssetAmount
+    dup
+    assert
+    // contracts/marketplace/marketplace.algo.ts:117
+    // deposited: new arc4.Uint64(xfer.assetAmount),
+    itob
+    // contracts/marketplace/marketplace.algo.ts:116-122
+    // this.listings(key).value = new ListingValue({
+    //   deposited: new arc4.Uint64(xfer.assetAmount),
+    //   unitaryPrice: unitaryPrice,
+    //   bidder: new arc4.Address(),
+    //   bid: new arc4.Uint64(),
+    //   bidUnitaryPrice: new arc4.Uint64(),
+    // });
+    uncover 2
+    concat
+    pushbytes base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+    concat
+    box_put
+    // contracts/marketplace/marketplace.algo.ts:94
     // @arc4.abimethod()
-    callsub firstDeposit
     intc_0 // 1
     return
 
-main_allowAsset_route@6:
-    // contracts/marketplace/marketplace.algo.ts:77
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.deposit[routing]() -> void:
+deposit:
+    // contracts/marketplace/marketplace.algo.ts:125
     // @arc4.abimethod()
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    gtxns TypeEnum
+    intc_3 // axfer
+    ==
+    assert // transaction type is axfer
+    txna ApplicationArgs 1
+    // contracts/marketplace/marketplace.algo.ts:128
+    // owner: new arc4.Address(Txn.sender),
+    txn Sender
+    // contracts/marketplace/marketplace.algo.ts:129
+    // asset: new arc4.Uint64(xfer.xferAsset.id),
+    dig 2
+    gtxns XferAsset
+    itob
+    // contracts/marketplace/marketplace.algo.ts:127-131
+    // const key = new ListingKey({
+    //   owner: new arc4.Address(Txn.sender),
+    //   asset: new arc4.Uint64(xfer.xferAsset.id),
+    //   nonce: nonce,
+    // });
+    concat
+    swap
+    concat
+    // contracts/marketplace/marketplace.algo.ts:133
+    // assert(xfer.sender === Txn.sender);
+    dig 1
+    gtxns Sender
+    txn Sender
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:134
+    // assert(xfer.assetReceiver === Global.currentApplicationAddress);
+    dig 1
+    gtxns AssetReceiver
+    global CurrentApplicationAddress
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:135
+    // assert(xfer.assetAmount > 0);
+    swap
+    gtxns AssetAmount
+    dup
+    assert
+    // contracts/marketplace/marketplace.algo.ts:32
+    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
+    bytec_0 // "listings"
+    uncover 2
+    concat
+    // contracts/marketplace/marketplace.algo.ts:137
+    // const existing = clone(this.listings(key).value);
+    dup
+    box_get
+    assert // Box must have value
+    // contracts/marketplace/marketplace.algo.ts:139
+    // bid: existing.bid,
+    dup
+    extract 48 8
+    // contracts/marketplace/marketplace.algo.ts:140
+    // bidUnitaryPrice: existing.bidUnitaryPrice,
+    dig 1
+    extract 56 8
+    // contracts/marketplace/marketplace.algo.ts:141
+    // bidder: existing.bidder,
+    dig 2
+    extract 16 32
+    // contracts/marketplace/marketplace.algo.ts:142
+    // unitaryPrice: existing.unitaryPrice,
+    dig 3
+    extract 8 8
+    // contracts/marketplace/marketplace.algo.ts:144
+    // existing.deposited.asUint64() + xfer.assetAmount,
+    uncover 4
+    intc_1 // 0
+    extract_uint64
+    uncover 6
+    +
+    // contracts/marketplace/marketplace.algo.ts:143-145
+    // deposited: new arc4.Uint64(
+    //   existing.deposited.asUint64() + xfer.assetAmount,
+    // ),
+    itob
+    // contracts/marketplace/marketplace.algo.ts:138-146
+    // this.listings(key).value = new ListingValue({
+    //   bid: existing.bid,
+    //   bidUnitaryPrice: existing.bidUnitaryPrice,
+    //   bidder: existing.bidder,
+    //   unitaryPrice: existing.unitaryPrice,
+    //   deposited: new arc4.Uint64(
+    //     existing.deposited.asUint64() + xfer.assetAmount,
+    //   ),
+    // });
+    swap
+    concat
+    swap
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    box_put
+    // contracts/marketplace/marketplace.algo.ts:125
+    // @arc4.abimethod()
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.setPrice[routing]() -> void:
+setPrice:
+    // contracts/marketplace/marketplace.algo.ts:149
+    // @arc4.abimethod()
+    txna ApplicationArgs 2
+    txna ApplicationArgs 3
+    // contracts/marketplace/marketplace.algo.ts:152
+    // owner: new arc4.Address(Txn.sender),
+    txn Sender
+    // contracts/marketplace/marketplace.algo.ts:149
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    // contracts/marketplace/marketplace.algo.ts:151-155
+    // const key = new ListingKey({
+    //   owner: new arc4.Address(Txn.sender),
+    //   asset: new arc4.Uint64(asset.id),
+    //   nonce: nonce,
+    // });
+    concat
+    uncover 2
+    concat
+    // contracts/marketplace/marketplace.algo.ts:32
+    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
+    bytec_0 // "listings"
+    swap
+    concat
+    // contracts/marketplace/marketplace.algo.ts:157
+    // const existing = clone(this.listings(key).value);
+    dup
+    box_get
+    assert // Box must have value
+    // contracts/marketplace/marketplace.algo.ts:159
+    // bid: existing.bid,
+    dup
+    extract 48 8
+    // contracts/marketplace/marketplace.algo.ts:160
+    // bidUnitaryPrice: existing.bidUnitaryPrice,
+    dig 1
+    extract 56 8
+    // contracts/marketplace/marketplace.algo.ts:161
+    // bidder: existing.bidder,
+    dig 2
+    extract 16 32
+    // contracts/marketplace/marketplace.algo.ts:162
+    // deposited: existing.deposited,
+    uncover 3
+    extract 0 8
+    // contracts/marketplace/marketplace.algo.ts:158-164
+    // this.listings(key).value = new ListingValue({
+    //   bid: existing.bid,
+    //   bidUnitaryPrice: existing.bidUnitaryPrice,
+    //   bidder: existing.bidder,
+    //   deposited: existing.deposited,
+    //   unitaryPrice: unitaryPrice,
+    // });
+    uncover 5
+    concat
+    swap
+    concat
+    uncover 2
+    concat
+    swap
+    concat
+    box_put
+    // contracts/marketplace/marketplace.algo.ts:149
+    // @arc4.abimethod()
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.buy[routing]() -> void:
+buy:
+    // contracts/marketplace/marketplace.algo.ts:167
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
+    dup
+    btoi
+    txna ApplicationArgs 3
     txn GroupIndex
     intc_0 // 1
     -
@@ -219,108 +511,52 @@ main_allowAsset_route@6:
     intc_0 // pay
     ==
     assert // transaction type is pay
-    txna ApplicationArgs 1
+    txna ApplicationArgs 4
     btoi
-    txnas Assets
-    // contracts/marketplace/marketplace.algo.ts:77
-    // @arc4.abimethod()
-    callsub allowAsset
-    intc_0 // 1
-    return
-
-main_getListingsMbr_route@5:
-    // contracts/marketplace/marketplace.algo.ts:72
-    // @arc4.abimethod({ readonly: true })
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    bytec_2 // 0x151f7c75000000000000c544
-    log
-    intc_0 // 1
-    return
-
-main_quantityPrice_route@4:
-    // contracts/marketplace/marketplace.algo.ts:53-57
-    // quantityPrice(
-    //   quantity: uint64,
-    //   price: uint64,
-    //   assetDecimals: uint64,
-    // ): uint64 {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txna ApplicationArgs 1
-    btoi
-    txna ApplicationArgs 2
-    btoi
-    txna ApplicationArgs 3
-    btoi
-    // contracts/marketplace/marketplace.algo.ts:53-57
-    // quantityPrice(
-    //   quantity: uint64,
-    //   price: uint64,
-    //   assetDecimals: uint64,
-    // ): uint64 {
-    callsub quantityPrice
-    itob
-    pushbytes 0x151f7c75
+    // contracts/marketplace/marketplace.algo.ts:175-179
+    // const key = new ListingKey({
+    //   owner: owner,
+    //   asset: new arc4.Uint64(asset.id),
+    //   nonce: nonce,
+    // });
+    dig 5
+    uncover 5
+    concat
+    uncover 3
+    concat
+    // contracts/marketplace/marketplace.algo.ts:32
+    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
+    bytec_0 // "listings"
     swap
     concat
-    log
-    intc_0 // 1
-    return
-
-main_listingsBoxMbr_route@3:
-    // contracts/marketplace/marketplace.algo.ts:33
-    // listingsBoxMbr(): uint64 {
-    txn OnCompletion
-    !
-    assert // OnCompletion is not NoOp
-    txn ApplicationID
-    assert // can only call when not creating
-    bytec_2 // 0x151f7c75000000000000c544
-    log
-    intc_0 // 1
-    return
-
-main_bare_routing@16:
-    // contracts/marketplace/marketplace.algo.ts:30
-    // export default class DigitalMarketplace extends arc4.Contract {
-    txn OnCompletion
-    bnz main_after_if_else@20
-    txn ApplicationID
-    !
-    assert // can only call when creating
-    intc_0 // 1
-    return
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.quantityPrice(quantity: uint64, price: uint64, assetDecimals: uint64) -> uint64:
-quantityPrice:
-    // contracts/marketplace/marketplace.algo.ts:53-57
-    // quantityPrice(
-    //   quantity: uint64,
-    //   price: uint64,
-    //   assetDecimals: uint64,
-    // ): uint64 {
-    proto 3 1
-    // contracts/marketplace/marketplace.algo.ts:58
-    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
-    frame_dig -2
-    frame_dig -3
-    mulw
+    // contracts/marketplace/marketplace.algo.ts:181
+    // const listing = clone(this.listings(key).value);
+    dup
+    box_get
+    assert // Box must have value
+    // contracts/marketplace/marketplace.algo.ts:185
+    // listing.unitaryPrice.asUint64(),
+    dup
+    extract 8 8
+    dig 1
+    pushint 8 // 8
+    extract_uint64
+    // contracts/marketplace/marketplace.algo.ts:186
+    // asset.decimals,
+    dig 6
+    asset_params_get AssetDecimals
+    assert // asset exists
     // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    swap
+    dig 5
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
     // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
-    pushint 10 // 10
-    frame_dig -1
+    intc_2 // 10
+    uncover 3
     expw
-    // contracts/marketplace/marketplace.algo.ts:61-66
+    // contracts/marketplace/marketplace.algo.ts:62-67
     // op.divmodw(
     //   amountNotScaledHigh,
     //   amountNotScaledLow,
@@ -330,507 +566,57 @@ quantityPrice:
     divmodw
     popn 2
     swap
-    // contracts/marketplace/marketplace.algo.ts:67
+    // contracts/marketplace/marketplace.algo.ts:68
     // assert(_quotientHigh === 0);
     !
     assert
-    // contracts/marketplace/marketplace.algo.ts:69
-    // return amountToBePaid;
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.allowAsset(mbrPay: uint64, asset: uint64) -> void:
-allowAsset:
-    // contracts/marketplace/marketplace.algo.ts:77-78
-    // @arc4.abimethod()
-    // allowAsset(mbrPay: gtxn.PaymentTxn, asset: Asset) {
-    proto 2 0
-    // contracts/marketplace/marketplace.algo.ts:79
-    // assert(!Global.currentApplicationAddress.isOptedIn(asset));
-    global CurrentApplicationAddress
-    frame_dig -1
-    asset_holding_get AssetBalance
-    bury 1
-    !
-    assert
-    // contracts/marketplace/marketplace.algo.ts:81
-    // assert(mbrPay.receiver === Global.currentApplicationAddress);
-    frame_dig -2
-    gtxns Receiver
-    global CurrentApplicationAddress
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:82
-    // assert(mbrPay.amount === Global.assetOptInMinBalance);
-    frame_dig -2
-    gtxns Amount
-    global AssetOptInMinBalance
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:84-90
-    // itxn
-    //   .assetTransfer({
-    //     xferAsset: asset,
-    //     assetReceiver: Global.currentApplicationAddress,
-    //     assetAmount: 0,
-    //   })
-    //   .submit();
-    itxn_begin
-    // contracts/marketplace/marketplace.algo.ts:87
-    // assetReceiver: Global.currentApplicationAddress,
-    global CurrentApplicationAddress
-    // contracts/marketplace/marketplace.algo.ts:88
-    // assetAmount: 0,
-    intc_1 // 0
-    itxn_field AssetAmount
-    itxn_field AssetReceiver
-    frame_dig -1
-    itxn_field XferAsset
-    // contracts/marketplace/marketplace.algo.ts:84-89
-    // itxn
-    //   .assetTransfer({
-    //     xferAsset: asset,
-    //     assetReceiver: Global.currentApplicationAddress,
-    //     assetAmount: 0,
-    //   })
-    intc_2 // 4
-    itxn_field TypeEnum
-    intc_1 // 0
-    itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:84-90
-    // itxn
-    //   .assetTransfer({
-    //     xferAsset: asset,
-    //     assetReceiver: Global.currentApplicationAddress,
-    //     assetAmount: 0,
-    //   })
-    //   .submit();
-    itxn_submit
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.firstDeposit(mbrPay: uint64, xfer: uint64, unitaryPrice: bytes, nonce: bytes) -> void:
-firstDeposit:
-    // contracts/marketplace/marketplace.algo.ts:93-99
-    // @arc4.abimethod()
-    // firstDeposit(
-    //   mbrPay: gtxn.PaymentTxn,
-    //   xfer: gtxn.AssetTransferTxn,
-    //   unitaryPrice: arc4.UintN64,
-    //   nonce: arc4.UintN64,
-    // ) {
-    proto 4 0
-    // contracts/marketplace/marketplace.algo.ts:100
-    // assert(mbrPay.sender === Txn.sender);
-    frame_dig -4
-    gtxns Sender
-    txn Sender
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:101
-    // assert(mbrPay.receiver === Global.currentApplicationAddress);
-    frame_dig -4
-    gtxns Receiver
-    global CurrentApplicationAddress
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:102
-    // assert(mbrPay.amount === this.listingsBoxMbr());
-    frame_dig -4
-    gtxns Amount
-    // contracts/marketplace/marketplace.algo.ts:35-49
-    // 2_500 +
-    // // fmt: off
-    // // Key length
-    // (8 +
-    //   32 +
-    //   8 +
-    //   8 +
-    //   // Value length
-    //   8 +
-    //   8 +
-    //   32 +
-    //   8 +
-    //   8) *
-    //   // fmt: on
-    //   400
-    intc 4 // 50500
-    // contracts/marketplace/marketplace.algo.ts:102
-    // assert(mbrPay.amount === this.listingsBoxMbr());
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:105
-    // owner: new arc4.Address(Txn.sender),
-    txn Sender
-    // contracts/marketplace/marketplace.algo.ts:106
-    // asset: new arc4.UintN64(xfer.xferAsset.id),
-    frame_dig -3
-    gtxns XferAsset
-    itob
-    // contracts/marketplace/marketplace.algo.ts:104-108
-    // const key = new ListingKey({
-    //   owner: new arc4.Address(Txn.sender),
-    //   asset: new arc4.UintN64(xfer.xferAsset.id),
-    //   nonce: nonce,
-    // });
-    concat
-    frame_dig -1
-    concat
-    // contracts/marketplace/marketplace.algo.ts:31
-    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
-    bytec_0 // "listings"
-    swap
-    concat
-    // contracts/marketplace/marketplace.algo.ts:109
-    // assert(!this.listings(key).exists);
-    dup
-    box_len
-    bury 1
-    !
-    assert
-    // contracts/marketplace/marketplace.algo.ts:111
-    // assert(xfer.sender === Txn.sender);
-    frame_dig -3
-    gtxns Sender
-    txn Sender
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:112
-    // assert(xfer.assetReceiver === Global.currentApplicationAddress);
-    frame_dig -3
-    gtxns AssetReceiver
-    global CurrentApplicationAddress
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:113
-    // assert(xfer.assetAmount > 0);
-    frame_dig -3
-    gtxns AssetAmount
-    dup
-    assert
-    // contracts/marketplace/marketplace.algo.ts:116
-    // deposited: new arc4.UintN64(xfer.assetAmount),
-    itob
-    // contracts/marketplace/marketplace.algo.ts:115-121
-    // this.listings(key).value = new ListingValue({
-    //   deposited: new arc4.UintN64(xfer.assetAmount),
-    //   unitaryPrice: unitaryPrice,
-    //   bidder: new arc4.Address(),
-    //   bid: new arc4.UintN64(),
-    //   bidUnitaryPrice: new arc4.UintN64(),
-    // });
-    frame_dig -2
-    concat
-    // contracts/marketplace/marketplace.algo.ts:118
-    // bidder: new arc4.Address(),
-    bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
-    // contracts/marketplace/marketplace.algo.ts:115-121
-    // this.listings(key).value = new ListingValue({
-    //   deposited: new arc4.UintN64(xfer.assetAmount),
-    //   unitaryPrice: unitaryPrice,
-    //   bidder: new arc4.Address(),
-    //   bid: new arc4.UintN64(),
-    //   bidUnitaryPrice: new arc4.UintN64(),
-    // });
-    concat
-    // contracts/marketplace/marketplace.algo.ts:119
-    // bid: new arc4.UintN64(),
-    bytec_3 // 0x0000000000000000
-    // contracts/marketplace/marketplace.algo.ts:115-121
-    // this.listings(key).value = new ListingValue({
-    //   deposited: new arc4.UintN64(xfer.assetAmount),
-    //   unitaryPrice: unitaryPrice,
-    //   bidder: new arc4.Address(),
-    //   bid: new arc4.UintN64(),
-    //   bidUnitaryPrice: new arc4.UintN64(),
-    // });
-    concat
-    // contracts/marketplace/marketplace.algo.ts:120
-    // bidUnitaryPrice: new arc4.UintN64(),
-    bytec_3 // 0x0000000000000000
-    // contracts/marketplace/marketplace.algo.ts:115-121
-    // this.listings(key).value = new ListingValue({
-    //   deposited: new arc4.UintN64(xfer.assetAmount),
-    //   unitaryPrice: unitaryPrice,
-    //   bidder: new arc4.Address(),
-    //   bid: new arc4.UintN64(),
-    //   bidUnitaryPrice: new arc4.UintN64(),
-    // });
-    concat
-    box_put
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.deposit(xfer: uint64, nonce: bytes) -> void:
-deposit:
-    // contracts/marketplace/marketplace.algo.ts:124-125
-    // @arc4.abimethod()
-    // deposit(xfer: gtxn.AssetTransferTxn, nonce: arc4.UintN64) {
-    proto 2 0
-    // contracts/marketplace/marketplace.algo.ts:127
-    // owner: new arc4.Address(Txn.sender),
-    txn Sender
-    // contracts/marketplace/marketplace.algo.ts:128
-    // asset: new arc4.UintN64(xfer.xferAsset.id),
-    frame_dig -2
-    gtxns XferAsset
-    itob
-    // contracts/marketplace/marketplace.algo.ts:126-130
-    // const key = new ListingKey({
-    //   owner: new arc4.Address(Txn.sender),
-    //   asset: new arc4.UintN64(xfer.xferAsset.id),
-    //   nonce: nonce,
-    // });
-    concat
-    frame_dig -1
-    concat
-    // contracts/marketplace/marketplace.algo.ts:132
-    // assert(xfer.sender === Txn.sender);
-    frame_dig -2
-    gtxns Sender
-    txn Sender
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:133
-    // assert(xfer.assetReceiver === Global.currentApplicationAddress);
-    frame_dig -2
-    gtxns AssetReceiver
-    global CurrentApplicationAddress
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:134
-    // assert(xfer.assetAmount > 0);
-    frame_dig -2
-    gtxns AssetAmount
-    dup
-    assert
-    // contracts/marketplace/marketplace.algo.ts:31
-    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
-    bytec_0 // "listings"
-    uncover 2
-    concat
-    // contracts/marketplace/marketplace.algo.ts:136
-    // const existing = this.listings(key).value.copy();
-    dup
-    box_get
-    assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:138
-    // bid: existing.bid,
-    dup
-    extract 48 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:139
-    // bidUnitaryPrice: existing.bidUnitaryPrice,
-    dig 1
-    extract 56 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:140
-    // bidder: existing.bidder,
-    dig 2
-    extract 16 32 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:141
-    // unitaryPrice: existing.unitaryPrice,
-    dig 3
-    extract 8 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:142
-    // deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
-    uncover 4
-    intc_1 // 0
-    extract_uint64
-    uncover 6
-    +
-    itob
-    // contracts/marketplace/marketplace.algo.ts:137-143
-    // this.listings(key).value = new ListingValue({
-    //   bid: existing.bid,
-    //   bidUnitaryPrice: existing.bidUnitaryPrice,
-    //   bidder: existing.bidder,
-    //   unitaryPrice: existing.unitaryPrice,
-    //   deposited: new arc4.UintN64(existing.deposited.native + xfer.assetAmount),
-    // });
-    swap
-    concat
-    swap
-    concat
-    uncover 2
-    concat
-    swap
-    concat
-    box_put
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.setPrice(asset: uint64, nonce: bytes, unitaryPrice: bytes) -> void:
-setPrice:
-    // contracts/marketplace/marketplace.algo.ts:146-147
-    // @arc4.abimethod()
-    // setPrice(asset: Asset, nonce: arc4.UintN64, unitaryPrice: arc4.UintN64) {
-    proto 3 0
-    // contracts/marketplace/marketplace.algo.ts:149
-    // owner: new arc4.Address(Txn.sender),
-    txn Sender
-    // contracts/marketplace/marketplace.algo.ts:150
-    // asset: new arc4.UintN64(asset.id),
-    frame_dig -3
-    itob
-    // contracts/marketplace/marketplace.algo.ts:148-152
-    // const key = new ListingKey({
-    //   owner: new arc4.Address(Txn.sender),
-    //   asset: new arc4.UintN64(asset.id),
-    //   nonce: nonce,
-    // });
-    concat
-    frame_dig -2
-    concat
-    // contracts/marketplace/marketplace.algo.ts:31
-    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
-    bytec_0 // "listings"
-    swap
-    concat
-    // contracts/marketplace/marketplace.algo.ts:154
-    // const existing = this.listings(key).value.copy();
-    dup
-    box_get
-    assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:156
-    // bid: existing.bid,
-    dup
-    extract 48 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:157
-    // bidUnitaryPrice: existing.bidUnitaryPrice,
-    dig 1
-    extract 56 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:158
-    // bidder: existing.bidder,
-    dig 2
-    extract 16 32 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:159
-    // deposited: existing.deposited,
-    uncover 3
-    extract 0 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:155-161
-    // this.listings(key).value = new ListingValue({
-    //   bid: existing.bid,
-    //   bidUnitaryPrice: existing.bidUnitaryPrice,
-    //   bidder: existing.bidder,
-    //   deposited: existing.deposited,
-    //   unitaryPrice: unitaryPrice,
-    // });
-    frame_dig -1
-    concat
-    swap
-    concat
-    uncover 2
-    concat
-    swap
-    concat
-    box_put
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.buy(owner: bytes, asset: uint64, nonce: bytes, buyPay: uint64, quantity: uint64) -> void:
-buy:
-    // contracts/marketplace/marketplace.algo.ts:164-171
-    // @arc4.abimethod()
-    // buy(
-    //   owner: arc4.Address,
-    //   asset: Asset,
-    //   nonce: arc4.UintN64,
-    //   buyPay: gtxn.PaymentTxn,
-    //   quantity: uint64,
-    // ) {
-    proto 5 0
-    // contracts/marketplace/marketplace.algo.ts:174
-    // asset: new arc4.UintN64(asset.id),
-    frame_dig -4
-    itob
-    // contracts/marketplace/marketplace.algo.ts:172-176
-    // const key = new ListingKey({
-    //   owner: owner,
-    //   asset: new arc4.UintN64(asset.id),
-    //   nonce: nonce,
-    // });
-    frame_dig -5
-    swap
-    concat
-    frame_dig -3
-    concat
-    // contracts/marketplace/marketplace.algo.ts:31
-    // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
-    bytec_0 // "listings"
-    swap
-    concat
-    // contracts/marketplace/marketplace.algo.ts:178
-    // const listing = this.listings(key).value.copy();
-    dup
-    box_get
-    assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:182
-    // listing.unitaryPrice.native,
-    dup
-    extract 8 8 // on error: Index access is out of bounds
-    dig 1
-    pushint 8 // 8
-    extract_uint64
-    // contracts/marketplace/marketplace.algo.ts:183
-    // asset.decimals,
-    frame_dig -4
-    asset_params_get AssetDecimals
-    assert // asset exists
-    // contracts/marketplace/marketplace.algo.ts:180-184
-    // const amountToBePaid = this.quantityPrice(
-    //   quantity,
-    //   listing.unitaryPrice.native,
-    //   asset.decimals,
-    // );
-    frame_dig -1
-    cover 2
-    callsub quantityPrice
-    // contracts/marketplace/marketplace.algo.ts:186
+    // contracts/marketplace/marketplace.algo.ts:189
     // assert(buyPay.sender === Txn.sender);
-    frame_dig -2
+    dig 5
     gtxns Sender
     txn Sender
     ==
     assert
-    // contracts/marketplace/marketplace.algo.ts:187
+    // contracts/marketplace/marketplace.algo.ts:190
     // assert(buyPay.receiver.bytes === owner.bytes);
-    frame_dig -2
+    dig 5
     gtxns Receiver
-    frame_dig -5
-    ==
-    assert
-    // contracts/marketplace/marketplace.algo.ts:188
-    // assert(buyPay.amount === amountToBePaid);
-    frame_dig -2
-    gtxns Amount
+    uncover 8
     ==
     assert
     // contracts/marketplace/marketplace.algo.ts:191
+    // assert(buyPay.amount === amountToBePaid);
+    uncover 5
+    gtxns Amount
+    ==
+    assert
+    // contracts/marketplace/marketplace.algo.ts:194
     // bid: listing.bid,
     dig 1
-    extract 48 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:192
+    extract 48 8
+    // contracts/marketplace/marketplace.algo.ts:195
     // bidUnitaryPrice: listing.bidUnitaryPrice,
     dig 2
-    extract 56 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:193
+    extract 56 8
+    // contracts/marketplace/marketplace.algo.ts:196
     // bidder: listing.bidder,
     dig 3
-    extract 16 32 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:195
-    // deposited: new arc4.UintN64(listing.deposited.native - quantity),
+    extract 16 32
+    // contracts/marketplace/marketplace.algo.ts:198
+    // deposited: new arc4.Uint64(listing.deposited.asUint64() - quantity),
     uncover 4
     intc_1 // 0
     extract_uint64
-    frame_dig -1
+    dig 6
     -
     itob
-    // contracts/marketplace/marketplace.algo.ts:190-196
+    // contracts/marketplace/marketplace.algo.ts:193-199
     // this.listings(key).value = new ListingValue({
     //   bid: listing.bid,
     //   bidUnitaryPrice: listing.bidUnitaryPrice,
     //   bidder: listing.bidder,
     //   unitaryPrice: listing.unitaryPrice,
-    //   deposited: new arc4.UintN64(listing.deposited.native - quantity),
+    //   deposited: new arc4.Uint64(listing.deposited.asUint64() - quantity),
     // });
     uncover 4
     concat
@@ -841,7 +627,7 @@ buy:
     swap
     concat
     box_put
-    // contracts/marketplace/marketplace.algo.ts:198-204
+    // contracts/marketplace/marketplace.algo.ts:201-207
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
@@ -850,26 +636,24 @@ buy:
     //   })
     //   .submit();
     itxn_begin
-    // contracts/marketplace/marketplace.algo.ts:201
+    // contracts/marketplace/marketplace.algo.ts:204
     // assetReceiver: Txn.sender,
     txn Sender
-    frame_dig -1
-    itxn_field AssetAmount
     itxn_field AssetReceiver
-    frame_dig -4
+    itxn_field AssetAmount
     itxn_field XferAsset
-    // contracts/marketplace/marketplace.algo.ts:198-203
+    // contracts/marketplace/marketplace.algo.ts:201-206
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
     //     assetReceiver: Txn.sender,
     //     assetAmount: quantity,
     //   })
-    intc_2 // 4
+    intc_3 // 4
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:198-204
+    // contracts/marketplace/marketplace.algo.ts:201-207
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
@@ -878,110 +662,130 @@ buy:
     //   })
     //   .submit();
     itxn_submit
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.withdraw(asset: uint64, nonce: bytes) -> void:
-withdraw:
-    // contracts/marketplace/marketplace.algo.ts:207-208
+    // contracts/marketplace/marketplace.algo.ts:167
     // @arc4.abimethod()
-    // withdraw(asset: Asset, nonce: arc4.UintN64) {
-    proto 2 0
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.withdraw[routing]() -> void:
+withdraw:
     // contracts/marketplace/marketplace.algo.ts:210
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    dup
+    btoi
+    swap
+    txna ApplicationArgs 2
+    // contracts/marketplace/marketplace.algo.ts:213
     // owner: new arc4.Address(Txn.sender),
     txn Sender
-    // contracts/marketplace/marketplace.algo.ts:211
-    // asset: new arc4.UintN64(asset.id),
-    frame_dig -2
-    itob
-    // contracts/marketplace/marketplace.algo.ts:209-213
+    // contracts/marketplace/marketplace.algo.ts:212-216
     // const key = new ListingKey({
     //   owner: new arc4.Address(Txn.sender),
-    //   asset: new arc4.UintN64(asset.id),
+    //   asset: new arc4.Uint64(asset.id),
     //   nonce: nonce,
     // });
+    uncover 2
     concat
-    frame_dig -1
+    swap
     concat
-    // contracts/marketplace/marketplace.algo.ts:31
+    // contracts/marketplace/marketplace.algo.ts:32
     // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
     bytec_0 // "listings"
     swap
     concat
     dup
-    // contracts/marketplace/marketplace.algo.ts:215
-    // const listing = this.listings(key).value.copy();
+    // contracts/marketplace/marketplace.algo.ts:218
+    // const listing = clone(this.listings(key).value);
     box_get
     swap
     dup
     uncover 2
     assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:216
+    // contracts/marketplace/marketplace.algo.ts:219
     // if (listing.bidder !== new arc4.Address()) {
-    extract 16 32 // on error: Index access is out of bounds
+    extract 16 32
     dup
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     !=
-    bz withdraw_after_if_else@3
-    // contracts/marketplace/marketplace.algo.ts:218
-    // listing.bid.native,
-    frame_dig 1
+    bz withdraw_after_if_else@4
+    // contracts/marketplace/marketplace.algo.ts:221
+    // listing.bid.asUint64(),
+    dig 1
     dup
-    intc_3 // 48
+    pushint 48 // 48
     extract_uint64
-    // contracts/marketplace/marketplace.algo.ts:219
-    // listing.bidUnitaryPrice.native,
+    // contracts/marketplace/marketplace.algo.ts:222
+    // listing.bidUnitaryPrice.asUint64(),
     swap
     pushint 56 // 56
     extract_uint64
-    // contracts/marketplace/marketplace.algo.ts:220
+    // contracts/marketplace/marketplace.algo.ts:223
     // asset.decimals,
-    frame_dig -2
+    dig 5
     asset_params_get AssetDecimals
     assert // asset exists
-    // contracts/marketplace/marketplace.algo.ts:217-221
-    // const currentBidDeposit = this.quantityPrice(
-    //   listing.bid.native,
-    //   listing.bidUnitaryPrice.native,
-    //   asset.decimals,
+    // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    swap
+    uncover 2
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
+    // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    intc_2 // 10
+    uncover 3
+    expw
+    // contracts/marketplace/marketplace.algo.ts:62-67
+    // op.divmodw(
+    //   amountNotScaledHigh,
+    //   amountNotScaledLow,
+    //   scalingFactorHigh,
+    //   scalingFactorLow,
     // );
-    callsub quantityPrice
-    // contracts/marketplace/marketplace.algo.ts:222-224
+    divmodw
+    popn 2
+    swap
+    // contracts/marketplace/marketplace.algo.ts:68
+    // assert(_quotientHigh === 0);
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:225-227
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidDeposit })
     //   .submit();
     itxn_begin
     itxn_field Amount
-    frame_dig 2
+    dup
     itxn_field Receiver
-    // contracts/marketplace/marketplace.algo.ts:222-223
+    // contracts/marketplace/marketplace.algo.ts:225-226
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidDeposit })
     intc_0 // 1
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:222-224
+    // contracts/marketplace/marketplace.algo.ts:225-227
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidDeposit })
     //   .submit();
     itxn_submit
 
-withdraw_after_if_else@3:
-    // contracts/marketplace/marketplace.algo.ts:227
+withdraw_after_if_else@4:
+    // contracts/marketplace/marketplace.algo.ts:230
     // this.listings(key).delete();
-    frame_dig 0
+    dig 2
     box_del
     pop
-    // contracts/marketplace/marketplace.algo.ts:229-231
+    // contracts/marketplace/marketplace.algo.ts:232-234
     // itxn
     //   .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
     //   .submit();
     itxn_begin
-    // contracts/marketplace/marketplace.algo.ts:230
+    // contracts/marketplace/marketplace.algo.ts:233
     // .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
     txn Sender
-    // contracts/marketplace/marketplace.algo.ts:35-49
+    // contracts/marketplace/marketplace.algo.ts:36-50
     // 2_500 +
     // // fmt: off
     // // Key length
@@ -1000,115 +804,123 @@ withdraw_after_if_else@3:
     intc 4 // 50500
     itxn_field Amount
     itxn_field Receiver
-    // contracts/marketplace/marketplace.algo.ts:229-230
+    // contracts/marketplace/marketplace.algo.ts:232-233
     // itxn
     //   .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
     intc_0 // 1
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:229-231
+    // contracts/marketplace/marketplace.algo.ts:232-234
     // itxn
     //   .payment({ receiver: Txn.sender, amount: this.listingsBoxMbr() })
     //   .submit();
     itxn_submit
-    // contracts/marketplace/marketplace.algo.ts:233-239
+    // contracts/marketplace/marketplace.algo.ts:236-242
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
     //     assetReceiver: Txn.sender,
-    //     assetAmount: listing.deposited.native,
+    //     assetAmount: listing.deposited.asUint64(),
     //   })
     //   .submit();
     itxn_begin
-    // contracts/marketplace/marketplace.algo.ts:236
+    // contracts/marketplace/marketplace.algo.ts:239
     // assetReceiver: Txn.sender,
     txn Sender
-    // contracts/marketplace/marketplace.algo.ts:237
-    // assetAmount: listing.deposited.native,
-    frame_dig 1
+    // contracts/marketplace/marketplace.algo.ts:240
+    // assetAmount: listing.deposited.asUint64(),
+    dig 2
     intc_1 // 0
     extract_uint64
     itxn_field AssetAmount
     itxn_field AssetReceiver
-    frame_dig -2
+    dig 3
     itxn_field XferAsset
-    // contracts/marketplace/marketplace.algo.ts:233-238
+    // contracts/marketplace/marketplace.algo.ts:236-241
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
     //     assetReceiver: Txn.sender,
-    //     assetAmount: listing.deposited.native,
+    //     assetAmount: listing.deposited.asUint64(),
     //   })
-    intc_2 // 4
+    intc_3 // 4
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:233-239
+    // contracts/marketplace/marketplace.algo.ts:236-242
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
     //     assetReceiver: Txn.sender,
-    //     assetAmount: listing.deposited.native,
+    //     assetAmount: listing.deposited.asUint64(),
     //   })
     //   .submit();
     itxn_submit
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.bid(owner: bytes, asset: uint64, nonce: bytes, bidPay: uint64, quantity: bytes, unitaryPrice: bytes) -> void:
-bid:
-    // contracts/marketplace/marketplace.algo.ts:242-250
+    // contracts/marketplace/marketplace.algo.ts:210
     // @arc4.abimethod()
-    // bid(
-    //   owner: arc4.Address,
-    //   asset: Asset,
-    //   nonce: arc4.UintN64,
-    //   bidPay: gtxn.PaymentTxn,
-    //   quantity: arc4.UintN64,
-    //   unitaryPrice: arc4.UintN64,
-    // ) {
-    proto 6 0
-    // contracts/marketplace/marketplace.algo.ts:253
-    // asset: new arc4.UintN64(asset.id),
-    frame_dig -5
-    itob
-    // contracts/marketplace/marketplace.algo.ts:251-255
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.bid[routing]() -> void:
+bid:
+    // contracts/marketplace/marketplace.algo.ts:245
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
+    dup
+    btoi
+    cover 2
+    txna ApplicationArgs 3
+    txn GroupIndex
+    intc_0 // 1
+    -
+    dup
+    cover 4
+    gtxns TypeEnum
+    intc_0 // pay
+    ==
+    assert // transaction type is pay
+    txna ApplicationArgs 4
+    cover 3
+    txna ApplicationArgs 5
+    cover 3
+    // contracts/marketplace/marketplace.algo.ts:254-258
     // const key = new ListingKey({
     //   owner,
-    //   asset: new arc4.UintN64(asset.id),
+    //   asset: new arc4.Uint64(asset.id),
     //   nonce,
     // });
-    frame_dig -6
+    cover 2
+    concat
     swap
     concat
-    frame_dig -4
-    concat
-    // contracts/marketplace/marketplace.algo.ts:31
+    // contracts/marketplace/marketplace.algo.ts:32
     // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
     bytec_0 // "listings"
     swap
     concat
     dup
-    // contracts/marketplace/marketplace.algo.ts:257
-    // const listing = this.listings(key).value.copy();
+    // contracts/marketplace/marketplace.algo.ts:260
+    // const listing = clone(this.listings(key).value);
     box_get
     swap
     dup
     uncover 2
     assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:258
+    // contracts/marketplace/marketplace.algo.ts:261
     // if (listing.bidder !== new arc4.Address()) {
-    extract 16 32 // on error: Index access is out of bounds
+    extract 16 32
     dup
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     !=
-    bz bid_after_if_else@3
-    // contracts/marketplace/marketplace.algo.ts:259
-    // assert(unitaryPrice.native > listing.bidUnitaryPrice.native);
-    frame_dig -1
+    bz bid_after_if_else@4
+    // contracts/marketplace/marketplace.algo.ts:262
+    // assert(unitaryPrice.asUint64() > listing.bidUnitaryPrice.asUint64());
+    dig 3
     btoi
-    frame_dig 1
+    dig 2
     dup
     cover 2
     pushint 56 // 56
@@ -1117,100 +929,134 @@ bid:
     dig 1
     >
     assert
-    // contracts/marketplace/marketplace.algo.ts:262
-    // listing.bid.native,
+    // contracts/marketplace/marketplace.algo.ts:265
+    // listing.bid.asUint64(),
     swap
-    intc_3 // 48
+    pushint 48 // 48
     extract_uint64
-    // contracts/marketplace/marketplace.algo.ts:264
+    // contracts/marketplace/marketplace.algo.ts:267
     // asset.decimals,
-    frame_dig -5
+    dig 8
     asset_params_get AssetDecimals
     assert // asset exists
-    // contracts/marketplace/marketplace.algo.ts:261-265
-    // const currentBidAmount = this.quantityPrice(
-    //   listing.bid.native,
-    //   listing.bidUnitaryPrice.native,
-    //   asset.decimals,
-    // );
-    swap
+    // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
     cover 2
-    callsub quantityPrice
-    // contracts/marketplace/marketplace.algo.ts:267-269
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
+    // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    intc_2 // 10
+    uncover 3
+    expw
+    // contracts/marketplace/marketplace.algo.ts:62-67
+    // op.divmodw(
+    //   amountNotScaledHigh,
+    //   amountNotScaledLow,
+    //   scalingFactorHigh,
+    //   scalingFactorLow,
+    // );
+    divmodw
+    popn 2
+    swap
+    // contracts/marketplace/marketplace.algo.ts:68
+    // assert(_quotientHigh === 0);
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:270-272
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidAmount })
     //   .submit();
     itxn_begin
     itxn_field Amount
-    frame_dig 2
+    dup
     itxn_field Receiver
-    // contracts/marketplace/marketplace.algo.ts:267-268
+    // contracts/marketplace/marketplace.algo.ts:270-271
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidAmount })
     intc_0 // 1
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:267-269
+    // contracts/marketplace/marketplace.algo.ts:270-272
     // itxn
     //   .payment({ receiver: listing.bidder.native, amount: currentBidAmount })
     //   .submit();
     itxn_submit
 
-bid_after_if_else@3:
-    // contracts/marketplace/marketplace.algo.ts:273
-    // quantity.native,
-    frame_dig -2
+bid_after_if_else@4:
+    // contracts/marketplace/marketplace.algo.ts:276
+    // quantity.asUint64(),
+    dig 4
+    dup
     btoi
-    // contracts/marketplace/marketplace.algo.ts:274
-    // unitaryPrice.native,
-    frame_dig -1
+    // contracts/marketplace/marketplace.algo.ts:277
+    // unitaryPrice.asUint64(),
+    dig 5
+    dup
+    cover 3
     btoi
-    // contracts/marketplace/marketplace.algo.ts:275
+    // contracts/marketplace/marketplace.algo.ts:278
     // asset.decimals,
-    frame_dig -5
+    dig 10
     asset_params_get AssetDecimals
     assert // asset exists
-    // contracts/marketplace/marketplace.algo.ts:272-276
-    // const amountToBeBid = this.quantityPrice(
-    //   quantity.native,
-    //   unitaryPrice.native,
-    //   asset.decimals,
+    // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    swap
+    uncover 2
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
+    // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    intc_2 // 10
+    uncover 3
+    expw
+    // contracts/marketplace/marketplace.algo.ts:62-67
+    // op.divmodw(
+    //   amountNotScaledHigh,
+    //   amountNotScaledLow,
+    //   scalingFactorHigh,
+    //   scalingFactorLow,
     // );
-    callsub quantityPrice
-    // contracts/marketplace/marketplace.algo.ts:278
+    divmodw
+    popn 2
+    swap
+    // contracts/marketplace/marketplace.algo.ts:68
+    // assert(_quotientHigh === 0);
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:281
     // assert(bidPay.sender === Txn.sender);
-    frame_dig -3
+    dig 8
+    dup
     gtxns Sender
     txn Sender
     ==
     assert
-    // contracts/marketplace/marketplace.algo.ts:279
+    // contracts/marketplace/marketplace.algo.ts:282
     // assert(bidPay.receiver === Global.currentApplicationAddress);
-    frame_dig -3
+    dup
     gtxns Receiver
     global CurrentApplicationAddress
     ==
     assert
-    // contracts/marketplace/marketplace.algo.ts:280
+    // contracts/marketplace/marketplace.algo.ts:283
     // assert(bidPay.amount === amountToBeBid);
-    frame_dig -3
     gtxns Amount
     ==
     assert
-    // contracts/marketplace/marketplace.algo.ts:283
+    // contracts/marketplace/marketplace.algo.ts:286
     // deposited: listing.deposited,
-    frame_dig 1
+    dig 3
     dup
-    extract 0 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:284
+    extract 0 8
+    // contracts/marketplace/marketplace.algo.ts:287
     // unitaryPrice: listing.unitaryPrice,
     swap
-    extract 8 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:285
+    extract 8 8
+    // contracts/marketplace/marketplace.algo.ts:288
     // bidder: new arc4.Address(Txn.sender),
     txn Sender
-    // contracts/marketplace/marketplace.algo.ts:282-288
+    // contracts/marketplace/marketplace.algo.ts:285-291
     // this.listings(key).value = new ListingValue({
     //   deposited: listing.deposited,
     //   unitaryPrice: listing.unitaryPrice,
@@ -1222,105 +1068,125 @@ bid_after_if_else@3:
     concat
     swap
     concat
-    frame_dig -2
+    swap
     concat
-    frame_dig -1
+    swap
     concat
-    frame_dig 0
+    dig 3
     swap
     box_put
-    retsub
-
-
-// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.acceptBid(asset: uint64, nonce: bytes) -> void:
-acceptBid:
-    // contracts/marketplace/marketplace.algo.ts:291-292
+    // contracts/marketplace/marketplace.algo.ts:245
     // @arc4.abimethod()
-    // acceptBid(asset: Asset, nonce: arc4.UintN64) {
-    proto 2 0
+    intc_0 // 1
+    return
+
+
+// contracts/marketplace/marketplace.algo.ts::DigitalMarketplace.acceptBid[routing]() -> void:
+acceptBid:
     // contracts/marketplace/marketplace.algo.ts:294
+    // @arc4.abimethod()
+    txna ApplicationArgs 1
+    dup
+    btoi
+    swap
+    txna ApplicationArgs 2
+    // contracts/marketplace/marketplace.algo.ts:297
     // owner: new arc4.Address(Txn.sender),
     txn Sender
-    // contracts/marketplace/marketplace.algo.ts:295
-    // asset: new arc4.UintN64(asset.id),
-    frame_dig -2
-    itob
-    // contracts/marketplace/marketplace.algo.ts:293-297
+    // contracts/marketplace/marketplace.algo.ts:296-300
     // const key = new ListingKey({
     //   owner: new arc4.Address(Txn.sender),
-    //   asset: new arc4.UintN64(asset.id),
+    //   asset: new arc4.Uint64(asset.id),
     //   nonce,
     // });
+    uncover 2
     concat
-    frame_dig -1
+    swap
     concat
-    // contracts/marketplace/marketplace.algo.ts:31
+    // contracts/marketplace/marketplace.algo.ts:32
     // listings = BoxMap<ListingKey, ListingValue>({ keyPrefix: "listings" });
     bytec_0 // "listings"
     swap
     concat
     dup
-    // contracts/marketplace/marketplace.algo.ts:299
-    // const listing = this.listings(key).value.copy();
+    // contracts/marketplace/marketplace.algo.ts:302
+    // const listing = clone(this.listings(key).value);
     box_get
     swap
     dup
     uncover 2
     assert // Box must have value
-    // contracts/marketplace/marketplace.algo.ts:300
+    // contracts/marketplace/marketplace.algo.ts:303
     // assert(listing.bidder !== new arc4.Address());
     dup
-    extract 16 32 // on error: Index access is out of bounds
+    extract 16 32
     dup
     cover 2
     bytec_1 // addr AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY5HFKQ
     !=
     assert
-    // contracts/marketplace/marketplace.algo.ts:303
-    // listing.deposited.native < listing.bid.native
+    // contracts/marketplace/marketplace.algo.ts:306
+    // listing.deposited.asUint64() < listing.bid.asUint64()
     dup
     intc_1 // 0
     extract_uint64
     dup
     uncover 2
-    intc_3 // 48
+    pushint 48 // 48
     extract_uint64
     dup
     cover 2
     <
-    // contracts/marketplace/marketplace.algo.ts:303-305
-    // listing.deposited.native < listing.bid.native
-    //   ? listing.deposited.native
-    //   : listing.bid.native;
-    bz acceptBid_ternary_false@2
-    frame_dig 3
+    // contracts/marketplace/marketplace.algo.ts:306-308
+    // listing.deposited.asUint64() < listing.bid.asUint64()
+    //   ? listing.deposited.asUint64()
+    //   : listing.bid.asUint64();
+    bz acceptBid_ternary_false@3
+    dig 1
 
-acceptBid_ternary_merge@3:
-    // contracts/marketplace/marketplace.algo.ts:309
-    // listing.bidUnitaryPrice.native,
-    frame_dig 1
+acceptBid_ternary_merge@4:
+    // contracts/marketplace/marketplace.algo.ts:312
+    // listing.bidUnitaryPrice.asUint64(),
+    dig 4
     dup
-    extract 56 8 // on error: Index access is out of bounds
+    extract 56 8
     dig 1
     pushint 56 // 56
     extract_uint64
-    // contracts/marketplace/marketplace.algo.ts:310
+    // contracts/marketplace/marketplace.algo.ts:313
     // asset.decimals,
-    frame_dig -2
+    dig 9
+    dup
+    cover 2
     asset_params_get AssetDecimals
     assert // asset exists
-    // contracts/marketplace/marketplace.algo.ts:307-311
-    // const bestBidAmount = this.quantityPrice(
-    //   minQuantity,
-    //   listing.bidUnitaryPrice.native,
-    //   asset.decimals,
-    // );
-    uncover 4
+    // contracts/marketplace/marketplace.algo.ts:59
+    // const [amountNotScaledHigh, amountNotScaledLow] = op.mulw(price, quantity);
+    swap
+    uncover 5
     dup
     cover 3
-    cover 2
-    callsub quantityPrice
-    // contracts/marketplace/marketplace.algo.ts:313
+    mulw
+    // contracts/marketplace/marketplace.algo.ts:60
+    // const [scalingFactorHigh, scalingFactorLow] = op.expw(10, assetDecimals);
+    intc_2 // 10
+    uncover 3
+    expw
+    // contracts/marketplace/marketplace.algo.ts:62-67
+    // op.divmodw(
+    //   amountNotScaledHigh,
+    //   amountNotScaledLow,
+    //   scalingFactorHigh,
+    //   scalingFactorLow,
+    // );
+    divmodw
+    popn 2
+    swap
+    // contracts/marketplace/marketplace.algo.ts:68
+    // assert(_quotientHigh === 0);
+    !
+    assert
+    // contracts/marketplace/marketplace.algo.ts:316
     // itxn.payment({ receiver: Txn.sender, amount: bestBidAmount }).submit();
     itxn_begin
     txn Sender
@@ -1331,7 +1197,7 @@ acceptBid_ternary_merge@3:
     intc_1 // 0
     itxn_field Fee
     itxn_submit
-    // contracts/marketplace/marketplace.algo.ts:315-321
+    // contracts/marketplace/marketplace.algo.ts:318-324
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
@@ -1342,24 +1208,24 @@ acceptBid_ternary_merge@3:
     itxn_begin
     dup
     itxn_field AssetAmount
-    frame_dig 2
+    dig 6
     dup
     cover 2
     itxn_field AssetReceiver
-    frame_dig -2
+    uncover 2
     itxn_field XferAsset
-    // contracts/marketplace/marketplace.algo.ts:315-320
+    // contracts/marketplace/marketplace.algo.ts:318-323
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
     //     assetReceiver: listing.bidder.native,
     //     assetAmount: minQuantity,
     //   })
-    intc_2 // 4
+    intc_3 // 4
     itxn_field TypeEnum
     intc_1 // 0
     itxn_field Fee
-    // contracts/marketplace/marketplace.algo.ts:315-321
+    // contracts/marketplace/marketplace.algo.ts:318-324
     // itxn
     //   .assetTransfer({
     //     xferAsset: asset,
@@ -1368,29 +1234,29 @@ acceptBid_ternary_merge@3:
     //   })
     //   .submit();
     itxn_submit
-    // contracts/marketplace/marketplace.algo.ts:326
+    // contracts/marketplace/marketplace.algo.ts:329
     // unitaryPrice: listing.unitaryPrice,
     uncover 3
-    extract 8 8 // on error: Index access is out of bounds
-    // contracts/marketplace/marketplace.algo.ts:327
-    // deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
-    frame_dig 3
+    extract 8 8
+    // contracts/marketplace/marketplace.algo.ts:330
+    // deposited: new arc4.Uint64(listing.deposited.asUint64() - minQuantity),
+    dig 5
     dig 2
     -
     itob
-    // contracts/marketplace/marketplace.algo.ts:328
-    // bid: new arc4.UintN64(listing.bid.native - minQuantity),
-    frame_dig 4
+    // contracts/marketplace/marketplace.algo.ts:331
+    // bid: new arc4.Uint64(listing.bid.asUint64() - minQuantity),
+    dig 5
     uncover 3
     -
     itob
-    // contracts/marketplace/marketplace.algo.ts:323-329
+    // contracts/marketplace/marketplace.algo.ts:326-332
     // this.listings(key).value = new ListingValue({
     //   bidder: listing.bidder,
     //   bidUnitaryPrice: listing.bidUnitaryPrice,
     //   unitaryPrice: listing.unitaryPrice,
-    //   deposited: new arc4.UintN64(listing.deposited.native - minQuantity),
-    //   bid: new arc4.UintN64(listing.bid.native - minQuantity),
+    //   deposited: new arc4.Uint64(listing.deposited.asUint64() - minQuantity),
+    //   bid: new arc4.Uint64(listing.bid.asUint64() - minQuantity),
     // });
     swap
     uncover 2
@@ -1401,11 +1267,14 @@ acceptBid_ternary_merge@3:
     concat
     swap
     concat
-    frame_dig 0
+    dig 5
     swap
     box_put
-    retsub
+    // contracts/marketplace/marketplace.algo.ts:294
+    // @arc4.abimethod()
+    intc_0 // 1
+    return
 
-acceptBid_ternary_false@2:
-    frame_dig 4
-    b acceptBid_ternary_merge@3
+acceptBid_ternary_false@3:
+    dup
+    b acceptBid_ternary_merge@4
